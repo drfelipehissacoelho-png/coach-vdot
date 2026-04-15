@@ -3,9 +3,26 @@
   "vdot": 39,
   "goal_race": "Osaka Marathon — 21/01/2027",
   "goal_time": "Sub-3h50",
-  "last_updated": "2026-04-15T18:51:48.895018",
-  "total_analyses": 2,
+  "last_updated": "2026-04-15T18:52:23.881245",
+  "total_analyses": 3,
   "analyses": [
+    {
+      "id": "2026-03-01_morning_run",
+      "date": "2026-03-01",
+      "date_display": "01/03/2026",
+      "source": "strava",
+      "activity_name": "Morning Run",
+      "distance_km": 43.01,
+      "duration": "03:58:07",
+      "avg_pace": "5:32/km",
+      "avg_heart_rate": 160.5,
+      "avg_cadence_spm": 181,
+      "temperature_c": 18,
+      "total_ascent_m": 334.0,
+      "score": null,
+      "analysis_html": "<b>📊 Resumo do Treino</b>\nFelipe, este foi um longão de 43km em 3h58 a 5:32/km médio — realizado às 4h40 em Recife, 18°C. Pace médio praticamente no ritmo de Maratona VDOT 39 (~5:36/km), com FC média de 160 bpm (92% da FCmáx estimada). Para a fase de Retomada Suave, este treino é, no mínimo, muito agressivo.\n\n---\n\n<b>✅ Pontos Positivos</b>\n\n• <b>Consistência de pace impressionante:</b> Splits de 5:14 a 5:37/km ao longo de 43km demonstra controle motor e experiência — nenhum colapso de ritmo mesmo no final.\n• <b>Cadência excelente:</b> 181 spm está alinhada com os princípios do Pose Method — acima dos 180 spm recomendados, sem impacto excessivo.\n• <b>Execução noturna/madrugada:</b> Acordar às 4h40 para treinar em Recife é disciplina real. O horário foi estratégico para amenizar o calor.\n\n---\n\n<b>⚠️ Sinais de Alerta</b>\n\n🔴 <b>Distância e intensidade incompatíveis com a fase atual:</b> Você está na semana 1–2 de retomada pós-1 mês de pausa. Um longão de 43km está ~107% acima do volume semanal alvo (40km/semana) feito em <b>uma única sessão</b>. Isso é todo o volume semanal em um dia.\n\n🔴 <b>FC cronicamente elevada para o pace:</b> FC média de 160 bpm (91% FCmáx) a 5:32/km é zona de Limiar/Tempo — não zona fácil. Para VDOT 39, corrida fácil deveria manter FC abaixo de ~140–145 bpm. Você rodou uma maratona de treino em intensidade de limiar.\n\n🟡 <b>Pace mais rápido que o ritmo E (Fácil):</b> 5:32/km médio está <b>fora da zona Easy</b> (5:58–6:40/km) e até mais rápido que o ritmo M (5:36/km). Mesmo com o calor de Recife, o esforço fisiológico foi de prova, não de base.\n\n🟡 <b>Risco de overreaching:</b> Pós-pausa de 1 mês + 43km em zona M/T = estresse cumulativo alto. O sistema musculoesquelético e metabólico não estava preparado para esse volume/intensidade combinados.\n\n---\n\n<b>🏁 Impacto na Preparação</b>\n\nEste treino, isoladamente, demonstra capacidade aeróbica sólida — seu VDOT real pode estar mais próximo de 39–40, o que é positivo. Porém, executado na semana de retomada, o custo é alto: os próximos 5–7 dias precisarão ser de recuperação real (corridas fáceis curtas ou descanso), o que atrasa a construção progressiva de base rumo à meia maratona de Set/Out 2026 e Osaka 2027. O risco não é hoje — é a fadiga oculta e a possível lesão nas próximas 2–3 semanas.\n\n---\n\n<b>📅 Próximo Treino Sugerido</b>\n\n<b>Tipo:</b> Corrida de recuperação ativa\n<b>Quando:</b> 48–72h após este treino (mínimo)\n<b>Distância:</b> 6–8 km\n<b>Pace-alvo:</b> 6:20–6:40/km (zona E conservadora, VDOT 39)\n<b>FC-alvo:</b> Abaixo de 135 bpm — use FC como guia, não o pace\n<b>Foco:</b> Flush metabólico, técnica Pose leve, sem ambição de ritmo\n<b>Depois:</b> 2 dias de descanso ou caminhada antes de qualquer sessão de qualidade\n\n---\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: <b>4/10</b> — Execução tecnicamente competente, mas volume e intensidade totalmente fora da fase de retomada; o risco de lesão ou fadiga acumulada supera o ganho pontual de fitness.",
+      "generated_at": "2026-04-15T18:52:23.881237"
+    },
     {
       "id": "2026-02-28_morning_run",
       "date": "2026-02-28",
