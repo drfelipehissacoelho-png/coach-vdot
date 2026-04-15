@@ -3,7 +3,7 @@
   "vdot": 39,
   "goal_race": "Osaka Marathon — 21/01/2027",
   "goal_time": "Sub-3h50",
-  "last_updated": "2026-04-15T18:50:27.231533",
+  "last_updated": "2026-04-15T18:50:54.519401",
   "total_analyses": 1,
   "analyses": [
     {
@@ -12,16 +12,16 @@
       "date_display": "25/02/2026",
       "source": "strava",
       "activity_name": "Morning Run",
-      "distance_km": 8.69,
-      "duration": "50:46",
-      "avg_pace": "5:50/km",
-      "avg_heart_rate": 155.0,
-      "avg_cadence_spm": 181,
+      "distance_km": 0.28,
+      "duration": "02:24",
+      "avg_pace": "8:42/km",
+      "avg_heart_rate": 68.4,
+      "avg_cadence_spm": 118,
       "temperature_c": 12,
-      "total_ascent_m": 202.0,
+      "total_ascent_m": 3.0,
       "score": null,
-      "analysis_html": "<b>📊 Resumo do Treino</b>\nFelipe, treino de 8,69 km a 5:50/km de pace médio, realizado em Recife às 9h de manhã (12°C — favorável). Na fase de Retomada Suave (semanas 1–2), o volume e a intensidade são compatíveis com o VDOT 39. Pace médio ficou exatamente no limite superior da Zona Fácil (5:58–6:40), com alguns splits invadindo território de Pace Maratona (~5:36).\n\n---\n\n<b>✅ Pontos Positivos</b>\n\n• <b>Consistência de pace impressionante:</b> 7 dos 8 splits completos entre 5:28–5:51/km, sem grandes oscilações. Sinal de controle neuromuscular e base sólida após 1 mês de pausa.\n\n• <b>Cadência excelente:</b> 181 spm está acima dos 170–175 spm ideais para o Pose Method/Romanov. Contato de solo eficiente, boa mecânica de retorno.\n\n• <b>FC compatível com a fase:</b> FC média de 155 bpm = ~89% da FCmáx estimada. Considerando que os splits de 5:33–5:40 estão mais rápidos que o Pace Fácil do seu VDOT, a FC reflete o esforço real. Nada preocupante para uma retomada.\n\n---\n\n<b>⚠️ Sinais de Alerta</b>\n\n• <b>Pace mais rápido que o prescrito para Zona Fácil:</b> Splits 1 a 8 ficaram entre 5:27–5:51/km. O teto da sua Zona E é 5:58/km. Você rodou a maior parte do treino ~10–20 seg/km acima do recomendado para esta fase — território de \"zona cinza\" que o Método Norueguês justamente evita.\n\n• <b>FC elevada para corrida fácil:</b> 155 bpm médio (~89% FCmáx) é alto para um treino que deveria ser conversacional. O 80/20 de Fitzgerald pede que corridas fáceis fiquem abaixo de ~76–80% FCmáx (~133–140 bpm para você). Monitore isso nas próximas sessões — o ritmo fácil real pode precisar de disciplina maior.\n\n---\n\n<b>🏁 Impacto na Preparação</b>\nTreino válido e bem executado para uma retomada. A distância de 8,69 km é adequada para a fase inicial (meta de 40 km/semana). O risco está em repetir o padrão de \"ir um pouco mais forte que o necessário\" — na retomada, o aeróbico base se constrói em paces <b>realmente fáceis</b>. A longo prazo (Osaka 2027, VDOT alvo 42), este treino contribui com volume, mas o benefício adaptativo seria maior se a FC estivesse na faixa conversacional.\n\n---\n\n<b>📅 Próximo Treino Sugerido</b>\n<b>Corrida Fácil — Zona E pura</b>\n• Distância: 8–10 km\n• Pace-alvo: <b>6:00–6:30/km</b> (sim, mais devagar — confie no processo)\n• FC-alvo: <b>130–140 bpm</b> (teste real do \"conversacional\")\n• Foco: Pose Method — queda para frente, pull dos quadris, <b>cadência mantida acima de 178 spm mesmo no pace fácil</b>\n• Dica prática: Se a FC passar de 145 bpm, reduza o pace imediatamente. Use FC como controle principal, não o relógio.\n\n---\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: <b>7/10</b> — Volume e mecânica corretos para a retomada, mas o pace acima da Zona E e FC elevada indicam que \"fácil de verdade\" ainda precisa ser internalizado para a fase atual.",
-      "generated_at": "2026-04-15T18:50:27.231525"
+      "analysis_html": "<b>📊 Resumo do Treino</b>\nAtividade registrada em 25/02/2026 — apenas 280 metros em 2:24 minutos, a um pace médio de 8:42/km. Trata-se claramente de um aquecimento, trote inicial ou teste de dispositivo, não de uma sessão estruturada. Contexto: Felipe ainda está em fase pré-retomada (início oficial do plano: 07/04/2026), com ~1 mês de pausa pós-maratona no retrovisor.\n\n---\n\n<b>✅ Pontos Positivos</b>\n• <b>FC extremamente controlada:</b> 68 bpm médio e pico de 122 bpm indicam total recuperação cardíaca — ótimo sinal para retomada.\n• <b>Movimento aconteceu:</b> Mesmo que mínimo, sair e registrar movimento é psicologicamente relevante no período de transição.\n• <b>Sem estresse fisiológico:</b> 122 bpm pico representa ~70% da FCmáx estimada (175 bpm) — zone 1 pura, sem sobrecarga.\n\n---\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>Dado insuficiente para análise real:</b> 280m/2:24 não constitui sessão de treino — provavelmente um registro acidental ou início abortado.\n• <b>Cadência de 118 spm:</b> Muito abaixo do alvo ideal (≥170 spm). Mesmo em trotes curtos, vale calibrar o padrão motor desde já — Pose Method reforça isso.\n• <b>Antecipação do plano:</b> O início oficial é 07/04/2026. Movimentos soltos antes disso são válidos, mas sem estrutura definida.\n\n---\n\n<b>🏁 Impacto na Preparação</b>\nImpacto direto: <b>neutro/zero</b> sobre a base aeróbica para Osaka 2027. Mas o impacto indireto pode ser positivo: manter o hábito de movimento no período de transição evita o sedentarismo completo e facilita a retomada em abril. Nenhum ganho de VDOT esperado, nenhum risco de overtraining.\n\n---\n\n<b>📅 Próximo Treino Sugerido</b>\n<b>Tipo:</b> Corrida fácil contínua (Zona E)\n<b>Distância:</b> 5–6 km\n<b>Pace-alvo:</b> 6:20–6:40/km (zona fácil VDOT 39, ajustado para calor de Recife → adicione ~15–20s/km)\n<b>FC-alvo:</b> Manter abaixo de 140 bpm\n<b>Foco:</b> Reconexão com o movimento, checar sensações musculares e articulares pós-pausa. Inclua 5 min de drills Pose (queda, puxada, apoio) antes de iniciar.\n\n---\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: <b>3/10</b> — Registro válido como movimento, mas insuficiente como treino; irrelevante para construção do VDOT rumo ao sub-3h50 em Osaka.",
+      "generated_at": "2026-04-15T18:50:54.519387"
     }
   ]
 }
