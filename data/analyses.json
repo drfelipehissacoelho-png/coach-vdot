@@ -3,9 +3,26 @@
   "vdot": 39,
   "goal_race": "Osaka Marathon — 21/01/2027",
   "goal_time": "Sub-3h50",
-  "last_updated": "2026-04-15T18:50:54.519401",
-  "total_analyses": 1,
+  "last_updated": "2026-04-15T18:51:22.326619",
+  "total_analyses": 2,
   "analyses": [
+    {
+      "id": "2026-02-28_morning_run",
+      "date": "2026-02-28",
+      "date_display": "28/02/2026",
+      "source": "strava",
+      "activity_name": "Morning Run",
+      "distance_km": 1.4,
+      "duration": "09:00",
+      "avg_pace": "6:25/km",
+      "avg_heart_rate": 119.4,
+      "avg_cadence_spm": 175,
+      "temperature_c": 20,
+      "total_ascent_m": 31.0,
+      "score": 5,
+      "analysis_html": "<b>📊 Resumo do Treino</b>\nCorrida leve de retomada: 1,4 km em 9min, pace médio 6:25/km — dentro da Zona Fácil (E) do VDOT 39. Volume simbólico, característico de uma sessão de ativação ou retorno gradual após o mês de pausa pós-maratona. FC comportada (119/141 bpm), sinalizando boa recuperação cardiovascular.\n\n<b>✅ Pontos Positivos</b>\n• <b>Pace dentro da Zona E:</b> 6:25/km está confortavelmente na janela fácil (5:58–6:40), respeitando o princípio 80/20 e a fase de retomada suave\n• <b>FC controlada:</b> Média de 119 bpm (~68% FCmáx) demonstra que Felipe não forçou — ótimo sinal de recuperação real, especialmente no calor de Recife\n• <b>Cadência técnica sólida:</b> 175 spm é exatamente o alvo do Pose Method — cadência eficiente mesmo numa corrida curtíssima de retomada\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>Volume muito abaixo:</b> 1,4 km é insuficiente como estímulo de treino em si — assume-se que foi intencional (teste de corpo, ativação ou retorno tímido), mas precisa ser progressivo nas próximas sessões\n• <b>Pace máximo de 2:23/km:</b> Provavelmente GPS instável no início da atividade — não representa sprint real, mas vale checar se o Garmin está com sinal adequado antes dos treinos\n• <b>Data do treino (28/02) vs. início do plano (07/04):</b> Este treino está fora da janela do plano formal — confirmar se é pré-plano espontâneo ou se o início foi antecipado\n\n<b>🏁 Impacto na Preparação</b>\nTreino de impacto neutro-positivo: não gera adaptação mensurável, mas cumpre papel psicológico e neuromuscular importante na reintrodução do estímulo de corrida. Para Osaka 2027 (VDOT alvo ≥42), a base precisa ser construída de forma consistente — esta sessão é o \"primeiro passo\" legítimo, mas a progressão de volume nas semanas seguintes é o que vai importar.\n\n<b>📅 Próximo Treino Sugerido</b>\n<b>Tipo:</b> Corrida Fácil (Zona E) com foco em volume progressivo\n<b>Distância:</b> 5–6 km contínuos\n<b>Pace-alvo:</b> 6:10–6:40/km (ajustar para cima ~15–20 seg no calor de Recife)\n<b>FC-alvo:</b> manter abaixo de 145 bpm durante toda a sessão\n<b>Foco:</b> Respiração conversacional + verificar cadência ≥170 spm — sem pressão de pace, apenas volume tranquilo\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: 5/10 — Intensidade perfeita, mas volume de 1,4 km é insuficiente para gerar progressão real; a intenção foi correta, agora é hora de aumentar gradualmente.",
+      "generated_at": "2026-04-15T18:51:22.326609"
+    },
     {
       "id": "2026-02-25_morning_run",
       "date": "2026-02-25",
