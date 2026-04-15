@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coach VDOT — Felipe Hissa Coelho</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <style>
+    :root {
+      --bg: #0f1117; --surface: #1a1d27; --surface2: #232636;
+      --accent: #5b8dee; --green: #3dd68c; --warn: #f5a623;
+      --danger: #e05252; --text: #e8eaf0; --muted: #8b90a0;
+      --border: #2e3245; --radius: 12px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+
+    header { background: linear-gradient(135deg, #1a1d27, #0f1117); border-bottom: 1px solid var(--border); padding: 18px 28px; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+    .logo { font-size: 2rem; }
+    .header-info h1 { font-size: 1.2rem; font-weight: 800; color: var(--accent); }
+    .header-info p { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
+    .header-badges { margin-left: auto; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+    .badge { padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+    .badge-vdot { background: #1a2a3a; color: var(--accent); border: 1px solid var(--accent); }
+    .badge-goal { background: #1a3a2a; color: var(--green); border: 1px solid var(--green); }
+
+    .container { max-width: 1100px; margin: 0 auto; padding: 24px 20px; }
+
+    /* STATS SUMMARY */
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-bottom: 28px; }
+    .stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; text-align: center; }
+    .stat-card .stat-val { font-size: 1.8rem; font-weight: 800; color: var(--accent); }
+    .stat-card .stat-val.green { color: var(--green); }
+    .stat-card .stat-val.orange { color: var(--warn); }
+    .stat-card .stat-label { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 4px; }
+
+    /* CHARTS */
+    .charts-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 28px; }
+    @media(max-width: 700px) { .charts-row { grid-template-columns: 1fr; } }
+    .chart-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; }
+    .chart-card h3 { font-size: 0.82rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 14px; }
+    .chart-wrap { position: relative; height: 180px; }
+
+    /* ANALYSES LIST */
+    .section-title { font-size: 0.88rem; font-weight: 700; color: var(--text); margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+    .analysis-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 12px; overflow: hidden; transition: border-color 0.2s; }
+    .analysis-card:hover { border-color: var(--accent); }
+    .analysis-header { padding: 16px 20px; cursor: pointer; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+    .analysis-date { font-size: 0.78rem; color: var(--muted); min-width: 90px; }
+    .analysis-name { font-weight: 700; font-size: 0.92rem; flex: 1; }
+    .analysis-metrics { display: flex; gap: 16px; flex-wrap: wrap; }
+    .metric { font-size: 0.8rem; color: var(--muted); }
+    .metric span { color: var(--text); font-weight: 600; }
+    .score-badge { padding: 3px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 800; margin-left: auto; }
+    .score-high { background: #1a3a2a; color: var(--green); }
+    .score-mid  { background: #3a2a1a; color: var(--warn); }
+    .score-low  { background: #3a1a1a; color: var(--danger); }
+    .source-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; margin-right: 4px; }
+    .src-strava { background: #fc4c02; }
+    .src-garmin { background: #007cc3; }
+
+    .analysis-body { display: none; padding: 0 20px 20px; border-top: 1px solid var(--border); }
+    .analysis-body.open { display: block; }
+    .analysis-text { font-size: 0.85rem; line-height: 1.7; color: var(--text); }
+    .analysis-text b { color: var(--accent); }
+    .splits-table { width: 100%; border-collapse: collapse; font-size: 0.78rem; margin-top: 12px; }
+    .splits-table th { color: var(--muted); text-align: left; padding: 6px 10px; font-size: 0.7rem; text-transform: uppercase; }
+    .splits-table td { padding: 6px 10px; border-bottom: 1px solid var(--border); }
+    .expand-icon { margin-left: 8px; color: var(--muted); font-size: 0.75rem; transition: transform 0.2s; }
+    .analysis-card.open .expand-icon { transform: rotate(180deg); }
+
+    /* EMPTY STATE */
+    .empty { text-align: center; padding: 60px 20px; color: var(--muted); }
+    .empty .emoji { font-size: 3rem; margin-bottom: 12px; }
+
+    /* LAST UPDATED */
+    .last-updated { text-align: center; font-size: 0.72rem; color: var(--muted); margin-top: 32px; padding-bottom: 32px; }
+
+    /* LOADING */
+    .loading { text-align: center; padding: 80px 20px; color: var(--muted); }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .spinner { width: 32px; height: 32px; border: 3px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 16px; }
+
+    @media(max-width: 600px) {
+      header { padding: 14px 16px; }
+      .container { padding: 16px 12px; }
+      .analysis-metrics { gap: 10px; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🏃</div>
+  <div class="header-info">
+    <h1>Coach VDOT</h1>
+    <p id="athlete-name">Carregando...</p>
+  </div>
+  <div class="header-badges">
+    <span class="badge badge-vdot" id="vdot-badge">VDOT —</span>
+    <span class="badge badge-goal" id="goal-badge">🎯 —</span>
+  </div>
+</header>
+
+<div class="container">
+  <div id="loading" class="loading">
+    <div class="spinner"></div>
+    <p>Carregando análises...</p>
+  </div>
+
+  <div id="content" style="display:none">
+
+    <!-- RESUMO ESTATÍSTICO -->
+    <div class="stats-grid" id="stats-grid"></div>
+
+    <!-- GRÁFICOS -->
+    <div class="charts-row">
+      <div class="chart-card">
+        <h3>📏 Distância por Treino (km)</h3>
+        <div class="chart-wrap"><canvas id="chartDist"></canvas></div>
+      </div>
+      <div class="chart-card">
+        <h3>❤️ FC Média por Treino</h3>
+        <div class="chart-wrap"><canvas id="chartHR"></canvas></div>
+      </div>
+    </div>
+
+    <!-- LISTA DE ANÁLISES -->
+    <div class="section-title">📋 Histórico de Análises</div>
+    <div id="analyses-list"></div>
+
+    <div class="last-updated" id="last-updated"></div>
+  </div>
+</div>
+
+<script>
+  const DATA_URL = './data/analyses.json';
+
+  async function loadData() {
+    try {
+      const r = await fetch(DATA_URL + '?t=' + Date.now());
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return await r.json();
+    } catch(e) {
+      return null;
+    }
+  }
+
+  function paceToMinutes(pace) {
+    if (!pace || pace === 'N/D') return null;
+    const m = pace.match(/(\d+):(\d+)/);
+    if (!m) return null;
+    return parseInt(m[1]) + parseInt(m[2]) / 60;
+  }
+
+  function scoreBadge(score) {
+    if (!score) return '';
+    const cls = score >= 8 ? 'score-high' : score >= 6 ? 'score-mid' : 'score-low';
+    return `<span class="score-badge ${cls}">${score}/10</span>`;
+  }
+
+  function renderStats(data) {
+    const analyses = data.analyses || [];
+    const last30 = analyses.filter(a => {
+      if (!a.date) return false;
+      const d = new Date(a.date);
+      const diff = (Date.now() - d.getTime()) / (1000*60*60*24);
+      return diff <= 30;
+    });
+
+    const totalKm = last30.reduce((s, a) => s + (a.distance_km || 0), 0);
+    const avgPaces = last30.map(a => paceToMinutes(a.avg_pace)).filter(Boolean);
+    const avgHRs = last30.map(a => a.avg_heart_rate).filter(Boolean);
+    const scores = analyses.slice(0, 10).map(a => a.score).filter(Boolean);
+
+    const avgPaceMin = avgPaces.length ? avgPaces.reduce((a,b) => a+b) / avgPaces.length : null;
+    const avgHR = avgHRs.length ? Math.round(avgHRs.reduce((a,b) => a+b) / avgHRs.length) : null;
+    const avgScore = scores.length ? (scores.reduce((a,b) => a+b) / scores.length).toFixed(1) : null;
+
+    function fmtPace(min) {
+      if (!min) return '—';
+      const m = Math.floor(min);
+      const s = Math.round((min - m) * 60);
+      return `${m}:${s.toString().padStart(2,'0')}`;
+    }
+
+    const grid = document.getElementById('stats-grid');
+    grid.innerHTML = [
+      { val: last30.length, label: 'Treinos (30 dias)', cls: '' },
+      { val: totalKm.toFixed(1) + ' km', label: 'Volume (30 dias)', cls: 'green' },
+      { val: fmtPace(avgPaceMin) + '/km', label: 'Pace Médio', cls: '' },
+      { val: avgHR ? avgHR + ' bpm' : '—', label: 'FC Média', cls: 'orange' },
+      { val: avgScore ? avgScore + '/10' : '—', label: 'Aderência Média', cls: 'green' },
+      { val: analyses.length, label: 'Total Análises', cls: '' },
+    ].map(s => `
+      <div class="stat-card">
+        <div class="stat-val ${s.cls}">${s.val}</div>
+        <div class="stat-label">${s.label}</div>
+      </div>
+    `).join('');
+  }
+
+  function renderCharts(data) {
+    const analyses = (data.analyses || []).slice(0, 15).reverse();
+    const labels = analyses.map(a => a.date_display || a.date || '');
+    const dists = analyses.map(a => a.distance_km || 0);
+    const hrs = analyses.map(a => a.avg_heart_rate || null);
+
+    const cfg = (label, vals, color) => ({
+      type: 'bar',
+      data: {
+        labels,
+        datasets: [{ label, data: vals, backgroundColor: color + '99', borderColor: color, borderWidth: 1, borderRadius: 4 }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: {
+          x: { ticks: { color: '#8b90a0', font: { size: 10 }, maxRotation: 45 }, grid: { color: '#2e3245' } },
+          y: { ticks: { color: '#8b90a0', font: { size: 10 } }, grid: { color: '#2e3245' } }
+        }
+      }
+    });
+
+    new Chart(document.getElementById('chartDist'), cfg('km', dists, '#5b8dee'));
+    new Chart(document.getElementById('chartHR'), cfg('bpm', hrs, '#e05252'));
+  }
+
+  function renderAnalyses(data) {
+    const list = document.getElementById('analyses-list');
+    const analyses = data.analyses || [];
+
+    if (!analyses.length) {
+      list.innerHTML = `<div class="empty"><div class="emoji">🏃</div><p>Nenhuma análise ainda.<br>Complete um treino para receber o primeiro feedback!</p></div>`;
+      return;
+    }
+
+    list.innerHTML = analyses.map((a, i) => {
+      const srcDot = `<span class="source-dot src-${a.source || 'garmin'}"></span>`;
+      const distStr = a.distance_km ? `<span>${a.distance_km} km</span>` : '';
+      const durStr  = a.duration    ? `<span>${a.duration}</span>` : '';
+      const paceStr = a.avg_pace    ? `<span>⚡ ${a.avg_pace}</span>` : '';
+      const hrStr   = a.avg_heart_rate ? `<span>❤️ ${a.avg_heart_rate} bpm</span>` : '';
+      const tempStr = a.temperature_c ? `<span>🌡 ${a.temperature_c}°C</span>` : '';
+
+      // Converte HTML do Telegram para visualização web
+      const analysisHtml = (a.analysis_html || '')
+        .replace(/<b>/g, '<strong>').replace(/<\/b>/g, '</strong>')
+        .replace(/<i>/g, '<em>').replace(/<\/i>/g, '</em>');
+
+      return `
+        <div class="analysis-card" id="card-${i}">
+          <div class="analysis-header" onclick="toggleCard(${i})">
+            <div class="analysis-date">${srcDot}${a.date_display || a.date || ''}</div>
+            <div class="analysis-name">${a.activity_name || 'Treino'}</div>
+            <div class="analysis-metrics">
+              <div class="metric">${distStr}</div>
+              <div class="metric">${durStr}</div>
+              <div class="metric">${paceStr}</div>
+              <div class="metric">${hrStr}</div>
+              <div class="metric">${tempStr}</div>
+            </div>
+            ${scoreBadge(a.score)}
+            <span class="expand-icon">▼</span>
+          </div>
+          <div class="analysis-body" id="body-${i}">
+            <div class="analysis-text">${analysisHtml || '<em>Análise não disponível.</em>'}</div>
+          </div>
+        </div>`;
+    }).join('');
+  }
+
+  function toggleCard(i) {
+    const card = document.getElementById('card-' + i);
+    const body = document.getElementById('body-' + i);
+    card.classList.toggle('open');
+    body.classList.toggle('open');
+  }
+
+  async function init() {
+    const data = await loadData();
+    document.getElementById('loading').style.display = 'none';
+
+    if (!data) {
+      document.getElementById('content').innerHTML = '<div class="empty"><div class="emoji">⚠️</div><p>Não foi possível carregar os dados.<br>Verifique se o arquivo data/analyses.json existe.</p></div>';
+      document.getElementById('content').style.display = 'block';
+      return;
+    }
+
+    document.getElementById('athlete-name').textContent = data.athlete || 'Felipe';
+    document.getElementById('vdot-badge').textContent = `VDOT ${data.vdot || 39}`;
+    document.getElementById('goal-badge').textContent = `🎯 ${data.goal_time || 'Sub-3h50'}`;
+
+    if (data.last_updated) {
+      const d = new Date(data.last_updated);
+      document.getElementById('last-updated').textContent =
+        `Última atualização: ${d.toLocaleDateString('pt-BR')} às ${d.toLocaleTimeString('pt-BR', {hour:'2-digit', minute:'2-digit'})}`;
+    }
+
+    renderStats(data);
+    renderCharts(data);
+    renderAnalyses(data);
+    document.getElementById('content').style.display = 'block';
+  }
+
+  init();
+</script>
+</body>
+</html>
