@@ -3,7 +3,25 @@
   "vdot": 39,
   "goal_race": "Osaka Marathon — 21/01/2027",
   "goal_time": "Sub-3h50",
-  "last_updated": "",
-  "total_analyses": 0,
-  "analyses": []
+  "last_updated": "2026-04-15T18:49:53.856325",
+  "total_analyses": 1,
+  "analyses": [
+    {
+      "id": "2026-02-25_morning_run",
+      "date": "2026-02-25",
+      "date_display": "25/02/2026",
+      "source": "strava",
+      "activity_name": "Morning Run",
+      "distance_km": 1.13,
+      "duration": "11:46",
+      "avg_pace": "10:25/km",
+      "avg_heart_rate": 119.4,
+      "avg_cadence_spm": 162,
+      "temperature_c": 19,
+      "total_ascent_m": 60.0,
+      "score": null,
+      "analysis_html": "<b>📊 Resumo do Treino</b>\nFelipe, este foi um treino de retomada extremamente curto — 1,13 km em pace médio de 10:25/km, realizado às 04:40h em Recife. Pelo contexto (pós-~1 mês de pausa, fase de Retomada Suave) e pela natureza do split final (0,13 km a 30:18/km = parada ou caminhada), tudo indica uma corrida de aquecimento/teste ou treino interrompido. VDOT atual: 39.\n\n---\n\n<b>✅ Pontos Positivos</b>\n• <b>FC controlada:</b> Média de 119 bpm (~68% FCmáx) indica que o esforço foi genuinamente leve — dentro da zona E do VDOT 39, sem forçar o retorno.\n• <b>Voltou a calçar o tênis:</b> Após 1 mês de pausa, qualquer movimento conta. A iniciativa de sair em Recife às 04:40h mostra comprometimento com a rotina.\n• <b>Sem sinais de forçar o ritmo:</b> O pace do km principal (~7:53/km) ficou acima do teto fácil (6:40/km), confirmando esforço regenerativo — adequado para o primeiro contato pós-pausa.\n\n---\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>Distância muito aquém do planejado:</b> 1,13 km é insignificante para gerar estímulo. Se o treino foi interrompido por desconforto, dor ou indisposição, isso precisa ser monitorado nas próximas sessões.\n• <b>FC máxima de 157 bpm (90% FCmáx) em 1 km fácil:</b> O pico de 157 bpm é elevado demais para um esforço tão curto e leve. Pode ser spike de GPS/sensor, mudança brusca de pace (3:13/km de pace máximo registrado) ou sinal de descondicionamento cardíaco pós-pausa — fique atento.\n• <b>Cadência de 162 spm:</b> Abaixo do alvo ideal (≥170 spm pelo Pose Method). Com pouco volume, priorize qualidade técnica desde já.\n\n---\n\n<b>🏁 Impacto na Preparação</b>\nPraticamente neutro em termos de carga fisiológica — e tudo bem. Para Osaka 2027, o que importa agora é <b>consistência de semanas, não de sessões</b>. Este treino vale como \"ativação neuromotora\" e quebra de inércia pós-pausa. O risco real é a irregularidade: se este padrão (sessões muito curtas e esparsas) continuar nas próximas 2–3 semanas, a base aeróbica não se estabelece e o VDOT pode cair abaixo de 39.\n\n---\n\n<b>📅 Próximo Treino Sugerido</b>\n<b>Corrida Fácil — Zona E (Reconstrução)</b>\n• <b>Distância:</b> 5–6 km contínuos\n• <b>Pace-alvo:</b> 6:20–6:40/km (teto da zona E, com ajuste de +15–20 seg para o calor de Recife)\n• <b>FC-alvo:</b> Manter abaixo de 145 bpm durante todo o percurso\n• <b>Foco técnico:</b> Cadência ≥170 spm, queda para frente, contato curto com o solo (Pose Method)\n• <b>Horário:</b> Manter o early morning — excelente hábito para o calor de Recife\n• <b>Observação:</b> Se sentir qualquer desconforto que justificou a parada hoje, inclua 5 min de caminhada ativa no início\n\n---\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: <b>3/10</b> — Volume irrisório para a fase de retomada, mas a intensidade foi correta e o importante agora é entender o que interrompeu o treino e garantir consistência a partir da próxima sessão.",
+      "generated_at": "2026-04-15T18:49:53.856317"
+    }
+  ]
 }
