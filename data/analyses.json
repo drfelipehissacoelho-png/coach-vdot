@@ -3,9 +3,26 @@
   "vdot": 39,
   "goal_race": "Osaka Marathon — 21/01/2027",
   "goal_time": "Sub-3h50",
-  "last_updated": "2026-04-15T18:52:23.881245",
-  "total_analyses": 3,
+  "last_updated": "2026-04-16T06:37:35.988650",
+  "total_analyses": 4,
   "analyses": [
+    {
+      "id": "2026-04-16_morning_run",
+      "date": "2026-04-16",
+      "date_display": "16/04/2026",
+      "source": "strava",
+      "activity_name": "Morning Run",
+      "distance_km": 6.76,
+      "duration": "46:14",
+      "avg_pace": "6:50/km",
+      "avg_heart_rate": 160.4,
+      "avg_cadence_spm": 174,
+      "temperature_c": 26,
+      "total_ascent_m": 14.0,
+      "score": null,
+      "analysis_html": "<b>📊 Resumo do Treino</b>\nFelipe completou 6,76 km em pace médio de 6:50/km — dentro da janela esperada para corrida fácil (E) com ajuste climático (26°C, Recife às 04h45). Para VDOT 39, a zona E vai de 5:58–6:40/km; o ajuste térmico de ~20–30s/km é legítimo, colocando o esforço real no território fácil. Fase de Retomada Suave, semana 1–2: execução adequada ao contexto.\n\n---\n\n<b>✅ Pontos Positivos</b>\n• <b>Controle de intensidade:</b> FC média de 160 bpm representa ~91% da FCmáx estimada (175) — alto em números absolutos, mas compreensível para 26°C + umidade de Recife. O esforço percebido no calor úmido eleva a FC ~10–15 bpm vs. condições neutras, o que aproxima a sessão do esforço fisiológico fácil-moderado real.\n• <b>Cadência positiva:</b> 174 spm é excelente para retomada — alinhado ao Pose Method, reduz impacto articular e protege numa fase de baixo volume. Manter.\n• <b>Consistência de volume:</b> 6,76 km bem executados contribuem para a base aeróbica da retomada, sem exagero para a fase atual (alvo de 40km/semana a ser construído progressivamente).\n\n---\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>FC elevada para zona E:</b> 160 bpm médio é alto mesmo com ajuste térmico. Nas voltas 2–7, a FC ficou estável entre 160–163 bpm com paces acima de 6:24/km — isso sugere que o sistema cardiovascular ainda não voltou ao baseline pós-pausa de 1 mês. Não é alarme, mas pede atenção.\n• <b>Deriva do pace nas voltas 4–6 (7:03–7:09/km):</b> Queda natural pelo calor, mas indica que o estresse térmico foi real. Hidratação e escolha de percurso com sombra merecem atenção nas próximas sessões.\n• <b>Pace máximo de 5:16/km registrado:</b> Provavelmente trecho de aceleração ou dado de GPS. Evite \"espiadas\" em zona I durante retomada — salve isso para quando o volume estiver consolidado.\n\n---\n\n<b>🏁 Impacto na Preparação</b>\nTreino cumpre o papel da fase: reativar o motor aeróbico sem estressar o sistema musculoesquelético em retomada. Para o objetivo Sub-3h50 em Osaka (VDOT alvo ≥42), a base dessas semanas é o alicerce — cada corrida fácil bem executada agora vale ouro em outubro/novembro. Nenhum dano à preparação; pelo contrário, disciplina de pace fácil no calor é exatamente o que o método 80/20 prescreve.\n\n---\n\n<b>📅 Próximo Treino Sugerido</b>\n<b>Tipo:</b> Corrida Fácil (E) + Drills de Técnica\n<b>Distância:</b> 7–8 km\n<b>Pace-alvo:</b> 6:50–7:10/km (com ajuste térmico se >24°C) — guie-se pela FC: mantenha abaixo de 155 bpm\n<b>Foco:</b> Drills Pose Method nos primeiros 10 min (queda frontal, puxada de calcanhar), depois corrida contínua em zona E controlada. Priorize horário com menor temperatura ou percurso sombreado para calibrar melhor a relação pace/FC.\n\n---\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: <b>7/10</b> — Execução correta para a fase, mas FC consistentemente alta indica que o corpo ainda está em readaptação; ajuste de condições (horário/percurso) vai acelerar a recalibração aeróbica.",
+      "generated_at": "2026-04-16T06:37:35.988635"
+    },
     {
       "id": "2026-03-01_morning_run",
       "date": "2026-03-01",
