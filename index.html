@@ -6,301 +6,589 @@
   <title>Coach VDOT — Felipe Hissa Coelho</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
     :root {
-      --bg: #0f1117; --surface: #1a1d27; --surface2: #232636;
-      --accent: #5b8dee; --green: #3dd68c; --warn: #f5a623;
-      --danger: #e05252; --text: #e8eaf0; --muted: #8b90a0;
-      --border: #2e3245; --radius: 12px;
+      --bg: #080b12;
+      --bg2: #0d1117;
+      --surface: #111827;
+      --surface2: #1a2235;
+      --surface3: #1e2a40;
+      --accent: #3b82f6;
+      --accent2: #60a5fa;
+      --orange: #f97316;
+      --orange2: #fb923c;
+      --green: #22c55e;
+      --green2: #4ade80;
+      --red: #ef4444;
+      --yellow: #eab308;
+      --text: #f1f5f9;
+      --text2: #94a3b8;
+      --text3: #64748b;
+      --border: #1e293b;
+      --border2: #253347;
+      --radius: 16px;
+      --radius-sm: 10px;
+      --shadow: 0 4px 24px rgba(0,0,0,0.4);
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
 
-    header { background: linear-gradient(135deg, #1a1d27, #0f1117); border-bottom: 1px solid var(--border); padding: 18px 28px; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
-    .logo { font-size: 2rem; }
-    .header-info h1 { font-size: 1.2rem; font-weight: 800; color: var(--accent); }
-    .header-info p { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
-    .header-badges { margin-left: auto; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
-    .badge { padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
-    .badge-vdot { background: #1a2a3a; color: var(--accent); border: 1px solid var(--accent); }
-    .badge-goal { background: #1a3a2a; color: var(--green); border: 1px solid var(--green); }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    .container { max-width: 1100px; margin: 0 auto; padding: 24px 20px; }
+    body {
+      font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.5;
+    }
 
-    /* STATS SUMMARY */
-    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-bottom: 28px; }
-    .stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; text-align: center; }
-    .stat-card .stat-val { font-size: 1.8rem; font-weight: 800; color: var(--accent); }
-    .stat-card .stat-val.green { color: var(--green); }
-    .stat-card .stat-val.orange { color: var(--warn); }
-    .stat-card .stat-label { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 4px; }
+    /* HEADER */
+    header {
+      background: linear-gradient(180deg, #0d1524 0%, #080b12 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 28px;
+      position: sticky; top: 0; z-index: 100;
+    }
+    .header-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+    .logo-wrap { display: flex; align-items: center; gap: 12px; }
+    .logo-icon {
+      width: 44px; height: 44px;
+      background: linear-gradient(135deg, var(--accent), var(--orange));
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+      box-shadow: 0 0 20px rgba(59,130,246,0.25);
+    }
+    .logo-text h1 { font-size: 1.1rem; font-weight: 800; letter-spacing: -0.3px; }
+    .logo-text p { font-size: 0.72rem; color: var(--text2); margin-top: 1px; }
+    .header-right { margin-left: auto; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+    .pill { padding: 5px 13px; border-radius: 20px; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.4px; text-transform: uppercase; display: flex; align-items: center; gap: 5px; }
+    .pill-blue   { background: rgba(59,130,246,0.12); color: var(--accent2); border: 1px solid rgba(59,130,246,0.25); }
+    .pill-green  { background: rgba(34,197,94,0.12);  color: var(--green2);  border: 1px solid rgba(34,197,94,0.25); }
+    .pill-orange { background: rgba(249,115,22,0.12); color: var(--orange2); border: 1px solid rgba(249,115,22,0.25); }
+
+    /* CONTAINER */
+    .container { max-width: 1200px; margin: 0 auto; padding: 28px 20px 60px; }
+
+    /* RACE COUNTDOWN */
+    .races-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+    @media(max-width:600px) { .races-row { grid-template-columns: 1fr; } }
+
+    .race-card {
+      border-radius: var(--radius); padding: 22px 24px;
+      position: relative; overflow: hidden; border: 1px solid transparent;
+    }
+    .race-card-montevideo { background: linear-gradient(135deg,#0c1a2e,#0d1e3a); border-color: rgba(59,130,246,0.3); }
+    .race-card-osaka      { background: linear-gradient(135deg,#1e0d10,#280f13); border-color: rgba(249,115,22,0.3); }
+    .race-card::before {
+      content:''; position:absolute; top:-40px; right:-40px;
+      width:120px; height:120px; border-radius:50%; opacity:0.06;
+    }
+    .race-card-montevideo::before { background: var(--accent); }
+    .race-card-osaka::before      { background: var(--orange); }
+
+    .race-label { font-size:0.62rem; font-weight:700; letter-spacing:1px; text-transform:uppercase; margin-bottom:5px; }
+    .race-card-montevideo .race-label { color: var(--accent2); }
+    .race-card-osaka .race-label      { color: var(--orange2); }
+    .race-name { font-size:1rem; font-weight:800; margin-bottom:3px; }
+    .race-date { font-size:0.72rem; color:var(--text2); margin-bottom:14px; }
+    .race-countdown { display:flex; align-items:baseline; gap:7px; margin-bottom:14px; }
+    .race-days { font-size:3rem; font-weight:900; line-height:1; }
+    .race-card-montevideo .race-days { color: var(--accent2); }
+    .race-card-osaka .race-days      { color: var(--orange2); }
+    .race-days-label { font-size:0.78rem; color:var(--text2); font-weight:500; }
+    .race-progress-label { font-size:0.62rem; color:var(--text3); margin-bottom:5px; display:flex; justify-content:space-between; }
+    .race-progress-bar  { height:4px; background:var(--border2); border-radius:2px; overflow:hidden; }
+    .race-progress-fill { height:100%; border-radius:2px; transition:width 0.8s ease; }
+    .race-card-montevideo .race-progress-fill { background: linear-gradient(90deg,var(--accent),var(--accent2)); }
+    .race-card-osaka .race-progress-fill      { background: linear-gradient(90deg,var(--orange),var(--orange2)); }
+    .race-goal { position:absolute; bottom:18px; right:20px; font-size:1.1rem; font-weight:900; opacity:0.85; }
+    .race-card-montevideo .race-goal { color: var(--accent2); }
+    .race-card-osaka .race-goal      { color: var(--orange2); }
+
+    /* VDOT CARD */
+    .vdot-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 22px 24px;
+      margin-bottom: 24px; display: flex; align-items: center;
+      gap: 28px; flex-wrap: wrap;
+    }
+    .vdot-left { flex:1; min-width:200px; }
+    .section-mini-title { font-size:0.62rem; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:var(--text3); margin-bottom:10px; }
+    .vdot-numbers { display:flex; align-items:baseline; gap:10px; margin-bottom:12px; }
+    .vdot-current { font-size:2.8rem; font-weight:900; color:var(--accent2); line-height:1; }
+    .vdot-arrow   { color:var(--text3); font-size:1.2rem; }
+    .vdot-target  { font-size:2.8rem; font-weight:900; color:var(--green2); line-height:1; opacity:0.4; }
+    .vdot-bar     { height:8px; background:var(--border2); border-radius:4px; overflow:hidden; }
+    .vdot-fill    { height:100%; border-radius:4px; background:linear-gradient(90deg,var(--accent),var(--green)); transition:width 0.8s ease; }
+    .vdot-ticks   { display:flex; justify-content:space-between; margin-top:5px; }
+    .vdot-tick    { font-size:0.58rem; color:var(--text3); }
+
+    .vdot-zones   { flex:2; min-width:280px; }
+    .zones-grid   { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; }
+    .zone-item    { background:var(--bg2); border:1px solid var(--border); border-radius:var(--radius-sm); padding:10px 12px; }
+    .zone-name    { font-size:0.58rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; color:var(--text3); margin-bottom:4px; }
+    .zone-pace    { font-size:0.85rem; font-weight:700; }
+    .zone-e { color:var(--green2); }
+    .zone-m { color:var(--accent2); }
+    .zone-t { color:var(--yellow); }
+    .zone-i { color:var(--orange2); }
+    .zone-desc    { font-size:0.58rem; color:var(--text3); margin-top:2px; }
+
+    /* STATS GRID */
+    .stats-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin-bottom:24px; }
+    .stat-card {
+      background:var(--surface); border:1px solid var(--border);
+      border-radius:var(--radius); padding:18px;
+      text-align:center; transition:border-color 0.2s,transform 0.15s;
+    }
+    .stat-card:hover { border-color:var(--border2); transform:translateY(-2px); }
+    .stat-icon  { font-size:1.1rem; margin-bottom:8px; opacity:0.65; }
+    .stat-val   { font-size:1.65rem; font-weight:800; line-height:1; margin-bottom:4px; }
+    .stat-val.blue   { color:var(--accent2); }
+    .stat-val.green  { color:var(--green2); }
+    .stat-val.orange { color:var(--orange2); }
+    .stat-val.yellow { color:var(--yellow); }
+    .stat-label { font-size:0.62rem; color:var(--text3); text-transform:uppercase; letter-spacing:0.5px; font-weight:600; }
+
+    /* FILTER BAR */
+    .filter-bar { display:flex; align-items:center; gap:10px; margin-bottom:20px; flex-wrap:wrap; }
+    .filter-label { font-size:0.68rem; color:var(--text3); font-weight:600; text-transform:uppercase; letter-spacing:0.5px; }
+    .filter-btn {
+      padding:5px 16px; border-radius:20px; font-size:0.7rem; font-weight:600;
+      border:1px solid var(--border2); background:transparent; color:var(--text2);
+      cursor:pointer; transition:all 0.2s; font-family:inherit;
+    }
+    .filter-btn:hover  { border-color:var(--accent); color:var(--accent2); }
+    .filter-btn.active { background:rgba(59,130,246,0.12); border-color:var(--accent); color:var(--accent2); }
 
     /* CHARTS */
-    .charts-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 28px; }
-    @media(max-width: 700px) { .charts-row { grid-template-columns: 1fr; } }
-    .chart-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; }
-    .chart-card h3 { font-size: 0.82rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 14px; }
-    .chart-wrap { position: relative; height: 180px; }
+    .charts-row { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:24px; }
+    @media(max-width:700px) { .charts-row { grid-template-columns:1fr; } }
+    .chart-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:20px 22px; }
+    .chart-title { font-size:0.68rem; font-weight:700; color:var(--text2); text-transform:uppercase; letter-spacing:0.5px; margin-bottom:16px; }
+    .chart-wrap  { position:relative; height:165px; }
 
-    /* ANALYSES LIST */
-    .section-title { font-size: 0.88rem; font-weight: 700; color: var(--text); margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
-    .analysis-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 12px; overflow: hidden; transition: border-color 0.2s; }
-    .analysis-card:hover { border-color: var(--accent); }
-    .analysis-header { padding: 16px 20px; cursor: pointer; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
-    .analysis-date { font-size: 0.78rem; color: var(--muted); min-width: 90px; }
-    .analysis-name { font-weight: 700; font-size: 0.92rem; flex: 1; }
-    .analysis-metrics { display: flex; gap: 16px; flex-wrap: wrap; }
-    .metric { font-size: 0.8rem; color: var(--muted); }
-    .metric span { color: var(--text); font-weight: 600; }
-    .score-badge { padding: 3px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 800; margin-left: auto; }
-    .score-high { background: #1a3a2a; color: var(--green); }
-    .score-mid  { background: #3a2a1a; color: var(--warn); }
-    .score-low  { background: #3a1a1a; color: var(--danger); }
-    .source-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; margin-right: 4px; }
-    .src-strava { background: #fc4c02; }
-    .src-garmin { background: #007cc3; }
+    /* ANALYSES */
+    .section-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:14px; }
+    .section-title  { font-size:0.68rem; font-weight:700; color:var(--text2); text-transform:uppercase; letter-spacing:0.5px; }
+    .section-count  { font-size:0.62rem; color:var(--text3); background:var(--surface2); border:1px solid var(--border); padding:2px 10px; border-radius:10px; }
 
-    .analysis-body { display: none; padding: 0 20px 20px; border-top: 1px solid var(--border); }
-    .analysis-body.open { display: block; }
-    .analysis-text { font-size: 0.85rem; line-height: 1.7; color: var(--text); }
-    .analysis-text b { color: var(--accent); }
-    .splits-table { width: 100%; border-collapse: collapse; font-size: 0.78rem; margin-top: 12px; }
-    .splits-table th { color: var(--muted); text-align: left; padding: 6px 10px; font-size: 0.7rem; text-transform: uppercase; }
-    .splits-table td { padding: 6px 10px; border-bottom: 1px solid var(--border); }
-    .expand-icon { margin-left: 8px; color: var(--muted); font-size: 0.75rem; transition: transform 0.2s; }
-    .analysis-card.open .expand-icon { transform: rotate(180deg); }
+    .analysis-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); margin-bottom:10px; overflow:hidden; transition:border-color 0.2s,box-shadow 0.2s; }
+    .analysis-card:hover { border-color:var(--border2); box-shadow:var(--shadow); }
+    .analysis-card.open  { border-color:var(--accent); }
 
-    /* EMPTY STATE */
-    .empty { text-align: center; padding: 60px 20px; color: var(--muted); }
-    .empty .emoji { font-size: 3rem; margin-bottom: 12px; }
+    .analysis-header { padding:15px 20px; cursor:pointer; display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+    .analysis-left   { display:flex; align-items:center; gap:12px; flex:1; min-width:180px; }
+    .source-icon     { width:36px; height:36px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:1rem; flex-shrink:0; }
+    .src-strava      { background:rgba(252,76,2,0.1); border:1px solid rgba(252,76,2,0.2); }
+    .src-garmin      { background:rgba(0,124,195,0.1); border:1px solid rgba(0,124,195,0.2); }
+    .analysis-name   { font-weight:700; font-size:0.88rem; margin-bottom:2px; }
+    .analysis-date   { font-size:0.68rem; color:var(--text3); }
+    .pre-cycle-tag   { font-size:0.58rem; color:var(--text3); background:var(--surface2); border:1px solid var(--border); padding:1px 7px; border-radius:6px; margin-left:6px; vertical-align:middle; }
 
-    /* LAST UPDATED */
-    .last-updated { text-align: center; font-size: 0.72rem; color: var(--muted); margin-top: 32px; padding-bottom: 32px; }
+    .analysis-metrics { display:flex; gap:18px; flex-wrap:wrap; }
+    .metric           { display:flex; flex-direction:column; align-items:center; gap:1px; }
+    .metric-val       { font-size:0.85rem; font-weight:700; }
+    .metric-label     { font-size:0.56rem; color:var(--text3); text-transform:uppercase; letter-spacing:0.4px; font-weight:600; }
 
-    /* LOADING */
-    .loading { text-align: center; padding: 80px 20px; color: var(--muted); }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    .spinner { width: 32px; height: 32px; border: 3px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 16px; }
+    .analysis-right { display:flex; align-items:center; gap:8px; margin-left:auto; }
+    .score-badge    { padding:3px 12px; border-radius:20px; font-size:0.7rem; font-weight:800; }
+    .score-high { background:rgba(34,197,94,0.12);  color:var(--green2);  border:1px solid rgba(34,197,94,0.2); }
+    .score-mid  { background:rgba(234,179,8,0.12);  color:var(--yellow);  border:1px solid rgba(234,179,8,0.2); }
+    .score-low  { background:rgba(239,68,68,0.12);  color:var(--red);     border:1px solid rgba(239,68,68,0.2); }
 
-    @media(max-width: 600px) {
-      header { padding: 14px 16px; }
-      .container { padding: 16px 12px; }
-      .analysis-metrics { gap: 10px; }
-      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .expand-btn {
+      width:28px; height:28px; border-radius:8px;
+      background:var(--surface2); border:1px solid var(--border);
+      display:flex; align-items:center; justify-content:center;
+      color:var(--text3); font-size:0.68rem; transition:all 0.2s; cursor:pointer;
+    }
+    .analysis-card.open .expand-btn { background:rgba(59,130,246,0.1); border-color:var(--accent); color:var(--accent2); transform:rotate(180deg); }
+
+    .analysis-body { display:none; padding:0 20px 20px; border-top:1px solid var(--border); }
+    .analysis-body.open { display:block; }
+    .analysis-text { font-size:0.82rem; line-height:1.75; color:var(--text2); padding-top:16px; }
+    .analysis-text strong, .analysis-text b { color:var(--text); font-weight:700; }
+
+    /* EMPTY / LOADING */
+    .empty { text-align:center; padding:60px 20px; color:var(--text3); }
+    .empty-icon { font-size:2.8rem; margin-bottom:12px; opacity:0.45; }
+    .empty p { font-size:0.82rem; }
+    .loading { text-align:center; padding:80px 20px; color:var(--text3); }
+    @keyframes spin { to { transform:rotate(360deg); } }
+    .spinner { width:34px; height:34px; border:3px solid var(--border); border-top-color:var(--accent); border-radius:50%; animation:spin 0.8s linear infinite; margin:0 auto 14px; }
+
+    /* FOOTER */
+    .footer { text-align:center; font-size:0.62rem; color:var(--text3); margin-top:40px; padding-bottom:20px; display:flex; align-items:center; justify-content:center; gap:8px; }
+    .footer-dot { width:3px; height:3px; background:var(--text3); border-radius:50%; }
+
+    /* RESPONSIVE */
+    @media(max-width:600px) {
+      header { padding:13px 16px; }
+      .container { padding:16px 12px 48px; }
+      .vdot-card { flex-direction:column; gap:16px; }
+      .zones-grid { grid-template-columns:repeat(2,1fr); }
+      .stats-grid { grid-template-columns:repeat(2,1fr); }
+      .analysis-metrics { gap:12px; }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <div class="logo">🏃</div>
-  <div class="header-info">
-    <h1>Coach VDOT</h1>
-    <p id="athlete-name">Carregando...</p>
-  </div>
-  <div class="header-badges">
-    <span class="badge badge-vdot" id="vdot-badge">VDOT —</span>
-    <span class="badge badge-goal" id="goal-badge">🎯 —</span>
+  <div class="header-inner">
+    <div class="logo-wrap">
+      <div class="logo-icon">🏃</div>
+      <div class="logo-text">
+        <h1>Coach VDOT</h1>
+        <p id="athlete-name">Carregando...</p>
+      </div>
+    </div>
+    <div class="header-right">
+      <span class="pill pill-blue"  id="vdot-pill">VDOT 39</span>
+      <span class="pill pill-orange" id="goal-pill">🎯 Sub-3h50</span>
+      <span class="pill pill-green">⚡ Base Aeróbica</span>
+    </div>
   </div>
 </header>
 
 <div class="container">
-  <div id="loading" class="loading">
-    <div class="spinner"></div>
-    <p>Carregando análises...</p>
-  </div>
-
+  <div id="loading" class="loading"><div class="spinner"></div><p>Carregando análises...</p></div>
   <div id="content" style="display:none">
 
-    <!-- RESUMO ESTATÍSTICO -->
-    <div class="stats-grid" id="stats-grid"></div>
-
-    <!-- GRÁFICOS -->
-    <div class="charts-row">
-      <div class="chart-card">
-        <h3>📏 Distância por Treino (km)</h3>
-        <div class="chart-wrap"><canvas id="chartDist"></canvas></div>
+    <!-- RACE COUNTDOWNS -->
+    <div class="races-row">
+      <div class="race-card race-card-montevideo">
+        <div class="race-label">🏅 Tune-up Race</div>
+        <div class="race-name">Meia Maratona de Montevideo</div>
+        <div class="race-date">09 de Agosto de 2026 · 21,1 km</div>
+        <div class="race-countdown">
+          <div class="race-days" id="days-montevideo">—</div>
+          <div class="race-days-label">dias restantes</div>
+        </div>
+        <div class="race-progress-label"><span>Início do ciclo</span><span id="pct-montevideo">0%</span></div>
+        <div class="race-progress-bar"><div class="race-progress-fill" id="bar-montevideo" style="width:0%"></div></div>
+        <div class="race-goal">Sub-1:50</div>
       </div>
-      <div class="chart-card">
-        <h3>❤️ FC Média por Treino</h3>
-        <div class="chart-wrap"><canvas id="chartHR"></canvas></div>
+
+      <div class="race-card race-card-osaka">
+        <div class="race-label">🏆 Objetivo Principal</div>
+        <div class="race-name">Osaka Marathon</div>
+        <div class="race-date">26 de Janeiro de 2027 · 42,2 km</div>
+        <div class="race-countdown">
+          <div class="race-days" id="days-osaka">—</div>
+          <div class="race-days-label">dias restantes</div>
+        </div>
+        <div class="race-progress-label"><span>Início do ciclo</span><span id="pct-osaka">0%</span></div>
+        <div class="race-progress-bar"><div class="race-progress-fill" id="bar-osaka" style="width:0%"></div></div>
+        <div class="race-goal">Sub-3:50</div>
       </div>
     </div>
 
-    <!-- LISTA DE ANÁLISES -->
-    <div class="section-title">📋 Histórico de Análises</div>
+    <!-- VDOT + ZONES -->
+    <div class="vdot-card">
+      <div class="vdot-left">
+        <div class="section-mini-title">Progresso VDOT</div>
+        <div class="vdot-numbers">
+          <div class="vdot-current" id="vdot-current">39</div>
+          <div class="vdot-arrow">→</div>
+          <div class="vdot-target">42</div>
+        </div>
+        <div class="vdot-bar"><div class="vdot-fill" id="vdot-fill" style="width:0%"></div></div>
+        <div class="vdot-ticks">
+          <span class="vdot-tick">35</span><span class="vdot-tick">37</span>
+          <span class="vdot-tick">39</span><span class="vdot-tick">41</span>
+          <span class="vdot-tick">43</span>
+        </div>
+      </div>
+      <div class="vdot-zones">
+        <div class="section-mini-title" style="margin-bottom:10px">Zonas de Treino (VDOT <span id="vdot-zone-label">39</span>)</div>
+        <div class="zones-grid">
+          <div class="zone-item"><div class="zone-name">Fácil (E)</div><div class="zone-pace zone-e">5:58–6:40</div><div class="zone-desc">80% do volume</div></div>
+          <div class="zone-item"><div class="zone-name">Maratona (M)</div><div class="zone-pace zone-m">~5:36</div><div class="zone-desc">Ritmo de prova</div></div>
+          <div class="zone-item"><div class="zone-name">Limiar (T)</div><div class="zone-pace zone-t">5:05–5:15</div><div class="zone-desc">~20 min contínuo</div></div>
+          <div class="zone-item"><div class="zone-name">Intervalado (I)</div><div class="zone-pace zone-i">4:45–4:55</div><div class="zone-desc">Ritmo 5K</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats-grid" id="stats-grid"></div>
+
+    <!-- CHARTS -->
+    <div class="charts-row">
+      <div class="chart-card"><div class="chart-title">📏 Distância por Treino (km)</div><div class="chart-wrap"><canvas id="chartDist"></canvas></div></div>
+      <div class="chart-card"><div class="chart-title">📈 Tendência de Pace (/km)</div><div class="chart-wrap"><canvas id="chartPace"></canvas></div></div>
+    </div>
+    <div class="charts-row">
+      <div class="chart-card"><div class="chart-title">❤️ FC Média por Treino (bpm)</div><div class="chart-wrap"><canvas id="chartHR"></canvas></div></div>
+      <div class="chart-card"><div class="chart-title">🦵 Cadência Média (spm)</div><div class="chart-wrap"><canvas id="chartCad"></canvas></div></div>
+    </div>
+
+    <!-- FILTER + LIST -->
+    <div class="filter-bar">
+      <span class="filter-label">Exibir:</span>
+      <button class="filter-btn active" onclick="setFilter('cycle')" id="btn-cycle">Ciclo Atual</button>
+      <button class="filter-btn" onclick="setFilter('all')" id="btn-all">Todos os Treinos</button>
+    </div>
+    <div class="section-header">
+      <div class="section-title">📋 Histórico de Análises</div>
+      <span class="section-count" id="analyses-count">0 treinos</span>
+    </div>
     <div id="analyses-list"></div>
 
-    <div class="last-updated" id="last-updated"></div>
+    <div class="footer">
+      <span id="last-updated-text">—</span>
+      <div class="footer-dot"></div>
+      <span>Coach VDOT · drfelipehissacoelho@gmail.com</span>
+    </div>
   </div>
 </div>
 
 <script>
-  const DATA_URL = './data/analyses.json';
+  const DATA_URL     = './data/analyses.json';
+  const CYCLE_START  = '2026-04-16';
+  const DATE_MONTEVIDEO = new Date('2026-08-09');
+  const DATE_OSAKA      = new Date('2027-01-26');
+  const DATE_CYCLE      = new Date('2026-04-16');
 
-  async function loadData() {
-    try {
-      const r = await fetch(DATA_URL + '?t=' + Date.now());
-      if (!r.ok) throw new Error('HTTP ' + r.status);
-      return await r.json();
-    } catch(e) {
-      return null;
-    }
+  let allAnalyses = [];
+  let charts = {};
+
+  /* ── Activity label ──────────────────────────────────── */
+  function getActivityLabel(a) {
+    const raw = (a.activity_name || '').toLowerCase().trim();
+    const generics = ['morning run','afternoon run','evening run','lunch run','night run','run','running','corrida'];
+    if (!generics.includes(raw)) return a.activity_name;
+
+    const d = a.distance_km || 0;
+    const p = paceToMinutes(a.avg_pace);
+
+    if (d >= 30)          return 'Longão de Maratona';
+    if (d >= 18)          return 'Corrida Longa';
+    if (d >= 14)          return 'Progressivo Longo';
+    if (d >= 10)          return 'Corrida Moderada';
+    if (d < 1)            return 'Aquecimento / Teste';
+    if (p && p < 5.5)     return 'Treino de Velocidade';
+    if (p && p < 6.0)     return 'Treino de Limiar';
+    if (raw.includes('lunch')) return 'Corrida Fácil (Almoço)';
+    return 'Corrida Fácil';
   }
 
+  /* ── Helpers ─────────────────────────────────────────── */
   function paceToMinutes(pace) {
     if (!pace || pace === 'N/D') return null;
     const m = pace.match(/(\d+):(\d+)/);
-    if (!m) return null;
-    return parseInt(m[1]) + parseInt(m[2]) / 60;
+    return m ? parseInt(m[1]) + parseInt(m[2]) / 60 : null;
   }
-
+  function fmtPace(min) {
+    if (!min) return '—';
+    const m = Math.floor(min), s = Math.round((min-m)*60);
+    return `${m}:${s.toString().padStart(2,'0')}`;
+  }
+  function daysBetween(a,b) { return Math.round((b-a)/(1000*60*60*24)); }
   function scoreBadge(score) {
     if (!score) return '';
-    const cls = score >= 8 ? 'score-high' : score >= 6 ? 'score-mid' : 'score-low';
+    const cls = score>=8?'score-high':score>=6?'score-mid':'score-low';
     return `<span class="score-badge ${cls}">${score}/10</span>`;
   }
 
-  function renderStats(data) {
-    const analyses = data.analyses || [];
-    const last30 = analyses.filter(a => {
-      if (!a.date) return false;
-      const d = new Date(a.date);
-      const diff = (Date.now() - d.getTime()) / (1000*60*60*24);
-      return diff <= 30;
-    });
+  /* ── Countdowns ──────────────────────────────────────── */
+  function renderCountdowns() {
+    const now = new Date();
+    const totalM = daysBetween(DATE_CYCLE, DATE_MONTEVIDEO);
+    const totalO = daysBetween(DATE_CYCLE, DATE_OSAKA);
+    const dM = Math.max(0, daysBetween(now, DATE_MONTEVIDEO));
+    const dO = Math.max(0, daysBetween(now, DATE_OSAKA));
+    const pM = Math.min(100, Math.round((1-dM/totalM)*100));
+    const pO = Math.min(100, Math.round((1-dO/totalO)*100));
 
-    const totalKm = last30.reduce((s, a) => s + (a.distance_km || 0), 0);
-    const avgPaces = last30.map(a => paceToMinutes(a.avg_pace)).filter(Boolean);
-    const avgHRs = last30.map(a => a.avg_heart_rate).filter(Boolean);
-    const scores = analyses.slice(0, 10).map(a => a.score).filter(Boolean);
+    document.getElementById('days-montevideo').textContent = dM;
+    document.getElementById('days-osaka').textContent      = dO;
+    document.getElementById('pct-montevideo').textContent  = pM+'%';
+    document.getElementById('pct-osaka').textContent       = pO+'%';
+    setTimeout(()=>{
+      document.getElementById('bar-montevideo').style.width = pM+'%';
+      document.getElementById('bar-osaka').style.width      = pO+'%';
+    }, 100);
+  }
 
-    const avgPaceMin = avgPaces.length ? avgPaces.reduce((a,b) => a+b) / avgPaces.length : null;
-    const avgHR = avgHRs.length ? Math.round(avgHRs.reduce((a,b) => a+b) / avgHRs.length) : null;
-    const avgScore = scores.length ? (scores.reduce((a,b) => a+b) / scores.length).toFixed(1) : null;
+  /* ── VDOT ────────────────────────────────────────────── */
+  function renderVdot(vdot) {
+    document.getElementById('vdot-current').textContent    = vdot;
+    document.getElementById('vdot-zone-label').textContent = vdot;
+    document.getElementById('vdot-pill').textContent       = 'VDOT '+vdot;
+    const pct = Math.min(100, Math.max(0, ((vdot-35)/(43-35))*100));
+    setTimeout(()=>{ document.getElementById('vdot-fill').style.width = pct+'%'; }, 100);
+  }
 
-    function fmtPace(min) {
-      if (!min) return '—';
-      const m = Math.floor(min);
-      const s = Math.round((min - m) * 60);
-      return `${m}:${s.toString().padStart(2,'0')}`;
-    }
+  /* ── Stats ───────────────────────────────────────────── */
+  function renderStats(analyses) {
+    const last30 = analyses.filter(a => a.date && (Date.now()-new Date(a.date))/(864e5) <= 30);
+    const totalKm   = last30.reduce((s,a)=>s+(a.distance_km||0),0);
+    const avgPaces  = last30.map(a=>paceToMinutes(a.avg_pace)).filter(Boolean);
+    const avgHRs    = last30.map(a=>a.avg_heart_rate).filter(Boolean);
+    const scores    = analyses.slice(0,10).map(a=>a.score).filter(Boolean);
+    const avgPaceM  = avgPaces.length ? avgPaces.reduce((a,b)=>a+b)/avgPaces.length : null;
+    const avgHR     = avgHRs.length   ? Math.round(avgHRs.reduce((a,b)=>a+b)/avgHRs.length) : null;
+    const avgScore  = scores.length   ? (scores.reduce((a,b)=>a+b)/scores.length).toFixed(1) : null;
+    const longestRun = analyses.reduce((mx,a)=>Math.max(mx,a.distance_km||0),0);
 
-    const grid = document.getElementById('stats-grid');
-    grid.innerHTML = [
-      { val: last30.length, label: 'Treinos (30 dias)', cls: '' },
-      { val: totalKm.toFixed(1) + ' km', label: 'Volume (30 dias)', cls: 'green' },
-      { val: fmtPace(avgPaceMin) + '/km', label: 'Pace Médio', cls: '' },
-      { val: avgHR ? avgHR + ' bpm' : '—', label: 'FC Média', cls: 'orange' },
-      { val: avgScore ? avgScore + '/10' : '—', label: 'Aderência Média', cls: 'green' },
-      { val: analyses.length, label: 'Total Análises', cls: '' },
-    ].map(s => `
+    document.getElementById('stats-grid').innerHTML = [
+      {icon:'🏃', val:last30.length,                    label:'Treinos (30d)',      cls:'blue'},
+      {icon:'📏', val:totalKm.toFixed(1)+' km',         label:'Volume (30d)',       cls:'green'},
+      {icon:'⚡', val:fmtPace(avgPaceM)+'/km',           label:'Pace Médio',         cls:''},
+      {icon:'❤️', val:avgHR?avgHR+' bpm':'—',           label:'FC Média',           cls:'orange'},
+      {icon:'🎯', val:avgScore?avgScore+'/10':'—',       label:'Aderência Média',    cls:'yellow'},
+      {icon:'🏅', val:longestRun.toFixed(1)+' km',       label:'Maior Corrida',      cls:'blue'},
+    ].map(s=>`
       <div class="stat-card">
+        <div class="stat-icon">${s.icon}</div>
         <div class="stat-val ${s.cls}">${s.val}</div>
         <div class="stat-label">${s.label}</div>
-      </div>
-    `).join('');
+      </div>`).join('');
   }
 
-  function renderCharts(data) {
-    const analyses = (data.analyses || []).slice(0, 15).reverse();
-    const labels = analyses.map(a => a.date_display || a.date || '');
-    const dists = analyses.map(a => a.distance_km || 0);
-    const hrs = analyses.map(a => a.avg_heart_rate || null);
+  /* ── Charts ──────────────────────────────────────────── */
+  const GRID_COLOR = '#1e293b', TICK_COLOR = '#64748b';
+  const baseOpts = {
+    responsive:true, maintainAspectRatio:false,
+    plugins:{legend:{display:false}},
+    scales:{
+      x:{ticks:{color:TICK_COLOR,font:{size:9},maxRotation:45},grid:{color:GRID_COLOR}},
+      y:{ticks:{color:TICK_COLOR,font:{size:9}},grid:{color:GRID_COLOR}}
+    }
+  };
 
-    const cfg = (label, vals, color) => ({
-      type: 'bar',
-      data: {
-        labels,
-        datasets: [{ label, data: vals, backgroundColor: color + '99', borderColor: color, borderWidth: 1, borderRadius: 4 }]
-      },
-      options: {
-        responsive: true, maintainAspectRatio: false,
-        plugins: { legend: { display: false } },
-        scales: {
-          x: { ticks: { color: '#8b90a0', font: { size: 10 }, maxRotation: 45 }, grid: { color: '#2e3245' } },
-          y: { ticks: { color: '#8b90a0', font: { size: 10 } }, grid: { color: '#2e3245' } }
-        }
-      }
+  function destroyCharts() { Object.values(charts).forEach(c=>c&&c.destroy()); charts={}; }
+
+  function renderCharts(analyses) {
+    destroyCharts();
+    const data   = analyses.slice(0,15).reverse();
+    const labels = data.map(a=>(a.date_display||a.date||'').slice(0,5));
+    const dists  = data.map(a=>a.distance_km||0);
+    const paces  = data.map(a=>{ const p=paceToMinutes(a.avg_pace); return p?+p.toFixed(2):null; });
+    const hrs    = data.map(a=>a.avg_heart_rate||null);
+    const cads   = data.map(a=>a.avg_cadence_spm||null);
+
+    const bar  = (id,vals,color)=> new Chart(document.getElementById(id),{
+      type:'bar',
+      data:{labels,datasets:[{data:vals,backgroundColor:color+'28',borderColor:color,borderWidth:1.5,borderRadius:5}]},
+      options:baseOpts
+    });
+    const line = (id,vals,color,rev)=> new Chart(document.getElementById(id),{
+      type:'line',
+      data:{labels,datasets:[{data:vals,borderColor:color,backgroundColor:color+'15',borderWidth:2,pointRadius:3,pointBackgroundColor:color,fill:true,tension:0.35}]},
+      options:{...baseOpts,scales:{...baseOpts.scales,y:{...baseOpts.scales.y,reverse:!!rev}}}
     });
 
-    new Chart(document.getElementById('chartDist'), cfg('km', dists, '#5b8dee'));
-    new Chart(document.getElementById('chartHR'), cfg('bpm', hrs, '#e05252'));
+    charts.dist = bar ('chartDist', dists, '#3b82f6');
+    charts.pace = line('chartPace', paces, '#f97316', true);
+    charts.hr   = line('chartHR',   hrs,   '#ef4444', false);
+    charts.cad  = line('chartCad',  cads,  '#22c55e', false);
   }
 
-  function renderAnalyses(data) {
+  /* ── Analyses list ───────────────────────────────────── */
+  function renderAnalyses(analyses) {
+    document.getElementById('analyses-count').textContent = analyses.length+' treino'+(analyses.length!==1?'s':'');
     const list = document.getElementById('analyses-list');
-    const analyses = data.analyses || [];
 
     if (!analyses.length) {
-      list.innerHTML = `<div class="empty"><div class="emoji">🏃</div><p>Nenhuma análise ainda.<br>Complete um treino para receber o primeiro feedback!</p></div>`;
+      list.innerHTML = `<div class="empty"><div class="empty-icon">🏃</div><p>Nenhuma análise neste período.</p></div>`;
       return;
     }
 
-    list.innerHTML = analyses.map((a, i) => {
-      const srcDot = `<span class="source-dot src-${a.source || 'garmin'}"></span>`;
-      const distStr = a.distance_km ? `<span>${a.distance_km} km</span>` : '';
-      const durStr  = a.duration    ? `<span>${a.duration}</span>` : '';
-      const paceStr = a.avg_pace    ? `<span>⚡ ${a.avg_pace}</span>` : '';
-      const hrStr   = a.avg_heart_rate ? `<span>❤️ ${a.avg_heart_rate} bpm</span>` : '';
-      const tempStr = a.temperature_c ? `<span>🌡 ${a.temperature_c}°C</span>` : '';
-
-      // Converte HTML do Telegram para visualização web
-      const analysisHtml = (a.analysis_html || '')
-        .replace(/<b>/g, '<strong>').replace(/<\/b>/g, '</strong>')
-        .replace(/<i>/g, '<em>').replace(/<\/i>/g, '</em>');
+    list.innerHTML = analyses.map((a,i)=>{
+      const name      = getActivityLabel(a);
+      const srcClass  = a.source==='strava'?'src-strava':'src-garmin';
+      const srcIcon   = a.source==='strava'?'🟠':'🔵';
+      const isCycle   = a.date >= CYCLE_START;
+      const cycleTag  = isCycle?'':'<span class="pre-cycle-tag">pré-ciclo</span>';
+      const html      = (a.analysis_html||'')
+        .replace(/<b>/g,'<strong>').replace(/<\/b>/g,'</strong>')
+        .replace(/<i>/g,'<em>').replace(/<\/i>/g,'</em>');
 
       return `
         <div class="analysis-card" id="card-${i}">
           <div class="analysis-header" onclick="toggleCard(${i})">
-            <div class="analysis-date">${srcDot}${a.date_display || a.date || ''}</div>
-            <div class="analysis-name">${a.activity_name || 'Treino'}</div>
-            <div class="analysis-metrics">
-              <div class="metric">${distStr}</div>
-              <div class="metric">${durStr}</div>
-              <div class="metric">${paceStr}</div>
-              <div class="metric">${hrStr}</div>
-              <div class="metric">${tempStr}</div>
+            <div class="analysis-left">
+              <div class="source-icon ${srcClass}">${srcIcon}</div>
+              <div>
+                <div class="analysis-name">${name}${cycleTag}</div>
+                <div class="analysis-date">${a.date_display||a.date||'—'}</div>
+              </div>
             </div>
-            ${scoreBadge(a.score)}
-            <span class="expand-icon">▼</span>
+            <div class="analysis-metrics">
+              ${a.distance_km      ?`<div class="metric"><span class="metric-val">${a.distance_km} km</span><span class="metric-label">Dist</span></div>`:''}
+              ${a.duration         ?`<div class="metric"><span class="metric-val">${a.duration}</span><span class="metric-label">Tempo</span></div>`:''}
+              ${a.avg_pace         ?`<div class="metric"><span class="metric-val">${a.avg_pace}</span><span class="metric-label">Pace</span></div>`:''}
+              ${a.avg_heart_rate   ?`<div class="metric"><span class="metric-val">${Math.round(a.avg_heart_rate)}</span><span class="metric-label">FC</span></div>`:''}
+              ${a.avg_cadence_spm  ?`<div class="metric"><span class="metric-val">${a.avg_cadence_spm}</span><span class="metric-label">Cad</span></div>`:''}
+              ${a.temperature_c    ?`<div class="metric"><span class="metric-val">${a.temperature_c}°C</span><span class="metric-label">Temp</span></div>`:''}
+            </div>
+            <div class="analysis-right">
+              ${scoreBadge(a.score)}
+              <div class="expand-btn">▼</div>
+            </div>
           </div>
           <div class="analysis-body" id="body-${i}">
-            <div class="analysis-text">${analysisHtml || '<em>Análise não disponível.</em>'}</div>
+            <div class="analysis-text">${html||'<em>Análise não disponível.</em>'}</div>
           </div>
         </div>`;
     }).join('');
   }
 
-  function toggleCard(i) {
-    const card = document.getElementById('card-' + i);
-    const body = document.getElementById('body-' + i);
-    card.classList.toggle('open');
-    body.classList.toggle('open');
+  /* ── Filter ──────────────────────────────────────────── */
+  function setFilter(f) {
+    document.getElementById('btn-cycle').classList.toggle('active', f==='cycle');
+    document.getElementById('btn-all').classList.toggle('active',   f==='all');
+    const filtered = f==='cycle' ? allAnalyses.filter(a=>a.date>=CYCLE_START) : allAnalyses;
+    renderStats(filtered);
+    renderCharts(filtered);
+    renderAnalyses(filtered);
   }
 
-  async function init() {
-    const data = await loadData();
-    document.getElementById('loading').style.display = 'none';
+  /* ── Toggle ──────────────────────────────────────────── */
+  function toggleCard(i) {
+    document.getElementById('card-'+i).classList.toggle('open');
+    document.getElementById('body-'+i).classList.toggle('open');
+  }
 
-    if (!data) {
-      document.getElementById('content').innerHTML = '<div class="empty"><div class="emoji">⚠️</div><p>Não foi possível carregar os dados.<br>Verifique se o arquivo data/analyses.json existe.</p></div>';
+  /* ── Init ────────────────────────────────────────────── */
+  async function init() {
+    let data;
+    try {
+      const r = await fetch(DATA_URL+'?t='+Date.now());
+      if (!r.ok) throw new Error();
+      data = await r.json();
+    } catch(e) {
+      document.getElementById('loading').style.display = 'none';
+      document.getElementById('content').innerHTML = `<div class="empty"><div class="empty-icon">⚠️</div><p>Não foi possível carregar os dados.</p></div>`;
       document.getElementById('content').style.display = 'block';
       return;
     }
 
-    document.getElementById('athlete-name').textContent = data.athlete || 'Felipe';
-    document.getElementById('vdot-badge').textContent = `VDOT ${data.vdot || 39}`;
-    document.getElementById('goal-badge').textContent = `🎯 ${data.goal_time || 'Sub-3h50'}`;
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('athlete-name').textContent = data.athlete||'Felipe Hissa Coelho';
+    document.getElementById('goal-pill').textContent    = '🎯 '+(data.goal_time||'Sub-3h50');
+
+    allAnalyses = data.analyses || [];
+
+    renderCountdowns();
+    renderVdot(data.vdot||39);
+
+    const cycleAnalyses = allAnalyses.filter(a=>a.date>=CYCLE_START);
+    renderStats(cycleAnalyses);
+    renderCharts(cycleAnalyses);
+    renderAnalyses(cycleAnalyses);
 
     if (data.last_updated) {
       const d = new Date(data.last_updated);
-      document.getElementById('last-updated').textContent =
-        `Última atualização: ${d.toLocaleDateString('pt-BR')} às ${d.toLocaleTimeString('pt-BR', {hour:'2-digit', minute:'2-digit'})}`;
+      document.getElementById('last-updated-text').textContent =
+        `Atualizado em ${d.toLocaleDateString('pt-BR')} às ${d.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}`;
     }
 
-    renderStats(data);
-    renderCharts(data);
-    renderAnalyses(data);
     document.getElementById('content').style.display = 'block';
   }
 
