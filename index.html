@@ -177,6 +177,9 @@
     .analysis-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); margin-bottom:10px; overflow:hidden; transition:border-color 0.2s,box-shadow 0.2s; }
     .analysis-card:hover { border-color:var(--border2); box-shadow:var(--shadow); }
     .analysis-card.open  { border-color:var(--accent); }
+    .analysis-card.swim-card { border-left:3px solid #06b6d4; }
+    .analysis-card.swim-card:hover { border-color:#0891b2; }
+    .analysis-card.swim-card.open  { border-color:#06b6d4; }
 
     .analysis-header { padding:15px 20px; cursor:pointer; display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
     .analysis-left   { display:flex; align-items:center; gap:12px; flex:1; min-width:180px; }
@@ -358,7 +361,19 @@
 
   /* ── Activity label ──────────────────────────────────── */
   function getActivityLabel(a) {
-    const raw = (a.activity_name || '').toLowerCase().trim();
+    const raw  = (a.activity_name || '').toLowerCase().trim();
+    const sport = (a.sport || '').toLowerCase();
+
+    // Natação (cross-training)
+    if (sport === 'swim' || raw.includes('swim') || raw.includes('natação') || raw.includes('pool')) {
+      const distM = Math.round((a.distance_km || 0) * 1000);
+      if (distM >= 3000)  return '🏊 Nado Longo (3km+)';
+      if (distM >= 2000)  return '🏊 Nado Moderado';
+      if (distM >= 1000)  return '🏊 Nado Aeróbico';
+      if (distM > 0)      return '🏊 Natação';
+      return '🏊 Natação (Cross-Training)';
+    }
+
     const generics = ['morning run','afternoon run','evening run','lunch run','night run','run','running','corrida'];
     if (!generics.includes(raw)) return a.activity_name;
 
@@ -468,23 +483,32 @@
     const data   = analyses.slice(0,15).reverse();
     const labels = data.map(a=>(a.date_display||a.date||'').slice(0,5));
     const dists  = data.map(a=>a.distance_km||0);
-    const paces  = data.map(a=>{ const p=paceToMinutes(a.avg_pace); return p?+p.toFixed(2):null; });
+    // Pace e cadência: excluir natação (ritmo /100m não é comparável ao /km de corrida)
+    const isRun  = a => (a.sport||'run').toLowerCase() !== 'swim';
+    const paces  = data.map(a=>{ if(!isRun(a)) return null; const p=paceToMinutes(a.avg_pace); return p?+p.toFixed(2):null; });
     const hrs    = data.map(a=>a.avg_heart_rate||null);
-    const cads   = data.map(a=>a.avg_cadence_spm||null);
+    const cads   = data.map(a=>{ if(!isRun(a)) return null; return a.avg_cadence_spm||null; });
+
+    const paceTooltip = {
+      plugins:{
+        legend:{display:false},
+        tooltip:{callbacks:{label:ctx=>{ const v=ctx.parsed.y; if(!v) return ''; const m=Math.floor(v),s=Math.round((v-m)*60); return m+':'+s.toString().padStart(2,'0')+'/km'; }}}
+      }
+    };
 
     const bar  = (id,vals,color)=> new Chart(document.getElementById(id),{
       type:'bar',
       data:{labels,datasets:[{data:vals,backgroundColor:color+'28',borderColor:color,borderWidth:1.5,borderRadius:5}]},
       options:baseOpts
     });
-    const line = (id,vals,color,rev)=> new Chart(document.getElementById(id),{
+    const line = (id,vals,color,rev,extraOpts)=> new Chart(document.getElementById(id),{
       type:'line',
       data:{labels,datasets:[{data:vals,borderColor:color,backgroundColor:color+'15',borderWidth:2,pointRadius:3,pointBackgroundColor:color,fill:true,tension:0.35}]},
-      options:{...baseOpts,scales:{...baseOpts.scales,y:{...baseOpts.scales.y,reverse:!!rev}}}
+      options:{...baseOpts,...(extraOpts||{}),scales:{...baseOpts.scales,y:{...baseOpts.scales.y,reverse:!!rev}}}
     });
 
     charts.dist = bar ('chartDist', dists, '#3b82f6');
-    charts.pace = line('chartPace', paces, '#f97316', true);
+    charts.pace = line('chartPace', paces, '#f97316', true, paceTooltip);
     charts.hr   = line('chartHR',   hrs,   '#ef4444', false);
     charts.cad  = line('chartCad',  cads,  '#22c55e', false);
   }
@@ -505,12 +529,23 @@
       const srcIcon   = a.source==='strava'?'🟠':'🔵';
       const isCycle   = a.date >= CYCLE_START;
       const cycleTag  = isCycle?'':'<span class="pre-cycle-tag">pré-ciclo</span>';
+      const isSwim    = (a.sport||'').toLowerCase()==='swim';
       const html      = (a.analysis_html||'')
         .replace(/<b>/g,'<strong>').replace(/<\/b>/g,'</strong>')
         .replace(/<i>/g,'<em>').replace(/<\/i>/g,'</em>');
 
+      // Distância: natação mostra em metros se < 2km
+      const distLabel = isSwim && a.distance_km && a.distance_km < 2
+        ? `${Math.round(a.distance_km*1000)}m`
+        : (a.distance_km ? `${a.distance_km} km` : null);
+
+      // Pace label: /100m para natação, /km para corrida
+      const paceLabel = isSwim ? 'Ritmo' : 'Pace';
+      // Cadência label: braçadas para natação
+      const cadLabel  = isSwim ? 'Braç' : 'Cad';
+
       return `
-        <div class="analysis-card" id="card-${i}">
+        <div class="analysis-card${isSwim?' swim-card':''}" id="card-${i}">
           <div class="analysis-header" onclick="toggleCard(${i})">
             <div class="analysis-left">
               <div class="source-icon ${srcClass}">${srcIcon}</div>
@@ -520,12 +555,12 @@
               </div>
             </div>
             <div class="analysis-metrics">
-              ${a.distance_km      ?`<div class="metric"><span class="metric-val">${a.distance_km} km</span><span class="metric-label">Dist</span></div>`:''}
-              ${a.duration         ?`<div class="metric"><span class="metric-val">${a.duration}</span><span class="metric-label">Tempo</span></div>`:''}
-              ${a.avg_pace         ?`<div class="metric"><span class="metric-val">${a.avg_pace}</span><span class="metric-label">Pace</span></div>`:''}
-              ${a.avg_heart_rate   ?`<div class="metric"><span class="metric-val">${Math.round(a.avg_heart_rate)}</span><span class="metric-label">FC</span></div>`:''}
-              ${a.avg_cadence_spm  ?`<div class="metric"><span class="metric-val">${a.avg_cadence_spm}</span><span class="metric-label">Cad</span></div>`:''}
-              ${a.temperature_c    ?`<div class="metric"><span class="metric-val">${a.temperature_c}°C</span><span class="metric-label">Temp</span></div>`:''}
+              ${distLabel            ?`<div class="metric"><span class="metric-val">${distLabel}</span><span class="metric-label">Dist</span></div>`:''}
+              ${a.duration           ?`<div class="metric"><span class="metric-val">${a.duration}</span><span class="metric-label">Tempo</span></div>`:''}
+              ${a.avg_pace           ?`<div class="metric"><span class="metric-val">${a.avg_pace}</span><span class="metric-label">${paceLabel}</span></div>`:''}
+              ${a.avg_heart_rate     ?`<div class="metric"><span class="metric-val">${Math.round(a.avg_heart_rate)}</span><span class="metric-label">FC</span></div>`:''}
+              ${a.avg_cadence_spm    ?`<div class="metric"><span class="metric-val">${a.avg_cadence_spm}</span><span class="metric-label">${cadLabel}</span></div>`:''}
+              ${a.temperature_c      ?`<div class="metric"><span class="metric-val">${a.temperature_c}°C</span><span class="metric-label">Temp</span></div>`:''}
             </div>
             <div class="analysis-right">
               ${scoreBadge(a.score)}
