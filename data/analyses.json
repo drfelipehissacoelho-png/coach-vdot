@@ -6,9 +6,26 @@
   "tune_up_race": "Meia Maratona de Montevideo — 09/08/2026",
   "tune_up_goal": "Sub-1h50",
   "cycle_start": "2026-04-16",
-  "last_updated": "2026-04-16T06:37:35.988650",
-  "total_analyses": 4,
+  "last_updated": "2026-04-17T11:16:42.662968",
+  "total_analyses": 5,
   "analyses": [
+    {
+      "id": "2026-04-17_longo",
+      "date": "2026-04-17",
+      "date_display": "17/04/2026",
+      "source": "strava",
+      "activity_name": "Longo",
+      "distance_km": 9.0,
+      "duration": "01:01:04",
+      "avg_pace": "6:47/km",
+      "avg_heart_rate": 156.2,
+      "avg_cadence_spm": 172,
+      "temperature_c": 26,
+      "total_ascent_m": 18.0,
+      "score": null,
+      "analysis_html": "<b>📊 Resumo do Treino</b>\nFelipe, segundo dia do ciclo oficial (16/04). Rodagem longa de 9km em Recife às 4h48 — 26°C, úmido, condições desafiadoras. Pace médio 6:47/km, ligeiramente acima da zona E do VDOT 39 (5:58–6:40), porém o calor justifica o ajuste. FC média de 156 bpm = 89% da FCmáx estimada, o que é o principal sinal a ser monitorado.\n\n---\n\n<b>✅ Pontos Positivos</b>\n\n• <b>Saída controlada:</b> Voltas 1–4 entre 6:33–6:43/km — dentro ou próximo do limite superior da zona E. Boa disciplina no início, especialmente no calor.\n• <b>Cadência sólida:</b> 172 spm é excelente para VDOT 39. Dentro do padrão Pose/Daniels (170+ spm), sinal de boa mecânica de passada mesmo sob fadiga térmica.\n• <b>Execução do longão:</b> Completar 9km às 4h48 em Recife no verão já é em si um indicador de comprometimento e adaptabilidade. Volume adequado para semana 1–2 de base.\n\n---\n\n<b>⚠️ Sinais de Alerta</b>\n\n• <b>FC média alta (156 bpm = 89% FCmáx):</b> Para uma zona E, o ideal seria 70–80% FCmáx (~122–140 bpm). Mesmo com desconto de calor (~5–8 bpm), você operou acima do alvo aeróbico. O treino ficou na zona cinza — não foi fácil nem limiar. Isso contraria o princípio 80/20.\n• <b>Drift cardíaco acentuado:</b> De 137 bpm (volta 1) para 163 bpm (voltas 7–8) = +26 bpm em 8km. É drift térmico + fadiga. Ideal seria manter a diferença abaixo de 15 bpm em zona E.\n• <b>Desaceleração nas voltas finais:</b> Volta 9 chegou a 7:18/km com FC caindo para 160 bpm — sinal de fadiga neuromuscular ou desidratação. Fique atento à hidratação pré-treino.\n\n---\n\n<b>🏁 Impacto na Preparação</b>\n\nTreino cumprido e com valor aeróbico real — o estímulo existiu. Porém, operar sistematicamente nessa intensidade (zona cinza com calor) pode acumular fadiga desnecessária na fase de base, comprometendo a qualidade dos treinos de qualidade futuros. Para Montevideo (sub-1h50) e Osaka (sub-3h50), a base sólida em zona E verdadeira é o alicerce. Prioridade agora: construir volume com FC controlada, não velocidade.\n\n---\n\n<b>📅 Próximo Treino Sugerido</b>\n\n<b>Tipo:</b> Rodagem fácil regenerativa\n<b>Distância:</b> 6–7 km\n<b>Pace-alvo:</b> 6:40–7:00/km (com calor, aceite até 7:10/km)\n<b>FC-alvo:</b> Máximo 145 bpm — se passar, reduza o pace sem hesitar\n<b>Foco:</b> Recuperação ativa + reforçar o hábito de respeitar a zona E no calor de Recife. Considere treinar com hidratação a cada 20 min.\n\n---\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: <b>6/10</b> — Volume e comprometimento corretos para semana 2 de base, mas a FC elevada indica intensidade acima do ideal para a fase 80/20; ajuste o pace pelo coração, não pelo relógio.",
+      "generated_at": "2026-04-17T11:16:42.662955"
+    },
     {
       "id": "2026-04-16_morning_run",
       "date": "2026-04-16",
