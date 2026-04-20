@@ -177,9 +177,12 @@
     .analysis-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); margin-bottom:10px; overflow:hidden; transition:border-color 0.2s,box-shadow 0.2s; }
     .analysis-card:hover { border-color:var(--border2); box-shadow:var(--shadow); }
     .analysis-card.open  { border-color:var(--accent); }
-    .analysis-card.swim-card { border-left:3px solid #06b6d4; }
+    .analysis-card.swim-card      { border-left:3px solid #06b6d4; }
     .analysis-card.swim-card:hover { border-color:#0891b2; }
     .analysis-card.swim-card.open  { border-color:#06b6d4; }
+    .analysis-card.treadmill-card      { border-left:3px solid #a855f7; }
+    .analysis-card.treadmill-card:hover { border-color:#9333ea; }
+    .analysis-card.treadmill-card.open  { border-color:#a855f7; }
 
     .analysis-header { padding:15px 20px; cursor:pointer; display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
     .analysis-left   { display:flex; align-items:center; gap:12px; flex:1; min-width:180px; }
@@ -374,6 +377,20 @@
       return '🏊 Natação (Cross-Training)';
     }
 
+    // Esteira (treadmill)
+    const isTreadmill = a.is_treadmill === true
+      || raw.includes('treadmill') || raw.includes('esteira')
+      || (a.sub_sport||'').toLowerCase().includes('treadmill');
+    if (isTreadmill) {
+      const d = a.distance_km || 0;
+      const p = paceToMinutes(a.avg_pace);
+      if (d >= 18)         return '🏃 Esteira Longa';
+      if (d >= 10)         return '🏃 Esteira Moderada';
+      if (p && p < 5.5)   return '🏃 Esteira — Velocidade';
+      if (p && p < 6.0)   return '🏃 Esteira — Limiar';
+      return '🏃 Esteira Fácil';
+    }
+
     const generics = ['morning run','afternoon run','evening run','lunch run','night run','run','running','corrida'];
     if (!generics.includes(raw)) return a.activity_name;
 
@@ -529,7 +546,9 @@
       const srcIcon   = a.source==='strava'?'🟠':'🔵';
       const isCycle   = a.date >= CYCLE_START;
       const cycleTag  = isCycle?'':'<span class="pre-cycle-tag">pré-ciclo</span>';
-      const isSwim    = (a.sport||'').toLowerCase()==='swim';
+      const isSwim      = (a.sport||'').toLowerCase()==='swim';
+      const isTreadmill = a.is_treadmill === true || (a.sub_sport||'').toLowerCase().includes('treadmill');
+      const cardClass   = isSwim ? ' swim-card' : isTreadmill ? ' treadmill-card' : '';
       const html      = (a.analysis_html||'')
         .replace(/<b>/g,'<strong>').replace(/<\/b>/g,'</strong>')
         .replace(/<i>/g,'<em>').replace(/<\/i>/g,'</em>');
@@ -545,7 +564,7 @@
       const cadLabel  = isSwim ? 'Braç' : 'Cad';
 
       return `
-        <div class="analysis-card${isSwim?' swim-card':''}" id="card-${i}">
+        <div class="analysis-card${cardClass}" id="card-${i}">
           <div class="analysis-header" onclick="toggleCard(${i})">
             <div class="analysis-left">
               <div class="source-icon ${srcClass}">${srcIcon}</div>
