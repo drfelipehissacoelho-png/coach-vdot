@@ -523,8 +523,8 @@
 
     const bandeira = last28.map(a=>a.metrics?.bandeira_clinica).find(v=>v!=null)??null;
     const bClass   = bandeira?'vermelho':'verde';
-    const bMap     = {'red_s':'RED-S — Revisar com médico','overtraining':'Overtraining — Reduza carga'};
-    const bText    = bandeira?(bMap[bandeira]||bandeira):'✓ Nenhuma';
+    const bMap     = {'red_s':'RED-S — Revisar com médico','overtraining':'Overtraining — Reduza carga','fc_media_96pct_fcmax_em_ritmo_facil':'FC média em 96% da FCmáx em treino fácil'};
+    const bText    = bandeira?(bMap[bandeira]||bandeira.replace(/_/g,' ')):'✓ Nenhuma';
 
     document.getElementById('semaforo-row').innerHTML = `
       <div class="semaforo-card ${dClass}">
