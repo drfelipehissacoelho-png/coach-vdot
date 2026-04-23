@@ -6,8 +6,8 @@
   "tune_up_race": "Meia Maratona de Montevideo — 09/08/2026",
   "tune_up_goal": "Sub-1h50",
   "cycle_start": "2026-04-16",
-  "last_updated": "2026-04-23T06:00:34.631435",
-  "total_analyses": 8,
+  "last_updated": "2026-04-23T13:27:24.530371",
+  "total_analyses": 11,
   "analyses": [
     {
       "id": "2026-04-23_morning_run",
@@ -21,12 +21,110 @@
       "duration": "50:09",
       "avg_pace": "6:36/km",
       "avg_heart_rate": 155.0,
+      "max_heart_rate": 166.0,
       "avg_cadence_spm": 173,
       "temperature_c": 26,
+      "humidity_pct": 93,
+      "dew_point_c": 23.1,
+      "heat_index_c": 24.3,
+      "weather_source": "cache",
       "total_ascent_m": 9.0,
-      "score": null,
-      "analysis_html": "<b>📊 Resumo do Treino</b>\nFelipe, treino de rodagem fácil de 7,58 km a 6:36/km médio, dentro da Semana 2 da Fase Base Aeróbica do ciclo Montevideo. Com VDOT 39, a zona E vai de 5:58 a 6:40/km — o pace está tecnicamente dentro, mas a FC média de 155 bpm (89% da FCmáx) sinaliza que o esforço fisiológico foi mais alto do que o pace sugere. Calor de 26°C às 4h40 em Recife explica boa parte disso.\n\n<b>✅ Pontos Positivos</b>\n• <b>Pace dentro da zona E:</b> 6:36/km médio está no teto da zona fácil (5:58–6:40). No calor úmido de Recife, isso é disciplina — você não deixou o ego acelerar.\n• <b>Consistência nos splits:</b> Voltas 1 a 7 variaram apenas 10 segundos entre si (6:31–6:41). Ritmo de atleta experiente, sem oscilações bruscas.\n• <b>Cadência adequada:</b> 173 spm está próximo do alvo Pose/Daniels (≥170). Base técnica preservada desde a retomada.\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>FC progressivamente alta para um treino fácil:</b> Saiu de 138 bpm (Volta 1) e chegou a 163 bpm (Volta 7) — drift cardíaco de 25 bpm. Isso indica desidratação progressiva + estresse térmico, mesmo com pace constante. 163 bpm = 93% FCmáx: território de limiar, não de zona E.\n• <b>Ajuste necessário de referência:</b> No calor de Recife (26°C+umidade), adicione ~20–30 seg/km ao pace E ou reduza 5–8 bpm na FC-alvo. Hoje o pace \"correto\" pelo calor seria 6:50–7:10/km para manter zona E fisiológica real.\n\n<b>🏁 Impacto na Preparação</b>\nTreino cumpre a função de volume aeróbico base, mas o estresse cardiovascular real foi de zona M/T, não zona E. Para a meta Sub-1h50 em Montevideo (VDOT alvo 42), a Fase Base precisa construir aeróbico <b>sem acumular fadiga desnecessária</b>. Dias como hoje — se repetidos sem ajuste — podem comprometer a recuperação e atrasar a evolução do VDOT.\n\n<b>📅 Próximo Treino Sugerido</b>\n<b>Rodagem fácil — 8 km</b> | Pace-alvo: <b>6:50–7:05/km</b> (ajustado para calor) | FC-alvo: manter <b>≤150 bpm</b> durante todo o percurso — se a FC subir, reduza o pace sem hesitar. Foco: reconstruir o senso de \"fácil de verdade\" fisiológico. Hidratação prévia obrigatória. Horário: manter antes das 6h.\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: <b>7/10</b> — Disciplina de pace e consistência de splits são ótimas, mas a FC elevada indica que o esforço real ultrapassou a zona E; ajuste térmico precisa entrar na equação a partir de agora.",
-      "generated_at": "2026-04-23T06:00:34.631420"
+      "total_descent_m": 5.8,
+      "training_stress_score": null,
+      "aerobic_training_effect": null,
+      "anaerobic_training_effect": null,
+      "laps": [
+        {
+          "lap_number": 1,
+          "distance_km": 1.0,
+          "duration": "06:31",
+          "avg_pace": "6:30/km",
+          "avg_heart_rate": 138,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 2,
+          "distance_km": 1.0,
+          "duration": "06:35",
+          "avg_pace": "6:35/km",
+          "avg_heart_rate": 148,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 3,
+          "distance_km": 1.0,
+          "duration": "06:36",
+          "avg_pace": "6:35/km",
+          "avg_heart_rate": 151,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 4,
+          "distance_km": 1.0,
+          "duration": "06:37",
+          "avg_pace": "6:36/km",
+          "avg_heart_rate": 156,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 5,
+          "distance_km": 1.0,
+          "duration": "06:36",
+          "avg_pace": "6:36/km",
+          "avg_heart_rate": 160,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 6,
+          "distance_km": 1.0,
+          "duration": "06:41",
+          "avg_pace": "6:40/km",
+          "avg_heart_rate": 160,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 7,
+          "distance_km": 1.0,
+          "duration": "06:35",
+          "avg_pace": "6:35/km",
+          "avg_heart_rate": 163,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 8,
+          "distance_km": 0.58,
+          "duration": "03:59",
+          "avg_pace": "6:48/km",
+          "avg_heart_rate": 162,
+          "avg_cadence_spm": null
+        }
+      ],
+      "metrics": {
+        "vdot_referencia": 39,
+        "tipo_treino_detectado": "rodagem",
+        "zona_prescrita": "E",
+        "pace_prescrito_min_km": "5:58-6:40",
+        "pace_executado_min_km": "6:36",
+        "aderencia_pace_pct": 96,
+        "distribuicao_intensidade": {
+          "facil_pct": 85,
+          "moderado_pct": 15,
+          "forte_pct": 0
+        },
+        "gray_zone_alerta": false,
+        "deriva_cardiaca_pct": 18.1,
+        "eficiencia_aerobica": null,
+        "cadencia_media_spm": 173,
+        "ajuste_calor_segundos_km": 20,
+        "pace_equivalente_frio_min_km": "6:16",
+        "limitador_principal": "deriva_cardiaca",
+        "bandeira_clinica": null,
+        "nota_aderencia": 8,
+        "confianca_analise": "alta"
+      },
+      "score": 8,
+      "analysis_html": "<b>📊 Resumo do Treino</b>\nRodagem leve de 7,58 km a 6:36/km — dentro da janela E (5:58–6:40) do VDOT 39. Semana 2 da Base Aeróbica, treino executado às 4h49 em Recife com 26°C e 93% de umidade: condições extremas que impõem custo fisiológico real. Felipe cumpriu o volume e o ritmo corretos para a fase.\n\n<b>✅ Pontos Positivos</b>\n• <b>Pace na zona E:</b> 6:36/km médio é textbook para rodagem fácil no VDOT 39 — exatamente o que a fase de base exige.\n• <b>Consistência de splits:</b> km 1 a 7 variaram apenas 10 segundos (6:30–6:41), mostrando controle de esforço mesmo com o calor aumentando.\n• <b>Disciplina de horário:</b> treinar às 04h49 em Recife é a decisão estratégica certa — minimiza exposição ao calor e protege a qualidade do estímulo aeróbico.\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>Deriva cardíaca significativa:</b> FC subiu de 138 bpm (km 1) para 163 bpm (km 7) — delta de 25 bpm no mesmo pace. Isso representa ~18% de deriva, acima do limiar de conforto (~5%). Causa provável: calor + umidade elevada. Não é patológico, mas exige atenção cumulativa ao longo da semana.\n• <b>FC média de 155 bpm = ~89% da FCmáx estimada (175 bpm):</b> para um treino rotulado como \"fácil\", o esforço cardíaco real foi moderado-alto. No frio equivaleria a um pace ~5:16–5:20/km — bem acima da zona E. O corpo trabalhou mais do que o pace sugere.\n• <b>Cadência de 173 spm:</b> abaixo da meta de 178–180 spm para corrida eficiente (Pose Method / Jack Daniels). Não crítico, mas vale trabalhar progressivamente.\n\n<b>🏁 Impacto na Preparação</b>\nTreino válido e funcional para a Base Aeróbica. O estímulo aeróbico foi entregue, porém o custo fisiológico real (FC elevada pelo calor) foi maior do que o pace indica. Nos próximos dias, priorize recuperação adequada — hidratação, sono e pelo menos 48h antes de qualquer treino com intensidade. Adaptação ao calor de Recife é um ativo para Montevideo em agosto.\n\n<b>📅 Próximo Treino Sugerido</b>\n<b>Tipo:</b> Rodagem Fácil ou Regenerativo\n<b>Distância:</b> 6–8 km\n<b>Pace-alvo:</b> 6:30–6:45/km — mas monitore a FC: se passar de 155 bpm, reduza o pace sem hesitar.\n<b>Foco:</b> Drills de técnica (Pose Method) nos primeiros 10 min — puxe a cadência para 175–178 spm. Hidratação obrigatória antes de sair.\n<b>Alternativa:</b> Natação (30–40 min aeróbico leve) como cross-training — excelente para manter o volume sem estresse térmico adicional.\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: 8/10 — Pace correto, volume adequado para a fase, único desconto é a deriva cardíaca expressiva que sinaliza custo oculto do calor úmido.\n",
+      "generated_at": "2026-04-23T13:27:24.530327"
     },
     {
       "id": "2026-04-21_morning_run",
@@ -40,12 +138,110 @@
       "duration": "50:23",
       "avg_pace": "6:36/km",
       "avg_heart_rate": 155.5,
+      "max_heart_rate": 167.0,
       "avg_cadence_spm": 173,
       "temperature_c": 26,
+      "humidity_pct": 95,
+      "dew_point_c": 23.5,
+      "heat_index_c": 24.3,
+      "weather_source": "cache",
       "total_ascent_m": 16.0,
-      "score": null,
-      "analysis_html": "<b>📊 Resumo do Treino</b>\nFelipe, corrida fácil de 7,62 km em 50:23 (pace médio 6:36/km) realizada às 4h48 em Recife a 26°C. VDOT atual 39, Fase de Base Aeróbica (Ciclo Montevideo, sem 1–2). O treino se encaixa perfeitamente no perfil de corrida E (Easy) do seu plano 80/20.\n\n---\n\n<b>✅ Pontos Positivos</b>\n\n• <b>Pace dentro da zona E:</b> 6:36/km está exatamente no corredor fácil VDOT 39 (5:58–6:40). Com calor de 26°C + umidade de Recife, o ajuste esperado é +20 a +30 seg/km — ou seja, o esforço real equivale a rodar ~6:06–6:16/km em condições ideais. Execução precisa.\n\n• <b>Disciplina de intensidade:</b> Splits muito consistentes entre 6:33 e 6:43/km, sem aceleração fora do controle. Isso é exatamente o que o Método Norueguês e o 80/20 pedem: sem zona cinza, sem heroísmo no fácil.\n\n• <b>Cadência de 173 spm:</b> Muito perto do alvo Pose Method (≥175 spm). Para 6:36/km, é um número excelente — indica boa mecânica e passada eficiente para o ritmo trabalhado.\n\n---\n\n<b>⚠️ Sinais de Alerta</b>\n\n• <b>Drift cardíaco moderado:</b> FC subiu de 143 bpm (volta 1) para 163 bpm (volta 7) — delta de 20 bpm em pace constante. Com o calor, parte é esperada (termorregulação), mas indica que o sistema cardiovascular ainda está sob demanda crescente. Hidratação pré-treino e monitoramento do drift nas próximas semanas são importantes.\n\n• <b>FC média de 155,5 bpm = ~89% FCmáx:</b> Mesmo com ajuste de calor, está no limite superior da zona E (~80–85% FCmáx idealmente). Considere reduzir o pace em +10 seg/km nos dias mais quentes para manter o esforço fisiológico dentro da zona alvo.\n\n---\n\n<b>🏁 Impacto na Preparação</b>\n\nTreino de base aeróbica cumprido com qualidade. Na fase atual (Abr–Mai), cada km fácil bem executado está construindo o motor oxidativo que vai sustentar o ritmo de meia em Montevideo (5:13/km para sub-1h50). Sem stress desnecessário, sem lesão — isso é exatamente o que semanas 1–2 devem entregar. Sinal verde para aumentar volume gradualmente.\n\n---\n\n<b>📅 Próximo Treino Sugerido</b>\n\n<b>Tipo:</b> Corrida fácil + drills Pose Method\n<b>Distância:</b> 8–9 km\n<b>Pace-alvo:</b> 6:40–6:50/km (ajustado para calor de Recife)\n<b>FC-alvo:</b> Manter abaixo de 155 bpm durante todo o trajeto\n<b>Foco:</b> Drills de extração de pé e queda para frente nos primeiros 10 min; manter cadência ≥175 spm. Se FC ultrapassar 158 bpm, reduza o pace imediatamente — o benefício está na duração, não na velocidade.\n\n---\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: <b>9/10</b> — Pace, cadência e disciplina de ritmo perfeitos para a fase de base; desconto mínimo pelo drift cardíaco no calor que merece atenção contínua.",
-      "generated_at": "2026-04-21T06:00:35.706448"
+      "total_descent_m": 7.2,
+      "training_stress_score": null,
+      "aerobic_training_effect": null,
+      "anaerobic_training_effect": null,
+      "laps": [
+        {
+          "lap_number": 1,
+          "distance_km": 1.0,
+          "duration": "06:23",
+          "avg_pace": "6:21/km",
+          "avg_heart_rate": 143,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 2,
+          "distance_km": 1.0,
+          "duration": "06:39",
+          "avg_pace": "6:38/km",
+          "avg_heart_rate": 148,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 3,
+          "distance_km": 1.0,
+          "duration": "06:39",
+          "avg_pace": "6:40/km",
+          "avg_heart_rate": 151,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 4,
+          "distance_km": 1.0,
+          "duration": "06:43",
+          "avg_pace": "6:43/km",
+          "avg_heart_rate": 155,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 5,
+          "distance_km": 1.0,
+          "duration": "06:41",
+          "avg_pace": "6:41/km",
+          "avg_heart_rate": 158,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 6,
+          "distance_km": 1.0,
+          "duration": "06:38",
+          "avg_pace": "6:38/km",
+          "avg_heart_rate": 161,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 7,
+          "distance_km": 1.0,
+          "duration": "06:34",
+          "avg_pace": "6:33/km",
+          "avg_heart_rate": 163,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 8,
+          "distance_km": 0.61,
+          "duration": "04:06",
+          "avg_pace": "6:41/km",
+          "avg_heart_rate": 163,
+          "avg_cadence_spm": null
+        }
+      ],
+      "metrics": {
+        "vdot_referencia": 39,
+        "tipo_treino_detectado": "rodagem",
+        "zona_prescrita": "E",
+        "pace_prescrito_min_km": "5:58-6:40",
+        "pace_executado_min_km": "6:36",
+        "aderencia_pace_pct": 95,
+        "distribuicao_intensidade": {
+          "facil_pct": 85,
+          "moderado_pct": 13,
+          "forte_pct": 2
+        },
+        "gray_zone_alerta": false,
+        "deriva_cardiaca_pct": 14.0,
+        "eficiencia_aerobica": null,
+        "cadencia_media_spm": 173,
+        "ajuste_calor_segundos_km": 22,
+        "pace_equivalente_frio_min_km": "6:14",
+        "limitador_principal": "clima",
+        "bandeira_clinica": null,
+        "nota_aderencia": 8,
+        "confianca_analise": "alta"
+      },
+      "score": 8,
+      "analysis_html": "<b>📊 Resumo do Treino</b>\nFelipe, rodagem fácil de 7,62 km às 4h48 em Recife — calor de 26°C com umidade de 95% (ponto de orvalho 23,5°C: condições extremas). Pace médio 6:36/km com ajuste de calor estimado em ~20–25s/km → equivalente a ~6:11–6:16/km em condições normais, dentro da zona E do seu VDOT 39 (5:58–6:40). Semana 1–2 de Base Aeróbica, execução coerente com a fase.\n\n<b>✅ Pontos Positivos</b>\n• <b>Pace controlado e dentro da zona E:</b> 6:36/km médio respeitou o teto da zona fácil mesmo com calor extremo — boa disciplina para não escorregar para zona cinza.\n• <b>Início de ciclo consistente:</b> 5ª semana pós-retomada, volume e ritmo adequados para construção gradual de base aeróbica sem estresse desnecessário.\n• <b>Pace máximo de 5:18/km isolado:</b> Provavelmente saída ou trecho pontual — não contaminou a média, sinal de boa autopercepção de esforço.\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>FC elevada para o pace (155,5 bpm média / 167 bpm pico):</b> A 89% da FC máx no pico, em rodagem fácil, é um sinal claro do estresse térmico. O ponto de orvalho de 23,5°C é o limiar crítico para dissipação de calor — acima disso, o corpo não consegue esfriar eficientemente.\n• <b>Deriva cardíaca progressiva (+20 bpm do km1 ao km7):</b> Saiu em 143 bpm e fechou em 163 bpm no mesmo pace (~6:38/km). Deriva de ~14% indica esforço cardiovascular crescente — treino tecnicamente \"fácil\" mas fisiologicamente custoso.\n• <b>Cadência 173 spm:</b> Abaixo do alvo Pose Method/ideal (≥178 spm). Em paces lentos é comum cair, mas vale monitorar — passada longa + calor = maior impacto e risco.\n\n<b>🏁 Impacto na Preparação</b>\nTreino cumpre função de estímulo aeróbico de base e <b>adaptação ao calor</b> (que é uma vantagem real para Montevideo em agosto). O custo fisiológico real foi de uma rodagem moderada, não leve — considere isso no cômputo de recuperação semanal. Não acrescenta estresse de qualidade, mas constrói volume e resiliência ao clima, ambos úteis para o ciclo.\n\n<b>📅 Próximo Treino Sugerido</b>\n<b>Tipo:</b> Rodagem fácil + drills Pose Method\n<b>Distância:</b> 8–9 km\n<b>Pace-alvo:</b> 6:20–6:40/km (ajustado ao calor — aceite até 6:45/km se FC > 150 bpm)\n<b>FC-alvo:</b> Manter abaixo de 155 bpm — se passar disso, reduza o pace sem hesitar\n<b>Foco:</b> Cadência ≥178 spm + queda do quadril no contato (Pose). Hidratação pré-treino obrigatória. Se possível, manter horário das 4h–5h para minimizar exposição térmica.\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: 8/10 — Pace e volume adequados à fase de base; penaliza levemente pela deriva cardíaca elevada que indica custo térmico alto, mas a disciplina de ritmo foi correta.\n",
+      "generated_at": "2026-04-23T13:26:56.865585"
     },
     {
       "id": "2026-04-20_morning_run",
@@ -59,97 +255,1318 @@
       "duration": "44:59",
       "avg_pace": "7:15/km",
       "avg_heart_rate": 148.6,
+      "max_heart_rate": 161.0,
       "avg_cadence_spm": 169,
       "temperature_c": 25,
+      "humidity_pct": null,
+      "dew_point_c": null,
+      "heat_index_c": null,
+      "weather_source": null,
       "total_ascent_m": 0,
+      "total_descent_m": 0.0,
+      "training_stress_score": null,
+      "aerobic_training_effect": null,
+      "anaerobic_training_effect": null,
+      "laps": [
+        {
+          "lap_number": 1,
+          "distance_km": 1.0,
+          "duration": "07:23",
+          "avg_pace": "7:22/km",
+          "avg_heart_rate": 135,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 2,
+          "distance_km": 1.0,
+          "duration": "07:15",
+          "avg_pace": "7:14/km",
+          "avg_heart_rate": 144,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 3,
+          "distance_km": 1.0,
+          "duration": "07:14",
+          "avg_pace": "7:14/km",
+          "avg_heart_rate": 148,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 4,
+          "distance_km": 1.0,
+          "duration": "07:14",
+          "avg_pace": "7:12/km",
+          "avg_heart_rate": 147,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 5,
+          "distance_km": 1.0,
+          "duration": "07:14",
+          "avg_pace": "7:12/km",
+          "avg_heart_rate": 155,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 6,
+          "distance_km": 1.0,
+          "duration": "07:16",
+          "avg_pace": "7:16/km",
+          "avg_heart_rate": 158,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 7,
+          "distance_km": 0.19,
+          "duration": "01:24",
+          "avg_pace": "7:16/km",
+          "avg_heart_rate": 157,
+          "avg_cadence_spm": null
+        }
+      ],
+      "metrics": {
+        "vdot_referencia": 39,
+        "tipo_treino_detectado": "rodagem",
+        "zona_prescrita": "E",
+        "pace_prescrito_min_km": "5:58-6:40",
+        "pace_executado_min_km": "7:15",
+        "aderencia_pace_pct": 72,
+        "distribuicao_intensidade": {
+          "facil_pct": 85,
+          "moderado_pct": 15,
+          "forte_pct": 0
+        },
+        "gray_zone_alerta": false,
+        "deriva_cardiaca_pct": 17.0,
+        "eficiencia_aerobica": null,
+        "cadencia_media_spm": 169,
+        "ajuste_calor_segundos_km": 0,
+        "pace_equivalente_frio_min_km": "7:15",
+        "limitador_principal": "deriva_cardiaca",
+        "bandeira_clinica": null,
+        "nota_aderencia": 7,
+        "confianca_analise": "alta"
+      },
       "score": null,
-      "analysis_html": "<b>📊 Resumo do Treino</b>\nFelipe, treino de 6,19 km na esteira em 44:59 (pace médio 7:15/km), realizado na fase de Base Aeróbica (sem 1–2 do ciclo Montevideo). Intensidade acima da zona Fácil do VDOT 39 (5:58–6:40), com FC escalando progressivamente até 161 bpm — o que merece atenção. Sessão de volume baixo, adequada para retomada pós-pausa.\n\n---\n\n<b>✅ Pontos Positivos</b>\n• <b>Consistência de pace:</b> Voltas 2 a 7 extremamente regulares (7:12–7:16/km) — controle de esforço sólido na esteira, hábito de atleta experiente.\n• <b>Retomada em andamento:</b> Completar 6km contínuos após ~1 mês de pausa é exatamente o que a fase de Base exige — sem forçar, reativando o sistema aeróbico.\n• <b>Cadência decente:</b> 169 spm é um ponto de partida razoável. Com foco em Pose Method, há espaço para chegar a 175–180 spm mantendo o esforço controlado.\n\n---\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>FC elevada para o pace:</b> 7:15/km deveria gerar FC próxima de 130–140 bpm na zona Fácil. Você chegou a 161 bpm na volta 6 — isso indica descondicionamento cardiovascular pós-pausa, não problema de intensidade no treinamento. Espere normalização em 2–3 semanas.\n• <b>Pace fora da zona E:</b> 7:15/km está abaixo do limite inferior da zona Fácil do VDOT 39 (6:40/km). Na prática, você está correndo mais devagar do que sua zona exige — isso é aceitável na retomada, mas sinalizamos para calibrar o ritmo conforme a FC se estabilizar.\n• <b>FC progressiva sem estabilização:</b> A FC subiu de 135 para 161 bpm ao longo de apenas 6km sem aumento de pace (drift cardíaco). Monitorar se persiste nas próximas sessões — pode indicar estresse residual ou hidratação insuficiente.\n\n---\n\n<b>🏁 Impacto na Preparação</b>\nTreino cumpre seu papel na fase de Base: reativar o sistema aeróbico sem gerar fadiga desnecessária. Para o Sub-1h50 em Montevideo (pace ~5:14/km), Felipe precisa construir base sólida agora. Cada sessão fácil consistente nas próximas 4–6 semanas é fundação direta para aguentar o volume de Junho. Esse treino conta — não é glamouroso, mas é necessário.\n\n---\n\n<b>📅 Próximo Treino Sugerido</b>\n<b>Corrida Fácil — 7 a 8 km na esteira ou rua (manhã cedo)</b>\n• Pace-alvo: <b>6:20–6:40/km</b> — tente manter FC abaixo de 150 bpm, mesmo que precise desacelerar\n• Foco: respiração nasal como guia de intensidade, cadência acima de 170 spm\n• Se a FC disparar acima de 155 bpm antes de 4km, reduza o pace sem culpa — é a resposta certa nesta fase\n• Hidratação antes e durante (Recife, mesmo indoor)\n\n---\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: <b>7/10</b> — Treino correto para a fase, mas FC elevada e pace abaixo da zona E indicam necessidade de recalibrar intensidade à medida que o condicionamento volta.",
-      "generated_at": "2026-04-20T10:45:39.291099"
+      "analysis_html": "<b>📊 Resumo do Treino</b>\nFelipe, treino de rodagem leve em esteira — 6,19 km a 7:15/km com FC média de 149 bpm. Para o VDOT 39 (fase Base Aeróbica, sem 1 do ciclo oficial), o pace está <b>acima da zona E prescrita (5:58–6:40)</b>, ou seja, mais lento que o limite inferior da zona fácil. Isso não é problema — é conservador e apropriado para a retomada pós-pausa de 1 mês.\n\n---\n\n<b>✅ Pontos Positivos</b>\n\n• <b>Intensidade controlada:</b> FC média 149 bpm = ~85% da FC Máx estimada (175). Elevada para o pace, mas ainda dentro de um esforço aeróbico sem extrapolação de limiar. Compatível com retomada e possível desacondicionamento pós-pausa.\n\n• <b>Consistência de splits:</b> Voltas 2–7 completamente estáveis (7:12–7:16/km) — demonstra ótimo controle de esforço na esteira, sem \"aceleração involuntária\" que sabota muitos treinos de base.\n\n• <b>Decisão inteligente de treinar indoor:</b> Esteira em Recife (25°C controlled) evita o estresse térmico do asfalto nordestino, preservando a qualidade do estímulo aeróbico na fase de retomada.\n\n---\n\n<b>⚠️ Sinais de Alerta</b>\n\n• <b>FC elevada para o pace:</b> 149 bpm com 7:15/km é uma relação FC/pace desfavorável. O esperado para zona E com VDOT 39 seria FC mais próxima de 130–140 bpm. Isso confirma desacondicionamento pós-pausa — não é alarme, é diagnóstico. Acompanhar a evolução semana a semana.\n\n• <b>Cadência baixa (169 spm):</b> Meta técnica pelo Pose Method é ≥180 spm. A 7:15/km na esteira, a tendência é passada longa e cadência baixa. Trabalhar drills de cadência já nesta fase de base — é o momento certo.\n\n• <b>Drift cardíaco perceptível:</b> De 135 bpm (volta 1) para 158 bpm (volta 6) com pace estável = +23 bpm de drift em 6 km. Percentual de deriva ~17% — acima do ideal (<5%). Reforça a necessidade de paciência nas primeiras semanas do ciclo.\n\n---\n\n<b>🏁 Impacto na Preparação</b>\n\nTreino cumprido corretamente para a semana 1 do ciclo. O papel deste estímulo é <b>reativar o sistema aeróbico</b> sem estresse metabólico — tarefa cumprida. O drift cardíaco elevado é informação valiosa: seu \"ponto zero\" está mapeado. Em 3–4 semanas de volume consistente, o mesmo pace deve ocorrer com FC 10–15 bpm menor. Isso, por si só, representa evolução real rumo ao VDOT 42 necessário para Montevideo.\n\n---\n\n<b>📅 Próximo Treino Sugerido</b>\n\n<b>Rodagem fácil + drills de cadência</b>\n• Distância: 7–8 km (pequeno aumento progressivo)\n• Pace-alvo: <b>6:20–6:40/km</b> (zona E do VDOT 39 — tente entrar na zona)\n• FC-alvo: manter abaixo de 145 bpm; se ultrapassar, reduza o pace sem culpa\n• Foco técnico: <b>metrônomo a 178–180 spm</b> por pelo menos 10 minutos centrais do treino\n• Local: esteira (se calor >28°C no asfalto) ou externo cedo pela manhã\n\n---\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: <b>7/10</b> — Pace conservador e volume modesto para a fase, mas a estabilidade de splits e a decisão de treinar indoor mostram maturidade de atleta; drift cardíaco elevado é esperado na semana 1 e não penaliza o planejamento.\n",
+      "generated_at": "2026-04-23T13:26:27.735507"
     },
     {
       "id": "2026-04-17_longo",
       "date": "2026-04-17",
       "date_display": "17/04/2026",
       "source": "strava",
+      "sport": "run",
+      "is_treadmill": false,
       "activity_name": "Longo",
       "distance_km": 9.0,
       "duration": "01:01:04",
       "avg_pace": "6:47/km",
       "avg_heart_rate": 156.2,
+      "max_heart_rate": 167.0,
       "avg_cadence_spm": 172,
       "temperature_c": 26,
+      "humidity_pct": 95,
+      "dew_point_c": 23.3,
+      "heat_index_c": 24.2,
+      "weather_source": "cache",
       "total_ascent_m": 18.0,
-      "score": null,
-      "analysis_html": "<b>📊 Resumo do Treino</b>\nFelipe, segundo dia do ciclo oficial (16/04) — longão de 9km em Recife às 4h48, 26°C. Pace médio de 6:47/km, acima do teto da zona Easy (VDOT 39: 5:58–6:40/km), mas com FC crescente chegando a 167 bpm (96% da FCmáx estimada). Treino de base aeróbica com sinal claro de esforço acima do pretendido pela fase.\n\n<b>✅ Pontos Positivos</b>\n• <b>Início inteligente:</b> Voltas 1–3 (6:33–6:36/km, 137–152 bpm) mostram bom controle inicial — dentro ou próximo do teto Easy, FC compatível com zona conversacional.\n• <b>Consistência de cadência:</b> 172 spm é excelente para fase de base — alinhado ao Pose Method e dentro do alvo Jack Daniels (≥170 spm).\n• <b>Disciplina de horário:</b> Sair às 4h48 em Recife é a decisão certa — sem isso, a FC teria sido ainda mais elevada. Comprometimento real com o processo.\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>Cardiac drift progressivo e intenso:</b> FC saiu de 137 bpm (Volta 1) para 167 bpm (Volta 7–8) — delta de 30 bpm em 9km. Esse padrão indica que o esforço real foi muito além do Easy, especialmente nas voltas 5–9. Para VDOT 39, zona Easy deve ficar em ~75–82% FCmáx (~131–143 bpm). Voltas 5 a 9 já estavam em zona de limiar ou acima.\n• <b>Pace degradando sob FC crescente:</b> O pace piorou de 6:33 para 7:18/km enquanto a FC subia — sinal de fadiga térmica/cardiovascular combinada, não de ritmo controlado.\n• <b>Pace máximo de 4:39/km:</b> Há um pico isolado fora de contexto de um longão de base — verificar se foi sprint involuntário, semáforo ou dado GPS. Merece atenção.\n\n<b>🏁 Impacto na Preparação</b>\nO estímulo aeróbico foi gerado, mas provavelmente na intensidade errada: em vez de acumular volume fácil (80/20), a segunda metade do treino funcionou como um esforço de zona cinza — desgastante sem ser específico. Para Montevideo (Sub-1h50), a base precisa ser construída com FC controlada. Um treino assim pontualmente não compromete, mas o padrão não pode se repetir.\n\n<b>📅 Próximo Treino Sugerido</b>\n<b>Tipo:</b> Corrida Fácil (Easy Run)\n<b>Distância:</b> 6–7 km\n<b>Pace-alvo:</b> 6:30–6:50/km — mas <b>guiado pela FC: manter ≤140 bpm o tempo todo</b>\n<b>Foco:</b> Recuperação ativa + recalibrar o esforço pelo coração, não pelo cronômetro. Se a FC subir além de 140 bpm, reduza o pace sem hesitar. Em Recife/calor, aceite paces de até 7:10–7:20/km se necessário.\n<b>Método:</b> 5 min de drills Pose no início (queda, pull, queda controlada). Cadência ≥170 spm.\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: <b>6/10</b> — Volume e comprometimento corretos para semana 1, mas a intensidade da segunda metade escapou da zona Easy, quebrando o princípio 80/20 fundamental desta fase.",
-      "generated_at": "2026-04-17T11:16:46.887762"
+      "total_descent_m": 7.4,
+      "training_stress_score": null,
+      "aerobic_training_effect": null,
+      "anaerobic_training_effect": null,
+      "laps": [
+        {
+          "lap_number": 1,
+          "distance_km": 1.0,
+          "duration": "06:34",
+          "avg_pace": "6:33/km",
+          "avg_heart_rate": 137,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 2,
+          "distance_km": 1.0,
+          "duration": "06:37",
+          "avg_pace": "6:36/km",
+          "avg_heart_rate": 147,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 3,
+          "distance_km": 1.0,
+          "duration": "06:35",
+          "avg_pace": "6:35/km",
+          "avg_heart_rate": 152,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 4,
+          "distance_km": 1.0,
+          "duration": "06:43",
+          "avg_pace": "6:43/km",
+          "avg_heart_rate": 155,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 5,
+          "distance_km": 1.0,
+          "duration": "06:41",
+          "avg_pace": "6:41/km",
+          "avg_heart_rate": 160,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 6,
+          "distance_km": 1.0,
+          "duration": "06:49",
+          "avg_pace": "6:48/km",
+          "avg_heart_rate": 161,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 7,
+          "distance_km": 1.0,
+          "duration": "06:53",
+          "avg_pace": "6:53/km",
+          "avg_heart_rate": 163,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 8,
+          "distance_km": 1.01,
+          "duration": "06:58",
+          "avg_pace": "6:53/km",
+          "avg_heart_rate": 163,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 9,
+          "distance_km": 0.99,
+          "duration": "07:14",
+          "avg_pace": "7:18/km",
+          "avg_heart_rate": 160,
+          "avg_cadence_spm": null
+        }
+      ],
+      "metrics": {
+        "vdot_referencia": 39,
+        "tipo_treino_detectado": "rodagem",
+        "zona_prescrita": "E",
+        "pace_prescrito_min_km": "5:58-6:40",
+        "pace_executado_min_km": "6:47",
+        "aderencia_pace_pct": 78,
+        "distribuicao_intensidade": {
+          "facil_pct": 72,
+          "moderado_pct": 24,
+          "forte_pct": 4
+        },
+        "gray_zone_alerta": true,
+        "deriva_cardiaca_pct": 19.0,
+        "eficiencia_aerobica": null,
+        "cadencia_media_spm": 172,
+        "ajuste_calor_segundos_km": 22,
+        "pace_equivalente_frio_min_km": "6:25",
+        "limitador_principal": "clima",
+        "bandeira_clinica": null,
+        "nota_aderencia": 7,
+        "confianca_analise": "alta"
+      },
+      "score": 7,
+      "analysis_html": "<b>📊 Resumo do Treino</b>\nFelipe, segundo dia do ciclo oficial (16/04). Rodagem longa de 9km em Recife às 4h48, 26°C e 95% de umidade — condições extremas que distorcem qualquer referência de pace bruto. Com VDOT 39, seu pace fácil prescrito é 5:58–6:40/km, mas o calor úmido justifica ajuste de ~20–25s/km. Pace executado de 6:47/km é fisiologicamente compatível com zona E corrigida.\n\n<b>✅ Pontos Positivos</b>\n• <b>Pace gerenciado no calor:</b> 6:47/km médio, com ajuste de ~20s/km pelo Heat Index (Recife + 95% umidade), equivale a ~6:25/km em condições frias — dentro da zona E (5:58–6:40). Decisão inteligente.\n• <b>Consistência nos splits 1–5:</b> Splits de 6:33 a 6:43 com progressão de FC controlada. Leitura de esforço bem calibrada nos primeiros 5km.\n• <b>Saiu para treinar às 4h48 no dia 2 do ciclo:</b> Disciplina e comprometimento com o processo. Isso constrói maratonistas.\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>Deriva cardíaca expressiva:</b> FC subiu de 137 bpm (volta 1) para 163 bpm (voltas 7–8) — uma elevação de ~19% ao longo de 9km. Deriva ≥10% é sinal de estresse térmico relevante. O pace ainda segurou, mas o sistema cardiovascular estava trabalhando duro para manter esse ritmo.\n• <b>FC média 156 bpm = ~89% FCmáx:</b> Para um treino que deveria ser zona E (idealmente 70–79% FCmáx / ~122–138 bpm), está acima do desejado — mesmo corrigindo para o calor. Monitorar se isso se repete nas próximas semanas.\n• <b>Pace máximo 4:39/km registrado:</b> Sugere um sprint pontual ou erro de GPS. Se foi intencional, evite acelerações em treinos de base aeróbica — especialmente no calor.\n\n<b>🏁 Impacto na Preparação</b>\nTreino válido para construção aeróbica de base. Em semana 1–2 do ciclo, o objetivo é acumular volume fácil e estabelecer consistência — missão cumprida. A deriva cardíaca elevada indica que 9km em condições extremas já representa estímulo fisiológico suficiente: <b>não force distância agora.</b> Ao longo das semanas, conforme a aclimatação progride, FC tenderá a normalizar no mesmo pace — esse é o sinal real de desenvolvimento aeróbico em Recife.\n\n<b>📅 Próximo Treino Sugerido</b>\n<b>Rodagem fácil regenerativa — 6 a 7km</b>\n• Pace-alvo: 6:50–7:10/km (respeitando calor; FC ≤ 145 bpm como guia)\n• Foco: recuperação ativa, cadência (alvo: 175–178 spm, hoje ficou em 172)\n• Dica Pose Method: atenção ao lean e queda do quadril — cadência abaixo de 175 em treino fácil sugere passada longa, risco de impacto maior\n• Horário: manter madrugada/amanhecer; hidratar bem antes de sair\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: 7/10 — Pace adequado ao contexto de calor e fase de base, mas FC elevada e deriva expressiva indicam que o volume foi no limite do aceitável para as condições; execução correta, mas margem de segurança estreita.\n",
+      "generated_at": "2026-04-23T13:25:59.491934"
     },
     {
       "id": "2026-04-16_morning_run",
       "date": "2026-04-16",
       "date_display": "16/04/2026",
       "source": "strava",
+      "sport": "run",
+      "is_treadmill": false,
       "activity_name": "Morning Run",
       "distance_km": 6.76,
       "duration": "46:14",
       "avg_pace": "6:50/km",
       "avg_heart_rate": 160.4,
+      "max_heart_rate": 167.0,
       "avg_cadence_spm": 174,
       "temperature_c": 26,
+      "humidity_pct": 95,
+      "dew_point_c": 23.0,
+      "heat_index_c": 23.8,
+      "weather_source": "cache",
       "total_ascent_m": 14.0,
+      "total_descent_m": 11.0,
+      "training_stress_score": null,
+      "aerobic_training_effect": null,
+      "anaerobic_training_effect": null,
+      "laps": [
+        {
+          "lap_number": 1,
+          "distance_km": 1.0,
+          "duration": "06:32",
+          "avg_pace": "6:30/km",
+          "avg_heart_rate": 151,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 2,
+          "distance_km": 1.0,
+          "duration": "06:24",
+          "avg_pace": "6:24/km",
+          "avg_heart_rate": 163,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 3,
+          "distance_km": 1.0,
+          "duration": "06:38",
+          "avg_pace": "6:38/km",
+          "avg_heart_rate": 161,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 4,
+          "distance_km": 1.0,
+          "duration": "07:04",
+          "avg_pace": "7:03/km",
+          "avg_heart_rate": 160,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 5,
+          "distance_km": 1.0,
+          "duration": "07:02",
+          "avg_pace": "7:01/km",
+          "avg_heart_rate": 161,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 6,
+          "distance_km": 1.0,
+          "duration": "07:09",
+          "avg_pace": "7:09/km",
+          "avg_heart_rate": 162,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 7,
+          "distance_km": 0.76,
+          "duration": "05:25",
+          "avg_pace": "7:09/km",
+          "avg_heart_rate": 162,
+          "avg_cadence_spm": null
+        }
+      ],
+      "metrics": {
+        "vdot_referencia": 39,
+        "tipo_treino_detectado": "rodagem",
+        "zona_prescrita": "E",
+        "pace_prescrito_min_km": "5:58-6:40",
+        "pace_executado_min_km": "6:50",
+        "aderencia_pace_pct": 78,
+        "distribuicao_intensidade": {
+          "facil_pct": 85,
+          "moderado_pct": 13,
+          "forte_pct": 2
+        },
+        "gray_zone_alerta": false,
+        "deriva_cardiaca_pct": 7.3,
+        "eficiencia_aerobica": null,
+        "cadencia_media_spm": 174,
+        "ajuste_calor_segundos_km": 30,
+        "pace_equivalente_frio_min_km": "6:20",
+        "limitador_principal": "deriva_cardiaca",
+        "bandeira_clinica": null,
+        "nota_aderencia": 8,
+        "confianca_analise": "media"
+      },
       "score": null,
-      "analysis_html": "<b>📊 Resumo do Treino</b>\nFelipe completou 6,76 km em pace médio de 6:50/km — dentro da janela esperada para corrida fácil (E) com ajuste climático (26°C, Recife às 04h45). Para VDOT 39, a zona E vai de 5:58–6:40/km; o ajuste térmico de ~20–30s/km é legítimo, colocando o esforço real no território fácil. Fase de Retomada Suave, semana 1–2: execução adequada ao contexto.\n\n---\n\n<b>✅ Pontos Positivos</b>\n• <b>Controle de intensidade:</b> FC média de 160 bpm representa ~91% da FCmáx estimada (175) — alto em números absolutos, mas compreensível para 26°C + umidade de Recife. O esforço percebido no calor úmido eleva a FC ~10–15 bpm vs. condições neutras, o que aproxima a sessão do esforço fisiológico fácil-moderado real.\n• <b>Cadência positiva:</b> 174 spm é excelente para retomada — alinhado ao Pose Method, reduz impacto articular e protege numa fase de baixo volume. Manter.\n• <b>Consistência de volume:</b> 6,76 km bem executados contribuem para a base aeróbica da retomada, sem exagero para a fase atual (alvo de 40km/semana a ser construído progressivamente).\n\n---\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>FC elevada para zona E:</b> 160 bpm médio é alto mesmo com ajuste térmico. Nas voltas 2–7, a FC ficou estável entre 160–163 bpm com paces acima de 6:24/km — isso sugere que o sistema cardiovascular ainda não voltou ao baseline pós-pausa de 1 mês. Não é alarme, mas pede atenção.\n• <b>Deriva do pace nas voltas 4–6 (7:03–7:09/km):</b> Queda natural pelo calor, mas indica que o estresse térmico foi real. Hidratação e escolha de percurso com sombra merecem atenção nas próximas sessões.\n• <b>Pace máximo de 5:16/km registrado:</b> Provavelmente trecho de aceleração ou dado de GPS. Evite \"espiadas\" em zona I durante retomada — salve isso para quando o volume estiver consolidado.\n\n---\n\n<b>🏁 Impacto na Preparação</b>\nTreino cumpre o papel da fase: reativar o motor aeróbico sem estressar o sistema musculoesquelético em retomada. Para o objetivo Sub-3h50 em Osaka (VDOT alvo ≥42), a base dessas semanas é o alicerce — cada corrida fácil bem executada agora vale ouro em outubro/novembro. Nenhum dano à preparação; pelo contrário, disciplina de pace fácil no calor é exatamente o que o método 80/20 prescreve.\n\n---\n\n<b>📅 Próximo Treino Sugerido</b>\n<b>Tipo:</b> Corrida Fácil (E) + Drills de Técnica\n<b>Distância:</b> 7–8 km\n<b>Pace-alvo:</b> 6:50–7:10/km (com ajuste térmico se >24°C) — guie-se pela FC: mantenha abaixo de 155 bpm\n<b>Foco:</b> Drills Pose Method nos primeiros 10 min (queda frontal, puxada de calcanhar), depois corrida contínua em zona E controlada. Priorize horário com menor temperatura ou percurso sombreado para calibrar melhor a relação pace/FC.\n\n---\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: <b>7/10</b> — Execução correta para a fase, mas FC consistentemente alta indica que o corpo ainda está em readaptação; ajuste de condições (horário/percurso) vai acelerar a recalibração aeróbica.",
-      "generated_at": "2026-04-16T06:37:35.988635"
+      "analysis_html": "<b>📊 Resumo do Treino</b>\nPrimeiro dia oficial do ciclo Montevideo — 6,76 km a 6:50/km médio, em condições extremas (26°C / 95% UR, às 04:45h). Felipe está no início da Fase de Base Aeróbica (VDOT 39), e o objetivo era rodar fácil para reativar o sistema aeróbico após ~1 mês de pausa pós-maratona. Treino cumprido com a função certa: volume leve, pés no chão.\n\n<b>✅ Pontos Positivos</b>\n• <b>Intensidade controlada no contexto climático:</b> Pace médio 6:50/km parece acima da zona E (5:58–6:40), mas com 26°C/95% UR o ajuste térmico estimado é de +25–35s/km — equivale a ~6:15–6:25/km em condições neutras. Dentro da zona fácil. ✅\n• <b>FC dentro do razoável para o calor:</b> FC média 160 bpm (91% FCmáx) soa alto, mas é esperado em clima úmido extremo na retomada. A FC máxima não foi ultrapassada (167 vs 175), e não houve aceleração descontrolada.\n• <b>Saída inteligente:</b> Voltas 1–2 mais rápidas (6:30/km), ajuste natural nas voltas 3–6 para ~7:00–7:09/km — Felipe reagiu ao esforço e recuou o ritmo. Isso é treino inteligente, não fraqueza.\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>FC média elevada para treino E:</b> 160 bpm = ~91% FCmáx estimada. Mesmo com ajuste de calor, a zona fácil deveria manter FC abaixo de ~140–148 bpm. O calor úmido impõe deriva cardíaca estrutural, mas é um sinal para monitorar nas próximas sessões à medida que o condicionamento retorna.\n• <b>Cadência 174 spm:</b> Levemente abaixo do alvo ideal (≥178 spm no método Pose/Daniels). Em corrida fácil lenta, é comum cair — mas vale atenção nos drills de retomada.\n• <b>Pace máximo 5:16/km:</b> Aparece nos dados (provavelmente GPS spike ou aceleração pontual no final). Sem contexto de split, não é alarmante, mas confirma: nenhum trecho de qualidade deve ocorrer na fase de Base Aeróbica sem prescrição.\n\n<b>🏁 Impacto na Preparação</b>\nEste é o <b>dia zero do ciclo oficial</b>. O impacto não é fisiológico mensurável — é de <b>reativação neuromuscular e de hábito</b>. Completar 6,76 km controlado após pausa, em calor extremo, sem se machucar e sem forçar o ritmo, é exatamente o que a periodização pede na Semana 1. Base sólida começa assim: acumular estímulos sem acumular fadiga. Cada quilômetro deste período vale como investimento para o Sub-1h50 em Montevideo e o Sub-3h50 em Osaka.\n\n<b>📅 Próximo Treino Sugerido</b>\n<b>Rodagem Fácil + Drills de Técnica (Pose Method)</b>\n• Distância: 7–8 km\n• Pace-alvo: 6:30–7:00/km <i>(ajustado para calor — não olhe o número, olhe a respiração e a FC)</i>\n• FC-alvo: manter abaixo de 150–155 bpm. Se ultrapassar, caminhe 30–60s.\n• Incluir: 4×20m de <i>falling drill</i> + 4×20m de <i>pull drill</i> antes do trote\n• Cadência: foco em 178+ spm, mesmo que isso signifique passos mais curtos\n• Horário: manter 04:30–05:30h para fugir do pico térmico\n• Recuperação: 1 dia de descanso ou natação leve entre as sessões\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: <b>8/10</b> — Primeiro treino do ciclo executado com controle e inteligência no calor; FC acima do ideal para zona E, mas justificada pelas condições extremas e pela retomada.\n",
+      "generated_at": "2026-04-23T13:25:31.167787"
+    },
+    {
+      "id": "2026-04-12_lunch_run",
+      "date": "2026-04-12",
+      "date_display": "12/04/2026",
+      "source": "strava",
+      "sport": "run",
+      "is_treadmill": false,
+      "activity_name": "Lunch Run",
+      "distance_km": 5.55,
+      "duration": "40:17",
+      "avg_pace": "7:15/km",
+      "avg_heart_rate": 167.3,
+      "max_heart_rate": 177.0,
+      "avg_cadence_spm": 172,
+      "temperature_c": 23,
+      "humidity_pct": 83,
+      "dew_point_c": 24.5,
+      "heat_index_c": 31.5,
+      "weather_source": "open-meteo",
+      "total_ascent_m": 42.0,
+      "total_descent_m": 16.6,
+      "training_stress_score": null,
+      "aerobic_training_effect": null,
+      "anaerobic_training_effect": null,
+      "laps": [
+        {
+          "lap_number": 1,
+          "distance_km": 1.0,
+          "duration": "07:15",
+          "avg_pace": "7:14/km",
+          "avg_heart_rate": 151,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 2,
+          "distance_km": 1.0,
+          "duration": "07:05",
+          "avg_pace": "7:05/km",
+          "avg_heart_rate": 166,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 3,
+          "distance_km": 1.0,
+          "duration": "07:05",
+          "avg_pace": "7:05/km",
+          "avg_heart_rate": 171,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 4,
+          "distance_km": 1.0,
+          "duration": "07:06",
+          "avg_pace": "7:07/km",
+          "avg_heart_rate": 172,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 5,
+          "distance_km": 1.0,
+          "duration": "07:21",
+          "avg_pace": "7:20/km",
+          "avg_heart_rate": 172,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 6,
+          "distance_km": 0.55,
+          "duration": "04:25",
+          "avg_pace": "7:58/km",
+          "avg_heart_rate": 171,
+          "avg_cadence_spm": null
+        }
+      ],
+      "metrics": {
+        "vdot_referencia": 39,
+        "tipo_treino_detectado": "rodagem",
+        "zona_prescrita": "E",
+        "pace_prescrito_min_km": "5:58-6:40",
+        "pace_executado_min_km": "7:15",
+        "aderencia_pace_pct": null,
+        "distribuicao_intensidade": {
+          "facil_pct": 100,
+          "moderado_pct": 0,
+          "forte_pct": 0
+        },
+        "gray_zone_alerta": false,
+        "deriva_cardiaca_pct": 13.9,
+        "eficiencia_aerobica": null,
+        "cadencia_media_spm": 172,
+        "ajuste_calor_segundos_km": 15,
+        "pace_equivalente_frio_min_km": "7:00",
+        "limitador_principal": "deriva_cardiaca",
+        "bandeira_clinica": "fc_media_96pct_fcmax_em_ritmo_facil",
+        "nota_aderencia": 5,
+        "confianca_analise": "alta"
+      },
+      "score": 5,
+      "analysis_html": "<b>📊 Resumo do Treino</b>\nFelipe, rodagem de 5,55 km em ritmo fácil, realizada no calor intenso de Recife (Heat Index 31,5°C). Pace médio de 7:15/km está acima da zona E do VDOT 39 (5:58–6:40), mas com ajuste térmico de +10 a +20s/km, o equivalente em condições frias seria ~6:55–7:05/km — ainda acima da zona E prescrita. A FC média de 167 bpm (96% da FCmáx estimada) é o dado mais preocupante desta sessão. Semana 1 do ciclo pré-oficial (07/04).\n\n---\n\n<b>✅ Pontos Positivos</b>\n• <b>Consistência de pace:</b> Voltas 2–5 muito estáveis (7:05–7:07/km), mostrando boa percepção de esforço mesmo no calor.\n• <b>Saiu para treinar:</b> Retomada pós-pausa de 1 mês com volume conservador (5,5 km) — decisão acertada para não sobrecarregar.\n• <b>Ritmo controlado:</b> Pace máximo de 5:37 isolado (provavelmente início ou trecho atípico), sem aceleradas desnecessárias no corpo do treino.\n\n---\n\n<b>⚠️ Sinais de Alerta</b>\n🔴 <b>FC crítica para ritmo fácil:</b> FC média 167 bpm = ~96% da FCmáx estimada (175 bpm). Para uma rodagem leve, isso é zona vermelha, independente do calor. O ritmo fácil (zona E) deveria manter FC abaixo de 140–148 bpm (80–85% FCmáx). Há uma dissociação severa entre pace e FC.\n\n🟠 <b>Calor + horário:</b> A atividade foi registrada às 11h01 com Heat Index de 31,5°C. Treinos de base em Recife idealmente deveriam ocorrer antes das 6h ou após as 18h para proteger a adaptação aeróbica.\n\n🟡 <b>Cadência baixa:</b> 172 spm está abaixo do alvo de 178–182 spm recomendado pelo Pose Method. Na fase de base, drills de cadência são prioritários.\n\n🟡 <b>Ponto de orvalho 24,5°C:</b> Acima de 21°C, a dissipação de calor por evaporação é comprometida — o corpo trabalha muito mais para termorregular, explicando parte da FC elevada.\n\n---\n\n<b>🏁 Impacto na Preparação</b>\nTreino de baixíssimo volume que cumpre o papel de \"reativar as pernas\" na semana pré-ciclo. Porém, a FC elevadíssima indica que o sistema cardiovascular ainda está em recalibração pós-pausa ou que o calor está mascarando a real condição aeróbica. Não gera estresse de treinamento produtivo para o ciclo Montevideo — mas também não prejudica. O risco real é repetir este padrão de FC alta em todas as sessões e acumular fadiga oculta sem ganho de fitness.\n\n---\n\n<b>📅 Próximo Treino Sugerido</b>\n<b>Tipo:</b> Rodagem fácil + drills de cadência\n<b>Distância:</b> 6–7 km\n<b>Horário:</b> Antes das 6h (essencial em Recife)\n<b>Pace-alvo:</b> 6:30–7:00/km com <b>prioridade absoluta na FC ≤ 145 bpm</b> — se a FC subir, reduza o pace ou caminhe. Não persiga o pace nesta fase.\n<b>Drills:</b> 4× 30s de strides com ênfase em queda e cadência alta (Pose Method) ao final\n<b>Foco:</b> Recondicionar o sistema aeróbico com FC controlada. O pace virá com o tempo.\n\n---\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: 5/10 — Volume e intensidade compatíveis com retomada, mas a FC crítica (96% FCmáx em ritmo \"fácil\") sinaliza que a base aeróbica precisa ser reconstruída com muito mais cuidado de horário e controle cardíaco.\n",
+      "generated_at": "2026-04-23T13:24:57.676533"
+    },
+    {
+      "id": "2026-04-11_morning_run",
+      "date": "2026-04-11",
+      "date_display": "11/04/2026",
+      "source": "strava",
+      "sport": "run",
+      "is_treadmill": false,
+      "activity_name": "Morning Run",
+      "distance_km": 11.72,
+      "duration": "01:16:01",
+      "avg_pace": "6:29/km",
+      "avg_heart_rate": 167.6,
+      "max_heart_rate": 179.0,
+      "avg_cadence_spm": 174,
+      "temperature_c": 26,
+      "humidity_pct": 94,
+      "dew_point_c": 23.1,
+      "heat_index_c": 24.1,
+      "weather_source": "open-meteo",
+      "total_ascent_m": 18.0,
+      "total_descent_m": 3.8,
+      "training_stress_score": null,
+      "aerobic_training_effect": null,
+      "anaerobic_training_effect": null,
+      "laps": [
+        {
+          "lap_number": 1,
+          "distance_km": 1.0,
+          "duration": "06:32",
+          "avg_pace": "6:30/km",
+          "avg_heart_rate": 148,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 2,
+          "distance_km": 1.0,
+          "duration": "06:26",
+          "avg_pace": "6:26/km",
+          "avg_heart_rate": 159,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 3,
+          "distance_km": 1.0,
+          "duration": "06:27",
+          "avg_pace": "6:27/km",
+          "avg_heart_rate": 163,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 4,
+          "distance_km": 1.0,
+          "duration": "06:26",
+          "avg_pace": "6:26/km",
+          "avg_heart_rate": 164,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 5,
+          "distance_km": 1.0,
+          "duration": "06:32",
+          "avg_pace": "6:30/km",
+          "avg_heart_rate": 166,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 6,
+          "distance_km": 1.0,
+          "duration": "06:24",
+          "avg_pace": "6:24/km",
+          "avg_heart_rate": 170,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 7,
+          "distance_km": 1.0,
+          "duration": "06:22",
+          "avg_pace": "6:23/km",
+          "avg_heart_rate": 171,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 8,
+          "distance_km": 1.0,
+          "duration": "06:22",
+          "avg_pace": "6:20/km",
+          "avg_heart_rate": 173,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 9,
+          "distance_km": 1.02,
+          "duration": "06:26",
+          "avg_pace": "6:20/km",
+          "avg_heart_rate": 175,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 10,
+          "distance_km": 1.0,
+          "duration": "06:40",
+          "avg_pace": "6:40/km",
+          "avg_heart_rate": 171,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 11,
+          "distance_km": 0.98,
+          "duration": "06:37",
+          "avg_pace": "6:43/km",
+          "avg_heart_rate": 172,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 12,
+          "distance_km": 0.71,
+          "duration": "04:47",
+          "avg_pace": "6:41/km",
+          "avg_heart_rate": 174,
+          "avg_cadence_spm": null
+        }
+      ],
+      "metrics": {
+        "vdot_referencia": 39,
+        "tipo_treino_detectado": "rodagem",
+        "zona_prescrita": "E",
+        "pace_prescrito_min_km": "5:58-6:40",
+        "pace_executado_min_km": "6:29",
+        "aderencia_pace_pct": 88,
+        "distribuicao_intensidade": {
+          "facil_pct": 45,
+          "moderado_pct": 35,
+          "forte_pct": 20
+        },
+        "gray_zone_alerta": true,
+        "deriva_cardiaca_pct": 18.2,
+        "eficiencia_aerobica": null,
+        "cadencia_media_spm": 174,
+        "ajuste_calor_segundos_km": 25,
+        "pace_equivalente_frio_min_km": "6:04",
+        "limitador_principal": "clima",
+        "bandeira_clinica": "fc_maxima_excedida",
+        "nota_aderencia": 7,
+        "confianca_analise": "alta"
+      },
+      "score": 7,
+      "analysis_html": "<b>📊 Resumo do Treino</b>\nFelipe, rodagem de 11,7 km às 04h46 em Recife com 26°C e umidade de 94% — condições extremas mesmo de madrugada. Pace médio de 6:29/km está dentro da zona E do VDOT 39 (5:58–6:40), mas a FC média de 167 bpm (96% da FCmáx estimada) sinaliza esforço fisiológico muito acima do que o pace sugere. Treino executado na semana pré-ciclo (anterior a 16/04), fase de base aeróbica.\n\n<b>✅ Pontos Positivos</b>\n• <b>Pace controlado:</b> 6:29/km médio respeita a zona E — bom senso de ritmo para o calor\n• <b>Consistência de splits:</b> voltas 1–9 praticamente idênticas (6:20–6:32/km), mostrando controle de esforço percebido\n• <b>Volta 10 recuada para 6:40/km:</b> excelente intuição — o organismo sinalizou e você respondeu certo\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>FC em nível crítico:</b> FC média 167 bpm = ~96% da FCmáx (175 bpm). Para uma rodagem \"fácil\", isso é zona 4–5, não zona E. O calor úmido (ponto de orvalho 23,1°C) é o principal culpado — acima de 21°C de ponto de orvalho, o resfriamento evaporativo praticamente cessa\n• <b>FC máxima de 179 bpm</b> excedeu sua FCmáx estimada de 175 bpm — reveja o teto cardíaco ou considere que o esforço real foi extremo\n• <b>Deriva cardíaca severa:</b> de 148 bpm (volta 1) para 175 bpm (volta 9) = +27 bpm em 9 km. Deriva &gt;10% em rodagem fácil é sinal de estresse térmico intenso, não apenas de fadiga aeróbica\n• <b>Cadência 174 spm:</b> levemente abaixo do ideal Pose/Daniels (≥178–180 spm) — monitorar\n\n<b>🏁 Impacto na Preparação</b>\nEste treino entregou estímulo aeróbico válido, mas o custo fisiológico foi alto para o volume (11,7 km). O estresse cardiotérmico equivale, em carga, a um treino de ~15–16 km em condições ideais. Para a fase de base (semanas 1–2 do ciclo), o volume foi bom, mas a intensidade real (FC) ficou acima da zona E — sem culpa do atleta, culpa do clima. O pré-ciclo está cumprindo o papel de reativar a base.\n\n<b>📅 Próximo Treino Sugerido</b>\n<b>Tipo:</b> Rodagem fácil regenerativa ou natação (cross-training)\n<b>Distância:</b> 8–10 km (se correr) ou 45 min de natação\n<b>Pace-alvo:</b> 6:10–6:40/km — mas <b>guie pelo coração: FC máx 155 bpm</b>. Se passar disso, caminhe ou reduza\n<b>Foco:</b> Recuperação do estresse térmico. Considere rota com sombra ou esperar temperatura &lt;24°C. Priorize hidratação nas 24h seguintes\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: 7/10 — Pace correto para a fase, mas FC incompatível com zona E real; o clima tornou o treino fácil em treino moderado-intenso involuntário.\n",
+      "generated_at": "2026-04-23T13:24:25.157537"
+    },
+    {
+      "id": "2026-04-09_morning_run",
+      "date": "2026-04-09",
+      "date_display": "09/04/2026",
+      "source": "strava",
+      "sport": "run",
+      "is_treadmill": false,
+      "activity_name": "Morning Run",
+      "distance_km": 6.43,
+      "duration": "42:14",
+      "avg_pace": "6:33/km",
+      "avg_heart_rate": 145.5,
+      "max_heart_rate": 156.0,
+      "avg_cadence_spm": 172,
+      "temperature_c": 24,
+      "humidity_pct": 94,
+      "dew_point_c": 22.6,
+      "heat_index_c": 23.6,
+      "weather_source": "open-meteo",
+      "total_ascent_m": 13.0,
+      "total_descent_m": 3.2,
+      "training_stress_score": null,
+      "aerobic_training_effect": null,
+      "anaerobic_training_effect": null,
+      "laps": [
+        {
+          "lap_number": 1,
+          "distance_km": 1.0,
+          "duration": "06:13",
+          "avg_pace": "6:13/km",
+          "avg_heart_rate": 131,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 2,
+          "distance_km": 1.0,
+          "duration": "06:19",
+          "avg_pace": "6:18/km",
+          "avg_heart_rate": 149,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 3,
+          "distance_km": 1.0,
+          "duration": "06:43",
+          "avg_pace": "6:43/km",
+          "avg_heart_rate": 150,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 4,
+          "distance_km": 1.0,
+          "duration": "06:42",
+          "avg_pace": "6:41/km",
+          "avg_heart_rate": 150,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 5,
+          "distance_km": 1.0,
+          "duration": "06:34",
+          "avg_pace": "6:33/km",
+          "avg_heart_rate": 148,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 6,
+          "distance_km": 1.0,
+          "duration": "06:44",
+          "avg_pace": "6:43/km",
+          "avg_heart_rate": 144,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 7,
+          "distance_km": 0.43,
+          "duration": "02:59",
+          "avg_pace": "6:53/km",
+          "avg_heart_rate": 142,
+          "avg_cadence_spm": null
+        }
+      ],
+      "metrics": {
+        "vdot_referencia": 39,
+        "tipo_treino_detectado": "rodagem",
+        "zona_prescrita": "E",
+        "pace_prescrito_min_km": "5:58-6:40",
+        "pace_executado_min_km": "6:33",
+        "aderencia_pace_pct": 88,
+        "distribuicao_intensidade": {
+          "facil_pct": 85,
+          "moderado_pct": 13,
+          "forte_pct": 2
+        },
+        "gray_zone_alerta": false,
+        "deriva_cardiaca_pct": 2.8,
+        "eficiencia_aerobica": null,
+        "cadencia_media_spm": 172,
+        "ajuste_calor_segundos_km": 22,
+        "pace_equivalente_frio_min_km": "6:11",
+        "limitador_principal": "clima",
+        "bandeira_clinica": null,
+        "nota_aderencia": 8,
+        "confianca_analise": "alta"
+      },
+      "score": 8,
+      "analysis_html": "<b>📊 Resumo do Treino</b>\nRodagem leve de 6,43 km a 6:33/km (FC média 145 bpm) — exatamente no espírito da fase de Base Aeróbica, semana 1 do ciclo Montevideo. VDOT de referência: 39. Treino realizado em condições extremas de calor úmido (24°C / 94% umidade, ponto de orvalho 22,6°C) às 4h48 em Recife — contexto que exige ajuste de pace significativo.\n\n<b>✅ Pontos Positivos</b>\n• <b>Pace contextualmente correto:</b> 6:33/km em calor extremo equivale a ~5:50–6:05/km em condições neutras — dentro da zona E prescrita (5:58–6:40). Você correu no ritmo certo sem forçar.\n• <b>FC bem comportada:</b> FC média 145 bpm = ~83% da FCmáx. Há leve elevação pelo calor, mas a FC máxima de 156 bpm (89%) não saiu do controle. Compatível com esforço fácil/moderado nessas condições.\n• <b>Disciplina de saída:</b> Largou conservador (6:13 no km 1) e manteve consistência nos splits centrais. Sem aceleração impulsiva — maturidade de corredor avançado.\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>Zona cinza no km 2:</b> O salto de FC de 131 → 149 bpm entre os dois primeiros quilômetros foi abrupto. Pode indicar início ainda muito intenso antes de estabilizar — monitore essa transição nas próximas sessões.\n• <b>Cadência baixa (172 spm):</b> Abaixo do alvo ótimo (≥178 spm pelo Pose Method). No calor e em retomada pós-pausa, é compreensível — mas é o principal ponto técnico a trabalhar nesta fase de base.\n• <b>Condições climáticas limitantes:</b> Ponto de orvalho de 22,6°C é classificado como \"muito desconfortável\" — acima de 21°C, o risco de sobrecarga térmica aumenta mesmo em pace fácil. Para sessões mais longas, considere avaliação criteriosa do horário.\n\n<b>🏁 Impacto na Preparação</b>\nTreino cumpre exatamente o que a fase de Base Aeróbica exige: estímulo aeróbico leve, reativação muscular e construção de consistência. Com 285 dias para Osaka e 115 para Montevideo, a prioridade agora é acumular volume fácil sem lesão — esse treino está alinhado. Não subestime o valor do \"nada aconteceu\": em semana 1 de retomada pós-pausa de 1 mês, terminar 6,4 km saudável já é uma vitória.\n\n<b>📅 Próximo Treino Sugerido</b>\n<b>Tipo:</b> Rodagem + drills de cadência (Pose Method)\n<b>Distância:</b> 6–7 km\n<b>Pace-alvo:</b> 6:25–6:45/km (ajuste calor: +20–25s/km sobre zona E)\n<b>Foco:</b> Manter FC abaixo de 150 bpm durante todo o treino; inserir 4×30s de aceleração de cadência (strides) no km 4 para estimular os 178 spm; se possível, sair antes das 5h para aproveitar temperatura ligeiramente menor.\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: 8/10 — Intensidade e volume corretos para a fase; perde apenas pelo calor extremo que limita qualidade e pela cadência abaixo do alvo técnico.\n",
+      "generated_at": "2026-04-23T13:23:56.709731"
     },
     {
       "id": "2026-03-01_morning_run",
       "date": "2026-03-01",
       "date_display": "01/03/2026",
       "source": "strava",
+      "sport": "run",
+      "is_treadmill": false,
       "activity_name": "Morning Run",
       "distance_km": 43.01,
       "duration": "03:58:07",
       "avg_pace": "5:32/km",
       "avg_heart_rate": 160.5,
+      "max_heart_rate": 170.0,
       "avg_cadence_spm": 181,
       "temperature_c": 18,
+      "humidity_pct": 82,
+      "dew_point_c": 24.2,
+      "heat_index_c": 31.1,
+      "weather_source": "open-meteo",
       "total_ascent_m": 334.0,
+      "total_descent_m": -4.0,
+      "training_stress_score": null,
+      "aerobic_training_effect": null,
+      "anaerobic_training_effect": null,
+      "laps": [
+        {
+          "lap_number": 1,
+          "distance_km": 1.0,
+          "duration": "05:29",
+          "avg_pace": "5:28/km",
+          "avg_heart_rate": 142,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 2,
+          "distance_km": 1.0,
+          "duration": "05:15",
+          "avg_pace": "5:14/km",
+          "avg_heart_rate": 151,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 3,
+          "distance_km": 1.0,
+          "duration": "05:33",
+          "avg_pace": "5:33/km",
+          "avg_heart_rate": 154,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 4,
+          "distance_km": 1.0,
+          "duration": "05:27",
+          "avg_pace": "5:26/km",
+          "avg_heart_rate": 152,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 5,
+          "distance_km": 1.0,
+          "duration": "05:22",
+          "avg_pace": "5:21/km",
+          "avg_heart_rate": 154,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 6,
+          "distance_km": 1.0,
+          "duration": "05:27",
+          "avg_pace": "5:27/km",
+          "avg_heart_rate": 159,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 7,
+          "distance_km": 1.0,
+          "duration": "05:27",
+          "avg_pace": "5:26/km",
+          "avg_heart_rate": 158,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 8,
+          "distance_km": 1.0,
+          "duration": "05:37",
+          "avg_pace": "5:36/km",
+          "avg_heart_rate": 158,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 9,
+          "distance_km": 1.0,
+          "duration": "05:27",
+          "avg_pace": "5:26/km",
+          "avg_heart_rate": 159,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 10,
+          "distance_km": 1.0,
+          "duration": "05:31",
+          "avg_pace": "5:31/km",
+          "avg_heart_rate": 159,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 11,
+          "distance_km": 1.0,
+          "duration": "05:31",
+          "avg_pace": "5:30/km",
+          "avg_heart_rate": 160,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 12,
+          "distance_km": 1.0,
+          "duration": "05:08",
+          "avg_pace": "5:08/km",
+          "avg_heart_rate": 159,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 13,
+          "distance_km": 1.0,
+          "duration": "05:18",
+          "avg_pace": "5:18/km",
+          "avg_heart_rate": 160,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 14,
+          "distance_km": 1.0,
+          "duration": "05:21",
+          "avg_pace": "5:20/km",
+          "avg_heart_rate": 160,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 15,
+          "distance_km": 1.0,
+          "duration": "04:56",
+          "avg_pace": "4:55/km",
+          "avg_heart_rate": 160,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 16,
+          "distance_km": 1.0,
+          "duration": "05:44",
+          "avg_pace": "5:44/km",
+          "avg_heart_rate": 160,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 17,
+          "distance_km": 1.0,
+          "duration": "05:21",
+          "avg_pace": "5:19/km",
+          "avg_heart_rate": 162,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 18,
+          "distance_km": 1.0,
+          "duration": "05:36",
+          "avg_pace": "5:37/km",
+          "avg_heart_rate": 161,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 19,
+          "distance_km": 1.0,
+          "duration": "05:27",
+          "avg_pace": "5:26/km",
+          "avg_heart_rate": 161,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 20,
+          "distance_km": 1.0,
+          "duration": "05:35",
+          "avg_pace": "5:34/km",
+          "avg_heart_rate": 160,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 21,
+          "distance_km": 1.0,
+          "duration": "05:27",
+          "avg_pace": "5:26/km",
+          "avg_heart_rate": 160,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 22,
+          "distance_km": 1.0,
+          "duration": "05:30",
+          "avg_pace": "5:30/km",
+          "avg_heart_rate": 159,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 23,
+          "distance_km": 1.0,
+          "duration": "05:39",
+          "avg_pace": "5:38/km",
+          "avg_heart_rate": 160,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 24,
+          "distance_km": 1.0,
+          "duration": "05:32",
+          "avg_pace": "5:32/km",
+          "avg_heart_rate": 161,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 25,
+          "distance_km": 1.0,
+          "duration": "05:29",
+          "avg_pace": "5:28/km",
+          "avg_heart_rate": 162,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 26,
+          "distance_km": 1.0,
+          "duration": "05:40",
+          "avg_pace": "5:40/km",
+          "avg_heart_rate": 163,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 27,
+          "distance_km": 1.0,
+          "duration": "05:39",
+          "avg_pace": "5:38/km",
+          "avg_heart_rate": 162,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 28,
+          "distance_km": 1.0,
+          "duration": "05:42",
+          "avg_pace": "5:42/km",
+          "avg_heart_rate": 163,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 29,
+          "distance_km": 1.0,
+          "duration": "05:36",
+          "avg_pace": "5:36/km",
+          "avg_heart_rate": 163,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 30,
+          "distance_km": 1.0,
+          "duration": "05:35",
+          "avg_pace": "5:34/km",
+          "avg_heart_rate": 163,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 31,
+          "distance_km": 1.0,
+          "duration": "05:23",
+          "avg_pace": "5:23/km",
+          "avg_heart_rate": 163,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 32,
+          "distance_km": 1.0,
+          "duration": "05:38",
+          "avg_pace": "5:37/km",
+          "avg_heart_rate": 162,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 33,
+          "distance_km": 1.0,
+          "duration": "05:52",
+          "avg_pace": "5:52/km",
+          "avg_heart_rate": 162,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 34,
+          "distance_km": 1.0,
+          "duration": "05:38",
+          "avg_pace": "5:37/km",
+          "avg_heart_rate": 161,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 35,
+          "distance_km": 1.0,
+          "duration": "05:30",
+          "avg_pace": "5:28/km",
+          "avg_heart_rate": 163,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 36,
+          "distance_km": 1.0,
+          "duration": "05:46",
+          "avg_pace": "5:46/km",
+          "avg_heart_rate": 162,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 37,
+          "distance_km": 1.0,
+          "duration": "05:38",
+          "avg_pace": "5:37/km",
+          "avg_heart_rate": 162,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 38,
+          "distance_km": 1.0,
+          "duration": "05:35",
+          "avg_pace": "5:35/km",
+          "avg_heart_rate": 163,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 39,
+          "distance_km": 1.0,
+          "duration": "05:39",
+          "avg_pace": "5:38/km",
+          "avg_heart_rate": 163,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 40,
+          "distance_km": 1.0,
+          "duration": "05:47",
+          "avg_pace": "5:47/km",
+          "avg_heart_rate": 163,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 41,
+          "distance_km": 1.0,
+          "duration": "05:50",
+          "avg_pace": "5:49/km",
+          "avg_heart_rate": 163,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 42,
+          "distance_km": 1.0,
+          "duration": "06:03",
+          "avg_pace": "6:03/km",
+          "avg_heart_rate": 159,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 43,
+          "distance_km": 1.0,
+          "duration": "05:21",
+          "avg_pace": "5:20/km",
+          "avg_heart_rate": 167,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 44,
+          "distance_km": 0.01,
+          "duration": "00:06",
+          "avg_pace": "8:25/km",
+          "avg_heart_rate": 169,
+          "avg_cadence_spm": null
+        }
+      ],
+      "metrics": {
+        "vdot_referencia": 39,
+        "tipo_treino_detectado": "longao",
+        "zona_prescrita": "M",
+        "pace_prescrito_min_km": "5:36",
+        "pace_executado_min_km": "5:32",
+        "aderencia_pace_pct": 88,
+        "distribuicao_intensidade": {
+          "facil_pct": 15,
+          "moderado_pct": 70,
+          "forte_pct": 15
+        },
+        "gray_zone_alerta": true,
+        "deriva_cardiaca_pct": 11.8,
+        "eficiencia_aerobica": 1.74,
+        "cadencia_media_spm": 181,
+        "ajuste_calor_segundos_km": 12,
+        "pace_equivalente_frio_min_km": "5:20",
+        "limitador_principal": "deriva_cardiaca",
+        "bandeira_clinica": null,
+        "nota_aderencia": 7,
+        "confianca_analise": "media"
+      },
       "score": null,
-      "analysis_html": "<b>📊 Resumo do Treino</b>\nFelipe, este foi um longão de 43km em 3h58 a 5:32/km médio — realizado às 4h40 em Recife, 18°C. Pace médio praticamente no ritmo de Maratona VDOT 39 (~5:36/km), com FC média de 160 bpm (92% da FCmáx estimada). Para a fase de Retomada Suave, este treino é, no mínimo, muito agressivo.\n\n---\n\n<b>✅ Pontos Positivos</b>\n\n• <b>Consistência de pace impressionante:</b> Splits de 5:14 a 5:37/km ao longo de 43km demonstra controle motor e experiência — nenhum colapso de ritmo mesmo no final.\n• <b>Cadência excelente:</b> 181 spm está alinhada com os princípios do Pose Method — acima dos 180 spm recomendados, sem impacto excessivo.\n• <b>Execução noturna/madrugada:</b> Acordar às 4h40 para treinar em Recife é disciplina real. O horário foi estratégico para amenizar o calor.\n\n---\n\n<b>⚠️ Sinais de Alerta</b>\n\n🔴 <b>Distância e intensidade incompatíveis com a fase atual:</b> Você está na semana 1–2 de retomada pós-1 mês de pausa. Um longão de 43km está ~107% acima do volume semanal alvo (40km/semana) feito em <b>uma única sessão</b>. Isso é todo o volume semanal em um dia.\n\n🔴 <b>FC cronicamente elevada para o pace:</b> FC média de 160 bpm (91% FCmáx) a 5:32/km é zona de Limiar/Tempo — não zona fácil. Para VDOT 39, corrida fácil deveria manter FC abaixo de ~140–145 bpm. Você rodou uma maratona de treino em intensidade de limiar.\n\n🟡 <b>Pace mais rápido que o ritmo E (Fácil):</b> 5:32/km médio está <b>fora da zona Easy</b> (5:58–6:40/km) e até mais rápido que o ritmo M (5:36/km). Mesmo com o calor de Recife, o esforço fisiológico foi de prova, não de base.\n\n🟡 <b>Risco de overreaching:</b> Pós-pausa de 1 mês + 43km em zona M/T = estresse cumulativo alto. O sistema musculoesquelético e metabólico não estava preparado para esse volume/intensidade combinados.\n\n---\n\n<b>🏁 Impacto na Preparação</b>\n\nEste treino, isoladamente, demonstra capacidade aeróbica sólida — seu VDOT real pode estar mais próximo de 39–40, o que é positivo. Porém, executado na semana de retomada, o custo é alto: os próximos 5–7 dias precisarão ser de recuperação real (corridas fáceis curtas ou descanso), o que atrasa a construção progressiva de base rumo à meia maratona de Set/Out 2026 e Osaka 2027. O risco não é hoje — é a fadiga oculta e a possível lesão nas próximas 2–3 semanas.\n\n---\n\n<b>📅 Próximo Treino Sugerido</b>\n\n<b>Tipo:</b> Corrida de recuperação ativa\n<b>Quando:</b> 48–72h após este treino (mínimo)\n<b>Distância:</b> 6–8 km\n<b>Pace-alvo:</b> 6:20–6:40/km (zona E conservadora, VDOT 39)\n<b>FC-alvo:</b> Abaixo de 135 bpm — use FC como guia, não o pace\n<b>Foco:</b> Flush metabólico, técnica Pose leve, sem ambição de ritmo\n<b>Depois:</b> 2 dias de descanso ou caminhada antes de qualquer sessão de qualidade\n\n---\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: <b>4/10</b> — Execução tecnicamente competente, mas volume e intensidade totalmente fora da fase de retomada; o risco de lesão ou fadiga acumulada supera o ganho pontual de fitness.",
-      "generated_at": "2026-04-15T18:52:23.881237"
+      "analysis_html": "**Nota sobre os dados recebidos:** O perfil indica VDOT 39 (com zonas E: 5:58–6:40, M: ~5:36, T: ~5:05–5:15), mas a instrução final menciona \"VDOT atual (34)\". Vou usar **VDOT 39** conforme o perfil completo, que é a fonte primária. Adicionalmente, este treino é de **01/03/2026**, portanto **anterior ao ciclo oficial** (iniciado 16/04/2026) — contextualizarei como histórico pré-ciclo.\n\n---\n\n<b>📊 Resumo do Treino</b>\nLongão de 43km em 3h58 a 5:32/km médio — provavelmente a Maratona de Tokyo ou prova equivalente (01/03/2026, pré-ciclo). Com Heat Index de 31°C em Recife, o pace equivalente corrigido fica em ~5:17–5:22/km, muito próximo ao ritmo M do VDOT 39 (~5:36). Treino de altíssima carga realizado fora do ciclo oficial atual de preparação para Montevideo/Osaka.\n\n---\n\n<b>✅ Pontos Positivos</b>\n• <b>Pace consistente sob calor extremo:</b> Splits entre 5:14 e 5:37/km com Heat Index 31°C. Corrigido (~+10–15s/km), equivale a ~5:00–5:22/km em condições neutras — sólido para VDOT 39.\n• <b>Cadência excelente:</b> 181 spm está dentro do benchmark ideal (≥180 spm), indicando boa economia de movimento — princípio Pose Method aplicado em distância longa.\n• <b>Controle de FC nos primeiros 5km:</b> Saída comportada entre 142–154 bpm demonstra inteligência de corrida — sem explosão inicial, mesmo com o calor.\n\n---\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>FC elevada para o pace executado:</b> 160,5 bpm médio (92% da FCmáx estimada de 175) para um pace de prova indica alta carga cardiovascular — esperado pelo calor, mas relevante monitorar recuperação.\n• <b>Zona cinza presente (voltas 6–10):</b> FC entre 158–159 bpm de forma sustentada é moderado-alto, fora da zona fácil E (abaixo de ~145–148 bpm) e abaixo do limiar T. Clássica gray zone — deve ser evitada no ciclo Base atual.\n• <b>Treino pré-ciclo + 1 mês de pausa subsequente:</b> Esta carga de 43km foi seguida de ~1 mês de descanso. A retomada em Abril/2026 exige progressão conservadora de volume (regra dos 10%).\n\n---\n\n<b>🏁 Impacto na Preparação</b>\nEste treino é um <b>marcador histórico importante</b>: confirma capacidade de completar distância maratona e sustenta o diagnóstico de VDOT ~39. Serve como linha de base para medir o progresso rumo ao sub-3h50 em Osaka (VDOT ≥42). O mês de recuperação pós-prova foi necessário e bem administrado. A retomada no ciclo Base (Abril/2026) parte de uma fundação aeróbica real — não do zero.\n\n---\n\n<b>📅 Próximo Treino Sugerido</b>\n<b>Rodagem fácil de retomada — 8 a 10km</b>\n• Pace-alvo: <b>6:10–6:40/km</b> (zona E, VDOT 39) — conversacional estrito\n• FC-alvo: <b>abaixo de 148 bpm</b> durante todo o treino\n• Foco: reativar o padrão motor sem estresse cardiovascular; priorizar drills de Pose (fall, pull) nos últimos 10 min\n• Horário: preferencialmente antes das 6h ou após 18h em Recife para mitigar Heat Index\n• Sem progressão de pace — este não é o objetivo agora\n\n---\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: <b>7/10</b> — Prova ou longão executado com bom controle técnico, mas pace acima da zona M em calor extremo gera carga cardiovascular elevada; como referência histórica pré-ciclo, cumpre bem o papel de baseline.\n",
+      "generated_at": "2026-04-23T13:23:29.112295"
     },
     {
       "id": "2026-02-28_morning_run",
       "date": "2026-02-28",
       "date_display": "28/02/2026",
       "source": "strava",
+      "sport": "run",
+      "is_treadmill": false,
       "activity_name": "Morning Run",
       "distance_km": 4.3,
       "duration": "26:52",
       "avg_pace": "6:14/km",
       "avg_heart_rate": 152.1,
+      "max_heart_rate": 166.0,
       "avg_cadence_spm": 176,
       "temperature_c": 16,
+      "humidity_pct": 80,
+      "dew_point_c": 23.6,
+      "heat_index_c": 30.4,
+      "weather_source": "cache",
       "total_ascent_m": 27.0,
-      "score": null,
-      "analysis_html": "<b>📊 Resumo do Treino</b>\nCorrida fácil de 4,3 km a 6:14/km — dentro da janela Easy do VDOT 39 (5:58–6:40). Primeira semana de retomada suave pós-pausa de ~1 mês. Volume leve e intencional, exatamente o esperado para a Semana 1–2 do ciclo.\n\n<b>✅ Pontos Positivos</b>\n• <b>Pace disciplinado:</b> 6:14/km está no centro da zona E do VDOT 39 — nada de heroísmo no retorno, muito bem.\n• <b>FC compatível com o esforço:</b> Média de 152 bpm = ~87% FCmáx. Elevada, mas justificada pelo calor/umidade de Recife às 4h40. Com ajuste climático (~10–15 seg/km), o esforço real equivale a ~5:59–6:04/km — spot on na zona fácil.\n• <b>Cadência saudável:</b> 176 spm é um sinal positivo de eficiência neuromuscular, especialmente relevante pra quem trabalha com Pose Method. Acima do limiar crítico de 170 spm.\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>Drift de FC progressivo:</b> 147 → 156 bpm ao longo dos splits (+9 bpm em 4 km) com pace acelerando levemente. Sinal clássico de início de fadiga térmica. Nada grave hoje, mas monitorar nas próximas sessões.\n• <b>FC máxima de 166 bpm:</b> Representa 95% da FCmáx estimada. O pico aconteceu em algum momento do percurso — verifique se houve subida ou aceleração pontual. Evite picos assim em corridas E.\n\n<b>🏁 Impacto na Preparação</b>\nTreino cumpre exatamente o papel desta fase: reativar o sistema aeróbico sem agredir o organismo recém-recuperado. 4,3 km podem parecer pouco, mas a consistência nas próximas 6–8 semanas é o que vai construir a base para o VDOT 42 necessário para o sub-3:50 em Osaka. Cada sessão fácil bem executada agora é um tijolo nessa fundação.\n\n<b>📅 Próximo Treino Sugerido</b>\n<b>Corrida Fácil — 6 km</b>\n• Pace-alvo: 6:10–6:40/km (ajustado pro calor de Recife)\n• FC-alvo: manter abaixo de 155 bpm durante todo o percurso\n• Foco: manter cadência ≥174 spm, queda de quadril mínima (Pose), sem aceitar o drift de FC — reduza o pace se necessário\n• Ideal: mesmo horário ou mais cedo, hidratação pré-treino reforçada\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: <b>8/10</b> — Intensidade e comportamento exemplares para a Semana 1 de retomada; volume ainda abaixo do alvo, mas adequado e seguro para o momento.",
-      "generated_at": "2026-04-15T18:51:48.895003"
+      "total_descent_m": 2.4,
+      "training_stress_score": null,
+      "aerobic_training_effect": null,
+      "anaerobic_training_effect": null,
+      "laps": [
+        {
+          "lap_number": 1,
+          "distance_km": 1.0,
+          "duration": "06:25",
+          "avg_pace": "6:24/km",
+          "avg_heart_rate": 147,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 2,
+          "distance_km": 1.0,
+          "duration": "06:17",
+          "avg_pace": "6:17/km",
+          "avg_heart_rate": 151,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 3,
+          "distance_km": 1.0,
+          "duration": "06:12",
+          "avg_pace": "6:11/km",
+          "avg_heart_rate": 155,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 4,
+          "distance_km": 1.0,
+          "duration": "06:03",
+          "avg_pace": "6:03/km",
+          "avg_heart_rate": 156,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 5,
+          "distance_km": 0.3,
+          "duration": "01:55",
+          "avg_pace": "6:24/km",
+          "avg_heart_rate": 148,
+          "avg_cadence_spm": null
+        }
+      ],
+      "metrics": {
+        "vdot_referencia": 39,
+        "tipo_treino_detectado": "rodagem",
+        "zona_prescrita": "E",
+        "pace_prescrito_min_km": "5:58-6:40",
+        "pace_executado_min_km": "6:14",
+        "aderencia_pace_pct": 88,
+        "distribuicao_intensidade": {
+          "facil_pct": 90,
+          "moderado_pct": 10,
+          "forte_pct": 0
+        },
+        "gray_zone_alerta": false,
+        "deriva_cardiaca_pct": 6.1,
+        "eficiencia_aerobica": null,
+        "cadencia_media_spm": 176,
+        "ajuste_calor_segundos_km": 10,
+        "pace_equivalente_frio_min_km": "6:04",
+        "limitador_principal": "deriva_cardiaca",
+        "bandeira_clinica": null,
+        "nota_aderencia": 7,
+        "confianca_analise": "media"
+      },
+      "score": 7,
+      "analysis_html": "<b>📊 Resumo do Treino</b>\nRodagem fácil de 4,3 km a 6:14/km — dentro da zona E do VDOT 39 (5:58–6:40). Treino pré-ciclo oficial (28/02/2026), ainda na janela de retomada pós-maratona. Com Heat Index de 30,4°C e umidade de 80%, o pace equivalente em condições neutras fica em torno de ~6:00–6:09/km — técnicamente dentro da zona fácil.\n\n<b>✅ Pontos Positivos</b>\n• <b>Pace controlado e correto:</b> 6:14/km (corrigido ~6:00–6:05/km) encaixa perfeitamente na zona E do VDOT 39, mostrando disciplina de intensidade\n• <b>Splits negativos parciais:</b> progressão natural de 6:24 → 6:03 sem forcing — sinal de aquecimento orgânico, não de aceleração impulsiva\n• <b>Retomada responsável:</b> volume curto (4,3 km) compatível com a fase de reintrodução pós-pausa de ~1 mês\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>FC elevada para o esforço:</b> 152 bpm médio (~87% FCmáx) em pace fácil é alto para zona E, que idealmente deveria ficar ≤75–80% FCmáx (~131–140 bpm). O calor e umidade explicam parte, mas o descondicionamento pós-pausa também contribui — monitorar a deriva nas próximas semanas\n• <b>Pico de 166 bpm (95% FCmáx):</b> provavelmente em subida ou aceleração pontual, mas merece atenção — evitar esforços máximos nesta fase de retomada\n• <b>Cadência 176 spm:</b> levemente abaixo do alvo Pose/Daniels de 180 spm — oportunidade de ajuste técnico já nas próximas saídas\n\n<b>🏁 Impacto na Preparação</b>\nTreino fora do ciclo oficial (início: 16/04/2026), mas com impacto positivo na retomada aeróbica. Sinaliza que Felipe está ativo e reintroduzindo o estímulo de forma gradual — base sólida para os 40 km/semana alvo na fase de Base Aeróbica de Abril. Sem impacto direto no VDOT, mas útil para recalibrar o sistema cardiovascular pós-pausa.\n\n<b>📅 Próximo Treino Sugerido</b>\n<b>Rodagem fácil + drills de técnica (Pose Method)</b>\n• Distância: 5–6 km\n• Pace-alvo: 6:10–6:40/km (zona E, sem negociar com o calor)\n• FC-alvo: manter ≤145 bpm — se ultrapassar, reduzir pace sem hesitar\n• Foco: cadência ≥180 spm + queda do quadril + apoio sob o centro de massa\n• Sugestão: incluir 4×20m de drills (pony, pulling, queda controlada) antes dos km rodados\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: 7/10 — Pace e volume corretos para retomada, mas FC elevada indica que o sistema cardiovascular ainda está em readaptação; manter disciplina na zona fácil nas próximas semanas é prioridade.\n",
+      "generated_at": "2026-04-23T13:22:52.513519"
     },
     {
       "id": "2026-02-25_morning_run",
       "date": "2026-02-25",
       "date_display": "25/02/2026",
       "source": "strava",
+      "sport": "run",
+      "is_treadmill": false,
       "activity_name": "Morning Run",
-      "distance_km": 0.28,
-      "duration": "02:24",
-      "avg_pace": "8:42/km",
-      "avg_heart_rate": 68.4,
-      "avg_cadence_spm": 118,
+      "distance_km": 8.69,
+      "duration": "50:46",
+      "avg_pace": "5:50/km",
+      "avg_heart_rate": 155.0,
+      "max_heart_rate": 170.0,
+      "avg_cadence_spm": 181,
       "temperature_c": 12,
-      "total_ascent_m": 3.0,
-      "score": null,
-      "analysis_html": "<b>📊 Resumo do Treino</b>\nAtividade registrada em 25/02/2026 — apenas 280 metros em 2:24 minutos, a um pace médio de 8:42/km. Trata-se claramente de um aquecimento, trote inicial ou teste de dispositivo, não de uma sessão estruturada. Contexto: Felipe ainda está em fase pré-retomada (início oficial do plano: 07/04/2026), com ~1 mês de pausa pós-maratona no retrovisor.\n\n---\n\n<b>✅ Pontos Positivos</b>\n• <b>FC extremamente controlada:</b> 68 bpm médio e pico de 122 bpm indicam total recuperação cardíaca — ótimo sinal para retomada.\n• <b>Movimento aconteceu:</b> Mesmo que mínimo, sair e registrar movimento é psicologicamente relevante no período de transição.\n• <b>Sem estresse fisiológico:</b> 122 bpm pico representa ~70% da FCmáx estimada (175 bpm) — zone 1 pura, sem sobrecarga.\n\n---\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>Dado insuficiente para análise real:</b> 280m/2:24 não constitui sessão de treino — provavelmente um registro acidental ou início abortado.\n• <b>Cadência de 118 spm:</b> Muito abaixo do alvo ideal (≥170 spm). Mesmo em trotes curtos, vale calibrar o padrão motor desde já — Pose Method reforça isso.\n• <b>Antecipação do plano:</b> O início oficial é 07/04/2026. Movimentos soltos antes disso são válidos, mas sem estrutura definida.\n\n---\n\n<b>🏁 Impacto na Preparação</b>\nImpacto direto: <b>neutro/zero</b> sobre a base aeróbica para Osaka 2027. Mas o impacto indireto pode ser positivo: manter o hábito de movimento no período de transição evita o sedentarismo completo e facilita a retomada em abril. Nenhum ganho de VDOT esperado, nenhum risco de overtraining.\n\n---\n\n<b>📅 Próximo Treino Sugerido</b>\n<b>Tipo:</b> Corrida fácil contínua (Zona E)\n<b>Distância:</b> 5–6 km\n<b>Pace-alvo:</b> 6:20–6:40/km (zona fácil VDOT 39, ajustado para calor de Recife → adicione ~15–20s/km)\n<b>FC-alvo:</b> Manter abaixo de 140 bpm\n<b>Foco:</b> Reconexão com o movimento, checar sensações musculares e articulares pós-pausa. Inclua 5 min de drills Pose (queda, puxada, apoio) antes de iniciar.\n\n---\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: <b>3/10</b> — Registro válido como movimento, mas insuficiente como treino; irrelevante para construção do VDOT rumo ao sub-3h50 em Osaka.",
-      "generated_at": "2026-04-15T18:50:54.519387"
+      "humidity_pct": 71,
+      "dew_point_c": 23.1,
+      "heat_index_c": 32.7,
+      "weather_source": "cache",
+      "total_ascent_m": 202.0,
+      "total_descent_m": 1.4,
+      "training_stress_score": null,
+      "aerobic_training_effect": null,
+      "anaerobic_training_effect": null,
+      "laps": [
+        {
+          "lap_number": 1,
+          "distance_km": 1.0,
+          "duration": "05:33",
+          "avg_pace": "5:33/km",
+          "avg_heart_rate": 146,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 2,
+          "distance_km": 1.0,
+          "duration": "05:37",
+          "avg_pace": "5:36/km",
+          "avg_heart_rate": 155,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 3,
+          "distance_km": 1.0,
+          "duration": "05:40",
+          "avg_pace": "5:40/km",
+          "avg_heart_rate": 152,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 4,
+          "distance_km": 1.0,
+          "duration": "05:35",
+          "avg_pace": "5:35/km",
+          "avg_heart_rate": 155,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 5,
+          "distance_km": 1.0,
+          "duration": "05:28",
+          "avg_pace": "5:27/km",
+          "avg_heart_rate": 157,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 6,
+          "distance_km": 1.0,
+          "duration": "05:34",
+          "avg_pace": "5:34/km",
+          "avg_heart_rate": 155,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 7,
+          "distance_km": 1.0,
+          "duration": "05:51",
+          "avg_pace": "5:50/km",
+          "avg_heart_rate": 156,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 8,
+          "distance_km": 1.0,
+          "duration": "05:41",
+          "avg_pace": "5:41/km",
+          "avg_heart_rate": 159,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 9,
+          "distance_km": 0.69,
+          "duration": "05:46",
+          "avg_pace": "8:17/km",
+          "avg_heart_rate": 154,
+          "avg_cadence_spm": null
+        }
+      ],
+      "metrics": {
+        "vdot_referencia": 39,
+        "tipo_treino_detectado": "rodagem",
+        "zona_prescrita": "E",
+        "pace_prescrito_min_km": "5:58-6:40",
+        "pace_executado_min_km": "5:50",
+        "aderencia_pace_pct": 72,
+        "distribuicao_intensidade": {
+          "facil_pct": 30,
+          "moderado_pct": 60,
+          "forte_pct": 10
+        },
+        "gray_zone_alerta": true,
+        "deriva_cardiaca_pct": 8.9,
+        "eficiencia_aerobica": null,
+        "cadencia_media_spm": 181,
+        "ajuste_calor_segundos_km": 18,
+        "pace_equivalente_frio_min_km": "5:32",
+        "limitador_principal": "clima",
+        "bandeira_clinica": null,
+        "nota_aderencia": 7,
+        "confianca_analise": "media"
+      },
+      "score": 7,
+      "analysis_html": "<b>📊 Resumo do Treino</b>\nRodagem de 8,69 km a 5:50/km médio, com FC média de 155 bpm — treino realizado em Recife às 4h40 sob heat index de 32,7°C. Considerando o ajuste térmico (+15 a +20s/km estimado para as condições), o pace equivalente \"frio\" gira em torno de 5:30–5:35/km, que corresponde praticamente ao ritmo de Maratona (M) do VDOT 39 (~5:36). Este treino é anterior ao início oficial do ciclo (16/04/2026), portanto compõe o histórico de pré-ciclo.\n\n<b>✅ Pontos Positivos</b>\n• <b>Pace térmico-ajustado dentro do esperado:</b> equivalente a ~5:32/km em condições neutras — muito próximo do topo da zona E / entrada da zona M do VDOT 39, o que é aceitável para uma rodagem matinal.\n• <b>Cadência excelente:</b> 181 spm está no ponto ideal prescrito pelo Pose Method, indicando boa mecânica de passada e baixo risco de sobrecarga em membros inferiores.\n• <b>Disciplina climática:</b> rodar às 4h40 para minimizar o calor de Recife demonstra maturidade no gerenciamento do treino — decisão correta de treinador de si mesmo.\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>FC elevada para o pace:</b> FC média de 155 bpm (~89% da FCmáx) é alta para uma rodagem fácil/moderada — a zona E do VDOT 39 pressupõe em torno de 70–79% FCmáx (~122–138 bpm). O calor explica parte disso, mas confirma que o esforço real foi de zona M/limiar inferior, não zona E pura.\n• <b>FC máxima de 170 bpm (97% FCmáx):</b> o pico de 170 bpm no km 5 (5:27/km, o split mais rápido) sinaliza que houve um momento de intensidade acima do prescrito — evite acelerar em treinos de base, especialmente no calor.\n• <b>Deriva cardíaca observável:</b> FC subiu de 146 → 159 bpm do km 1 ao km 8 com pace relativamente estável, indicando deriva de ~8–9% — limite aceitável no calor, mas a vigiar nas próximas sessões.\n\n<b>🏁 Impacto na Preparação</b>\nTreino de pré-ciclo que cumpre seu papel: manutenção do estímulo aeróbico após a pausa pós-maratona. O esforço real (zona M/limiar baixo pelo calor) foi ligeiramente acima do ideal para uma rodagem de base, mas sem dano ao processo. Confirma que Felipe já está funcional e pronto para iniciar a fase Base Aeróbica em 16/04 com volume controlado e intensidade predominantemente zona E.\n\n<b>📅 Próximo Treino Sugerido</b>\n<b>Rodagem Fácil — 8 a 10 km em Zona E pura</b>\n• Pace-alvo: 6:00–6:30/km (com heat index alto, aceite até 6:40/km)\n• FC-alvo: ≤138 bpm — use a FC como regulador, não o pace\n• Foco: cadência ≥178 spm, postura Pose Method, sem acelerar nos últimos kms\n• Horário: manter 4h–5h da manhã ou migrar para esteira com AC se heat index >32°C\n• Opcional: 10–15 min de drills pós-corrida (queda, pull, postura)\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: 7/10 — Pace e cadência corretos para o momento, mas FC acima da zona E indica intensidade levemente elevada para uma sessão de base; ajuste térmico salva a interpretação.\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n",
+      "generated_at": "2026-04-23T13:22:01.991155"
     }
   ]
 }
