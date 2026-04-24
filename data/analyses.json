@@ -6,9 +6,110 @@
   "tune_up_race": "Meia Maratona de Montevideo — 09/08/2026",
   "tune_up_goal": "Sub-1h50",
   "cycle_start": "2026-04-16",
-  "last_updated": "2026-04-23T13:27:24.530371",
-  "total_analyses": 11,
+  "last_updated": "2026-04-24T11:09:32.001625",
+  "total_analyses": 12,
   "analyses": [
+    {
+      "id": "2026-04-24_morning_run",
+      "date": "2026-04-24",
+      "date_display": "24/04/2026",
+      "source": "strava",
+      "sport": "run",
+      "is_treadmill": true,
+      "activity_name": "Morning Run",
+      "distance_km": 5.57,
+      "duration": "40:29",
+      "avg_pace": "7:15/km",
+      "avg_heart_rate": 141.7,
+      "max_heart_rate": 150.0,
+      "avg_cadence_spm": 171,
+      "temperature_c": 25,
+      "humidity_pct": null,
+      "dew_point_c": null,
+      "heat_index_c": null,
+      "weather_source": null,
+      "total_ascent_m": 0,
+      "total_descent_m": 0.0,
+      "training_stress_score": null,
+      "aerobic_training_effect": null,
+      "anaerobic_training_effect": null,
+      "laps": [
+        {
+          "lap_number": 1,
+          "distance_km": 1.0,
+          "duration": "07:21",
+          "avg_pace": "7:20/km",
+          "avg_heart_rate": 131,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 2,
+          "distance_km": 1.0,
+          "duration": "07:14",
+          "avg_pace": "7:12/km",
+          "avg_heart_rate": 139,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 3,
+          "distance_km": 1.0,
+          "duration": "07:15",
+          "avg_pace": "7:14/km",
+          "avg_heart_rate": 142,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 4,
+          "distance_km": 1.0,
+          "duration": "07:14",
+          "avg_pace": "7:14/km",
+          "avg_heart_rate": 145,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 5,
+          "distance_km": 1.0,
+          "duration": "07:16",
+          "avg_pace": "7:14/km",
+          "avg_heart_rate": 146,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 6,
+          "distance_km": 0.57,
+          "duration": "04:09",
+          "avg_pace": "7:14/km",
+          "avg_heart_rate": 146,
+          "avg_cadence_spm": null
+        }
+      ],
+      "metrics": {
+        "vdot_referencia": 39,
+        "tipo_treino_detectado": "regenerativo",
+        "zona_prescrita": "E",
+        "pace_prescrito_min_km": "5:58-6:40",
+        "pace_executado_min_km": "7:15",
+        "aderencia_pace_pct": null,
+        "distribuicao_intensidade": {
+          "facil_pct": 100,
+          "moderado_pct": 0,
+          "forte_pct": 0
+        },
+        "gray_zone_alerta": false,
+        "deriva_cardiaca_pct": 11.5,
+        "eficiencia_aerobica": null,
+        "cadencia_media_spm": 171,
+        "ajuste_calor_segundos_km": 0,
+        "pace_equivalente_frio_min_km": "7:15",
+        "limitador_principal": "deriva_cardiaca",
+        "bandeira_clinica": null,
+        "nota_aderencia": 7,
+        "confianca_analise": "alta"
+      },
+      "score": 7,
+      "analysis_html": "<b>📊 Resumo do Treino</b>\nFelipe, rodagem regenerativa de 5,57 km em esteira, 40min a 7:15/km — ritmo acima da zona fácil superior (VDOT 39: 5:58–6:40), portanto dentro de uma zona de recuperação ativa/ultra-fácil. FC média de 141 bpm (81% da FCmáx estimada) indica esforço controlado. Sessão coerente com a Semana 2 da fase de Base Aeróbica do ciclo Montevideo.\n\n<b>✅ Pontos Positivos</b>\n• <b>Pace ultra-conservador:</b> 7:15/km está abaixo até do limite inferior da zona E (6:40/km), o que é excelente para um dia de recuperação ativa — sem estresse desnecessário ao sistema aeróbico.\n• <b>FC bem controlada:</b> FC média 141 bpm (~81% FCmáx) com máxima em 150 bpm (~86%) — esforço sustentado, sem picos. Mostra bom equilíbrio esforço/resposta cardíaca para a intensidade aplicada.\n• <b>Consistência de splits:</b> Voltas 2 a 6 absolutamente uniformes (7:12–7:14/km), demonstrando execução disciplinada e consciência de ritmo — traço de atleta experiente.\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>Deriva cardíaca moderada:</b> FC saiu de 131 bpm (Volta 1) para 146 bpm (Volta 5) com pace constante — delta de +15 bpm em 5km. Em esteira com temperatura controlada, isso sugere possível desidratação leve ou que o sistema ainda está em adaptação após o retorno pós-pausa. Monitore nas próximas sessões.\n• <b>Cadência 171 spm:</b> Abaixo do alvo Pose/Daniels de ≥175–180 spm. Em treinos fáceis há tendência de queda de cadência — trabalhe isso ativamente mesmo em ritmo regenerativo.\n\n<b>🏁 Impacto na Preparação</b>\nSessão de baixo estresse, alto valor de recuperação e construção de base aeróbica. Contribui para o volume semanal (~40km/sem alvo) sem custo fisiológico relevante. Nesta fase (Base Aeróbica Abr–Mai), acumular sessões como essa com boa regularidade é exatamente o que sustenta o aumento de VDOT de 39 → 42 necessário para o Sub-1h50 em Montevideo e o Sub-3h50 em Osaka.\n\n<b>📅 Próximo Treino Sugerido</b>\n<b>Rodagem fácil com drills de cadência</b> — 8–10 km a 6:20–6:40/km (zona E do VDOT 39), em superfície externa se possível. Intercale 4×30 seg de <i>metronome drill</i> (alvo: 178 spm) a cada 2 km. FC-alvo: manter abaixo de 145 bpm. Hidratação obrigatória antes e durante.\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: 7/10 — Intensidade adequada para o dia, mas cadência abaixo do alvo e deriva cardíaca merecem atenção; volume de 5,5 km fica aquém para construção de base — aumentar nas próximas sessões.\n",
+      "generated_at": "2026-04-24T11:09:32.001593"
+    },
     {
       "id": "2026-04-23_morning_run",
       "date": "2026-04-23",
