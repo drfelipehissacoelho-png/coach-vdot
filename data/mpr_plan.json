@@ -1,0 +1,175 @@
+{
+  "_comment": "Gerado automaticamente por parse_mpr_plan.py — NÃO editar manualmente.",
+  "month": "2026-04",
+  "source_pdf": "Planilha - MPR.pdf",
+  "generated_at": "2026-04-23",
+  "athlete": "Felipe Hissa Coelho",
+
+  "zones_mpr": {
+    "Z0": { "label": "Caminhada",       "pace_min": "11:00", "pace_max": "13:00" },
+    "Z1": { "label": "Leve",            "pace_min": "6:29",  "pace_max": "7:28"  },
+    "Z2": { "label": "Confortável",     "pace_min": "6:05",  "pace_max": "6:29"  },
+    "Z3": { "label": "Moderado",        "pace_min": "5:41",  "pace_max": "6:03"  },
+    "Z4": { "label": "Firme",           "pace_min": "5:20",  "pace_max": "5:39"  },
+    "Z5": { "label": "Forte/2000m",     "pace_min": "5:05",  "pace_max": "5:18"  },
+    "Z6": { "label": "1500m/Milha",     "pace_min": "5:01",  "pace_max": "5:14"  },
+    "Z7": { "label": "800m/1000m",      "pace_min": "4:58",  "pace_max": "5:11"  },
+    "Z8": { "label": "400m",            "pace_min": "4:31",  "pace_max": "4:43"  },
+    "Z9": { "label": "200m",            "pace_min": "4:16",  "pace_max": "4:32"  },
+    "TIROS_2000M": { "label": "Tiros 2000m", "pace_min": "5:37", "pace_max": "5:52" }
+  },
+
+  "sessions": [
+    {
+      "date": "2026-04-07",
+      "day_of_week": "Terça-Feira",
+      "type": "REGENERATIVO",
+      "zones": ["Z1"],
+      "duration_min": 40,
+      "distance_min_km": 5.36,
+      "distance_max_km": 6.17,
+      "structure": "40:00 Z1",
+      "notes": null
+    },
+    {
+      "date": "2026-04-09",
+      "day_of_week": "Quinta-Feira",
+      "type": "REGENERATIVO",
+      "zones": ["Z1"],
+      "duration_min": 40,
+      "distance_min_km": 5.36,
+      "distance_max_km": 6.17,
+      "structure": "40:00 Z1",
+      "notes": null
+    },
+    {
+      "date": "2026-04-11",
+      "day_of_week": "Sábado",
+      "type": "PERCURSO PLANO",
+      "zones": ["Z1"],
+      "duration_min": 45,
+      "distance_min_km": 6.03,
+      "distance_max_km": 6.94,
+      "structure": "45:00 Z1",
+      "notes": null
+    },
+    {
+      "date": "2026-04-14",
+      "day_of_week": "Terça-Feira",
+      "type": "REGENERATIVO",
+      "zones": ["Z1"],
+      "duration_min": 45,
+      "distance_min_km": 6.03,
+      "distance_max_km": 6.94,
+      "structure": "45:00 Z1",
+      "notes": null
+    },
+    {
+      "date": "2026-04-16",
+      "day_of_week": "Quinta-Feira",
+      "type": "REGENERATIVO",
+      "zones": ["Z1"],
+      "duration_min": 45,
+      "distance_min_km": 6.03,
+      "distance_max_km": 6.94,
+      "structure": "45:00 Z1",
+      "notes": null
+    },
+    {
+      "date": "2026-04-18",
+      "day_of_week": "Sábado",
+      "type": "PERCURSO PLANO",
+      "zones": ["Z1"],
+      "duration_min": 50,
+      "distance_min_km": 6.70,
+      "distance_max_km": 7.71,
+      "structure": "50:00 Z1",
+      "notes": null
+    },
+    {
+      "date": "2026-04-21",
+      "day_of_week": "Terça-Feira",
+      "type": "REGENERATIVO",
+      "zones": ["Z1"],
+      "duration_min": 50,
+      "distance_min_km": 6.70,
+      "distance_max_km": 7.71,
+      "structure": "50:00 Z1",
+      "notes": null
+    },
+    {
+      "date": "2026-04-22",
+      "day_of_week": "Quarta-Feira",
+      "type": "REGENERATIVO",
+      "zones": ["Z1"],
+      "duration_min": 50,
+      "distance_min_km": 6.70,
+      "distance_max_km": 7.71,
+      "structure": "50:00 Z1",
+      "notes": null
+    },
+    {
+      "date": "2026-04-23",
+      "day_of_week": "Quinta-Feira",
+      "type": "REGENERATIVO",
+      "zones": ["Z1"],
+      "duration_min": 50,
+      "distance_min_km": 6.70,
+      "distance_max_km": 7.71,
+      "structure": "50:00 Z1",
+      "notes": null
+    },
+    {
+      "date": "2026-04-25",
+      "day_of_week": "Sábado",
+      "type": "PERCURSO PLANO",
+      "zones": ["Z1"],
+      "duration_min": 60,
+      "distance_min_km": 8.04,
+      "distance_max_km": 9.25,
+      "structure": "60:00 Z1",
+      "notes": null
+    },
+    {
+      "date": "2026-04-28",
+      "day_of_week": "Terça-Feira",
+      "type": "INTERVALADO",
+      "zones": ["Z1", "Z3", "Z4"],
+      "duration_min": 55,
+      "distance_min_km": 8.11,
+      "distance_max_km": 9.03,
+      "structure": "15:00 Z1 + 5x(02:00 Z3 + 02:00 Z4 + 02:00 Z1) + 10:00 Z1",
+      "intervals": {
+        "warmup_min": 15,
+        "sets": 5,
+        "work_z3_min": 2,
+        "work_z4_min": 2,
+        "recovery_min": 2,
+        "cooldown_min": 10
+      },
+      "notes": "Primeira sessão de velocidade do ciclo"
+    },
+    {
+      "date": "2026-04-30",
+      "day_of_week": "Quinta-Feira",
+      "type": "REGENERATIVO",
+      "zones": ["Z1"],
+      "duration_min": 50,
+      "distance_min_km": 6.70,
+      "distance_max_km": 7.71,
+      "structure": "50:00 Z1",
+      "notes": null
+    },
+    {
+      "date": "2026-05-02",
+      "day_of_week": "Sábado",
+      "type": "PERCURSO PLANO",
+      "zones": ["Z1"],
+      "duration_min": 70,
+      "distance_min_km": 9.38,
+      "distance_max_km": 10.80,
+      "structure": "70:00 Z1",
+      "notes": null
+    }
+  ]
+}
