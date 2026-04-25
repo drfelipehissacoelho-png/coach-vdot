@@ -6,9 +6,150 @@
   "tune_up_race": "Meia Maratona de Montevideo — 09/08/2026",
   "tune_up_goal": "Sub-1h50",
   "cycle_start": "2026-04-16",
-  "last_updated": "2026-04-24T11:09:32.001625",
-  "total_analyses": 12,
+  "last_updated": "2026-04-25T08:16:46.521845",
+  "total_analyses": 13,
   "analyses": [
+    {
+      "id": "2026-04-25_longo",
+      "date": "2026-04-25",
+      "date_display": "25/04/2026",
+      "source": "strava",
+      "sport": "run",
+      "is_treadmill": false,
+      "activity_name": "Longo",
+      "distance_km": 10.43,
+      "duration": "01:08:09",
+      "avg_pace": "6:32/km",
+      "avg_heart_rate": 153.7,
+      "max_heart_rate": 173.0,
+      "avg_cadence_spm": 175,
+      "temperature_c": 27,
+      "humidity_pct": 94,
+      "dew_point_c": 22.4,
+      "heat_index_c": 23.4,
+      "weather_source": "open-meteo",
+      "total_ascent_m": 24.0,
+      "total_descent_m": 7.8,
+      "training_stress_score": null,
+      "aerobic_training_effect": null,
+      "anaerobic_training_effect": null,
+      "laps": [
+        {
+          "lap_number": 1,
+          "distance_km": 1.0,
+          "duration": "06:28",
+          "avg_pace": "6:27/km",
+          "avg_heart_rate": 141,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 2,
+          "distance_km": 1.0,
+          "duration": "06:31",
+          "avg_pace": "6:30/km",
+          "avg_heart_rate": 148,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 3,
+          "distance_km": 1.0,
+          "duration": "06:26",
+          "avg_pace": "6:26/km",
+          "avg_heart_rate": 149,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 4,
+          "distance_km": 1.0,
+          "duration": "06:30",
+          "avg_pace": "6:30/km",
+          "avg_heart_rate": 153,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 5,
+          "distance_km": 1.0,
+          "duration": "07:03",
+          "avg_pace": "7:03/km",
+          "avg_heart_rate": 153,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 6,
+          "distance_km": 1.0,
+          "duration": "06:48",
+          "avg_pace": "6:48/km",
+          "avg_heart_rate": 153,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 7,
+          "distance_km": 1.0,
+          "duration": "06:31",
+          "avg_pace": "6:30/km",
+          "avg_heart_rate": 155,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 8,
+          "distance_km": 1.0,
+          "duration": "06:24",
+          "avg_pace": "6:24/km",
+          "avg_heart_rate": 158,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 9,
+          "distance_km": 1.0,
+          "duration": "06:23",
+          "avg_pace": "6:23/km",
+          "avg_heart_rate": 158,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 10,
+          "distance_km": 1.01,
+          "duration": "06:23",
+          "avg_pace": "6:18/km",
+          "avg_heart_rate": 161,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 11,
+          "distance_km": 0.42,
+          "duration": "02:42",
+          "avg_pace": "6:27/km",
+          "avg_heart_rate": 160,
+          "avg_cadence_spm": null
+        }
+      ],
+      "metrics": {
+        "vdot_referencia": 39,
+        "tipo_treino_detectado": "longao",
+        "zona_prescrita": "E",
+        "pace_prescrito_min_km": "5:58-6:40",
+        "pace_executado_min_km": "6:32",
+        "aderencia_pace_pct": 88,
+        "distribuicao_intensidade": {
+          "facil_pct": 85,
+          "moderado_pct": 12,
+          "forte_pct": 3
+        },
+        "gray_zone_alerta": false,
+        "deriva_cardiaca_pct": 14.2,
+        "eficiencia_aerobica": null,
+        "cadencia_media_spm": 175,
+        "ajuste_calor_segundos_km": 20,
+        "pace_equivalente_frio_min_km": "6:12",
+        "limitador_principal": "deriva_cardiaca",
+        "bandeira_clinica": null,
+        "nota_aderencia": 8,
+        "confianca_analise": "alta"
+      },
+      "score": 8,
+      "analysis_html": "<b>📊 Resumo do Treino</b>\nFelipe rodou 10,43 km em pace médio de 6:32/km às 04:42h em Recife — condições extremas: 27°C, 94% de umidade e ponto de orvalho de 22°C. Com VDOT 39, a zona fácil prescrita é 5:58–6:40/km, mas o calor úmido exige ajuste de +15–25s/km, tornando o pace executado correto. Semana 2 do ciclo oficial de Base Aeróbica.\n\n<b>✅ Pontos Positivos</b>\n• <b>Pace bem calibrado para o calor:</b> 6:32/km é exatamente dentro da janela fácil ajustada (6:20–6:55/km esperado com esse estresse térmico). Sem atropelo de intensidade.\n• <b>Largada controlada:</b> Voltas 1–4 entre 6:26–6:30/km com FC abaixo de 153 bpm — boa disciplina no início apesar do calor.\n• <b>Volume adequado à fase:</b> 10,4 km como longão de base em semana 2 está alinhado com o volume alvo de 40 km/semana e a progressão conservadora pós-pausa de 1 mês.\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>Deriva cardíaca expressiva:</b> FC subiu de 141 bpm (volta 1) para 161 bpm (volta 10) — delta de 20 bpm em ritmo praticamente constante. Em condições normais, drift &gt;10% merece atenção; aqui o calor explica, mas é um sinal para monitorar hidratação e aclimatação.\n• <b>FC máxima de 173 bpm (99% da FCmáx):</b> Provavelmente em trecho de pace 5:09/km (um sprint ou morro). Confirme: esse pico foi intencional? Se não, evite picos assim em rodagens fáceis — risco de zona cinza não planejada.\n• <b>Treino não prescrito pelo MPR:</b> É uma sessão extra ao plano. Na semana 2 de base, volume adicional é bem-vindo, mas garanta que o acúmulo semanal não ultrapasse 10% de aumento em relação à semana anterior.\n\n<b>🏁 Impacto na Preparação</b>\nTreino positivo para o ciclo Montevideo. Longão de base em zona E constrói o motor aeróbico que sustentará o sub-1h50. Treinar no calor de Recife às 4h com disciplina de pace é também estímulo de aclimatação fisiológica — benefício real para adaptação cardiovascular. A deriva cardíaca controlada indica que Felipe ainda está construindo eficiência aeróbica no calor, o que é esperado nas semanas 1–3.\n\n<b>📅 Próximo Treino Sugerido</b>\n<b>Regenerativo curto + Drills (Pose Method)</b>\n• Distância: 6–7 km\n• Pace: 6:45–7:10/km (zona E conservadora — deixe a FC guiar, máx 145 bpm)\n• Foco: recuperação ativa após a deriva cardíaca de hoje + 4×30m de drills (queda, puxada, avanço)\n• Horário: manter 04:30–05:30h para aclimatação progressiva\n• Alternativa: trocar por sessão de natação (30–40 min aeróbico) como cross-training de recuperação\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: 8/10 — Intensidade correta, volume adequado e disciplina no calor extremo; perda de 1 ponto pela FC máxima de 173 bpm não justificada e por ser sessão extra ao plano sem alinhamento prévio.\n",
+      "generated_at": "2026-04-25T08:16:46.521831"
+    },
     {
       "id": "2026-04-24_morning_run",
       "date": "2026-04-24",
