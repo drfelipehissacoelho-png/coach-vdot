@@ -6,7 +6,7 @@
   "tune_up_race": "Meia Maratona de Montevideo — 09/08/2026",
   "tune_up_goal": "Sub-1h50",
   "cycle_start": "2026-04-16",
-  "last_updated": "2026-04-25T08:48:10.303719",
+  "last_updated": "2026-04-25T10:02:27.905707",
   "total_analyses": 13,
   "analyses": [
     {
@@ -921,7 +921,7 @@
         "ajuste_calor_segundos_km": 15,
         "pace_equivalente_frio_min_km": "7:00",
         "limitador_principal": "deriva_cardiaca",
-        "bandeira_clinica": "fc_media_95pct_fcmax_em_z1",
+        "bandeira_clinica": null,
         "nota_aderencia": 7,
         "confianca_analise": "alta"
       },
@@ -1070,7 +1070,7 @@
         "ajuste_calor_segundos_km": 22,
         "pace_equivalente_frio_min_km": "6:07",
         "limitador_principal": "deriva_cardiaca",
-        "bandeira_clinica": "FC_maxima_excedida_calor_extremo",
+        "bandeira_clinica": null,
         "nota_aderencia": 6,
         "confianca_analise": "alta"
       },
