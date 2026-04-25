@@ -848,8 +848,10 @@
     document.getElementById('btn-all').classList.toggle('active',   f==='all');
     const filtered = f==='cycle' ? allAnalyses.filter(a=>a.date>=CYCLE_START) : allAnalyses;
     renderStats(filtered);
-    renderPolarizacao(filtered);
+    // IMPORTANTE: renderCharts() chama destroyCharts() que faz `charts = {}`,
+    // o que apagaria o chart.polar. Por isso renderPolarizacao vem DEPOIS.
     renderCharts(filtered);
+    renderPolarizacao(filtered);
     renderAnalyses(filtered);
   }
 
@@ -886,8 +888,10 @@
     const cycleAnalyses = allAnalyses.filter(a=>a.date>=CYCLE_START);
     renderStats(cycleAnalyses);
     renderEfficiency(allAnalyses);
-    renderPolarizacao(cycleAnalyses);
+    // IMPORTANTE: renderCharts() chama destroyCharts() que faz `charts = {}`,
+    // o que apagaria o chart.polar. Por isso renderPolarizacao vem DEPOIS.
     renderCharts(cycleAnalyses);
+    renderPolarizacao(cycleAnalyses);
     renderAnalyses(cycleAnalyses);
 
     if (data.last_updated) {
