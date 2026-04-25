@@ -554,7 +554,19 @@
       const d = new Date(dateStr), day = d.getDay()||7;
       d.setDate(d.getDate()-day+1); d.setHours(0,0,0,0); return d;
     }
-    function durToMin(dur) { if(!dur) return null; const m=dur.match(/(\d+):(\d+)/); return m?+m[1]+ +m[2]/60:null; }
+    function durToMin(dur) {
+      // Aceita "hh:mm:ss", "mm:ss" e "ss". Bug antigo usava regex /(\d+):(\d+)/
+      // que casava só os dois primeiros grupos — em "01:08:09" virava 1.13 min
+      // em vez de 68 min, zerando todo o cálculo de minutos por intensidade
+      // e deixando o gráfico vazio (só com a linha tracejada Meta 80%).
+      if (!dur) return null;
+      const parts = String(dur).split(':').map(Number);
+      if (parts.some(isNaN)) return null;
+      if (parts.length === 3) return parts[0]*60 + parts[1] + parts[2]/60;
+      if (parts.length === 2) return parts[0] + parts[1]/60;
+      if (parts.length === 1) return parts[0];
+      return null;
+    }
 
     const now = new Date();
     const thisWS = isoWeekStart(now.toISOString().slice(0,10));
