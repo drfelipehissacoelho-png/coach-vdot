@@ -6,9 +6,126 @@
   "tune_up_race": "Meia Maratona de Montevideo — 09/08/2026",
   "tune_up_goal": "Sub-1h50",
   "cycle_start": "2026-04-16",
-  "last_updated": "2026-04-25T10:02:27.905707",
-  "total_analyses": 13,
+  "last_updated": "2026-04-26T10:09:33.697538",
+  "total_analyses": 14,
   "analyses": [
+    {
+      "id": "2026-04-26_morning_run",
+      "date": "2026-04-26",
+      "date_display": "26/04/2026",
+      "source": "strava",
+      "sport": "run",
+      "is_treadmill": true,
+      "activity_name": "Morning Run",
+      "distance_km": 7.06,
+      "duration": "47:48",
+      "avg_pace": "6:46/km",
+      "avg_heart_rate": 150.4,
+      "max_heart_rate": 162.0,
+      "avg_cadence_spm": 172,
+      "temperature_c": 23,
+      "humidity_pct": null,
+      "dew_point_c": null,
+      "heat_index_c": null,
+      "weather_source": null,
+      "total_ascent_m": 0,
+      "total_descent_m": 0.0,
+      "training_stress_score": null,
+      "aerobic_training_effect": null,
+      "anaerobic_training_effect": null,
+      "laps": [
+        {
+          "lap_number": 1,
+          "distance_km": 1.0,
+          "duration": "07:08",
+          "avg_pace": "7:07/km",
+          "avg_heart_rate": 136,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 2,
+          "distance_km": 1.0,
+          "duration": "06:44",
+          "avg_pace": "6:43/km",
+          "avg_heart_rate": 147,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 3,
+          "distance_km": 1.0,
+          "duration": "06:45",
+          "avg_pace": "6:44/km",
+          "avg_heart_rate": 150,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 4,
+          "distance_km": 1.0,
+          "duration": "06:43",
+          "avg_pace": "6:43/km",
+          "avg_heart_rate": 152,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 5,
+          "distance_km": 1.0,
+          "duration": "06:42",
+          "avg_pace": "6:41/km",
+          "avg_heart_rate": 153,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 6,
+          "distance_km": 1.0,
+          "duration": "06:42",
+          "avg_pace": "6:41/km",
+          "avg_heart_rate": 155,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 7,
+          "distance_km": 1.0,
+          "duration": "06:42",
+          "avg_pace": "6:41/km",
+          "avg_heart_rate": 157,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 8,
+          "distance_km": 0.05,
+          "duration": "00:22",
+          "avg_pace": "6:43/km",
+          "avg_heart_rate": 155,
+          "avg_cadence_spm": null
+        }
+      ],
+      "metrics": {
+        "vdot_referencia": 39,
+        "tipo_treino_detectado": "rodagem",
+        "zona_prescrita": "E",
+        "pace_prescrito_min_km": "6:29-7:28",
+        "pace_executado_min_km": "6:46",
+        "aderencia_pace_pct": 95,
+        "distribuicao_intensidade": {
+          "facil_pct": 100,
+          "moderado_pct": 0,
+          "forte_pct": 0
+        },
+        "gray_zone_alerta": false,
+        "deriva_cardiaca_pct": 15.4,
+        "eficiencia_aerobica": null,
+        "cadencia_media_spm": 172,
+        "ajuste_calor_segundos_km": 0,
+        "pace_equivalente_frio_min_km": "6:46",
+        "limitador_principal": "adesao",
+        "bandeira_clinica": null,
+        "nota_aderencia": 7,
+        "confianca_analise": "alta"
+      },
+      "score": 7,
+      "analysis_html": "<b>📊 Resumo do Treino</b>\nRodagem fácil de 7,06 km em esteira (47:48), pace médio 6:46/km — dentro da zona E do Daniels (VDOT 39: 5:58–6:40) e na faixa superior da MPR Z1 (6:29–7:28). Sessão prescrita era 60 min / percurso plano em Z1, portanto o treino foi executado com ~12 min a menos e ~1–2 km abaixo do volume esperado. Fase: Base Aeróbica, semana 1–2 do ciclo Montevideo.\n\n<b>✅ Pontos Positivos</b>\n• <b>Intensidade dentro do alvo:</b> Pace médio 6:46/km respeita a Z1 MPR e a zona E Daniels — 80/20 bem cumprido, sem entrada em zona cinza.\n• <b>FC bem controlada:</b> Média 150 bpm = 79% FCmáx (190 bpm ref.), pico 162 bpm = 85% — totalmente adequado para zona fácil. Sem artefato, sem bandeira clínica.\n• <b>Progressão de splits coerente:</b> Volta 1 serviu de aquecimento (7:07, 136 bpm) e o ritmo estabilizou naturalmente entre 6:41–6:44 nas voltas 3–7 — demonstra boa percepção de esforço e controle de ritmo.\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>Volume e duração aquém da prescrição:</b> 47:48 executados vs. 60 min prescritos — ~80% do tempo-alvo. 7,06 km vs. 8,04–9,25 km planejados. Sem impacto agudo, mas vale atenção para não repetir o padrão ao longo da semana.\n• <b>Cadência baixa (172 spm):</b> Alvo recomendado para Pose Method é ≥176–180 spm. Na esteira é mais fácil corrigir — sugere revisão de passada. Não é urgente, mas é ponto de melhoria técnica.\n• <b>Deriva cardíaca leve:</b> FC subiu de 136 → 157 bpm (+21 bpm) em 7 km ao mesmo pace — drift de ~15% esperado em retomada, mas monitorar nas próximas semanas para ver se reduz conforme adaptação aeróbica avança.\n\n<b>🏁 Impacto na Preparação</b>\nTreino cumpre seu papel de estímulo aeróbico base com baixo risco de lesão ou fadiga — exatamente o que a fase de retomada exige. O déficit de ~12 min é pequeno e não compromete a semana, mas o volume semanal precisa atingir ~40 km para que o ciclo progrida adequadamente rumo ao Sub-1h50 em Montevideo (VDOT alvo ≥42).\n\n<b>📅 Próximo Treino Sugerido</b>\n<b>Rodagem fácil outdoor (ou esteira) — 60 min completos</b>\n• Distância-alvo: 9–10 km\n• Pace-alvo: 6:30–6:45/km (Z1 MPR / zona E Daniels)\n• Foco técnico: Cadência ≥176 spm — use metrônomo ou playlist de 88 BPM\n• FC-alvo: manter abaixo de 160 bpm (84% FCmáx ref.)\n• Concluir os 60 min sem encurtar\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: 7/10 — Intensidade perfeita, mas duração e volume ficaram ~20% abaixo da prescrição MPR.\n",
+      "generated_at": "2026-04-26T10:09:33.697522"
+    },
     {
       "id": "2026-04-25_longo",
       "date": "2026-04-25",
