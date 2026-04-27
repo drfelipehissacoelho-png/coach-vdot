@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coach VDOT – Multi-Atleta</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --surface: #1a1d27;
+      --surface2: #232636;
+      --accent: #5b8dee;
+      --accent2: #3dd68c;
+      --warn: #f5a623;
+      --danger: #e05252;
+      --text: #e8eaf0;
+      --muted: #8b90a0;
+      --border: #2e3245;
+      --radius: 12px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+
+    /* HEADER */
+    header { background: linear-gradient(135deg, #1a1d27 0%, #0f1117 100%); border-bottom: 1px solid var(--border); padding: 16px 32px; display: flex; align-items: center; gap: 14px; }
+    .logo { font-size: 1.8rem; }
+    header h1 { font-size: 1.3rem; font-weight: 700; color: var(--accent); }
+    header p { font-size: 0.8rem; color: var(--muted); margin-top: 2px; }
+    .badge { margin-left: auto; background: var(--accent); color: #fff; font-size: 0.68rem; font-weight: 700; padding: 3px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+    /* ATHLETE SELECTOR */
+    .athlete-bar { background: var(--surface); border-bottom: 1px solid var(--border); padding: 12px 32px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .athlete-bar label { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; margin-right: 4px; }
+    .athlete-btn { padding: 8px 20px; border-radius: 20px; border: 1px solid var(--border); background: var(--surface2); color: var(--muted); font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 8px; }
+    .athlete-btn .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--muted); }
+    .athlete-btn.active { border-color: var(--accent); color: var(--text); background: #1a2a3a; }
+    .athlete-btn.active .dot { background: var(--accent); }
+    .athlete-btn:hover { border-color: var(--accent); color: var(--text); }
+
+    /* ATHLETE COLORS */
+    .athlete-btn[data-athlete="Felipe"].active { border-color: #5b8dee; background: #1a2a3a; }
+    .athlete-btn[data-athlete="Felipe"].active .dot { background: #5b8dee; }
+    .athlete-btn[data-athlete="Wagner"].active { border-color: #3dd68c; background: #1a3a2a; }
+    .athlete-btn[data-athlete="Wagner"].active .dot { background: #3dd68c; }
+    .athlete-btn[data-athlete="Mauricio"].active { border-color: #f5a623; background: #3a2a1a; }
+    .athlete-btn[data-athlete="Mauricio"].active .dot { background: #f5a623; }
+
+    /* ATHLETE PANELS */
+    .athlete-panel { display: none; }
+    .athlete-panel.active { display: block; }
+
+    /* LAYOUT */
+    .container { max-width: 1100px; margin: 0 auto; padding: 28px 24px; }
+
+    /* TABS */
+    .tabs { display: flex; gap: 4px; margin-bottom: 24px; border-bottom: 1px solid var(--border); }
+    .tab { padding: 10px 20px; font-size: 0.88rem; font-weight: 600; color: var(--muted); cursor: pointer; border-bottom: 2px solid transparent; transition: all 0.2s; }
+    .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+    .tab:hover { color: var(--text); }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    /* CARDS */
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px; margin-bottom: 18px; }
+    .card h2 { font-size: 0.95rem; font-weight: 700; color: var(--text); margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+
+    /* PROFILE GRID */
+    .profile-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .profile-stat { background: var(--surface2); border-radius: 8px; padding: 12px 14px; }
+    .profile-stat .label { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 3px; }
+    .profile-stat .value { font-size: 1.05rem; font-weight: 700; color: var(--text); }
+    .profile-stat .value.accent { color: var(--accent); }
+    .profile-stat .value.green { color: var(--accent2); }
+    .profile-stat .value.orange { color: var(--warn); }
+    .profile-stat .value.empty { color: var(--muted); font-style: italic; font-weight: 400; font-size: 0.85rem; }
+
+    /* PACES */
+    .pace-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+    .pace-card { background: var(--surface2); border-radius: 8px; padding: 12px; text-align: center; }
+    .pace-card .zone { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; margin-bottom: 4px; }
+    .pace-card .pace-val { font-size: 1.25rem; font-weight: 800; }
+    .pace-card .desc { font-size: 0.65rem; color: var(--muted); margin-top: 3px; }
+    .zone-E .zone,.zone-E .pace-val { color: var(--accent2); }
+    .zone-M .zone,.zone-M .pace-val { color: var(--accent); }
+    .zone-T .zone,.zone-T .pace-val { color: var(--warn); }
+    .zone-I .zone,.zone-I .pace-val { color: var(--danger); }
+
+    /* FORMS */
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .form-grid.three { grid-template-columns: 1fr 1fr 1fr; }
+    .form-group { display: flex; flex-direction: column; gap: 5px; }
+    .form-group label { font-size: 0.75rem; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.4px; }
+    .form-group input, .form-group select, .form-group textarea { background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; padding: 9px 12px; color: var(--text); font-size: 0.88rem; outline: none; transition: border-color 0.2s; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--accent); }
+    .form-group textarea { resize: vertical; min-height: 70px; }
+    .form-divider { border: none; border-top: 1px solid var(--border); margin: 16px 0; }
+    .section-label { font-size: 0.72rem; color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
+    .workout-types { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 4px; }
+    .wtype-btn { padding: 5px 13px; border-radius: 20px; border: 1px solid var(--border); background: var(--surface2); color: var(--muted); font-size: 0.78rem; cursor: pointer; transition: all 0.2s; }
+    .wtype-btn.selected { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
+    .effort-row { display: flex; align-items: center; gap: 12px; }
+    .effort-row input[type=range] { flex: 1; accent-color: var(--accent); }
+    .effort-label { min-width: 80px; text-align: right; font-size: 0.83rem; font-weight: 700; }
+
+    /* BUTTONS */
+    .btn { padding: 10px 24px; border-radius: 8px; border: none; font-size: 0.88rem; font-weight: 700; cursor: pointer; transition: all 0.2s; }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-primary:hover { background: #4a7de0; }
+    .btn-success { background: var(--accent2); color: #0f1117; }
+    .btn-success:hover { background: #31c07c; }
+    .btn-outline { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+    .btn-outline:hover { background: var(--accent); color: #fff; }
+    .btn-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+
+    /* OUTPUT */
+    .output-box { background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 18px; margin-top: 14px; display: none; }
+    .output-box.show { display: block; }
+    .output-box h3 { font-size: 0.83rem; font-weight: 700; color: var(--accent2); margin-bottom: 10px; }
+    .output-box pre { font-family: 'Courier New', monospace; font-size: 0.78rem; color: var(--text); white-space: pre-wrap; line-height: 1.7; }
+    .copy-btn { margin-top: 10px; padding: 7px 16px; background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; color: var(--text); font-size: 0.78rem; cursor: pointer; transition: background 0.2s; }
+    .copy-btn:hover { background: var(--surface); }
+
+    /* WEEK TABLE */
+    .week-table { width: 100%; border-collapse: collapse; font-size: 0.83rem; }
+    .week-table th { background: var(--surface2); padding: 9px 12px; text-align: left; font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.4px; }
+    .week-table td { padding: 9px 12px; border-bottom: 1px solid var(--border); }
+    .week-table tr:hover td { background: var(--surface2); }
+    .pill { display: inline-block; padding: 2px 9px; border-radius: 12px; font-size: 0.7rem; font-weight: 700; }
+    .pill-E { background: #1a3a2a; color: var(--accent2); }
+    .pill-M { background: #1a2a3a; color: var(--accent); }
+    .pill-T { background: #3a2a1a; color: var(--warn); }
+    .pill-I { background: #3a1a1a; color: var(--danger); }
+    .pill-Rest { background: var(--surface2); color: var(--muted); }
+
+    /* ALERTS */
+    .alert { display: flex; gap: 10px; padding: 12px 16px; border-radius: 8px; font-size: 0.83rem; margin-bottom: 14px; }
+    .alert-info { background: #1a2a3a; border: 1px solid #2a4a6a; color: #7ab3e0; }
+    .alert-success { background: #1a3a2a; border: 1px solid #2a5a3a; color: #5cc892; }
+    .alert-warn { background: #3a2a1a; border: 1px solid #5a3a1a; color: #d4893a; }
+    .alert-empty { background: var(--surface2); border: 1px solid var(--border); color: var(--muted); }
+    .alert-icon { font-size: 1rem; flex-shrink: 0; }
+
+    /* GARMIN GUIDE */
+    .step { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
+    .step-num { background: var(--accent); color: #fff; font-size: 0.72rem; font-weight: 800; border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+    .step-text { font-size: 0.81rem; color: var(--muted); line-height: 1.6; }
+    .step-text strong { color: var(--text); }
+    .garmin-box { background: var(--surface2); border: 1px dashed var(--border); border-radius: 10px; padding: 18px; margin-bottom: 14px; }
+    .garmin-box h3 { font-size: 0.87rem; font-weight: 700; margin-bottom: 8px; color: var(--accent); }
+
+    /* FOLDER INFO */
+    .folder-path { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; font-family: 'Courier New', monospace; font-size: 0.8rem; color: var(--accent2); margin-top: 8px; }
+
+    @media (max-width: 680px) {
+      .form-grid, .form-grid.three { grid-template-columns: 1fr; }
+      .pace-grid { grid-template-columns: 1fr 1fr; }
+      .profile-grid { grid-template-columns: 1fr; }
+      .athlete-bar { padding: 12px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🏃</div>
+  <div>
+    <h1>Coach VDOT</h1>
+    <p>Plataforma Multi-Atleta</p>
+  </div>
+  <div class="badge">3 Atletas</div>
+</header>
+
+<!-- ATHLETE SELECTOR BAR -->
+<div class="athlete-bar">
+  <label>Atleta:</label>
+  <button class="athlete-btn active" data-athlete="Felipe" onclick="selectAthlete('Felipe', this)">
+    <span class="dot"></span> Felipe Hissa
+  </button>
+  <button class="athlete-btn" data-athlete="Wagner" onclick="selectAthlete('Wagner', this)">
+    <span class="dot"></span> Wagner Vivaldo
+  </button>
+  <button class="athlete-btn" data-athlete="Mauricio" onclick="selectAthlete('Mauricio', this)">
+    <span class="dot"></span> Maurício Saraiva
+  </button>
+</div>
+
+<div class="container">
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- FELIPE -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <div id="panel-Felipe" class="athlete-panel active">
+    <div class="tabs">
+      <div class="tab active" onclick="showTab('Felipe','perfil',this)">📊 Perfil</div>
+      <div class="tab" onclick="showTab('Felipe','atividade',this)">➕ Registrar</div>
+      <div class="tab" onclick="showTab('Felipe','semana',this)">📅 Semana</div>
+      <div class="tab" onclick="showTab('Felipe','garmin',this)">⌚ Garmin</div>
+    </div>
+
+    <!-- PERFIL -->
+    <div id="Felipe-perfil" class="tab-content active">
+      <div class="alert alert-success"><span class="alert-icon">✅</span><span>VDOT <strong>39</strong> confirmado — Tokyo Marathon 3:59:34 · 01/03/2026 · arquivo .fit analisado.</span></div>
+      <div class="card">
+        <h2>👤 Felipe Hissa Coelho</h2>
+        <div class="profile-grid">
+          <div class="profile-stat"><div class="label">Idade / Nasc.</div><div class="value">45 anos · 24/12/1980</div></div>
+          <div class="profile-stat"><div class="label">FC Máx Est.</div><div class="value accent">~175 bpm</div></div>
+          <div class="profile-stat"><div class="label">Última Maratona</div><div class="value">3:59:34 · 01/03/2026</div></div>
+          <div class="profile-stat"><div class="label">🎯 Alvo</div><div class="value accent">Osaka · 28/02/2027</div></div>
+          <div class="profile-stat"><div class="label">Tune-up</div><div class="value">Meia · Set/Out 2026</div></div>
+          <div class="profile-stat"><div class="label">Fase Atual</div><div class="value green">Retomada Suave</div></div>
+          <div class="profile-stat"><div class="label">Volume Inicial</div><div class="value">40 km/sem</div></div>
+          <div class="profile-stat"><div class="label">Dias/Semana</div><div class="value">4–5 dias</div></div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>⚡ Paces — VDOT 39</h2>
+        <div class="pace-grid">
+          <div class="pace-card zone-E"><div class="zone">Fácil (E)</div><div class="pace-val">5:58–6:40</div><div class="desc">/km · Conversacional</div></div>
+          <div class="pace-card zone-M"><div class="zone">Maratona (M)</div><div class="pace-val">~5:36</div><div class="desc">/km · Ritmo de prova</div></div>
+          <div class="pace-card zone-T"><div class="zone">Limiar (T)</div><div class="pace-val">~5:10</div><div class="desc">/km · Comfortavelmente duro</div></div>
+          <div class="pace-card zone-I"><div class="zone">Intervalo (I)</div><div class="pace-val">~4:50</div><div class="desc">/km · Ritmo 5K</div></div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>🎯 Meta 80/20 — 40km/sem</h2>
+        <div class="profile-grid">
+          <div class="profile-stat"><div class="label">Volume Fácil (≥80%)</div><div class="value green">≥ 32 km</div></div>
+          <div class="profile-stat"><div class="label">Volume Qualidade (≤20%)</div><div class="value orange">≤ 8 km</div></div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>📁 Pasta de Treinos</h2>
+        <div class="alert alert-info"><span class="alert-icon">📂</span><span>Envie os arquivos .fit ou .gpx desta pasta para análise no Claude.</span></div>
+        <div class="folder-path">athletes/Felipe/treinos/</div>
+      </div>
+    </div>
+
+    <!-- REGISTRAR -->
+    <div id="Felipe-atividade" class="tab-content">
+      <div class="card">
+        <h2>📝 Registrar Atividade — Felipe</h2>
+        <div class="section-label">📅 Geral</div>
+        <div class="form-grid three">
+          <div class="form-group"><label>Data</label><input type="date" id="F-date"/></div>
+          <div class="form-group"><label>Distância (km)</label><input type="number" id="F-dist" placeholder="Ex: 12.5" step="0.1"/></div>
+          <div class="form-group"><label>Tempo (hh:mm:ss)</label><input type="text" id="F-time" placeholder="Ex: 1:02:30"/></div>
+        </div>
+        <hr class="form-divider"/>
+        <div class="section-label">🏃 Tipo de Treino</div>
+        <div class="workout-types">
+          <button class="wtype-btn" onclick="selType(this,'F','Corrida Fácil (E)')">Fácil (E)</button>
+          <button class="wtype-btn" onclick="selType(this,'F','Corrida Longa (E)')">Longa (E)</button>
+          <button class="wtype-btn" onclick="selType(this,'F','Ritmo Maratona (M)')">Maratona (M)</button>
+          <button class="wtype-btn" onclick="selType(this,'F','Limiar (T)')">Limiar (T)</button>
+          <button class="wtype-btn" onclick="selType(this,'F','Intervalado (I)')">Intervalado (I)</button>
+          <button class="wtype-btn" onclick="selType(this,'F','Recuperação')">Recuperação</button>
+          <button class="wtype-btn" onclick="selType(this,'F','Prova / Teste')">Prova</button>
+        </div>
+        <input type="hidden" id="F-type" value=""/>
+        <hr class="form-divider"/>
+        <div class="section-label">❤️ FC & Pace</div>
+        <div class="form-grid">
+          <div class="form-group"><label>FC Média (bpm)</label><input type="number" id="F-hrA" placeholder="Ex: 148"/></div>
+          <div class="form-group"><label>FC Máxima (bpm)</label><input type="number" id="F-hrM" placeholder="Ex: 172"/></div>
+          <div class="form-group"><label>Pace Médio (min/km)</label><input type="text" id="F-pace" placeholder="Ex: 5:45"/></div>
+          <div class="form-group"><label>Cadência (ppm)</label><input type="number" id="F-cad" placeholder="Ex: 178"/></div>
+        </div>
+        <hr class="form-divider"/>
+        <div class="section-label">🌡️ Condições</div>
+        <div class="form-grid three">
+          <div class="form-group"><label>Elevação (m)</label><input type="number" id="F-elev" placeholder="Ex: 85"/></div>
+          <div class="form-group"><label>Temperatura (°C)</label><input type="number" id="F-temp" placeholder="Ex: 28"/></div>
+          <div class="form-group"><label>Condição</label><select id="F-cond"><option value="">Selecione...</option><option>Ensolarado, seco</option><option>Nublado, fresco</option><option>Chuvoso</option><option>Muito quente/úmido</option><option>Frio</option></select></div>
+        </div>
+        <hr class="form-divider"/>
+        <div class="section-label">😮‍💨 Esforço (RPE)</div>
+        <div class="effort-row">
+          <input type="range" id="F-rpe" min="1" max="10" value="5" oninput="updRPE('F',this.value)"/>
+          <div class="effort-label" id="F-rpelabel">5/10 — Moderado</div>
+        </div>
+        <hr class="form-divider"/>
+        <div class="section-label">⌚ Link Garmin</div>
+        <div class="form-group"><label>URL da Atividade</label><input type="url" id="F-url" placeholder="https://connect.garmin.com/app/activity/..."/></div>
+        <hr class="form-divider"/>
+        <div class="section-label">💬 Notas</div>
+        <div class="form-group"><textarea id="F-notes" placeholder="Como foi? Sensações, dores, técnica, cansaço..."></textarea></div>
+        <hr class="form-divider"/>
+        <div class="btn-row">
+          <button class="btn btn-success" onclick="genReport('F','Felipe Hissa Coelho','VDOT 39')">✨ Gerar Relatório</button>
+          <button class="btn btn-outline" onclick="clearF('F')">🗑️ Limpar</button>
+        </div>
+        <div class="output-box" id="F-out">
+          <h3>✅ Cole este texto no chat do Claude:</h3>
+          <pre id="F-outtext"></pre>
+          <button class="copy-btn" onclick="copyOut('F-outtext',this)">📋 Copiar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEMANA -->
+    <div id="Felipe-semana" class="tab-content">
+      <div class="alert alert-success"><span class="alert-icon">🚀</span><span><strong>Semanas 1–2 — Retomada Suave.</strong> Qualidade = técnica Pose. Sem intensidade real até semana 3.</span></div>
+      <div class="card">
+        <h2>📅 Semana 07–13 Abr 2026 — Base Suave</h2>
+        <table class="week-table">
+          <thead><tr><th>Dia</th><th>Tipo</th><th>Distância</th><th>Estrutura</th><th>Foco / Drills</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Seg</strong></td><td><span class="pill pill-Rest">Descanso</span></td><td>—</td><td>—</td><td>Mobilidade quadril · Foam roller</td></tr>
+            <tr><td><strong>Ter</strong></td><td><span class="pill pill-E">Técnico (E)</span></td><td>9 km</td><td>8km E (5:58–6:40) + 4×10s strides suaves</td><td>Pose Hold + Pull Drill + Falling Start · Cad 178+</td></tr>
+            <tr><td><strong>Qua</strong></td><td><span class="pill pill-Rest">Descanso</span></td><td>—</td><td>—</td><td>Alongamento · Mobilidade tornozelo</td></tr>
+            <tr><td><strong>Qui</strong></td><td><span class="pill pill-E">Técnico (E)</span></td><td>10 km</td><td>100% E · FC &lt;155 · Sem aceleração</td><td>Pony Drill + High Knees · Foco na técnica</td></tr>
+            <tr><td><strong>Sex</strong></td><td><span class="pill pill-Rest">Descanso</span></td><td>—</td><td>—</td><td>Caminhada leve · Core 3×40s prancha</td></tr>
+            <tr><td><strong>Sáb</strong></td><td><span class="pill pill-E">Longo (E)</span></td><td>14 km</td><td>100% E (5:58–6:40) · Conversacional</td><td>Pose Hold antes · Hidratação 4/4km</td></tr>
+            <tr><td><strong>Dom</strong></td><td><span class="pill pill-Rest">Regenerativo</span></td><td>6 km</td><td>Muito fácil (6:20–6:50) · FC &lt;135</td><td>Pelo feeling · Sem relógio de pace</td></tr>
+          </tbody>
+          <tfoot><tr><td colspan="2" style="padding:9px 12px;"><strong>TOTAL</strong></td><td><strong>39 km</strong></td><td colspan="2" style="color:var(--accent2);">~97% fácil · 80/20 ✅</td></tr></tfoot>
+        </table>
+      </div>
+      <div class="card">
+        <h2>🗓️ Macro — Osaka Marathon 28/02/2027</h2>
+        <table class="week-table">
+          <thead><tr><th>Fase</th><th>Período</th><th>Foco</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Retomada</strong></td><td>Abr–Mai 2026 (sem 1–4)</td><td>Drills · Volume fácil 40→55km</td></tr>
+            <tr><td><strong>Base</strong></td><td>Mai–Jun 2026 (sem 5–10)</td><td>55→70km · Strides · Força</td></tr>
+            <tr><td><strong>Força/Limiar</strong></td><td>Jul–Ago 2026 (sem 11–18)</td><td>Threshold · Tempo runs · Progressivo</td></tr>
+            <tr><td><strong>🏅 Meia (tune-up)</strong></td><td>Set/Out 2026</td><td>Avaliação VDOT · Ajuste objetivo</td></tr>
+            <tr><td><strong>Específica</strong></td><td>Out–Dez 2026 (sem 19–28)</td><td>M-pace longs · VO2max controlado</td></tr>
+            <tr><td><strong>Taper</strong></td><td>Fev 2027 (sem 33–35)</td><td>Redução volume · Descanso ativo</td></tr>
+            <tr><td><strong>🏆 OSAKA</strong></td><td>28/02/2027</td><td>Meta: Sub-3h50 (VDOT ≥42)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- GARMIN -->
+    <div id="Felipe-garmin" class="tab-content">
+      <div class="alert alert-warn"><span class="alert-icon">🔒</span><span>Garmin Connect requer login — não é acessível diretamente. Use os métodos abaixo.</span></div>
+      <div class="card">
+        <h2>📁 Pasta de Treinos do Felipe</h2>
+        <div class="alert alert-info"><span class="alert-icon">📂</span><span>Salve os arquivos .fit exportados do Garmin nesta pasta e envie para análise.</span></div>
+        <div class="folder-path">athletes/Felipe/treinos/</div>
+      </div>
+      <div class="card">
+        <h2>⌚ Como Compartilhar Dados</h2>
+        <div class="step"><div class="step-num">1</div><div class="step-text">No Garmin Connect, abra a atividade → <strong>··· → Exportar → .FIT</strong></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-text">Salve na pasta <strong>athletes/Felipe/treinos/</strong></div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-text">No Claude, envie o arquivo e diga <strong>"analise meu treino"</strong></div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-text">Ou preencha a aba <strong>Registrar</strong> e copie o relatório gerado</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- WAGNER -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <div id="panel-Wagner" class="athlete-panel">
+    <div class="tabs">
+      <div class="tab active" onclick="showTab('Wagner','perfil',this)">📊 Perfil</div>
+      <div class="tab" onclick="showTab('Wagner','atividade',this)">➕ Registrar</div>
+      <div class="tab" onclick="showTab('Wagner','semana',this)">📅 Semana</div>
+      <div class="tab" onclick="showTab('Wagner','garmin',this)">⌚ Garmin</div>
+    </div>
+
+    <div id="Wagner-perfil" class="tab-content active">
+      <div class="alert alert-warn"><span class="alert-icon">⚠️</span><span>Perfil incompleto. Envie um tempo recente de corrida no Claude para calcular VDOT e definir os paces de treino.</span></div>
+      <div class="card">
+        <h2>👤 Wagner Vivaldo</h2>
+        <div class="profile-grid">
+          <div class="profile-stat"><div class="label">Idade</div><div class="value">45 anos</div></div>
+          <div class="profile-stat"><div class="label">FC Máx Est.</div><div class="value green">~175 bpm</div></div>
+          <div class="profile-stat"><div class="label">Experiência</div><div class="value accent">Avançado</div></div>
+          <div class="profile-stat"><div class="label">🎯 Alvo</div><div class="value green">NB Porto Alegre · 12/07/2026</div></div>
+          <div class="profile-stat"><div class="label">VDOT</div><div class="value empty">— a calcular</div></div>
+          <div class="profile-stat"><div class="label">Semanas até a Prova</div><div class="value orange">~13 semanas</div></div>
+          <div class="profile-stat"><div class="label">Volume Atual</div><div class="value empty">— a informar</div></div>
+          <div class="profile-stat"><div class="label">Fase</div><div class="value orange">Periodização</div></div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>⚡ Paces — VDOT a calcular</h2>
+        <div class="alert alert-empty"><span class="alert-icon">💡</span><span>Forneça um resultado recente (maratona, meia ou 10K) para gerar os paces personalizados.</span></div>
+        <div class="pace-grid">
+          <div class="pace-card zone-E"><div class="zone">Fácil (E)</div><div class="pace-val" style="color:var(--muted);">—</div><div class="desc">/km</div></div>
+          <div class="pace-card zone-M"><div class="zone">Maratona (M)</div><div class="pace-val" style="color:var(--muted);">—</div><div class="desc">/km</div></div>
+          <div class="pace-card zone-T"><div class="zone">Limiar (T)</div><div class="pace-val" style="color:var(--muted);">—</div><div class="desc">/km</div></div>
+          <div class="pace-card zone-I"><div class="zone">Intervalo (I)</div><div class="pace-val" style="color:var(--muted);">—</div><div class="desc">/km</div></div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>🗓️ Macro — NB Porto Alegre 12/07/2026</h2>
+        <table class="week-table">
+          <thead><tr><th>Fase</th><th>Período</th><th>Foco</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Força/Limiar</strong></td><td>Abr–Mai 2026 (sem 1–6)</td><td>Threshold · Volume específico · Longo progressivo</td></tr>
+            <tr><td><strong>Específica</strong></td><td>Mai–Jun 2026 (sem 7–11)</td><td>M-pace longs · VO2max controlado · Tune-up 10K</td></tr>
+            <tr><td><strong>Taper</strong></td><td>Jun–Jul 2026 (sem 12–13)</td><td>Redução volume · Manutenção intensidade</td></tr>
+            <tr><td><strong>🏆 PORTO ALEGRE</strong></td><td>12/07/2026</td><td>Prova alvo</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h2>📁 Pasta de Treinos</h2>
+        <div class="folder-path">athletes/Wagner/treinos/</div>
+      </div>
+    </div>
+
+    <div id="Wagner-atividade" class="tab-content">
+      <div class="card">
+        <h2>📝 Registrar Atividade — Wagner</h2>
+        <div class="section-label">📅 Geral</div>
+        <div class="form-grid three">
+          <div class="form-group"><label>Data</label><input type="date" id="W-date"/></div>
+          <div class="form-group"><label>Distância (km)</label><input type="number" id="W-dist" placeholder="Ex: 12.5" step="0.1"/></div>
+          <div class="form-group"><label>Tempo (hh:mm:ss)</label><input type="text" id="W-time" placeholder="Ex: 1:02:30"/></div>
+        </div>
+        <hr class="form-divider"/>
+        <div class="section-label">🏃 Tipo de Treino</div>
+        <div class="workout-types">
+          <button class="wtype-btn" onclick="selType(this,'W','Corrida Fácil (E)')">Fácil (E)</button>
+          <button class="wtype-btn" onclick="selType(this,'W','Corrida Longa (E)')">Longa (E)</button>
+          <button class="wtype-btn" onclick="selType(this,'W','Ritmo Maratona (M)')">Maratona (M)</button>
+          <button class="wtype-btn" onclick="selType(this,'W','Limiar (T)')">Limiar (T)</button>
+          <button class="wtype-btn" onclick="selType(this,'W','Intervalado (I)')">Intervalado (I)</button>
+          <button class="wtype-btn" onclick="selType(this,'W','Recuperação')">Recuperação</button>
+          <button class="wtype-btn" onclick="selType(this,'W','Prova / Teste')">Prova</button>
+        </div>
+        <input type="hidden" id="W-type" value=""/>
+        <hr class="form-divider"/>
+        <div class="section-label">❤️ FC & Pace</div>
+        <div class="form-grid">
+          <div class="form-group"><label>FC Média (bpm)</label><input type="number" id="W-hrA" placeholder="Ex: 148"/></div>
+          <div class="form-group"><label>FC Máxima (bpm)</label><input type="number" id="W-hrM" placeholder="Ex: 172"/></div>
+          <div class="form-group"><label>Pace Médio (min/km)</label><input type="text" id="W-pace" placeholder="Ex: 5:45"/></div>
+          <div class="form-group"><label>Cadência (ppm)</label><input type="number" id="W-cad" placeholder="Ex: 178"/></div>
+        </div>
+        <hr class="form-divider"/>
+        <div class="section-label">🌡️ Condições</div>
+        <div class="form-grid three">
+          <div class="form-group"><label>Elevação (m)</label><input type="number" id="W-elev" placeholder="Ex: 85"/></div>
+          <div class="form-group"><label>Temperatura (°C)</label><input type="number" id="W-temp" placeholder="Ex: 28"/></div>
+          <div class="form-group"><label>Condição</label><select id="W-cond"><option value="">Selecione...</option><option>Ensolarado, seco</option><option>Nublado, fresco</option><option>Chuvoso</option><option>Muito quente/úmido</option><option>Frio</option></select></div>
+        </div>
+        <hr class="form-divider"/>
+        <div class="section-label">😮‍💨 Esforço (RPE)</div>
+        <div class="effort-row">
+          <input type="range" id="W-rpe" min="1" max="10" value="5" oninput="updRPE('W',this.value)"/>
+          <div class="effort-label" id="W-rpelabel">5/10 — Moderado</div>
+        </div>
+        <hr class="form-divider"/>
+        <div class="section-label">⌚ Link Garmin</div>
+        <div class="form-group"><label>URL da Atividade</label><input type="url" id="W-url" placeholder="https://connect.garmin.com/app/activity/..."/></div>
+        <hr class="form-divider"/>
+        <div class="section-label">💬 Notas</div>
+        <div class="form-group"><textarea id="W-notes" placeholder="Como foi? Sensações, dores, técnica, cansaço..."></textarea></div>
+        <hr class="form-divider"/>
+        <div class="btn-row">
+          <button class="btn btn-success" onclick="genReport('W','Wagner Vivaldo','VDOT a definir')">✨ Gerar Relatório</button>
+          <button class="btn btn-outline" onclick="clearF('W')">🗑️ Limpar</button>
+        </div>
+        <div class="output-box" id="W-out">
+          <h3>✅ Cole este texto no chat do Claude:</h3>
+          <pre id="W-outtext"></pre>
+          <button class="copy-btn" onclick="copyOut('W-outtext',this)">📋 Copiar</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="Wagner-semana" class="tab-content">
+      <div class="alert alert-empty"><span class="alert-icon">📅</span><span>Plano semanal será gerado após coleta do perfil completo e VDOT do Wagner.</span></div>
+    </div>
+
+    <div id="Wagner-garmin" class="tab-content">
+      <div class="card">
+        <h2>📁 Pasta de Treinos do Wagner</h2>
+        <div class="alert alert-info"><span class="alert-icon">📂</span><span>Salve os arquivos .fit exportados do Garmin nesta pasta.</span></div>
+        <div class="folder-path">athletes/Wagner/treinos/</div>
+      </div>
+      <div class="card">
+        <h2>⌚ Como Compartilhar Dados</h2>
+        <div class="step"><div class="step-num">1</div><div class="step-text">No Garmin Connect → atividade → <strong>··· → Exportar → .FIT</strong></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-text">Salve na pasta <strong>athletes/Wagner/treinos/</strong></div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-text">No Claude, envie o arquivo e diga <strong>"analise treino do Wagner"</strong></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- MAURICIO -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <div id="panel-Mauricio" class="athlete-panel">
+    <div class="tabs">
+      <div class="tab active" onclick="showTab('Mauricio','perfil',this)">📊 Perfil</div>
+      <div class="tab" onclick="showTab('Mauricio','atividade',this)">➕ Registrar</div>
+      <div class="tab" onclick="showTab('Mauricio','semana',this)">📅 Semana</div>
+      <div class="tab" onclick="showTab('Mauricio','garmin',this)">⌚ Garmin</div>
+    </div>
+
+    <div id="Mauricio-perfil" class="tab-content active">
+      <div class="alert alert-warn"><span class="alert-icon">⚠️</span><span>Perfil incompleto. Envie um tempo recente de corrida no Claude para calcular VDOT e definir os paces de treino.</span></div>
+      <div class="card">
+        <h2>👤 Maurício Saraiva</h2>
+        <div class="profile-grid">
+          <div class="profile-stat"><div class="label">Idade</div><div class="value">50 anos</div></div>
+          <div class="profile-stat"><div class="label">FC Máx Est.</div><div class="value orange">~172 bpm</div></div>
+          <div class="profile-stat"><div class="label">Experiência</div><div class="value accent">Avançado</div></div>
+          <div class="profile-stat"><div class="label">🎯 Alvo</div><div class="value orange">Munique · 11/10/2026</div></div>
+          <div class="profile-stat"><div class="label">VDOT</div><div class="value empty">— a calcular</div></div>
+          <div class="profile-stat"><div class="label">Semanas até a Prova</div><div class="value green">~26 semanas</div></div>
+          <div class="profile-stat"><div class="label">Volume Atual</div><div class="value empty">— a informar</div></div>
+          <div class="profile-stat"><div class="label">Fase</div><div class="value orange">Periodização</div></div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>⚡ Paces — VDOT a calcular</h2>
+        <div class="alert alert-empty"><span class="alert-icon">💡</span><span>Forneça um resultado recente (maratona, meia ou 10K) para gerar os paces personalizados.</span></div>
+        <div class="pace-grid">
+          <div class="pace-card zone-E"><div class="zone">Fácil (E)</div><div class="pace-val" style="color:var(--muted);">—</div><div class="desc">/km</div></div>
+          <div class="pace-card zone-M"><div class="zone">Maratona (M)</div><div class="pace-val" style="color:var(--muted);">—</div><div class="desc">/km</div></div>
+          <div class="pace-card zone-T"><div class="zone">Limiar (T)</div><div class="pace-val" style="color:var(--muted);">—</div><div class="desc">/km</div></div>
+          <div class="pace-card zone-I"><div class="zone">Intervalo (I)</div><div class="pace-val" style="color:var(--muted);">—</div><div class="desc">/km</div></div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>🗓️ Macro — Maratona de Munique 11/10/2026</h2>
+        <table class="week-table">
+          <thead><tr><th>Fase</th><th>Período</th><th>Foco</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Base/Força</strong></td><td>Abr–Jun 2026 (sem 1–10)</td><td>Volume · Limiar controlado · Strides</td></tr>
+            <tr><td><strong>Intensidade</strong></td><td>Jun–Ago 2026 (sem 11–18)</td><td>VO2max · Tempo runs · Tune-up race</td></tr>
+            <tr><td><strong>Específica Maratona</strong></td><td>Ago–Set 2026 (sem 19–24)</td><td>M-pace longs · Pfitzinger 18–21km @M</td></tr>
+            <tr><td><strong>Taper</strong></td><td>Set–Out 2026 (sem 25–26)</td><td>Redução volume · Descanso ativo</td></tr>
+            <tr><td><strong>🏆 MUNIQUE</strong></td><td>11/10/2026</td><td>Prova alvo</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h2>📁 Pasta de Treinos</h2>
+        <div class="folder-path">athletes/Mauricio/treinos/</div>
+      </div>
+    </div>
+
+    <div id="Mauricio-atividade" class="tab-content">
+      <div class="card">
+        <h2>📝 Registrar Atividade — Maurício</h2>
+        <div class="section-label">📅 Geral</div>
+        <div class="form-grid three">
+          <div class="form-group"><label>Data</label><input type="date" id="M-date"/></div>
+          <div class="form-group"><label>Distância (km)</label><input type="number" id="M-dist" placeholder="Ex: 12.5" step="0.1"/></div>
+          <div class="form-group"><label>Tempo (hh:mm:ss)</label><input type="text" id="M-time" placeholder="Ex: 1:02:30"/></div>
+        </div>
+        <hr class="form-divider"/>
+        <div class="section-label">🏃 Tipo de Treino</div>
+        <div class="workout-types">
+          <button class="wtype-btn" onclick="selType(this,'M','Corrida Fácil (E)')">Fácil (E)</button>
+          <button class="wtype-btn" onclick="selType(this,'M','Corrida Longa (E)')">Longa (E)</button>
+          <button class="wtype-btn" onclick="selType(this,'M','Ritmo Maratona (M)')">Maratona (M)</button>
+          <button class="wtype-btn" onclick="selType(this,'M','Limiar (T)')">Limiar (T)</button>
+          <button class="wtype-btn" onclick="selType(this,'M','Intervalado (I)')">Intervalado (I)</button>
+          <button class="wtype-btn" onclick="selType(this,'M','Recuperação')">Recuperação</button>
+          <button class="wtype-btn" onclick="selType(this,'M','Prova / Teste')">Prova</button>
+        </div>
+        <input type="hidden" id="M-type" value=""/>
+        <hr class="form-divider"/>
+        <div class="section-label">❤️ FC & Pace</div>
+        <div class="form-grid">
+          <div class="form-group"><label>FC Média (bpm)</label><input type="number" id="M-hrA" placeholder="Ex: 148"/></div>
+          <div class="form-group"><label>FC Máxima (bpm)</label><input type="number" id="M-hrM" placeholder="Ex: 172"/></div>
+          <div class="form-group"><label>Pace Médio (min/km)</label><input type="text" id="M-pace" placeholder="Ex: 5:45"/></div>
+          <div class="form-group"><label>Cadência (ppm)</label><input type="number" id="M-cad" placeholder="Ex: 178"/></div>
+        </div>
+        <hr class="form-divider"/>
+        <div class="section-label">🌡️ Condições</div>
+        <div class="form-grid three">
+          <div class="form-group"><label>Elevação (m)</label><input type="number" id="M-elev" placeholder="Ex: 85"/></div>
+          <div class="form-group"><label>Temperatura (°C)</label><input type="number" id="M-temp" placeholder="Ex: 28"/></div>
+          <div class="form-group"><label>Condição</label><select id="M-cond"><option value="">Selecione...</option><option>Ensolarado, seco</option><option>Nublado, fresco</option><option>Chuvoso</option><option>Muito quente/úmido</option><option>Frio</option></select></div>
+        </div>
+        <hr class="form-divider"/>
+        <div class="section-label">😮‍💨 Esforço (RPE)</div>
+        <div class="effort-row">
+          <input type="range" id="M-rpe" min="1" max="10" value="5" oninput="updRPE('M',this.value)"/>
+          <div class="effort-label" id="M-rpelabel">5/10 — Moderado</div>
+        </div>
+        <hr class="form-divider"/>
+        <div class="section-label">⌚ Link Garmin</div>
+        <div class="form-group"><label>URL da Atividade</label><input type="url" id="M-url" placeholder="https://connect.garmin.com/app/activity/..."/></div>
+        <hr class="form-divider"/>
+        <div class="section-label">💬 Notas</div>
+        <div class="form-group"><textarea id="M-notes" placeholder="Como foi? Sensações, dores, técnica, cansaço..."></textarea></div>
+        <hr class="form-divider"/>
+        <div class="btn-row">
+          <button class="btn btn-success" onclick="genReport('M','Maurício Saraiva','VDOT a definir')">✨ Gerar Relatório</button>
+          <button class="btn btn-outline" onclick="clearF('M')">🗑️ Limpar</button>
+        </div>
+        <div class="output-box" id="M-out">
+          <h3>✅ Cole este texto no chat do Claude:</h3>
+          <pre id="M-outtext"></pre>
+          <button class="copy-btn" onclick="copyOut('M-outtext',this)">📋 Copiar</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="Mauricio-semana" class="tab-content">
+      <div class="alert alert-empty"><span class="alert-icon">📅</span><span>Plano semanal será gerado após coleta do perfil completo e VDOT do Maurício.</span></div>
+    </div>
+
+    <div id="Mauricio-garmin" class="tab-content">
+      <div class="card">
+        <h2>📁 Pasta de Treinos do Maurício</h2>
+        <div class="alert alert-info"><span class="alert-icon">📂</span><span>Salve os arquivos .fit exportados do Garmin nesta pasta.</span></div>
+        <div class="folder-path">athletes/Mauricio/treinos/</div>
+      </div>
+      <div class="card">
+        <h2>⌚ Como Compartilhar Dados</h2>
+        <div class="step"><div class="step-num">1</div><div class="step-text">No Garmin Connect → atividade → <strong>··· → Exportar → .FIT</strong></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-text">Salve na pasta <strong>athletes/Mauricio/treinos/</strong></div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-text">No Claude, envie o arquivo e diga <strong>"analise treino do Maurício"</strong></div></div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /container -->
+
+<script>
+const rpeL = {1:'1/10 — Muito Fácil',2:'2/10 — Fácil',3:'3/10 — Levemente Fácil',4:'4/10 — Moderado-Fácil',5:'5/10 — Moderado',6:'6/10 — Moderado-Duro',7:'7/10 — Duro',8:'8/10 — Muito Duro',9:'9/10 — Extremamente Duro',10:'10/10 — Máximo'};
+
+function selectAthlete(name, btn) {
+  document.querySelectorAll('.athlete-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.athlete-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('panel-' + name).classList.add('active');
+}
+
+function showTab(athlete, tab, el) {
+  const panel = document.getElementById('panel-' + athlete);
+  panel.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  panel.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(athlete + '-' + tab).classList.add('active');
+  el.classList.add('active');
+}
+
+function selType(btn, pfx, type) {
+  btn.closest('.workout-types').querySelectorAll('.wtype-btn').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+  document.getElementById(pfx + '-type').value = type;
+}
+
+function updRPE(pfx, v) {
+  document.getElementById(pfx + '-rpelabel').textContent = rpeL[v] || v + '/10';
+}
+
+function fmtDate(d) {
+  if (!d) return '[NÃO INFORMADA]';
+  const [y,m,day] = d.split('-');
+  return `${day}/${m}/${y}`;
+}
+
+function genReport(pfx, name, vdot) {
+  const date = document.getElementById(pfx+'-date').value;
+  const dist = document.getElementById(pfx+'-dist').value;
+  const time = document.getElementById(pfx+'-time').value;
+  const type = document.getElementById(pfx+'-type').value;
+  const hrA  = document.getElementById(pfx+'-hrA').value;
+  const hrM  = document.getElementById(pfx+'-hrM').value;
+  const pace = document.getElementById(pfx+'-pace').value;
+  const cad  = document.getElementById(pfx+'-cad').value;
+  const elev = document.getElementById(pfx+'-elev').value;
+  const temp = document.getElementById(pfx+'-temp').value;
+  const cond = document.getElementById(pfx+'-cond').value;
+  const rpe  = document.getElementById(pfx+'-rpe').value;
+  const url  = document.getElementById(pfx+'-url').value;
+  const notes= document.getElementById(pfx+'-notes').value;
+
+  let r = `Coach VDOT — Análise de Atividade\n`;
+  r += `Atleta: ${name} (${vdot})\n\n`;
+  r += `📅 Data: ${fmtDate(date)}\n`;
+  r += `🏃 Tipo: ${type || '[não selecionado]'}\n`;
+  r += `📏 Distância: ${dist || '?'} km\n`;
+  r += `⏱️ Tempo: ${time || '?'}\n`;
+  if (pace) r += `⚡ Pace médio: ${pace} /km\n`;
+  if (hrA)  r += `❤️ FC média: ${hrA} bpm`;
+  if (hrM)  r += ` | FC máx: ${hrM} bpm`;
+  if (hrA||hrM) r += '\n';
+  if (cad)  r += `🦵 Cadência: ${cad} ppm\n`;
+  if (elev) r += `🌄 Elevação: ${elev} m\n`;
+  if (temp||cond) r += `🌡️ Condições: ${temp ? temp+'°C' : ''}${temp&&cond?', ':''}${cond||''}\n`;
+  r += `😮‍💨 RPE: ${rpe}/10 — ${rpeL[rpe]}\n`;
+  if (url)  r += `🔗 Garmin: ${url}\n`;
+  if (notes) r += `\n💬 Notas: ${notes}\n`;
+  r += `\nPor favor: analise este treino, verifique 80/20, avalie cadência e sugira próximos passos.`;
+
+  document.getElementById(pfx+'-outtext').textContent = r;
+  const box = document.getElementById(pfx+'-out');
+  box.classList.add('show');
+  box.scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+function copyOut(id, btn) {
+  navigator.clipboard.writeText(document.getElementById(id).textContent).then(() => {
+    btn.textContent = '✅ Copiado!';
+    setTimeout(() => btn.textContent = '📋 Copiar', 2000);
+  });
+}
+
+function clearF(pfx) {
+  ['dist','time','hrA','hrM','pace','cad','elev','temp','url','notes'].forEach(f => {
+    const el = document.getElementById(pfx+'-'+f);
+    if (el) el.value = '';
+  });
+  const cond = document.getElementById(pfx+'-cond');
+  if (cond) cond.value = '';
+  document.getElementById(pfx+'-rpe').value = 5;
+  updRPE(pfx, 5);
+  document.getElementById(pfx+'-type').value = '';
+  document.querySelectorAll(`#${pfx}-out`).forEach(b => b.classList.remove('show'));
+  document.querySelectorAll('.wtype-btn').forEach(b => b.classList.remove('selected'));
+}
+
+window.onload = () => {
+  const today = new Date();
+  const d = `${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,'0')}-${String(today.getDate()).padStart(2,'0')}`;
+  ['F','W','M'].forEach(pfx => {
+    const el = document.getElementById(pfx+'-date');
+    if (el) el.value = d;
+  });
+};
+</script>
+</body>
+</html>
