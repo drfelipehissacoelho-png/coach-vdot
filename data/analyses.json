@@ -6,9 +6,194 @@
   "tune_up_race": "Meia Maratona de Montevideo — 09/08/2026",
   "tune_up_goal": "Sub-1h50",
   "cycle_start": "2026-04-16",
-  "last_updated": "2026-04-29T08:20:18.173415",
-  "total_analyses": 16,
+  "last_updated": "2026-05-01T07:04:15.919311",
+  "total_analyses": 17,
   "analyses": [
+    {
+      "id": "2026-05-01_morning_run",
+      "date": "2026-05-01",
+      "date_display": "01/05/2026",
+      "source": "strava",
+      "sport": "run",
+      "is_treadmill": false,
+      "activity_name": "Morning Run",
+      "distance_km": 11.27,
+      "duration": "01:10:54",
+      "avg_pace": "6:17/km",
+      "avg_heart_rate": 152.1,
+      "max_heart_rate": 163.0,
+      "avg_cadence_spm": 174,
+      "temperature_c": 25,
+      "humidity_pct": 96,
+      "dew_point_c": 23.4,
+      "heat_index_c": 24.2,
+      "weather_source": "cache",
+      "total_ascent_m": 205.0,
+      "total_descent_m": null,
+      "training_stress_score": null,
+      "aerobic_training_effect": null,
+      "anaerobic_training_effect": null,
+      "laps": [
+        {
+          "lap_number": 1,
+          "distance_km": 1.0,
+          "duration": "06:18",
+          "avg_pace": "6:17/km",
+          "avg_heart_rate": 141,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 2,
+          "distance_km": 1.0,
+          "duration": "06:24",
+          "avg_pace": "6:24/km",
+          "avg_heart_rate": 146,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 3,
+          "distance_km": 1.0,
+          "duration": "06:18",
+          "avg_pace": "6:18/km",
+          "avg_heart_rate": 148,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 4,
+          "distance_km": 1.0,
+          "duration": "06:22",
+          "avg_pace": "6:21/km",
+          "avg_heart_rate": 146,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 5,
+          "distance_km": 1.0,
+          "duration": "06:17",
+          "avg_pace": "6:17/km",
+          "avg_heart_rate": 152,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 6,
+          "distance_km": 1.0,
+          "duration": "06:23",
+          "avg_pace": "6:23/km",
+          "avg_heart_rate": 152,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 7,
+          "distance_km": 1.0,
+          "duration": "06:15",
+          "avg_pace": "6:14/km",
+          "avg_heart_rate": 155,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 8,
+          "distance_km": 1.0,
+          "duration": "06:11",
+          "avg_pace": "6:11/km",
+          "avg_heart_rate": 155,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 9,
+          "distance_km": 1.0,
+          "duration": "06:15",
+          "avg_pace": "6:14/km",
+          "avg_heart_rate": 155,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 10,
+          "distance_km": 1.0,
+          "duration": "06:12",
+          "avg_pace": "6:11/km",
+          "avg_heart_rate": 158,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 11,
+          "distance_km": 1.0,
+          "duration": "06:16",
+          "avg_pace": "6:14/km",
+          "avg_heart_rate": 158,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 12,
+          "distance_km": 0.27,
+          "duration": "01:43",
+          "avg_pace": "6:26/km",
+          "avg_heart_rate": 158,
+          "avg_cadence_spm": null
+        }
+      ],
+      "metrics": {
+        "vdot_referencia": 39,
+        "tipo_treino_detectado": "rodagem",
+        "zona_prescrita": "E",
+        "pace_prescrito_min_km": "6:29-7:28",
+        "pace_executado_min_km": "6:17",
+        "aderencia_pace_pct": 88,
+        "distribuicao_intensidade": {
+          "facil_pct": 90,
+          "moderado_pct": 10,
+          "forte_pct": 0
+        },
+        "gray_zone_alerta": false,
+        "deriva_cardiaca_pct": 2.4,
+        "eficiencia_aerobica": null,
+        "cadencia_media_spm": 174,
+        "ajuste_calor_segundos_km": 0,
+        "pace_equivalente_frio_min_km": "6:17/km",
+        "limitador_principal": "polarizacao",
+        "bandeira_clinica": null,
+        "nota_aderencia": 8,
+        "confianca_analise": "alta"
+      },
+      "score": 8,
+      "analysis_html": "<b>📊 Resumo do Treino</b>\nReposição da sessão de 02/05 executada em 01/05 às 04h42 — rodagem Z1 de 70 min em Recife. Felipe completou 11,27 km em 1h10:54 a 6:17/km médio, superando levemente o volume prescrito (9,38–10,8 km). VDOT de referência: 39. Fase atual: Base Aeróbica (sem 2–3 do ciclo Montevideo).\n\n<b>✅ Pontos Positivos</b>\n• <b>Controle aeróbico excelente:</b> Decoupling pa:hr de apenas 2,4% (meta: &lt;5%) — sinal claro de base aeróbica preservada para o pós-maratona. O sistema cardiovascular respondeu muito bem.\n• <b>Pace dentro da janela dupla:</b> 6:17/km está na zona E de Daniels (5:58–6:40) e dentro da Z2 Confortável do MPR, com sobreposição saudável entre os dois sistemas. Nenhum conflito de prescrição.\n• <b>Consistência de splits:</b> Variação máxima de 13 segundos entre voltas (6:11–6:24) sem acelerar forçado — demonstra maturidade de corrida e controle de esforço intuitivo.\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>Volume ligeiramente acima do prescrito:</b> 11,27 km vs. teto de 10,8 km da sessão reposta — diferença pequena (~5%), mas na fase de retomada pós-pausa, respeitar o teto protege contra sobrecarga acumulada.\n• <b>FC na 2ª metade em 157 bpm (82,6% FCmáx):</b> Tecnicamente dentro do aceitável para Z1/E, mas o calor+umidade de Recife às 04h42 inflacionou a FC. Não é alerta clínico, mas reforça a necessidade de monitorar a FC — não o pace — como regulador primário neste clima.\n• <b>Cadência em 174 spm:</b> Levemente abaixo do alvo Pose Method/Daniels (≥178 spm). Não crítico, mas há espaço para melhora de economia de corrida.\n\n<b>🏁 Impacto na Preparação</b>\nSessão de base aeróbica bem executada: acumula volume fácil de qualidade, preserva a eficiência metabólica e reforça o alicerce para o ciclo de Limiar de junho. O decoupling baixo confirma que Felipe está construindo o \"motor aeróbico\" necessário para sustentar paces de meia maratona em Montevideo (sub-1h50 = ~5:13/km). Cada rodagem Z1 bem executada agora vale ouro em agosto.\n\n<b>📅 Próximo Treino Sugerido</b>\n<b>Tipo:</b> Rodagem fácil Z1 + 4×30s de strides técnicos ao final\n<b>Distância:</b> 8–10 km\n<b>Pace-alvo:</b> 6:20–6:40/km (Daniels E / MPR Z1–Z2) — FC abaixo de 155 bpm como regulador primário\n<b>Foco:</b> Recuperação ativa + ativação de cadência (buscar 178 spm nos strides). Manter pelo menos 1 dia de descanso ou natação entre esta sessão e a próxima corrida.\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: 8/10 — Intensidade e controle aeróbico impecáveis; volume 5% acima do teto prescrito e cadência levemente baixa impedem nota máxima.\n",
+      "classification": "rescheduled",
+      "matched_session_id": "2026-05-02",
+      "extra_session_evaluation": null,
+      "running_dynamics": {
+        "ground_contact_time_ms": null,
+        "vertical_oscillation_cm": null,
+        "vertical_ratio_pct": null,
+        "stride_length_m": null,
+        "gct_balance_pct": null
+      },
+      "drift_analysis": {
+        "pattern": "sem_drift_relevante",
+        "confidence": "moderate",
+        "pa_hr_decoupling_pct": 2.42,
+        "pw_hr_decoupling_pct": null,
+        "delta_power_pct": null,
+        "delta_pace_pct": -2.22,
+        "delta_cadence_pct": 0.28,
+        "first_half": {
+          "avg_hr": 149.48557692307693,
+          "avg_watts": null,
+          "avg_pace_min_km": 6.391440200402547,
+          "avg_cadence_spm": 174.91346153846155,
+          "samples": 416
+        },
+        "second_half": {
+          "avg_hr": 156.66576086956522,
+          "avg_watts": null,
+          "avg_pace_min_km": 6.249483101845804,
+          "avg_cadence_spm": 175.39673913043478,
+          "samples": 368
+        },
+        "notes": [
+          "Decoupling pa:hr/pw:hr abaixo de 5% — adaptação aeróbica preservada."
+        ]
+      },
+      "generated_at": "2026-05-01T07:04:15.919286"
+    },
     {
       "id": "2026-04-29_morning_run",
       "date": "2026-04-29",
