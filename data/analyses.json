@@ -6,7 +6,7 @@
   "tune_up_race": "Meia Maratona de Montevideo — 09/08/2026",
   "tune_up_goal": "Sub-1h50",
   "cycle_start": "2026-04-16",
-  "last_updated": "2026-05-02T09:24:39.418917",
+  "last_updated": "2026-05-02T09:25:07.001943",
   "total_analyses": 18,
   "analyses": [
     {
@@ -15,20 +15,20 @@
       "date_display": "02/05/2026",
       "source": "strava",
       "sport": "run",
-      "is_treadmill": true,
+      "is_treadmill": false,
       "activity_name": "Morning Run",
-      "distance_km": 0.0,
-      "duration": "00:37",
-      "avg_pace": "234:44/km",
-      "avg_heart_rate": 96.4,
-      "max_heart_rate": 102.0,
-      "avg_cadence_spm": 92,
-      "temperature_c": 27,
-      "humidity_pct": null,
-      "dew_point_c": null,
-      "heat_index_c": null,
-      "weather_source": null,
-      "total_ascent_m": 0,
+      "distance_km": 0.04,
+      "duration": "01:09",
+      "avg_pace": "25:36/km",
+      "avg_heart_rate": 90.4,
+      "max_heart_rate": 92.0,
+      "avg_cadence_spm": null,
+      "temperature_c": 28,
+      "humidity_pct": 96,
+      "dew_point_c": 23.2,
+      "heat_index_c": 23.9,
+      "weather_source": "cache",
+      "total_ascent_m": 0.0,
       "total_descent_m": null,
       "training_stress_score": null,
       "aerobic_training_effect": null,
@@ -36,19 +36,19 @@
       "laps": [
         {
           "lap_number": 1,
-          "distance_km": 0.0,
-          "duration": "00:37",
-          "avg_pace": "238:05/km",
-          "avg_heart_rate": 96,
+          "distance_km": 0.05,
+          "duration": "01:09",
+          "avg_pace": "23:48/km",
+          "avg_heart_rate": 90,
           "avg_cadence_spm": null
         }
       ],
       "metrics": {
         "vdot_referencia": 39,
-        "tipo_treino_detectado": "regenerativo",
+        "tipo_treino_detectado": "outro",
         "zona_prescrita": null,
         "pace_prescrito_min_km": null,
-        "pace_executado_min_km": null,
+        "pace_executado_min_km": "25:36",
         "aderencia_pace_pct": null,
         "distribuicao_intensidade": {
           "facil_pct": 100,
@@ -58,20 +58,20 @@
         "gray_zone_alerta": false,
         "deriva_cardiaca_pct": null,
         "eficiencia_aerobica": null,
-        "cadencia_media_spm": 92,
-        "ajuste_calor_segundos_km": 528,
-        "pace_equivalente_frio_min_km": "225:56",
+        "cadencia_media_spm": null,
+        "ajuste_calor_segundos_km": 81,
+        "pace_equivalente_frio_min_km": "24:15",
         "limitador_principal": "nenhum",
-        "bandeira_clinica": "dados_invalidos_arquivo_corrompido",
-        "nota_aderencia": null,
-        "confianca_analise": "baixa"
+        "bandeira_clinica": null,
+        "nota_aderencia": 6,
+        "confianca_analise": "alta"
       },
-      "score": null,
-      "analysis_html": "Vou analisar este treino com atenção — mas preciso ser transparente com você sobre o que os dados mostram.\n\n---\n\n<b>📊 Resumo do Treino</b>\nSessão extra (não prescrita pelo MPR) realizada em esteira em 02/05/2026. Os dados retornados pelo Garmin/Strava apresentam <b>anomalias severas de registro</b>: distância = 0,0 km, pace médio = 234:44/km, potência média = 6W, cadência = 92 spm (valor impossível para corrida — seria caminhada lenta ou repouso). O arquivo JSON foi capturado, mas os sensores de GPS/acelerômetro da esteira claramente <b>não transmitiram dados válidos</b>. A sessão provavelmente ocorreu, mas não pode ser analisada por métricas de performance.\n\n---\n\n<b>✅ Pontos Positivos</b>\n• <b>FC coerente com zona regenerativa:</b> FC média 96 bpm = 50,5% da FCmáx referência (190 bpm) — isso é consistente com uma caminhada leve ou aquecimento, zona abaixo do Z1. Nenhum estresse fisiológico detectado.\n• <b>Comportamento 80/20 preservado:</b> Mesmo sem dados de distância, a intensidade cardíaca indica que não houve comprometimento da polarização da semana.\n• <b>Timing adequado:</b> Sessão matinal às 06h27 em Recife, indoor, evitando o calor — escolha inteligente para o contexto climático local.\n\n---\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>Dados inválidos — arquivo corrompido:</b> Distância 0,0 km + pace 234:44/km + potência 6W + cadência 92 spm são inconsistentes com qualquer corrida real. Provavelmente houve falha de paridade entre esteira e Garmin (protocolo ANT+/BLE não sincronizou).\n• <b>Duração de apenas 37 minutos com zero distância registrada:</b> Impossível calcular pace real, deriva cardíaca, eficiência aeróbica ou aderência a zonas VDOT.\n• <b>Cadência 92 spm:</b> Se real, indica caminhada — não corrida. Se for artefato de sensor, confirma falha de captura.\n\n---\n\n<b>🏁 Impacto na Preparação</b>\nFisiologicamente, uma sessão de ~37 minutos em FC média de 96 bpm (50% FCmáx) gera impacto positivo mínimo mas real: fluxo sanguíneo ativo, mobilidade e recuperação neural. <b>Não compromete nenhuma sessão do MPR</b> e está 100% alinhada com a classificação EXTRA_SESSION/BENEFICIAL. Para Montevideo (09/08) e Osaka (28/02/2027), este tipo de sessão leve na Fase de Base é irrelevante em termos de carga — mas o hábito de mover-se todos os dias conta.\n\n---\n\n<b>📅 Próximo Treino Sugerido</b>\n<b>Rodagem fácil — Zona E (VDOT 39)</b>\n• Distância: 8–10 km\n• Pace-alvo: 6:05–6:29/km (Z2 MPR / Zona E VDOT)\n• FC-alvo: ≤75% FCmáx = ≤142 bpm\n• Foco: Confirmar que a esteira está pareada corretamente com o Garmin antes de iniciar (teste de 2 minutos andando para verificar transmissão de dados). Drills Pose Method nos primeiros 10 min: queda para frente + apoio sob o quadril.\n\n---\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: <b>N/A — dados insuficientes para pontuar</b> — arquivo corrompido impede avaliação de performance; sessão extra não pontuada no MPR por definição.\n\n---\n\n> 🔧 <b>Recomendação técnica:</b> Verifique nas configurações do Garmin se o perfil \"Esteira\" está com o footpod/acelerômetro interno ativado como fonte primária de distância. Em esteiras sem transmissor ANT+, o Garmin depende do acelerômetro do pulso — que pode falhar se o braço estiver apoiado no corrimão. Considere calibrar o perfil de esteira na próxima sessão.\n",
+      "score": 6,
+      "analysis_html": "<b>📊 Resumo do Treino</b>\nSessão extra (não prescrita pelo MPR) em 02/05/2026, às 6h31 em Recife. Distância registrada: apenas 40 metros em 1min09seg — trata-se de um microfragmento de atividade, provavelmente um GPS capturado acidentalmente ao sair de casa, um teste de relógio ou início de treino abortado. Não configura sessão de corrida funcional. VDOT atual: 39. Fase: Base Aeróbica (Ciclo Montevideo, semana 3).\n\n<b>✅ Pontos Positivos</b>\n• Sem sinais de esforço — FC média de 90 bpm (47% da FCmáx de 190 bpm) confirma que o atleta não se sobrecarregou com este fragmento.\n• Por ser EXTRA_SESSION e não interferir no MPR, a sessão não compromete a prescrição semanal nem gera fadiga acumulada relevante.\n• O simples fato de o relógio estar ativo às 6h31 sugere rotina matinal mantida — consistência de hábito é parte do processo.\n\n<b>⚠️ Sinais de Alerta</b>\nNenhum sinal fisiológico preocupante. Atenção apenas administrativa: verificar se o Garmin/Strava está salvando fragmentos de GPS erroneamente — isso pode distorcer métricas semanais de volume e ACWR se acumulado ao longo do ciclo. Recomendável excluir ou marcar como inválida no Strava.\n\n<b>🏁 Impacto na Preparação</b>\nImpacto fisiológico: zero. Este fragmento não gera estímulo adaptativo, não acumula fadiga e não contribui para o volume semanal rumo a Montevideo (09/08/2026). O ciclo de Base Aeróbica segue íntegro — nenhuma ação corretiva necessária.\n\n<b>📅 Próximo Treino Sugerido</b>\nRodagem fácil conforme prescrição MPR vigente: 8–12 km em pace Z1–Z2 (6:29–6:40/km real em Recife, considerando o ajuste de calor de +81seg/km sobre o pace VDOT de 5:58–6:29). Foco: cadência ≥175spm, postura Pose Method, sem pressão de pace. Janela ideal: madrugada (até 6h) para minimizar heat index de Recife.\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: 6/10 — Sessão extra inócua, bem intencionada, mas sem conteúdo treinávelregistrável; nota penaliza apenas a ausência de estímulo real, não o comportamento do atleta.\n",
       "classification": "extra_session",
       "matched_session_id": null,
       "extra_session_evaluation": {
-        "activity_id": "2026-05-02_Morning Run_18343045224.json",
+        "activity_id": "2026-05-02_Morning Run_18343123632.json",
         "date": "2026-05-02",
         "classification": "beneficial",
         "reason": "Sessão extra em zona aeróbica leve — coerente com 80/20 e útil para volume de base sem agredir a prescrição.",
@@ -110,7 +110,7 @@
           "Stream de tempo ou heartrate ausente / curto demais."
         ]
       },
-      "generated_at": "2026-05-02T09:24:39.418863"
+      "generated_at": "2026-05-02T09:25:07.001908"
     },
     {
       "id": "2026-05-01_morning_run",
