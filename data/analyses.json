@@ -6,9 +6,162 @@
   "tune_up_race": "Meia Maratona de Montevideo — 09/08/2026",
   "tune_up_goal": "Sub-1h50",
   "cycle_start": "2026-04-16",
-  "last_updated": "2026-05-05T09:34:28.983675",
-  "total_analyses": 19,
+  "last_updated": "2026-05-06T06:03:36.696629",
+  "total_analyses": 20,
   "analyses": [
+    {
+      "id": "2026-05-06_morning_run",
+      "date": "2026-05-06",
+      "date_display": "06/05/2026",
+      "source": "strava",
+      "sport": "run",
+      "is_treadmill": false,
+      "activity_name": "Morning Run",
+      "distance_km": 7.73,
+      "duration": "50:34",
+      "avg_pace": "6:32/km",
+      "avg_heart_rate": 146.9,
+      "max_heart_rate": 155.0,
+      "avg_cadence_spm": 175,
+      "temperature_c": 26,
+      "humidity_pct": 76,
+      "dew_point_c": 21.3,
+      "heat_index_c": 25.7,
+      "weather_source": "open-meteo",
+      "total_ascent_m": 13.0,
+      "total_descent_m": null,
+      "training_stress_score": null,
+      "aerobic_training_effect": null,
+      "anaerobic_training_effect": null,
+      "laps": [
+        {
+          "lap_number": 1,
+          "distance_km": 1.0,
+          "duration": "06:37",
+          "avg_pace": "6:36/km",
+          "avg_heart_rate": 135,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 2,
+          "distance_km": 1.0,
+          "duration": "06:33",
+          "avg_pace": "6:32/km",
+          "avg_heart_rate": 144,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 3,
+          "distance_km": 1.0,
+          "duration": "06:33",
+          "avg_pace": "6:33/km",
+          "avg_heart_rate": 148,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 4,
+          "distance_km": 1.0,
+          "duration": "06:32",
+          "avg_pace": "6:32/km",
+          "avg_heart_rate": 148,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 5,
+          "distance_km": 1.0,
+          "duration": "06:31",
+          "avg_pace": "6:30/km",
+          "avg_heart_rate": 149,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 6,
+          "distance_km": 1.0,
+          "duration": "06:34",
+          "avg_pace": "6:33/km",
+          "avg_heart_rate": 148,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 7,
+          "distance_km": 1.0,
+          "duration": "06:29",
+          "avg_pace": "6:29/km",
+          "avg_heart_rate": 150,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 8,
+          "distance_km": 0.73,
+          "duration": "04:46",
+          "avg_pace": "6:33/km",
+          "avg_heart_rate": 152,
+          "avg_cadence_spm": null
+        }
+      ],
+      "metrics": {
+        "vdot_referencia": 39,
+        "tipo_treino_detectado": "rodagem",
+        "zona_prescrita": "E",
+        "pace_prescrito_min_km": "6:29-7:28",
+        "pace_executado_min_km": "6:32",
+        "aderencia_pace_pct": 97,
+        "distribuicao_intensidade": {
+          "facil_pct": 100,
+          "moderado_pct": 0,
+          "forte_pct": 0
+        },
+        "gray_zone_alerta": false,
+        "deriva_cardiaca_pct": 1.0,
+        "eficiencia_aerobica": 1.49,
+        "cadencia_media_spm": 175,
+        "ajuste_calor_segundos_km": 15,
+        "pace_equivalente_frio_min_km": "6:17",
+        "limitador_principal": "tecnica",
+        "bandeira_clinica": null,
+        "nota_aderencia": 9,
+        "confianca_analise": "alta"
+      },
+      "score": null,
+      "analysis_html": "<b>📊 Resumo do Treino</b>\nFelipe, rodagem matinal de 7,73 km em 50:34 (pace médio 6:32/km) — ultrapassando a distância prescrita pelo MPR (6,59–7,59 km) em ~150m, dentro do tolerável. Fase de Base Aeróbica, semanas 3–4 do ciclo Montevideo. VDOT de referência: 39. Treino executado às 5h em Recife com 26°C/76% de umidade — condições que pressionam FC para cima.\n\n<b>✅ Pontos Positivos</b>\n• <b>Pace perfeitamente calibrado:</b> 6:32/km médio está exatamente no centro da Z1 MPR (6:29–7:28) e dentro da zona E Daniels (5:58–6:40). Pace equivalente em frio (~10°C): <b>6:17/km</b> — ainda mais confortável. Execução textbook.\n• <b>Decoupling cardíaco excepcional:</b> pa:hr de apenas 1,0% e pw:hr de 0,9% — muito abaixo do limiar de 5%. FC praticamente estável entre metades (148→149 bpm). Sinal claro de adaptação aeróbica sólida para o calor de Recife.\n• <b>Consistência de splits impressionante:</b> variação de apenas 8 seg/km entre o split mais lento (6:37) e o mais rápido (6:29). Progressão suave e controlada — ritmo de corredor maduro, sem oscilações de intensidade.\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>Cadência em 175 spm:</b> abaixo da meta Pose/Daniels de ≥180 spm. É o único deslize técnico do treino — em corridas fáceis, a tendência de \"poupar\" reduz a cadência. Trabalhar conscientemente para subir para 178–180 spm mesmo em Z1.\n• <b>FC Média de 147 bpm = 77% FCmáx (190 bpm):</b> ainda aceitável para zona E em calor, mas no limite superior da banda. Em dias mais frescos ou com hidratação plena, essa mesma cadência/pace deve produzir FC 5–8 bpm mais baixa. Monitorar tendência nas próximas semanas.\n\nNenhum sinal clínico preocupante.\n\n<b>🏁 Impacto na Preparação</b>\nTreino de alto valor para a base aeróbica: decoupling <1% confirma que o sistema cardiovascular está respondendo bem ao acúmulo de volume. Cada rodagem executada assim, dentro da Z1 MPR com FC controlada, deposita \"crédito aeróbico\" direto para o sub-1h50 em Montevideo. O volume semanal está sendo construído no ritmo certo — sem sacrificar qualidade das sessões de qualidade que virão em Junho.\n\n<b>📅 Próximo Treino Sugerido</b>\n<b>Tipo:</b> Rodagem fácil com foco em cadência\n<b>Distância:</b> 8–9 km\n<b>Pace-alvo:</b> 6:29–6:45/km (Z1 MPR / zona E Daniels) — ajuste natural pelo calor\n<b>Foco técnico:</b> Cadência ≥178 spm — use metrônomo no Garmin (configurar alerta de cadência). Mantenha FC ≤155 bpm. Se ultrapassar, reduza o pace sem negociar a cadência.\n<b>Horário sugerido:</b> Manter às 5h para aproveitar o menor heat index do dia.\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: <b>9/10</b> — Execução quase perfeita da prescrição MPR em condições adversas de calor; único ajuste necessário é elevar cadência para ≥178 spm.\n",
+      "classification": "planned_match",
+      "matched_session_id": "2026-05-06",
+      "extra_session_evaluation": null,
+      "running_dynamics": {
+        "ground_contact_time_ms": null,
+        "vertical_oscillation_cm": null,
+        "vertical_ratio_pct": null,
+        "stride_length_m": null,
+        "gct_balance_pct": null
+      },
+      "drift_analysis": {
+        "pattern": "sem_drift_relevante",
+        "confidence": "high",
+        "pa_hr_decoupling_pct": 0.99,
+        "pw_hr_decoupling_pct": 0.93,
+        "delta_power_pct": 0.19,
+        "delta_pace_pct": -0.13,
+        "delta_cadence_pct": 0.79,
+        "first_half": {
+          "avg_hr": 147.73556797020484,
+          "avg_watts": 218.40875232774675,
+          "avg_pace_min_km": 6.540783683833931,
+          "avg_cadence_spm": 176.23277467411546,
+          "samples": 1074
+        },
+        "second_half": {
+          "avg_hr": 149.40633737185462,
+          "avg_watts": 218.8219944082013,
+          "avg_pace_min_km": 6.532240460788862,
+          "avg_cadence_spm": 177.62907735321528,
+          "samples": 1073
+        },
+        "notes": [
+          "Decoupling pa:hr/pw:hr abaixo de 5% — adaptação aeróbica preservada."
+        ]
+      },
+      "generated_at": "2026-05-06T06:03:36.696608"
+    },
     {
       "id": "2026-05-05_tempo_run_esteira",
       "date": "2026-05-05",
