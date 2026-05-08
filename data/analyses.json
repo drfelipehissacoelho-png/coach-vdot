@@ -6,9 +6,170 @@
   "tune_up_race": "Meia Maratona de Montevideo — 09/08/2026",
   "tune_up_goal": "Sub-1h50",
   "cycle_start": "2026-04-16",
-  "last_updated": "2026-05-06T06:03:36.696629",
-  "total_analyses": 20,
+  "last_updated": "2026-05-08T05:59:04.634895",
+  "total_analyses": 21,
   "analyses": [
+    {
+      "id": "2026-05-08_morning_run",
+      "date": "2026-05-08",
+      "date_display": "08/05/2026",
+      "source": "strava",
+      "sport": "run",
+      "is_treadmill": false,
+      "activity_name": "Morning Run",
+      "distance_km": 8.01,
+      "duration": "48:33",
+      "avg_pace": "6:03/km",
+      "avg_heart_rate": 152.4,
+      "max_heart_rate": 162.0,
+      "avg_cadence_spm": 175,
+      "temperature_c": 26,
+      "humidity_pct": 96,
+      "dew_point_c": 23.1,
+      "heat_index_c": 23.8,
+      "weather_source": "open-meteo",
+      "total_ascent_m": 9.0,
+      "total_descent_m": null,
+      "training_stress_score": null,
+      "aerobic_training_effect": null,
+      "anaerobic_training_effect": null,
+      "laps": [
+        {
+          "lap_number": 1,
+          "distance_km": 1.0,
+          "duration": "06:01",
+          "avg_pace": "6:01/km",
+          "avg_heart_rate": 142,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 2,
+          "distance_km": 1.0,
+          "duration": "06:05",
+          "avg_pace": "6:04/km",
+          "avg_heart_rate": 148,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 3,
+          "distance_km": 1.0,
+          "duration": "06:00",
+          "avg_pace": "5:59/km",
+          "avg_heart_rate": 149,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 4,
+          "distance_km": 1.0,
+          "duration": "06:07",
+          "avg_pace": "6:06/km",
+          "avg_heart_rate": 151,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 5,
+          "distance_km": 1.0,
+          "duration": "06:04",
+          "avg_pace": "6:03/km",
+          "avg_heart_rate": 153,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 6,
+          "distance_km": 1.0,
+          "duration": "06:02",
+          "avg_pace": "6:02/km",
+          "avg_heart_rate": 155,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 7,
+          "distance_km": 1.0,
+          "duration": "06:03",
+          "avg_pace": "6:03/km",
+          "avg_heart_rate": 158,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 8,
+          "distance_km": 1.0,
+          "duration": "06:07",
+          "avg_pace": "6:06/km",
+          "avg_heart_rate": 159,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 9,
+          "distance_km": 0.01,
+          "duration": "00:04",
+          "avg_pace": "5:41/km",
+          "avg_heart_rate": 158,
+          "avg_cadence_spm": null
+        }
+      ],
+      "metrics": {
+        "vdot_referencia": 39,
+        "tipo_treino_detectado": "rodagem",
+        "zona_prescrita": "E",
+        "pace_prescrito_min_km": "6:05-6:29",
+        "pace_executado_min_km": "6:03",
+        "aderencia_pace_pct": 97,
+        "distribuicao_intensidade": {
+          "facil_pct": 100,
+          "moderado_pct": 0,
+          "forte_pct": 0
+        },
+        "gray_zone_alerta": false,
+        "deriva_cardiaca_pct": 4.3,
+        "eficiencia_aerobica": null,
+        "cadencia_media_spm": 175,
+        "ajuste_calor_segundos_km": 19,
+        "pace_equivalente_frio_min_km": "5:44",
+        "limitador_principal": "adesao",
+        "bandeira_clinica": null,
+        "nota_aderencia": 5,
+        "confianca_analise": "alta"
+      },
+      "score": null,
+      "analysis_html": "<b>📊 Resumo do Treino</b>\nFelipe, treino de rodagem longa prescrito (90 min / ~14 km Z2 MPR) executado com 8,0 km em 48:33 — ou seja, sessão interrompida antes do previsto (≈55% da distância e ≈54% da duração alvo). Pace médio de 6:03/km posicionado na entrada da Z2 MPR (6:05–6:29) e dentro da zona E do VDOT 39 (5:58–6:40). Com ajuste de calor (+19 s/km), o pace equivalente em condições frias seria <b>5:44/km</b> — colado no ritmo M do VDOT, o que já indica leve pressão fisiológica para o que era prescrito como \"fácil/confortável\".\n\n---\n\n<b>✅ Pontos Positivos</b>\n\n• <b>Consistência de pace excepcional:</b> Splits de 5:59 a 6:07/km em 8 km — variação de apenas 8 s/km. Controle de esforço cirúrgico, típico de atleta experiente que sabe o que está fazendo.\n\n• <b>Decoupling dentro do aceitável:</b> 3,6% pace/FC e 4,3% watts/FC — ambos abaixo do limiar de 5% considerado excelente para condições de 26°C / 96% de umidade. A potência estável (238→237 W) com FC subindo é o padrão textbook de drift cardiovascular por calor, não sinal de deterioração aeróbica.\n\n• <b>Zona correta para a fase:</b> FC média de 152 bpm = 80% FCmáx — topo aceitável da zona E/Confortável para Recife às 5h. FC máxima de 162 bpm = 85% FCmáx — sem alertas clínicos. O treino serviu ao propósito da Base Aeróbica.\n\n---\n\n<b>⚠️ Sinais de Alerta</b>\n\n• <b>Volume executado vs. prescrito — gap importante:</b> 8,0 km / 48 min vs. 13,7–14,6 km / 90 min prescrito. Apenas ~55% do volume planejado foi completado. Se foi decisão consciente (calor, fadiga acumulada, compromisso de horário), ok — mas precisa ser monitorado. Se foi abandono por mal-estar, requer atenção.\n\n• <b>FC média elevada para o pace (calor explica, mas registre):</b> 152 bpm a 6:03/km em percurso plano (9 m de ganho) = eficiência aeróbica pressionada. Equivalente fisiológico de rodar a 5:44/km em 10°C. Recife em maio às 5h já impõe custo real — o ponto de orvalho de 23°C indica ambiente saturado onde a sudorese resfria pouco.\n\n• <b>Cadência em 175 spm:</b> Abaixo do ideal de 178–182 spm recomendado pelo Pose Method. Dado que a potência ficou estável, a cadência mais baixa pode indicar passadas ligeiramente mais longas — vale checar no próximo treino.\n\n---\n\n<b>🏁 Impacto na Preparação</b>\n\nO estímulo aeróbico entregue é válido e coerente com a Fase Base (sem 3–4 do ciclo). A qualidade foi alta — pace controlado, sem zona cinza, drift dentro do esperado para o clima. Porém, o déficit de ~45 min de volume Z2 impacta o acúmulo semanal. Para semanas de ~40 km alvo, um longão de 8 km não cumpre o papel de \"tijolaço de base\" que uma sessão de 90 min entregaria. <b>Monitore o volume semanal total</b> — se outros dias compensarem, sem problema. Se o gap persistir, o acúmulo aeróbico para sustentar sub-1h50 em Montevideo (115 dias) ficará aquém.\n\n---\n\n<b>📅 Próximo Treino Sugerido</b>\n\n<b>Tipo:</b> Rodagem fácil regenerativa\n<b>Distância:</b> 8–10 km\n<b>Pace-alvo:</b> 6:10–6:35/km (Z1–Z2 MPR inferior) — honre o esforço de hoje com um dia mais suave\n<b>FC-alvo:</b> ≤148 bpm (~78% FCmáx)\n<b>Foco:</b> Drills de cadência (Pose) — busque 178+ spm com potência controlada ≤220 W. Se o volume desta semana estiver abaixo de 32 km até sexta, considere incluir um longão de reposição (12–14 km Z2) no fim de semana antes de segunda.\n\n---\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: <b>5/10</b> — Qualidade de execução excelente (pace, controle, FC); volume entregue ~55% do prescrito, o que limita o impacto na construção de base para Montevideo.\n",
+      "classification": "planned_match",
+      "matched_session_id": "2026-05-08",
+      "extra_session_evaluation": null,
+      "running_dynamics": {
+        "ground_contact_time_ms": null,
+        "vertical_oscillation_cm": null,
+        "vertical_ratio_pct": null,
+        "stride_length_m": null,
+        "gct_balance_pct": null
+      },
+      "drift_analysis": {
+        "pattern": "drift_cardiovascular",
+        "confidence": "high",
+        "pa_hr_decoupling_pct": 3.64,
+        "pw_hr_decoupling_pct": 4.26,
+        "delta_power_pct": -0.32,
+        "delta_pace_pct": -0.32,
+        "delta_cadence_pct": 1.01,
+        "first_half": {
+          "avg_hr": 150.45481927710844,
+          "avg_watts": 237.97088353413653,
+          "avg_pace_min_km": 6.073894864460374,
+          "avg_cadence_spm": 175.84738955823292,
+          "samples": 996
+        },
+        "second_half": {
+          "avg_hr": 156.636,
+          "avg_watts": 237.204,
+          "avg_pace_min_km": 6.054626373793439,
+          "avg_cadence_spm": 177.632,
+          "samples": 1000
+        },
+        "notes": [
+          "FC cresceu ≥3% enquanto pace/potência ficaram estáveis ou caíram."
+        ]
+      },
+      "generated_at": "2026-05-08T05:59:04.634853"
+    },
     {
       "id": "2026-05-06_morning_run",
       "date": "2026-05-06",
