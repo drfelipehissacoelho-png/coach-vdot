@@ -6,7 +6,7 @@
   "tune_up_race": "Meia Maratona de Montevideo — 09/08/2026",
   "tune_up_goal": "Sub-1h50",
   "cycle_start": "2026-04-16",
-  "last_updated": "2026-05-08T05:59:04.634895",
+  "last_updated": "2026-05-08T06:32:12.634952",
   "total_analyses": 21,
   "analyses": [
     {
@@ -27,7 +27,7 @@
       "humidity_pct": 96,
       "dew_point_c": 23.1,
       "heat_index_c": 23.8,
-      "weather_source": "open-meteo",
+      "weather_source": "cache",
       "total_ascent_m": 9.0,
       "total_descent_m": null,
       "training_stress_score": null,
@@ -125,15 +125,15 @@
         "cadencia_media_spm": 175,
         "ajuste_calor_segundos_km": 19,
         "pace_equivalente_frio_min_km": "5:44",
-        "limitador_principal": "adesao",
+        "limitador_principal": "deriva_cardiaca",
         "bandeira_clinica": null,
-        "nota_aderencia": 5,
+        "nota_aderencia": 8,
         "confianca_analise": "alta"
       },
-      "score": null,
-      "analysis_html": "<b>📊 Resumo do Treino</b>\nFelipe, treino de rodagem longa prescrito (90 min / ~14 km Z2 MPR) executado com 8,0 km em 48:33 — ou seja, sessão interrompida antes do previsto (≈55% da distância e ≈54% da duração alvo). Pace médio de 6:03/km posicionado na entrada da Z2 MPR (6:05–6:29) e dentro da zona E do VDOT 39 (5:58–6:40). Com ajuste de calor (+19 s/km), o pace equivalente em condições frias seria <b>5:44/km</b> — colado no ritmo M do VDOT, o que já indica leve pressão fisiológica para o que era prescrito como \"fácil/confortável\".\n\n---\n\n<b>✅ Pontos Positivos</b>\n\n• <b>Consistência de pace excepcional:</b> Splits de 5:59 a 6:07/km em 8 km — variação de apenas 8 s/km. Controle de esforço cirúrgico, típico de atleta experiente que sabe o que está fazendo.\n\n• <b>Decoupling dentro do aceitável:</b> 3,6% pace/FC e 4,3% watts/FC — ambos abaixo do limiar de 5% considerado excelente para condições de 26°C / 96% de umidade. A potência estável (238→237 W) com FC subindo é o padrão textbook de drift cardiovascular por calor, não sinal de deterioração aeróbica.\n\n• <b>Zona correta para a fase:</b> FC média de 152 bpm = 80% FCmáx — topo aceitável da zona E/Confortável para Recife às 5h. FC máxima de 162 bpm = 85% FCmáx — sem alertas clínicos. O treino serviu ao propósito da Base Aeróbica.\n\n---\n\n<b>⚠️ Sinais de Alerta</b>\n\n• <b>Volume executado vs. prescrito — gap importante:</b> 8,0 km / 48 min vs. 13,7–14,6 km / 90 min prescrito. Apenas ~55% do volume planejado foi completado. Se foi decisão consciente (calor, fadiga acumulada, compromisso de horário), ok — mas precisa ser monitorado. Se foi abandono por mal-estar, requer atenção.\n\n• <b>FC média elevada para o pace (calor explica, mas registre):</b> 152 bpm a 6:03/km em percurso plano (9 m de ganho) = eficiência aeróbica pressionada. Equivalente fisiológico de rodar a 5:44/km em 10°C. Recife em maio às 5h já impõe custo real — o ponto de orvalho de 23°C indica ambiente saturado onde a sudorese resfria pouco.\n\n• <b>Cadência em 175 spm:</b> Abaixo do ideal de 178–182 spm recomendado pelo Pose Method. Dado que a potência ficou estável, a cadência mais baixa pode indicar passadas ligeiramente mais longas — vale checar no próximo treino.\n\n---\n\n<b>🏁 Impacto na Preparação</b>\n\nO estímulo aeróbico entregue é válido e coerente com a Fase Base (sem 3–4 do ciclo). A qualidade foi alta — pace controlado, sem zona cinza, drift dentro do esperado para o clima. Porém, o déficit de ~45 min de volume Z2 impacta o acúmulo semanal. Para semanas de ~40 km alvo, um longão de 8 km não cumpre o papel de \"tijolaço de base\" que uma sessão de 90 min entregaria. <b>Monitore o volume semanal total</b> — se outros dias compensarem, sem problema. Se o gap persistir, o acúmulo aeróbico para sustentar sub-1h50 em Montevideo (115 dias) ficará aquém.\n\n---\n\n<b>📅 Próximo Treino Sugerido</b>\n\n<b>Tipo:</b> Rodagem fácil regenerativa\n<b>Distância:</b> 8–10 km\n<b>Pace-alvo:</b> 6:10–6:35/km (Z1–Z2 MPR inferior) — honre o esforço de hoje com um dia mais suave\n<b>FC-alvo:</b> ≤148 bpm (~78% FCmáx)\n<b>Foco:</b> Drills de cadência (Pose) — busque 178+ spm com potência controlada ≤220 W. Se o volume desta semana estiver abaixo de 32 km até sexta, considere incluir um longão de reposição (12–14 km Z2) no fim de semana antes de segunda.\n\n---\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: <b>5/10</b> — Qualidade de execução excelente (pace, controle, FC); volume entregue ~55% do prescrito, o que limita o impacto na construção de base para Montevideo.\n",
-      "classification": "planned_match",
-      "matched_session_id": "2026-05-08",
+      "score": 8,
+      "analysis_html": "<b>📊 Resumo do Treino</b>\nFelipe, rodagem de 8,01 km em 48:33 (pace médio 6:03/km), executada em 08/05 como antecipação válida da sessão prescrita para 09/05 (MPR: Rodagem 45 min / Z2 6:05–6:29/km). Treino realizado às ~5h em Recife com 26°C e umidade brutal de 96% — condições que elevam naturalmente o esforço fisiológico. Fase: Base Aeróbica, semana 3–4 do ciclo Montevideo (VDOT 39).\n\n<b>✅ Pontos Positivos</b>\n• <b>Aderência ao plano MPR excelente:</b> Pace médio de 6:03/km ficou dentro da Z2 prescrita (6:05–6:29), com splits notavelmente consistentes entre 5:59 e 6:07 — controle de ritmo cirúrgico ao longo dos 8 km.\n• <b>Pace equivalente frio de 5:44/km</b> (ajuste de +19s/km pelo calor/umidade): isso posiciona o esforço real na zona Maratona/M do VDOT 39 (~5:36), dentro do espectro aeróbico controlado. Daniels validado mesmo em condições adversas.\n• <b>Eficiência de potência sólida:</b> NP de 237W com variabilidade mínima (Potência Máx 282W isolada), confirmando corrida plana e cadência controlada — coerente com a fase de base e princípios do Pose Method.\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>Drift cardiovascular confirmado (confiança alta):</b> FC subiu de 150 → 157 bpm (+4,7%) com pace e potência estáveis — decoupling Watts/FC de 4,3%, ainda dentro do limite aceitável (<5%), mas na borda. Em 26°C/96% de umidade, é esperado, porém merece monitoramento contínuo nas próximas semanas.\n• <b>Cadência média de 175 spm:</b> Ligeiramente abaixo do alvo de 180 spm do Pose Method. Com a fadiga acumulada e calor, natural — mas é ponto de atenção técnica nos treinos da semana.\n• <b>Volume 35% acima do prescrito:</b> MPR prescrevia 45 min / ~6 km (Z1); Felipe executou 48:33 / 8,01 km em Z2. A antecipação foi válida, mas o volume extra (≈2 km) em dia que era para ser de recuperação leve pede atenção para não comprometer a sessão seguinte.\n\n<b>🏁 Impacto na Preparação</b>\nTreino que cumpre a função de base aeróbica: estímulo de volume em zona fácil/confortável sem agredir o limiar. O drift cardiovascular dentro do limite (<5%) indica que a base aeróbica está sendo construída adequadamente — Felipe está respondendo bem ao calor de Recife, o que será vantajoso em Montevideo (agosto). Para Osaka 2027, cada rodagem nesta fase pavimenta o volume que sustentará os longões de 30–35 km da fase de Base Maratona (Set–Out 2026).\n\n<b>📅 Próximo Treino Sugerido</b>\n⚠️ <b>Sessão MPR pendente: 2026-05-09 — Corrida Leve de Recuperação</b>\nTipo: Regenerativo Z1\nDuração: 45 min\nDistância alvo: 5,9–6,8 km\nPace-alvo: <b>6:29–7:28/km</b> (Z1 MPR) → equivale a zona E Daniels (5:58–6:40), mas pelo calor de Recife, fique tranquilamente no extremo lento (6:40–7:00/km real).\nFoco: Recuperação ativa — cadência suave ~174–176 spm, FC abaixo de 145 bpm (≤76% FCmáx ref. 190). Não force o ritmo. Se sentir FC acima de 148 bpm já nos primeiros 2 km, reduza o pace sem hesitar. Qualquer adaptação: alinhe com seu treinador.\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: 8/10 — Ritmo e consistência excelentes para a fase de base, mas volume ≈35% acima do prescrito e drift cardíaco na borda pedem ajuste de volume na sessão de recuperação de amanhã.\n",
+      "classification": "completed_early",
+      "matched_session_id": "2026-05-09",
       "extra_session_evaluation": null,
       "running_dynamics": {
         "ground_contact_time_ms": null,
@@ -168,7 +168,7 @@
           "FC cresceu ≥3% enquanto pace/potência ficaram estáveis ou caíram."
         ]
       },
-      "generated_at": "2026-05-08T05:59:04.634853"
+      "generated_at": "2026-05-08T06:32:12.634923"
     },
     {
       "id": "2026-05-06_morning_run",
