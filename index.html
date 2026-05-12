@@ -66,6 +66,12 @@
     .pill-blue   { background: rgba(59,130,246,0.12); color: var(--accent2); border: 1px solid rgba(59,130,246,0.25); }
     .pill-green  { background: rgba(34,197,94,0.12);  color: var(--green2);  border: 1px solid rgba(34,197,94,0.25); }
     .pill-orange { background: rgba(249,115,22,0.12); color: var(--orange2); border: 1px solid rgba(249,115,22,0.25); }
+    .pill-teal   { background: rgba(20,184,166,0.12); color: #14b8a6;        border: 1px solid rgba(20,184,166,0.25); }
+    .pill-yellow { background: rgba(234,179,8,0.12);  color: #ca8a04;        border: 1px solid rgba(234,179,8,0.25); }
+    .pill-red    { background: rgba(239,68,68,0.12);  color: #ef4444;        border: 1px solid rgba(239,68,68,0.25); }
+    .pill-gray   { background: rgba(148,163,184,0.12);color: #94a3b8;        border: 1px solid rgba(148,163,184,0.25); }
+    /* Classification badges — inline no card header */
+    .classif-badge { padding: 2px 9px; border-radius: 12px; font-size: 0.62rem; font-weight: 800; letter-spacing: 0.5px; text-transform: uppercase; white-space: nowrap; }
 
     /* CONTAINER */
     .container { max-width: 1200px; margin: 0 auto; padding: 28px 20px 60px; }
@@ -480,6 +486,24 @@
     return `<span class="score-badge ${cls}">${score}/10</span>`;
   }
 
+  /* ── Classification badge (MPR adherence) ─────────────── */
+  const CLASSIF_META = {
+    'planned_match':              { label: '✓ No plano',         css: 'background:rgba(34,197,94,0.15);color:#22c55e;border:1px solid rgba(34,197,94,0.3)' },
+    'adjusted_within_microcycle': { label: '↕ Ajuste de agenda', css: 'background:rgba(20,184,166,0.15);color:#14b8a6;border:1px solid rgba(20,184,166,0.3)' },
+    'completed_early':            { label: '⬆ Antecipado',       css: 'background:rgba(59,130,246,0.15);color:#60a5fa;border:1px solid rgba(59,130,246,0.3)' },
+    'completed_delayed':          { label: '⬇ Atrasado',         css: 'background:rgba(249,115,22,0.15);color:#fb923c;border:1px solid rgba(249,115,22,0.3)' },
+    'partially_completed':        { label: '◑ Parcial',          css: 'background:rgba(234,179,8,0.15);color:#eab308;border:1px solid rgba(234,179,8,0.3)' },
+    'extra_session':              { label: '＋ Extra',            css: 'background:rgba(148,163,184,0.1);color:#94a3b8;border:1px solid rgba(148,163,184,0.25)' },
+    'rescheduled':                { label: '↕ Ajuste de agenda', css: 'background:rgba(20,184,166,0.15);color:#14b8a6;border:1px solid rgba(20,184,166,0.3)' },
+    'recovery':                   { label: '❤ Regenerativo',     css: 'background:rgba(239,68,68,0.12);color:#fca5a5;border:1px solid rgba(239,68,68,0.2)' },
+  };
+  function classifBadge(classif) {
+    if (!classif) return '';
+    const meta = CLASSIF_META[classif];
+    if (!meta) return '';
+    return `<span class="classif-badge" style="${meta.css}" title="${classif}">${meta.label}</span>`;
+  }
+
   /* ── Countdowns ──────────────────────────────────────── */
   function renderCountdowns() {
     const now = new Date();
@@ -809,6 +833,7 @@
               ${a.temperature_c      ?`<div class="metric"><span class="metric-val">${a.temperature_c}°C</span><span class="metric-label">Temp</span></div>`:''}
             </div>
             <div class="analysis-right">
+              ${classifBadge(a.classification || a.mpr_classification)}
               ${scoreBadge(a.score)}
               <div class="expand-btn">▼</div>
             </div>
