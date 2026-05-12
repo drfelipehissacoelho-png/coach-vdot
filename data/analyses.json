@@ -125,17 +125,17 @@
       ],
       "metrics": {
         "vdot_referencia": 39,
-        "tipo_treino_detectado": "progressivo",
-        "zona_prescrita": "E",
-        "pace_prescrito_min_km": "6:05-6:29",
-        "pace_executado_min_km": "5:53",
-        "aderencia_pace_pct": 72,
+        "tipo_treino_detectado": "series",
+        "zona_prescrita": "Z1+Z3",
+        "pace_prescrito_min_km": "5:46-6:09 (Z3) + 6:29-7:28 (Z1)",
+        "pace_executado_min_km": "5:27 (blocos) / 5:53 (médio)",
+        "aderencia_pace_pct": 80,
         "distribuicao_intensidade": {
-          "facil_pct": 25,
-          "moderado_pct": 60,
-          "forte_pct": 15
+          "facil_pct": 42,
+          "moderado_pct": 0,
+          "forte_pct": 58
         },
-        "gray_zone_alerta": true,
+        "gray_zone_alerta": false,
         "deriva_cardiaca_pct": 6.0,
         "eficiencia_aerobica": 1.77,
         "cadencia_media_spm": 179,
@@ -143,12 +143,12 @@
         "pace_equivalente_frio_min_km": "5:34",
         "limitador_principal": "deriva_cardiaca",
         "bandeira_clinica": null,
-        "nota_aderencia": 6,
+        "nota_aderencia": 8,
         "confianca_analise": "alta"
       },
       "score": null,
       "analysis_html": "<b>📊 Resumo do Treino</b>\nFelipe, você executou antecipadamente (12/05 no lugar de 14/05) o percurso plano de 10km prescrito pelo plano MPR para Z2 — sessão classificada como <b>COMPLETED_EARLY</b>, válida como cumprimento da prescrição. Com VDOT 39 na Fase de Base Aeróbica (ciclo Montevideo, semana 4), o treino de 10,18 km em 60 min (pace médio 5:53/km) foi executado <b>acima da zona Z2 MPR (6:05–6:29/km)</b>, com progressão espontânea de pace ao longo dos splits. Ajustando para o calor de Recife (26°C/95% UR, +19s/km), o pace equivalente em frio é <b>5:34/km</b> — dentro da zona M (Maratona) do VDOT 39.\n\n<b>✅ Pontos Positivos</b>\n• <b>Equivalência fisiológica correta:</b> Pace real de 5:53/km em 26°C/95%UR equivale a ~5:34/km em condições neutras — dentro da zona Maratona (M ~5:36/km) do VDOT 39. O esforço fisiológico foi adequado para um estímulo aeróbico de qualidade.\n• <b>Potência Normalizada estável (NP 279W):</b> O decoupling Watts/FC de apenas 1,8% indica que a economia de corrida se manteve ao longo do treino — você correu de forma tecnicamente consistente mesmo com a FC subindo. Cadência média de 179 spm está no alvo Pose/Daniels.\n• <b>Execução antecipada sem impacto negativo:</b> A antecipação de 2 dias foi estrategicamente adequada — não havia sessão pendente conflitante, e você completou os 10km com boa consistência de esforço e sem sinais de fadiga excessiva.\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>Drift cardiovascular de 6,0% (limiar de atenção):</b> FC cresceu de 153→164 bpm (+7%) entre as metades enquanto o pace praticamente não variou. Decoupling pace/FC de 6,0% supera o limiar de excelência (<5%) e indica que a carga térmica + intensidade pressionaram o sistema cardiovascular além do ideal para uma rodagem de base. FC média de 153,5 bpm = <b>80,8% FCmáx</b> (190 bpm referência) — limite superior da zona E/M, aceitável, mas monitorar tendência.\n• <b>Splits 3–8 fora da Z2 MPR:</b> Os quilômetros centrais (5:25–5:48/km) ficaram consistentemente acima dos 6:05/km prescritos para Z2. A sessão se transformou num progressivo não planejado, com os últimos 2km retornando ao ritmo correto. Numa fase de base, essa \"deriva de pace\" espontânea é o padrão a evitar — o esforço percebido engana em dias quentes.\n• <b>Elevação de 175m não desprezível:</b> Para um percurso descrito como \"plano\", o ganho de elevação impactou FC e pace nos splits intermediários — considere percurso efetivamente plano nas próximas sessões.\n\n<b>🏁 Impacto na Preparação</b>\nTreino computado como carga aeróbica válida — você somou ~10km de estímulo no ciclo Montevideo. Porém, a intensidade média (zona M/limiar inferior em vez de Z2 pura) consumiu um pouco mais de \"ficha de recuperação\" do que o prescrito. Para um atleta em semana 4 de base, isso é gerenciável, mas reforça a importância de <b>travar o pace em 6:05–6:29/km desde o km 1</b> nas próximas rodagens — o calor de Recife tende a acelerar involuntariamente o esforço percebido.\n\n<b>📅 Próximo Treino Sugerido</b>\n⚠️ <b>Conforme MPR — sessão pendente de 2026-05-12 ainda em aberto:</b>\n<b>Séries de 60 min / ~9,0–9,9 km — Z1/Z3 alternadas</b>\n• Z1 (recuperação): 6:29–7:28/km | Z3 (moderado): 5:46–6:09/km\n• Estrutura sugerida: aquecimento 10min Z1 → blocos alternados Z1/Z3 → volta calma Z1\n• <b>Com calor de Recife (+19s/km):</b> execute Z3 em ~6:05–6:28/km real, Z1 em ~6:48–7:47/km real\n• Foco: <b>disciplina de pace por zona desde o aquecimento</b> — use o relógio como guia, não o esforço percebido\n• Se sentir fadiga residual do treino de hoje, discuta com o treinador a possibilidade de converter para Z1 puro\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: <b>6/10</b> — Prescrição cumprida em distância e duração, mas intensidade acima da Z2 MPR na maior parte do percurso; drift cardiovascular de 6% sinaliza que o calor cobrou o preço de uma rodagem que deveria ser mais controlada.\n",
-      "classification": "completed_early",
+      "classification": "planned_match",
       "matched_session_id": "2026-05-14",
       "extra_session_evaluation": null,
       "running_dynamics": {
@@ -184,7 +184,9 @@
           "FC cresceu ≥3% enquanto pace/potência ficaram estáveis ou caíram."
         ]
       },
-      "generated_at": "2026-05-12T06:00:53.092579"
+      "generated_at": "2026-05-12T06:00:53.092579",
+      "mpr_classification": "planned_match",
+      "mpr_matched_session_id": "2026-05-12"
     },
     {
       "id": "2026-05-10_lunch_run",
@@ -271,7 +273,7 @@
       "metrics": {
         "vdot_referencia": 39,
         "tipo_treino_detectado": "rodagem",
-        "zona_prescrita": "E",
+        "zona_prescrita": "Z1",
         "pace_prescrito_min_km": "6:29-7:28",
         "pace_executado_min_km": "7:03",
         "aderencia_pace_pct": 95,
@@ -293,7 +295,7 @@
       },
       "score": 8,
       "analysis_html": "<b>📊 Resumo do Treino</b>\nFelipe, rodagem de recuperação executada em 10/05 (prescrição de 09/05 — COMPLETED_DELAYED). Esteira indoor, 6,44 km em 45:26, pace médio 7:03/km. VDOT 39, fase de Base Aeróbica (semana 3–4 do ciclo Montevideo). Sessão de baixa intensidade, exatamente o que o plano mandou.\n\n<b>✅ Pontos Positivos</b>\n• <b>Aderência à zona MPR Z1 perfeita:</b> pace médio 7:03/km dentro da janela prescrita (6:29–7:28/km). Também dentro da zona E do Daniels (5:58–6:40 é o teto — e 7:03 fica confortavelmente abaixo disso, no extremo leve, ideal para rodagem de recuperação).\n• <b>FC controlada e segura:</b> FC média 143,8 bpm = 75,7% FCmáx e pico 153 bpm = 80,5% FCmáx — valores clássicos de zona aeróbica leve. Nenhum sinal de estresse cardiovascular.\n• <b>Decoupling impecável:</b> pa:hr de 0,6% e pw:hr de 0,5% — muito abaixo do limiar de 5%. Adaptação aeróbica preservada após a pausa pós-maratona. O sistema cardiovascular respondeu de forma estável do início ao fim.\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>Cadência em 174 spm:</b> levemente abaixo do ideal de 178–180 spm. Em esteira e ritmo leve é natural cair um pouco, mas vale monitorar — abaixo de 172 spm começa a impactar economia de corrida na Pose Method.\n• <b>Volta 1 (7:25, 129 bpm):</b> aquecimento bem progressivo — positivo — mas sinalizou que os primeiros 5 min foram de adaptação à esteira. Considere 3–5 min de caminhada ou trote muito leve como pré-aquecimento formal nas próximas sessões.\n\nNenhum sinal clínico preocupante.\n\n<b>🏁 Impacto na Preparação</b>\nSessão de recuperação ativa executada corretamente — cumpre o papel de manter o volume semanal sem adicionar estresse. Com o decoupling <1%, confirma que a base aeróbica está sendo construída com eficiência. A progressão natural do pace ao longo das voltas (7:25 → 6:51) sem salto de FC valida a resposta fisiológica adequada. Tijolo importante para chegar em Montevideo com base sólida.\n\n<b>📅 Próximo Treino Sugerido</b>\n<b>MPR 2026-05-12 — Séries | ~60 min | 8,99–9,87 km</b>\nEstrutura prescrita: alternância Z1 (6:29–7:28/km) e Z3 (5:46–6:09/km).\n• Execute em pista ou rua (evite esteira para sessões com variação de ritmo).\n• No Z3, fique no limite superior (~6:05–6:09/km) nas primeiras séries — a FC-alvo deve permanecer abaixo de 85% FCmáx (~161 bpm). Se ultrapassar, reduza o ritmo.\n• Temperatura em Recife acima de 28°C? Adicione 11–15 seg/km no Z3 e discuta ajuste com o treinador.\n• Hidrate antes — sessão no meio do dia em Recife exige atenção ao calor externo.\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: 8/10 — Intensidade correta, duração cumprida com 1 dia de atraso; cadência levemente baixa é o único ponto de melhora.\n",
-      "classification": "adjusted_within_microcycle",
+      "classification": "planned_match",
       "matched_session_id": "2026-05-09",
       "extra_session_evaluation": null,
       "running_dynamics": {
@@ -330,7 +332,8 @@
         ]
       },
       "generated_at": "2026-05-11T05:45:45.113745",
-      "mpr_classification": "adjusted_within_microcycle"
+      "mpr_classification": "planned_match",
+      "mpr_matched_session_id": "2026-05-10"
     },
     {
       "id": "2026-05-09_morning_run",
@@ -488,15 +491,15 @@
       ],
       "metrics": {
         "vdot_referencia": 39,
-        "tipo_treino_detectado": "longao",
-        "zona_prescrita": "E",
+        "tipo_treino_detectado": "percurso_misto",
+        "zona_prescrita": "Z2",
         "pace_prescrito_min_km": "6:05-6:29",
         "pace_executado_min_km": "5:57",
-        "aderencia_pace_pct": 85,
+        "aderencia_pace_pct": 75,
         "distribuicao_intensidade": {
-          "facil_pct": 80,
-          "moderado_pct": 15,
-          "forte_pct": 5
+          "facil_pct": 25,
+          "moderado_pct": 65,
+          "forte_pct": 10
         },
         "gray_zone_alerta": false,
         "deriva_cardiaca_pct": 18.3,
@@ -506,12 +509,12 @@
         "pace_equivalente_frio_min_km": "5:38",
         "limitador_principal": "deriva_cardiaca",
         "bandeira_clinica": null,
-        "nota_aderencia": 8,
+        "nota_aderencia": 7,
         "confianca_analise": "alta"
       },
       "score": null,
       "analysis_html": "<b>📊 Resumo do Treino</b>\nPercurso misto de 90 min prescrito para 08/05 executado com 1 dia de atraso — classificado como <b>COMPLETED_DELAYED</b>, sem prejuízo ao plano. Felipe cobriu 15,11 km em 1:30:03 (pace médio 5:57/km), dentro do range prescrito pela MPR Z2 (6:05–6:29/km) após ajuste de calor (+19s/km → equivalente a 5:38/km em condições frias). VDOT 39, fase Base Aeróbica, semana 3–4 do ciclo Montevideo.\n\n<b>✅ Pontos Positivos</b>\n• <b>Distância no alvo:</b> 15,11 km está dentro da janela prescrita (13,71–14,59 km) — ligeiramente acima, mas aceitável dado o percurso misto e condição climática extrema.\n• <b>Potência notavelmente estável:</b> 245W → 244W entre as metades (−0,5%) com NP≈média (243W vs 244W) — indica execução técnica consistente; o Stryd confirma esforço real controlado mesmo com o calor.\n• <b>Cadência mantida:</b> 178 spm constante nas duas metades — excelente para Pose Method, próximo do alvo de 180 spm e sem queda na fadiga, mostrando que a mecânica de corrida resistiu bem aos 90 minutos.\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>Decoupling Pace/FC elevado (▲18,3%):</b> Este é o sinal mais relevante do treino. FC cresceu de 154→162 bpm (+5,2%) enquanto o pace caiu de 6:00→6:57/km (+16,1%). Em condições normais (<5% = excelente), 18% indica stress cardiovascular significativo — atribuível primariamente ao calor extremo (26°C / UR 95% / ponto de orvalho 23,4°C), não necessariamente a déficit de base aeróbica. Mesmo assim, merece atenção.\n• <b>Splits finais acima de Z2-MPR:</b> Voltas 9–10 registraram FC 159–164 bpm (83,7–86,3% da FCmáx ref. 190 bpm), empurrando para topo da zona Daniels E ou beirando M — aceitável em contexto de calor, mas reforça a necessidade de hidratação agressiva e controle de ritmo nos primeiros 3 km dos próximos longões.\n• <b>Fade de pace na 2ª metade:</b> Queda de 57s/km entre metades é expressiva. Monitorar nas próximas semanas: se padrão se repetir em condições mais frescas, pode indicar necessidade de reforço aeróbico de base.\n\n<i>Nota: Pico de 168 bpm = 88,4% FCmáx ref. — dentro do aceitável para um esforço Z2 prolongado no calor de Recife. Nenhuma bandeira clínica.</i>\n\n<b>🏁 Impacto na Preparação</b>\nTreino cumpre a função de base aeróbica: estímulo de 90 min contínuos no calor de Recife às 04h40 é exatamente o tipo de adaptação cardiovascular e termorregulação que vai diferenciar Felipe na segunda metade da meia de Montevideo (agosto, condições potencialmente quentes). O decoupling alto sinaliza que a base aeróbica ainda está em construção — esperado para semana 3–4 do ciclo. A meta é ver esse número cair progressivamente ao longo de maio e junho.\n\n<b>📅 Próximo Treino Sugerido</b>\nConforme MPR pendente para <b>09/05/2026</b>:\n<b>RODAGEM LEVE — 45 min / 5,93–6,84 km</b>\n• Zona: Z1 MPR (6:29–7:28/km) = Daniels E inferior/conversacional\n• FC alvo: ≤75% FCmáx = ≤142 bpm\n• Foco: recuperação ativa após o esforço de hoje + manutenção da cadência 178–180 spm\n• Calor: se executado em Recife nas mesmas condições, adicionar 19s/km → correr sensação de esforço, não pelo relógio\n• ⚠️ Se sentir pernas pesadas ou FC elevada já no aquecimento, reduzir para 30 min ou discutir adaptação com o treinador\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: <b>8/10</b> — Treino executado com 1 dia de atraso mas com qualidade técnica e duração corretas; decoupling alto reflete o clima extremo de Recife, não desvio de plano.\n",
-      "classification": "adjusted_within_microcycle",
+      "classification": "planned_match",
       "matched_session_id": "2026-05-08",
       "extra_session_evaluation": null,
       "running_dynamics": {
@@ -549,7 +552,8 @@
         ]
       },
       "generated_at": "2026-05-09T08:42:04.324727",
-      "mpr_classification": "adjusted_within_microcycle"
+      "mpr_classification": "planned_match",
+      "mpr_matched_session_id": "2026-05-09"
     },
     {
       "id": "2026-05-08_morning_run",
@@ -651,15 +655,15 @@
       ],
       "metrics": {
         "vdot_referencia": 39,
-        "tipo_treino_detectado": "rodagem",
-        "zona_prescrita": "E",
+        "tipo_treino_detectado": "percurso_plano",
+        "zona_prescrita": "Z2",
         "pace_prescrito_min_km": "6:05-6:29",
         "pace_executado_min_km": "6:03",
-        "aderencia_pace_pct": 88,
+        "aderencia_pace_pct": 92,
         "distribuicao_intensidade": {
-          "facil_pct": 100,
-          "moderado_pct": 0,
-          "forte_pct": 0
+          "facil_pct": 25,
+          "moderado_pct": 70,
+          "forte_pct": 5
         },
         "gray_zone_alerta": false,
         "deriva_cardiaca_pct": 4.3,
@@ -669,7 +673,7 @@
         "pace_equivalente_frio_min_km": "5:44",
         "limitador_principal": "clima",
         "bandeira_clinica": null,
-        "nota_aderencia": 8,
+        "nota_aderencia": 9,
         "confianca_analise": "alta"
       },
       "score": 8,
@@ -711,7 +715,8 @@
         ]
       },
       "generated_at": "2026-05-08T06:53:17.308532",
-      "mpr_classification": "adjusted_within_microcycle"
+      "mpr_classification": "adjusted_within_microcycle",
+      "mpr_matched_session_id": "2026-05-07"
     },
     {
       "id": "2026-05-06_morning_run",
@@ -3410,225 +3415,6 @@
       "score": null,
       "analysis_html": "<thinking>\nLet me analyze this training data carefully.\n\n**Key observations:**\n\n1. **Date**: 01/03/2026 - This is BEFORE the cycle started (16/04/2026) and before the pre-cycle start (07/04/2026). This is historical data from the pre-cycle period.\n\n2. **VDOT**: The profile says VDOT 39, but the prompt says \"Use o VDOT atual (34)\" - there's a contradiction. The profile clearly states VDOT 39. I'll use VDOT 39 as stated in the profile, noting the instruction at the bottom says 34 (which might be an error in the prompt).\n\nWait, let me re-read. The prompt at the bottom says \"Use o VDOT atual (34)\" but the profile says VDOT 39. This is likely a template error where the bottom instruction wasn't updated. I'll use VDOT 39 from the profile since it's more detailed and specific.\n\nActually, looking at the date of the activity: 01/03/2026. The cycle started 07/04/2026. So this is pre-cycle historical data. The profile says \"Treinos anteriores a esta data (pré-Tokyo e período de transição) fazem parte do histórico mas não do ciclo atual de preparação.\"\n\nWait - if the cycle started in April 2026, and this run is from March 1, 2026, this is actually a pre-cycle activity. It says \"~1 mês de pausa pós-maratona\" - so this might be the run that was done about a month after a marathon.\n\nBut wait - 43km at 5:32/km pace with only 10 splits shown (10km)? That's strange. The file shows only 10 splits (10km) but the distance is 43km. This seems like a marathon or ultra-marathon distance.\n\nActually, looking more carefully:\n- Distance: 43.01 km\n- Duration: 3:58:07\n- Pace: 5:32/km\n- Only 10 splits shown\n\nThe 43km at ~3:58 would be a marathon-distance run. The pace 5:32/km for 43km is quite significant - that's a marathon effort.\n\nBut the profile says \"~1 mês de pausa pós-maratona\" which means the athlete had about 1 month pause after a marathon. If this is March 1, 2026, and the Tokyo Marathon was around March 2, 2025... wait, that doesn't add up.\n\nActually, Tokyo Marathon 2026 was on March 1, 2026! This IS the Tokyo Marathon data! The activity is \"Morning Run\" from 01/03/2026, 43.01km, 3:58:07 duration. This is clearly the Tokyo Marathon result!\n\nSo:\n- Tokyo Marathon: March 1, 2026\n- Finish time: 3:58:07 for 43.01km\n- Pace: 5:32/km\n- FC Média: 160.5 bpm\n- FC Máx: 170 bpm\n\nVDOT from 3:58:07 marathon:\n- A 3:58:07 marathon corresponds to approximately VDOT 37-38\n- Actually, for VDOT calculation: 3:58 marathon ≈ VDOT 37\n\nWait, let me think about this more carefully. The profile says VDOT 39. If the marathon time was 3:58, that corresponds roughly to VDOT 37. But the profile says VDOT 39. Maybe the VDOT 39 was calculated from other data or a more recent performance.\n\nActually, looking at it again: the file date is 01/03/2026 which matches Tokyo Marathon 2026 date. The distance 43.01km and time 3:58:07 strongly suggests this IS the Tokyo Marathon.\n\nBut the plan says this is a \"treino extra (não prescrito pelo MPR)\" and the MPR session is \"NENHUMA\". This contradicts it being a race... unless the system doesn't recognize it as a race.\n\nActually, looking at the metadata: \"Modalidade: Run / Run\" not \"Race\". And the profile says the athlete had \"~1 mês de pausa pós-maratona\" which would place the marathon around late January/early February if the cycle started in April... But Tokyo Marathon was March 1. Hmm.\n\nLet me reconsider. If the activity is from 01/03/2026 and is 43km, it's almost certainly the Tokyo Marathon. The profile mentions \"pré-Tokyo\" as a historical period. So this IS the Tokyo Marathon result.\n\nThe instruction says this is a \"treino extra\" not in the MPR plan - which makes sense since it's a race, not a training session planned by the coach.\n\nNow let me analyze:\n\n**VDOT from this performance:**\n- 3:58:07 for 42.2km (marathon)\n- Actually the GPS shows 43.01km which is typical GPS drift in marathons\n- Real distance: ~42.2km, time: 3:58:07\n- Pace: 5:38/km for actual marathon distance (42.2km in 3:58:07 = 5:38/km)\n- VDOT estimate from 3:58 marathon ≈ VDOT 37\n\nThe profile says VDOT 39 - this might have been updated based on other factors, or the VDOT 39 might be from a different race/test.\n\n**FC Analysis:**\n- FC Média: 160.5 bpm (91.7% of estimated max 175 bpm)\n- FC Máx: 170 bpm (97% of max)\n- For a marathon, average FC at 160.5 bpm is quite high - suggests significant effort\n\n**Pace analysis:**\n- VDOT 39 marathon pace: 5:36/km\n- Actual pace (GPS): 5:32/km - very close to M pace!\n- With heat adjustment (Heat Index 31.1°C, Recife), the actual effort was harder\n\nWait, but the splits only show 10km out of 43km. The race was in Tokyo. Actually, maybe the location data \"Recife\" is wrong or cached incorrectly? Tokyo Marathon 2026... The temperature in Tokyo on March 1, 2026 would be cool, not 18°C with 82% humidity.\n\nActually, the prompt says \"Local de Treino: Recife (PE) — clima quente e úmido, treino às 04:40h [fonte: cache]\" - this might be cached incorrectly. Tokyo Marathon would have different climate conditions.\n\nHmm, this is getting complex. Let me just analyze what's in front of me:\n\nThe data shows:\n- A 43km run on 01/03/2026 at 5:32/km pace\n- The file is labeled \"Morning Run\" but it's clearly a marathon-distance effort\n- 10 splits shown (first 10km only)\n\nGiven the context:\n- This is almost certainly the Tokyo Marathon (referenced in the profile as \"pré-Tokyo\")\n- The profile says the athlete has \"~1 mês de pausa pós-maratona\" which aligns with a March 1 marathon and April start of new cycle\n- The Recife location might be cached/incorrect (the athlete is based in Recife but ran the race in Tokyo)\n\n**Analysis of the splits (first 10km):**\n- Km 1: 5:28/km, 142 bpm - conservative start ✓\n- Km 2: 5:14/km, 151 bpm - too fast!\n- Km 3: 5:33/km, 154 bpm\n- Km 4: 5:26/km, 152 bpm\n- Km 5: 5:21/km, 154 bpm - fast for M pace\n- Km 6: 5:27/km, 159 bpm\n- Km 7: 5:26/km, 158 bpm\n- Km 8: 5:37/km, 158 bpm\n- Km 9: 5:26/km, 159 bpm\n- Km 10: 5:31/km, 159 bpm\n\nAverage of first 10km: ~5:\n",
       "generated_at": "2026-04-25T08:43:09.412066"
-    },
-    {
-      "id": "2026-02-28_morning_run",
-      "date": "2026-02-28",
-      "date_display": "28/02/2026",
-      "source": "strava",
-      "sport": "run",
-      "is_treadmill": false,
-      "activity_name": "Morning Run",
-      "distance_km": 4.3,
-      "duration": "26:52",
-      "avg_pace": "6:14/km",
-      "avg_heart_rate": 152.1,
-      "max_heart_rate": 166.0,
-      "avg_cadence_spm": 176,
-      "temperature_c": 16,
-      "humidity_pct": 80,
-      "dew_point_c": 23.6,
-      "heat_index_c": 30.4,
-      "weather_source": "cache",
-      "total_ascent_m": 27.0,
-      "total_descent_m": 2.4,
-      "training_stress_score": null,
-      "aerobic_training_effect": null,
-      "anaerobic_training_effect": null,
-      "laps": [
-        {
-          "lap_number": 1,
-          "distance_km": 1.0,
-          "duration": "06:25",
-          "avg_pace": "6:24/km",
-          "avg_heart_rate": 147,
-          "avg_cadence_spm": null
-        },
-        {
-          "lap_number": 2,
-          "distance_km": 1.0,
-          "duration": "06:17",
-          "avg_pace": "6:17/km",
-          "avg_heart_rate": 151,
-          "avg_cadence_spm": null
-        },
-        {
-          "lap_number": 3,
-          "distance_km": 1.0,
-          "duration": "06:12",
-          "avg_pace": "6:11/km",
-          "avg_heart_rate": 155,
-          "avg_cadence_spm": null
-        },
-        {
-          "lap_number": 4,
-          "distance_km": 1.0,
-          "duration": "06:03",
-          "avg_pace": "6:03/km",
-          "avg_heart_rate": 156,
-          "avg_cadence_spm": null
-        },
-        {
-          "lap_number": 5,
-          "distance_km": 0.3,
-          "duration": "01:55",
-          "avg_pace": "6:24/km",
-          "avg_heart_rate": 148,
-          "avg_cadence_spm": null
-        }
-      ],
-      "metrics": {
-        "vdot_referencia": 39,
-        "tipo_treino_detectado": "rodagem",
-        "zona_prescrita": "E",
-        "pace_prescrito_min_km": "5:58-6:40",
-        "pace_executado_min_km": "6:14",
-        "aderencia_pace_pct": 90,
-        "distribuicao_intensidade": {
-          "facil_pct": 88,
-          "moderado_pct": 10,
-          "forte_pct": 2
-        },
-        "gray_zone_alerta": false,
-        "deriva_cardiaca_pct": 6.1,
-        "eficiencia_aerobica": null,
-        "cadencia_media_spm": 176,
-        "ajuste_calor_segundos_km": 10,
-        "pace_equivalente_frio_min_km": "6:04",
-        "limitador_principal": "clima",
-        "bandeira_clinica": null,
-        "nota_aderencia": 7,
-        "confianca_analise": "alta"
-      },
-      "score": 7,
-      "analysis_html": "<b>📊 Resumo do Treino</b>\nRodagem leve de 4,3 km em pace médio de 6:14/km, realizada em Recife às 8h com Heat Index de 30,4°C. Treino não prescrito pelo MPR — sessão extra adicionada espontaneamente. Com VDOT 39 e ajuste de calor (~+10s/km), o pace equivalente em condições normais seria ~6:04/km, dentro da zona Fácil (5:58–6:40). Fase: Base Aeróbica, semana 1–2 do ciclo Montevideo.\n\n<b>✅ Pontos Positivos</b>\n• <b>Pace bem calibrado para o calor:</b> 6:14/km com Heat Index de 30°C equivale a ~6:04/km em frio — zona E correta, sem invadir zona cinza.\n• <b>Progressividade controlada:</b> splits de 6:24 → 6:03 mostram aquecimento natural sem aceleração agressiva — boa percepção de esforço.\n• <b>FC dentro do esperado para a zona E:</b> média de 152 bpm = ~87% da FCmáx. Ligeiramente elevada para zona fácil (esperado ≤85%), mas explicável pelo calor e umidade.\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>FC elevada para o pace:</b> 152 bpm médios em 6:14/km é alto para zona E — o calor eleva em ~5–10 bpm; ainda assim, monitore se isso persiste em dias mais frescos.\n• <b>Cadência em 176 spm:</b> abaixo da meta de 180 spm do Pose Method. Em rodagens fáceis, foco em cadência é acessível — vale trabalhar.\n• <b>Treino não prescrito:</b> em semana 1–2 de retomada pós-pausa de 1 mês, volume extra deve ser monitorado para não comprometer a recuperação ou o ACWR.\n\n<b>🏁 Impacto na Preparação</b>\nContribuição positiva, mas marginal: reforça o hábito de treinar em zona fácil e respeitar o ritmo de retomada. Para Montevideo (Sub-1h50 em agosto), a base aeróbica construída agora é o alicerce — mas sessões extras só têm valor se não comprometerem os treinos prescritos. Qualidade do sono e recuperação pesam mais que os 4,3 km adicionais.\n\n<b>📅 Próximo Treino Sugerido</b>\n<b>Tipo:</b> Rodagem fácil ou descanso ativo (natação leve 30–40 min)\n<b>Distância:</b> 6–8 km (caso seja dia prescrito pelo MPR)\n<b>Pace-alvo:</b> 6:10–6:40/km (zona E, ajustado para calor se treinar em Recife pela manhã)\n<b>Foco:</b> Cadência → buscar 178–182 spm ativamente; mantenha FC abaixo de 148 bpm\n<b>Obs:</b> Se o MPR não prevê sessão amanhã, priorize o descanso — respeite o plano prescrito.\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: 7/10 — Intensidade correta para a fase, mas sessão extra não prescrita em semana de retomada exige cautela com acúmulo de carga.\n",
-      "generated_at": "2026-04-25T08:42:32.684928"
-    },
-    {
-      "id": "2026-02-25_morning_run",
-      "date": "2026-02-25",
-      "date_display": "25/02/2026",
-      "source": "strava",
-      "sport": "run",
-      "is_treadmill": false,
-      "activity_name": "Morning Run",
-      "distance_km": 8.69,
-      "duration": "50:46",
-      "avg_pace": "5:50/km",
-      "avg_heart_rate": 155.0,
-      "max_heart_rate": 170.0,
-      "avg_cadence_spm": 181,
-      "temperature_c": 12,
-      "humidity_pct": 71,
-      "dew_point_c": 23.1,
-      "heat_index_c": 32.7,
-      "weather_source": "cache",
-      "total_ascent_m": 202.0,
-      "total_descent_m": 1.4,
-      "training_stress_score": null,
-      "aerobic_training_effect": null,
-      "anaerobic_training_effect": null,
-      "laps": [
-        {
-          "lap_number": 1,
-          "distance_km": 1.0,
-          "duration": "05:33",
-          "avg_pace": "5:33/km",
-          "avg_heart_rate": 146,
-          "avg_cadence_spm": null
-        },
-        {
-          "lap_number": 2,
-          "distance_km": 1.0,
-          "duration": "05:37",
-          "avg_pace": "5:36/km",
-          "avg_heart_rate": 155,
-          "avg_cadence_spm": null
-        },
-        {
-          "lap_number": 3,
-          "distance_km": 1.0,
-          "duration": "05:40",
-          "avg_pace": "5:40/km",
-          "avg_heart_rate": 152,
-          "avg_cadence_spm": null
-        },
-        {
-          "lap_number": 4,
-          "distance_km": 1.0,
-          "duration": "05:35",
-          "avg_pace": "5:35/km",
-          "avg_heart_rate": 155,
-          "avg_cadence_spm": null
-        },
-        {
-          "lap_number": 5,
-          "distance_km": 1.0,
-          "duration": "05:28",
-          "avg_pace": "5:27/km",
-          "avg_heart_rate": 157,
-          "avg_cadence_spm": null
-        },
-        {
-          "lap_number": 6,
-          "distance_km": 1.0,
-          "duration": "05:34",
-          "avg_pace": "5:34/km",
-          "avg_heart_rate": 155,
-          "avg_cadence_spm": null
-        },
-        {
-          "lap_number": 7,
-          "distance_km": 1.0,
-          "duration": "05:51",
-          "avg_pace": "5:50/km",
-          "avg_heart_rate": 156,
-          "avg_cadence_spm": null
-        },
-        {
-          "lap_number": 8,
-          "distance_km": 1.0,
-          "duration": "05:41",
-          "avg_pace": "5:41/km",
-          "avg_heart_rate": 159,
-          "avg_cadence_spm": null
-        },
-        {
-          "lap_number": 9,
-          "distance_km": 0.69,
-          "duration": "05:46",
-          "avg_pace": "8:17/km",
-          "avg_heart_rate": 154,
-          "avg_cadence_spm": null
-        }
-      ],
-      "metrics": {
-        "vdot_referencia": 39,
-        "tipo_treino_detectado": "rodagem",
-        "zona_prescrita": "E",
-        "pace_prescrito_min_km": "5:58-6:40",
-        "pace_executado_min_km": "5:50",
-        "aderencia_pace_pct": 78,
-        "distribuicao_intensidade": {
-          "facil_pct": 72,
-          "moderado_pct": 22,
-          "forte_pct": 6
-        },
-        "gray_zone_alerta": true,
-        "deriva_cardiaca_pct": 5.5,
-        "eficiencia_aerobica": null,
-        "cadencia_media_spm": 181,
-        "ajuste_calor_segundos_km": 22,
-        "pace_equivalente_frio_min_km": "5:28",
-        "limitador_principal": "clima",
-        "bandeira_clinica": null,
-        "nota_aderencia": 7,
-        "confianca_analise": "media"
-      },
-      "score": 7,
-      "analysis_html": "<b>📊 Resumo do Treino</b>\nRodagem de 8,69 km em 50:46 (pace médio 5:50/km), realizada em Recife às 04h com heat index de 32,7°C. Treino <b>não prescrito pelo MPR</b> — sessão extra executada na fase pré-ciclo oficial (ciclo só inicia em 16/04). VDOT de referência: 39.\n\n<b>✅ Pontos Positivos</b>\n• <b>Ajuste térmico consistente:</b> Com heat index ~32,7°C, o ajuste estimado é +20–25s/km. Pace executado (5:50) equivale a ~5:25–5:30/km em condições neutras — dentro da zona M/fronteira E do VDOT 39. Excelente discernimento ambiental.\n• <b>Cadência exemplar:</b> 181 spm está acima do threshold de 180 recomendado pelo Pose Method — sinal de boa mecânica de passada mesmo em treino leve.\n• <b>FC controlada para o contexto:</b> FC média 155 bpm (89% FCmáx estimada) é elevada em termos absolutos, mas <b>esperada</b> para heat index >30°C. FC máxima de 170 bpm (97% FCmáx) provavelmente reflete pico pontual no km 5 (5:27/km) — não sustentado.\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>Pace do km 5 (5:27) sem justificativa:</b> Aceleração isolada para 5:27 com FC saltando para 157 bpm foge ao padrão da sessão. Em calor intenso, acelerações não controladas aumentam risco de hipertermia. Atenção à consistência de esforço.\n• <b>Treino extra no pré-ciclo:</b> Esta sessão ocorre em 25/02 — antes do ciclo oficial (16/04) e dentro do período de transição pós-maratona (~1 mês de pausa). Volume e carga adicionais não controlados nesta fase podem comprometer a progressão planejada.\n• <b>Heat index 32,7°C às 4h40:</b> Mesmo no horário mais fresco, Recife já apresenta sobrecarga real. Monitorar sinais de acumulação de estresse térmico ao longo da semana.\n\n<b>🏁 Impacto na Preparação</b>\nSessão de baixo risco estrutural — volume moderado (8,69 km), esforço aeróbico predominante. Contribui positivamente para manutenção da base aeróbica no período de transição. Não interfere no ciclo oficial, desde que a semana não acumule fadiga residual antes do início em 16/04. Encarar como \"manutenção ativa\", não como carga de construção.\n\n<b>📅 Próximo Treino Sugerido</b>\n🔄 <b>Regenerativo ou descanso</b> — 40–50 min, pace E puro: 6:10–6:40/km equivalente térmico (ajustado para Recife → execute a 6:30–7:00/km se calor similar). FC teto: 145 bpm. Foco: manutenção de cadência ≥178 spm, drills de Pose (Pull, Fall) por 10 min. Sem acelerações. Se heat index >30°C novamente, reduzir distância para 6 km ou substituir por natação.\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: 7/10 — Sessão extra bem executada para o contexto térmico, mas fora do plano MPR e com uma aceleração não justificada no km 5.\n",
-      "generated_at": "2026-04-25T08:41:42.140182"
     }
-  ],
-  "goal_race_date": "2027-02-28"
+  ]
 }
