@@ -6,7 +6,7 @@
   "tune_up_race": "Meia Maratona de Montevideo — 09/08/2026",
   "tune_up_goal": "Sub-1h50",
   "cycle_start": "2026-04-16",
-  "last_updated": "2026-05-13T06:07:59.293692",
+  "last_updated": "2026-05-13T17:05:59.239730",
   "total_analyses": 23,
   "analyses": [
     {
@@ -27,7 +27,7 @@
       "humidity_pct": 91,
       "dew_point_c": 23.1,
       "heat_index_c": 24.6,
-      "weather_source": "open-meteo",
+      "weather_source": "cache",
       "total_ascent_m": 14.0,
       "total_descent_m": null,
       "training_stress_score": null,
@@ -107,25 +107,27 @@
         "pace_executado_min_km": "6:38",
         "aderencia_pace_pct": 97,
         "distribuicao_intensidade": {
-          "facil_pct": 100,
-          "moderado_pct": 0,
-          "forte_pct": 0
+          "facil_pct": 100.0,
+          "moderado_pct": 0.0,
+          "forte_pct": 0.0
         },
         "gray_zone_alerta": false,
-        "deriva_cardiaca_pct": -0.5,
+        "deriva_cardiaca_pct": 0.5,
         "eficiencia_aerobica": 1.54,
         "cadencia_media_spm": 176,
         "ajuste_calor_segundos_km": 21,
         "pace_equivalente_frio_min_km": "6:17",
-        "limitador_principal": "clima",
+        "limitador_principal": "tecnica",
         "bandeira_clinica": null,
         "nota_aderencia": 9,
         "confianca_analise": "alta"
       },
-      "score": null,
-      "analysis_html": "<b>📊 Resumo do Treino</b>\nFelipe, rodagem Z1 de 51:42 min / 7,78 km com pace médio de 6:38/km em condições extremas de calor e umidade (27°C / 91% UR às 5h da manhã em Recife). Ajustado pelo calor (+21 seg/km), o pace equivalente em condições neutras é <b>6:17/km</b> — posicionado firme dentro da Zona E do VDOT 39 (5:58–6:40) e exatamente no corredor Z1 MPR (6:29–7:28). Fase de Base Aeróbica, semana de consolidação.\n\n---\n\n<b>✅ Pontos Positivos</b>\n\n• <b>Aderência perfeita ao plano MPR:</b> Prescrição era 50 min Z1 com 6,59–7,59 km. Você entregou 51:42 min e 7,78 km — margem superior, dentro da faixa aceitável de progressão natural. Sem desvio de intensidade.\n\n• <b>Controle cardíaco exemplar no calor:</b> FC média de 140 bpm = <b>73,8% FCmáx</b> (ref. 190 bpm) e pico de 147 bpm = 77,4% FCmáx. Em 27°C/91% UR, esses valores mostram disciplina real de atleta avançado. Decoupling pa:hr de apenas -0,5% e pw:hr de +0,1% são números de élite em gestão aeróbica.\n\n• <b>Estabilidade mecânica e metabólica:</b> Splits de 1–7 variam apenas 11 segundos entre si (6:33–6:44/km), potência quase idêntica nas duas metades (216W → 215W) e cadência estável em 176 spm. Sem drift, sem colapso de ritmo. Consistência que o Método Norueguês exigiria.\n\n---\n\n<b>⚠️ Sinais de Alerta</b>\n\n• <b>Cadência em 176 spm:</b> Abaixo dos 180 spm recomendados pelo Pose Method para corridas fáceis. Em paces mais lentos (Z1) há tendência natural de queda de cadência — monitore para não deixar cair abaixo de 174 spm. Foque em passos curtos e rápidos, não em passada longa.\n\n• <b>Condição climática recorrente:</b> Recife em maio às 5h já entrega 27°C/91% UR. Se esse for o padrão das próximas semanas, o impacto acumulado no volume real de estímulo aeróbico é relevante. Não é alerta de hoje — é planejamento para o bloco de junho.\n\nNenhum sinal cardíaco ou de fadiga preocupante.\n\n---\n\n<b>🏁 Impacto na Preparação</b>\n\nTreino que cumpre exatamente o papel da Base Aeróbica: volume fácil, economia de esforço, tempo em pé. Com decoupling <1% em condições adversas, você está construindo a base cardiovascular que vai sustentar as sessões de limiar de junho (Fase Construção). Para Montevideo (sub-1h50 em 09/08), a fundação está sendo bem assentada. Cada rodagem Z1 bem executada no calor de Recife equivale a um estímulo de adaptação termorregulatória que vai render na prova.\n\n---\n\n<b>📅 Próximo Treino Sugerido</b>\n\nConforme prescrição MPR de <b>14/05/2026</b>:\n→ <b>Rodagem Z2 em percurso plano — 63 min / 10,0 km</b>\n→ Pace-alvo MPR: <b>6:05–6:29/km</b> (Z2 confortável)\n→ Pace-alvo corrigido para calor (+21 seg/km): <b>6:26–6:50/km</b> nos pés — se as condições se mantiverem similares, deixe a FC guiar (alvo: 74–79% FCmáx ≈ 141–150 bpm)\n→ Foco: cadência ≥178 spm, postura ereta, sem acelerar nos últimos 2 km\n→ Se sentir a FC subindo acima de 150 bpm antes de atingir o pace, <b>priorize a FC e discuta ajuste de volume com o treinador</b> — o salto de ~8 km para 10 km em calor intenso merece atenção.\n\n---\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: <b>9/10</b> — Prescrição MPR executada com precisão, controle aeróbico impecável no calor; desconto mínimo pela cadência ligeiramente abaixo do ideal.\n",
+      "metrics_validation": "valid",
+      "metrics_errors": [],
+      "score": 9,
+      "analysis_html": "<b>📊 Resumo do Treino</b>\nFelipe completou 7,78 km em 51:42 (pace médio 6:38/km) — dentro da janela prescrita pela MPR para a rodagem Z1 de 50 min (6:29–7:28/km). Com ajuste térmico de 21s/km (27°C, 91% umidade, Recife às 4h59), o pace equivalente em frio seria ~6:17/km, que já adentra a Z2 Daniels/MPR. Sessão executada no dia correto (PLANNED_MATCH), com volume ligeiramente acima do prescrito (+0,19 km sobre o teto de 7,59 km) — desvio irrelevante. VDOT de referência: 39.\n\n<b>✅ Pontos Positivos</b>\n• <b>Controle aeróbico exemplar:</b> Decoupling Pace/FC de apenas -0,5% e Watts/FC de +0,1% — ambos bem abaixo do limiar de 5%. Isso indica excelente preservação da eficiência aeróbica no calor, um marcador direto de adaptação do Ciclo de Base.\n• <b>Aderência à prescrição MPR:</b> Pace médio 6:38/km permaneceu dentro da Z1 (6:29–7:28/km) do plano durante todo o treino — splits km 1–8 todos entre 6:33 e 6:44/km, sem quilômetro \"vagabundo\" fora da zona. Consistência rara.\n• <b>FC absolutamente controlada:</b> FC média 140 bpm = 73,8% da FCmáx referência (190 bpm) — zona E de Daniels (70–79%), exatamente onde se quer na fase de Base Aeróbica. FC máxima 147 bpm = 77,4% FCmáx. Nenhum sinal de esforço excessivo.\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>Cadência ligeiramente abaixo do alvo Pose/Daniels:</b> 176 spm é aceitável, mas o target ideal para minimizar impacto e melhorar economia é ≥180 spm. A diferença de 4 passos por minuto acumula carga articular desnecessária — ponto de atenção leve, especialmente com aumento de volume previsto.\n• <b>Calor extremo:</b> Ponto de orvalho em 23,1°C indica saturação hídrica do ar — condição de risco de termorregulação mesmo em intensidade Z1. Manter hidratação ativa nos 30 min pré-treino nas próximas sessões neste horário.\n\nNenhum alerta cardíaco, de fadiga ou de lesão.\n\n<b>🏁 Impacto na Preparação</b>\nEsta rodagem cumpre exatamente a função da Semana 4 da Base Aeróbica: consolidar volume em Z1, preservar economia de corrida e sinalizar ao organismo que a plataforma aeróbica está sendo construída. O decoupling ≤1% em 27°C/91% UR é uma boa notícia — sugere que Felipe está adaptando bem ao calor de Recife, o que será vantagem real quando os treinos de limiar chegarem em junho. A base está sendo depositada corretamente para o ciclo de Montevideo.\n\n<b>📅 Próximo Treino Sugerido</b>\nConforme prescrição MPR de 2026-05-14:\n<b>PERCURSO PLANO — 63 min em Z2 (6:05–6:29/km)</b>\n• Distância estimada: ~9,5–10,5 km\n• FC alvo: 74–82% FCmáx (~141–156 bpm)\n• Foco: manter cadência ≥178–180 spm como ponto de atenção técnica\n• ⚠️ Atenção ao calor: se temperatura ≥28°C ou ponto de orvalho ≥24°C, discutir com o treinador ajuste de pace para Z1/Z2 baixo — a Z2 MPR em Recife exige vigilância na FC para não derivar para zona cinza\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: 9/10 — Pace, FC e volume todos dentro da prescrição MPR Z1; único desvio é cadência 176 spm (4 spm abaixo do ideal técnico), sem impacto no objetivo desta sessão.\n",
       "classification": "planned_match",
-      "matched_session_id": "2026-05-13",
+      "matched_session_id": "eff825b5-99a6-58db-bbfd-113b7f878e27",
       "extra_session_evaluation": null,
       "running_dynamics": {
         "ground_contact_time_ms": null,
@@ -160,7 +162,7 @@
           "Decoupling pa:hr/pw:hr abaixo de 5% — adaptação aeróbica preservada."
         ]
       },
-      "generated_at": "2026-05-13T06:07:59.293680"
+      "generated_at": "2026-05-13T17:05:59.239714"
     },
     {
       "id": "2026-05-12_morning_run",
@@ -278,15 +280,15 @@
       ],
       "metrics": {
         "vdot_referencia": 39,
-        "tipo_treino_detectado": "intervalado",
+        "tipo_treino_detectado": "rodagem",
         "zona_prescrita": "mista",
-        "pace_prescrito_min_km": "6:29-7:28 (Z1) | 5:46-6:09 (Z3)",
+        "pace_prescrito_min_km": "5:41-7:28",
         "pace_executado_min_km": "5:53",
         "aderencia_pace_pct": 88,
         "distribuicao_intensidade": {
-          "facil_pct": 41,
-          "moderado_pct": 58,
-          "forte_pct": 1
+          "facil_pct": 33.0,
+          "moderado_pct": 58.0,
+          "forte_pct": 9.0
         },
         "gray_zone_alerta": false,
         "deriva_cardiaca_pct": 6.0,
@@ -299,10 +301,12 @@
         "nota_aderencia": 8,
         "confianca_analise": "alta"
       },
-      "score": null,
-      "analysis_html": "<b>📊 Resumo do Treino</b>\nFelipe, sessão de série prescrita (SERIES 60 min) executada em 12/05 às 04:43 em Recife — condições extremas: 26°C / 95% umidade, ponto de orvalho em 23,5°C. Estrutura 15' Z1 + 35' Z3 + 10' Z1, com 10,18 km em 1h00 e pace médio 5:53/km (equivalente a ~5:34/km em condições neutras). VDOT referência: 39. Fase: Base Aeróbica — Ciclo Montevideo (sem 3–4).\n\n<b>✅ Pontos Positivos</b>\n• <b>Estrutura respeitada:</b> Os splits confirmam a divisão prescrita — voltas 1–2 em Z1 (6:33–6:38/km ✅), voltas 3–9 no bloco Z3 (5:24–5:50/km, maioria dentro de 5:46–6:09 ✅), volta 10 retorno a Z1 (6:30/km ✅). Aderência à arquitetura da sessão foi alta.\n• <b>Pace equivalente correto:</b> 5:53/km bruto → ~5:34 em frio (~10°C), alinhado com o teto do Z3 MPR (5:46–6:09) e próximo ao pace M do Daniels (5:36/km). Em condições extremas de calor úmido, isso é um resultado sólido.\n• <b>Cadência consistente:</b> 179 spm com leve progressão (+0,9% na 2ª metade) — dentro da janela Pose/Hansons (≥178 spm), sem queda de eficiência mecânica mesmo com fadiga cardiovascular.\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>Decoupling Pace/FC: 6,0% ⚠️</b> — acima do limiar de referência de 5%. A FC subiu de 153 → 164 bpm (+7,2%) enquanto o pace ficou praticamente estável (drift cardiovascular clássico). Em calor extremo isso é esperado e parcialmente explicado pelo ambiente, mas indica que o sistema aeróbico ainda está sendo desafiado nessa intensidade. FC média de 153,5 bpm = 80,8% da FCmáx (190 bpm) — topo de Z3 aceitável para o bloco moderado prescrito.\n• <b>FC máxima 170 bpm = 89,5% FCmáx</b> — dentro do aceitável para o bloco Z3 em calor úmido (≤92% FCmáx), sem bandeira clínica. Não configura excesso de intensidade.\n• <b>Potência NP 279W vs. média 271W</b> (ratio 1,03) — execução relativamente constante, mas a elevação de 175m num perfil aparentemente plano (alt. 1–20m) sugere dados de altimetria barométrica instável. Considere que os 175m podem estar superestimados pelo Garmin — não impacta a análise de FC/pace, mas explica parte do esforço adicional percebido.\n\n<b>🏁 Impacto na Preparação</b>\nSessão de qualidade real entregue num dos cenários ambientais mais hostis possíveis (WBGT elevado, madrugada). O bloco Z3 de 35' com pace equivalente ~5:34–5:40/km em frio desenvolve exatamente o limiar aeróbico inferior necessário para sustentar Sub-1h50 em Montevideo (~5:13/km). O decoupling de 6% no calor vai diminuir conforme a base aeróbica consolida nas próximas 6–8 semanas — essa sessão é um tijolo importante nesse processo.\n\n<b>📅 Próximo Treino Sugerido</b>\nConforme prescrição MPR para <b>13/05/2026</b>:\n<b>RODAGEM 50 min / 6,59–7,59 km — Zona Z1 (6:29–7:28/km)</b>\n→ Foco total em recuperação ativa. Após o drift cardiovascular de hoje, mantenha FC abaixo de 80% FCmáx (≤152 bpm). Pace bruto em Recife: 6:48–7:47/km (ajuste +19s/km pelo calor). Cadência mínima 175 spm. Se a FC não descer abaixo de 155 bpm nos primeiros 10', reduza o pace imediatamente — sinal de fadiga residual. Qualquer ajuste por fadiga ou calor extremo: discutir com o treinador antes de alterar a prescrição.\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: <b>8/10</b> — Estrutura executada fielmente com decoupling marginalmente acima do ideal, justificado pelas condições ambientais extremas de Recife.\n",
+      "metrics_validation": "valid",
+      "metrics_errors": [],
+      "score": 8,
+      "analysis_html": "<b>📊 Resumo do Treino</b>\nFelipe, sessão prescrita SERIES de 60 min executada em 12/05 às 04:43h em Recife (26°C / UR 95%). Estrutura: 15 min Z1 → 35 min Z3 → 10 min Z1. Os splits confirmam a leitura: abertura lenta (voltas 1–2 em ~6:34/km Z1), bloco central progressivo de 5:48 descendo até 5:24/km (Z3 MPR), e fechamento em 6:30/km (Z1). Pace médio de 5:53/km corresponde a ~5:34 equivalente no frio — dentro da zona M/Daniels para VDOT 39. Fase Base Aeróbica, semana 4–5 do ciclo Montevideo.\n\n<b>✅ Pontos Positivos</b>\n• <b>Estrutura respeitada:</b> As 3 fases (Z1 → Z3 → Z1) estão claramente visíveis nos splits — abertura controlada, bloco central no alvo e cooldown executado. Aderência à prescrição MPR confirmada.\n• <b>Pace equivalente no frio:</b> 5:34/km (ajuste de +19 seg/km para 26°C/UR95%) cai exatamente na zona M de Daniels (~5:36), o que é sólido para um bloco de 35 min num treino de base.\n• <b>Cadência consistente:</b> 179 spm — próximo do alvo técnico de 180 spm (Pose Method). Leve melhora na 2ª metade (+0,9%) mostra que o atleta manteve mecânica mesmo sob fadiga cardiovascular.\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>Decoupling cardiovascular de 6,0%:</b> FC subiu de 153 → 164 bpm (+7%) enquanto o pace ficou estável ou acelerou levemente. Está acima do limiar de referência (<5%) e indica que o sistema cardiovascular trabalhou progressivamente mais duro para sustentar a mesma potência. No contexto de 26°C/UR95% às 4h da manhã, é esperado — mas monitorar. Se repetir em condições mais frescas, sinaliza limitação aeróbica real.\n• <b>FC máxima de 170 bpm = 89,5% da FCmáx referência (190 bpm):</b> Num bloco Z3 com encerramento gradual, este pico é aceitável. Não configura bandeira clínica (abaixo de 98%), mas combinado com o decoupling de 6%, reforça que o calor impôs carga adicional real.\n• <b>Potência NP 279W vs. média 271W (fator 1,03):</b> Variabilidade baixa — positivo. Porém o Δ potência 1ª→2ª metade de +5,4% com FC crescente confirma drift cardiovascular clássico: o corpo precisou de mais esforço cardíaco para manter a mesma saída mecânica.\n\n<b>🏁 Impacto na Preparação</b>\nSessão cumpre o papel da Base Aeróbica: estímulo de limiar inferior (Z3 MPR ≈ zona M/Daniels) sem acúmulo de lactato excessivo. O decoupling de 6% em calor extremo não é penalizante — ao contrário, treinar em Recife às 4h com UR 95% é um estressor térmico que, gerenciado assim, constrói adaptação cardiovascular útil para Montevideo (agosto). O volume de 10,18 km contribui para a meta semanal de ~40 km. O ciclo segue no trilho.\n\n<b>📅 Próximo Treino Sugerido</b>\nConforme MPR prescrita para <b>13/05/2026</b>: <b>RODAGEM 50 min / 6,59–7,59 km em Z1 (6:29–7:28/km)</b>.\nDada a carga cardiovascular de hoje (decoupling 6%, FC média 153 bpm), esta sessão regenerativa é perfeita. Execute de forma conversacional, sem tentar recuperar o ritmo do bloco Z3. Em Recife, o calor pode elevar a FC — priorize manter o pace dentro de Z1 MPR e deixe a FC flutuar. Sem drills intensos amanhã. Se perceber FC >160 bpm nos primeiros 15 min, reduza o pace ou discuta ajuste com o treinador.\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: 8/10 — Estrutura prescrita executada corretamente, pace equivalente no alvo, com desconto leve pelo decoupling cardiovascular acima de 5% sinalizando limite de carga no calor.\n",
       "classification": "planned_match",
-      "matched_session_id": "2026-05-12",
+      "matched_session_id": "b1285bf3-f8d4-5c17-92e2-4c68b2842272",
       "extra_session_evaluation": null,
       "running_dynamics": {
         "ground_contact_time_ms": null,
@@ -337,7 +341,7 @@
           "FC cresceu ≥3% enquanto pace/potência ficaram estáveis ou caíram."
         ]
       },
-      "generated_at": "2026-05-12T15:19:22.844656"
+      "generated_at": "2026-05-13T17:05:29.129318"
     },
     {
       "id": "2026-05-10_lunch_run",
