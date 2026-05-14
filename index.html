@@ -491,6 +491,47 @@
     return `<span class="score-badge ${cls}">${score}/10</span>`;
   }
 
+  /* ── Chart data sanitization ────────────────────────────
+     Defensive layer between raw JSON and Chart.js datasets.
+     All helpers return null (never throw) for bad values.
+     Invalid points are logged to console ONLY — never shown in UI.
+     ──────────────────────────────────────────────────────── */
+
+  function _dbgSkip(actId, field, val) {
+    try { console.debug('[dashboard] skipped invalid metric: activity=' + actId + ' field=' + field + ' value=' + JSON.stringify(val)); } catch(_){}
+  }
+
+  // Returns null for null/undefined/NaN/Infinity or values outside [min,max].
+  function safeNum(v, min, max, actId, field) {
+    if (v == null) return null;
+    const n = +v;
+    if (!isFinite(n) || isNaN(n)) { _dbgSkip(actId, field, v); return null; }
+    if (min != null && n < min)   { _dbgSkip(actId, field, v); return null; }
+    if (max != null && n > max)   { _dbgSkip(actId, field, v); return null; }
+    return n;
+  }
+
+  // Pace string → minutes/km, validated in [3.0, 12.0].
+  // "46:25/km" → null. "225:56" → null. "5:34/km" → 5.567.
+  const PACE_MIN = 3.0, PACE_MAX = 12.0;
+  function safePace(pace, actId, field) {
+    if (!pace || pace === 'N/D') return null;
+    const m = String(pace).match(/(\d+):(\d+)/);
+    if (!m) return null;
+    const v = parseInt(m[1]) + parseInt(m[2]) / 60;
+    return safeNum(v, PACE_MIN, PACE_MAX, actId, field || 'pace');
+  }
+
+  // Distance guard: < 0.5 km = GPS ghost / accidental sync. > 120 km = impossible.
+  function safeDist(v, actId) {
+    return safeNum(v, 0.5, 120, actId, 'distance_km');
+  }
+
+  // Wraps a render function: if it throws, logs to console, never crashes the page.
+  function safeRender(name, fn) {
+    try { fn(); } catch(e) { console.error('[dashboard] ' + name + ' threw:', e); }
+  }
+
   /* ── Classification badge (MPR adherence) ─────────────── */
   const CLASSIF_META = {
     'planned_match':              { label: '✓ No plano',         css: 'background:rgba(34,197,94,0.15);color:#22c55e;border:1px solid rgba(34,197,94,0.3)' },
@@ -562,7 +603,7 @@
     const cutoff = Date.now() - 28*864e5;
     const last28 = analyses.filter(a => a.date && new Date(a.date) >= cutoff);
 
-    const derivas = last28.map(a=>a.metrics?.deriva_cardiaca_pct).filter(v=>v!=null);
+    const derivas = last28.map(a=>safeNum(a.metrics?.deriva_cardiaca_pct,-10,50,a.id,'deriva_cardiaca_pct')).filter(v=>v!=null);
     const avgDeriva = derivas.length ? derivas.reduce((a,b)=>a+b,0)/derivas.length : null;
     let dClass='verde', dLabel='Saudável';
     if (avgDeriva!=null) { if(avgDeriva>8){dClass='vermelho';dLabel='Crítico';} else if(avgDeriva>=5){dClass='amarelo';dLabel='Atenção';} }
@@ -665,8 +706,9 @@
     const sorted = [...analyses.filter(a=>a.date&&new Date(a.date)>=cutoff&&(a.sport||'run').toLowerCase()!=='swim')].reverse();
     const labels   = sorted.map(a=>(a.date_display||a.date||'').slice(0,5));
     const aerData  = sorted.map(a=>a.metrics?.eficiencia_aerobica??null);
-    const cadData  = sorted.map(a=>a.metrics?.cadencia_media_spm??a.avg_cadence_spm??null);
-    const pfData   = sorted.map(a=>paceToMinutes(a.metrics?.pace_equivalente_frio_min_km)??null);
+    // cadence 219 spm > realistic max (210) → discarded; "43:59" pace frio → null
+    const cadData  = sorted.map(a=>safeNum(a.metrics?.cadencia_media_spm??a.avg_cadence_spm,140,210,a.id,'cadencia_media_spm'));
+    const pfData   = sorted.map(a=>safePace(a.metrics?.pace_equivalente_frio_min_km,a.id,'pace_equivalente_frio_min_km'));
 
     function linTrend(vals) {
       const pts=vals.map((v,i)=>({x:i,y:v})).filter(p=>p.y!=null);
@@ -721,14 +763,14 @@
   /* ── Stats ───────────────────────────────────────────── */
   function renderStats(analyses) {
     const last30 = analyses.filter(a => a.date && (Date.now()-new Date(a.date))/(864e5) <= 30);
-    const totalKm   = last30.reduce((s,a)=>s+(a.distance_km||0),0);
-    const avgPaces  = last30.map(a=>paceToMinutes(a.avg_pace)).filter(Boolean);
-    const avgHRs    = last30.map(a=>a.avg_heart_rate).filter(Boolean);
+    const totalKm   = last30.reduce((s,a)=>s+(safeDist(a.distance_km,a.id)||0),0);
+    const avgPaces  = last30.map(a=>safePace(a.avg_pace,a.id,'avg_pace')).filter(v=>v!=null);
+    const avgHRs    = last30.map(a=>safeNum(a.avg_heart_rate,40,220,a.id,'avg_heart_rate')).filter(v=>v!=null);
     const scores    = analyses.slice(0,10).map(a=>a.score).filter(Boolean);
     const avgPaceM  = avgPaces.length ? avgPaces.reduce((a,b)=>a+b)/avgPaces.length : null;
     const avgHR     = avgHRs.length   ? Math.round(avgHRs.reduce((a,b)=>a+b)/avgHRs.length) : null;
     const avgScore  = scores.length   ? (scores.reduce((a,b)=>a+b)/scores.length).toFixed(1) : null;
-    const longestRun = analyses.reduce((mx,a)=>Math.max(mx,a.distance_km||0),0);
+    const longestRun = analyses.reduce((mx,a)=>Math.max(mx,safeDist(a.distance_km,a.id)||0),0);
 
     document.getElementById('stats-grid').innerHTML = [
       {icon:'🏃', val:last30.length,                    label:'Treinos (30d)',      cls:'blue'},
@@ -762,13 +804,15 @@
     destroyCharts();
     const data   = analyses.slice(0,15).reverse();
     const labels = data.map(a=>(a.date_display||a.date||'').slice(0,5));
-    const dists  = data.map(a=>a.distance_km||0);
+    // safeDist: ghost activities (< 0.5 km) render as 0 bar rather than 46-km-axis-stretching value
+    const dists  = data.map(a=>safeDist(a.distance_km,a.id)??0);
     // Pace e cadência: excluir natação (ritmo /100m não é comparável ao /km de corrida)
     const isRun  = a => (a.sport||'run').toLowerCase() !== 'swim';
-    const paces      = data.map(a=>{ if(!isRun(a)) return null; const p=paceToMinutes(a.avg_pace); return p?+p.toFixed(2):null; });
-    const hrs        = data.map(a=>a.avg_heart_rate||null);
-    const aderencias = data.map(a=>a.metrics?.aderencia_pace_pct??null);
-    const derivas    = data.map(a=>a.metrics?.deriva_cardiaca_pct??null);
+    // safePace: "46:25/km" → null (gap), keeps Y-axis sane for all real workouts
+    const paces      = data.map(a=>{ if(!isRun(a)) return null; const p=safePace(a.avg_pace,a.id,'avg_pace'); return p!=null?+p.toFixed(2):null; });
+    const hrs        = data.map(a=>safeNum(a.avg_heart_rate,40,220,a.id,'avg_heart_rate'));
+    const aderencias = data.map(a=>safeNum(a.metrics?.aderencia_pace_pct,0,150,a.id,'aderencia_pace_pct'));
+    const derivas    = data.map(a=>safeNum(a.metrics?.deriva_cardiaca_pct,-10,50,a.id,'deriva_cardiaca_pct'));
 
     const paceTooltip = {
       plugins:{
@@ -903,12 +947,12 @@
     document.getElementById('btn-cycle').classList.toggle('active', f==='cycle');
     document.getElementById('btn-all').classList.toggle('active',   f==='all');
     const filtered = f==='cycle' ? allAnalyses.filter(a=>a.date>=CYCLE_START) : allAnalyses;
-    renderStats(filtered);
+    safeRender('renderStats',      ()=>renderStats(filtered));
     // IMPORTANTE: renderCharts() chama destroyCharts() que faz `charts = {}`,
     // o que apagaria o chart.polar. Por isso renderPolarizacao vem DEPOIS.
-    renderCharts(filtered);
-    renderPolarizacao(filtered);
-    renderAnalyses(filtered);
+    safeRender('renderCharts',      ()=>renderCharts(filtered));
+    safeRender('renderPolarizacao', ()=>renderPolarizacao(filtered));
+    safeRender('renderAnalyses',    ()=>renderAnalyses(filtered));
   }
 
   /* ── Toggle ──────────────────────────────────────────── */
@@ -937,18 +981,18 @@
 
     allAnalyses = data.analyses || [];
 
-    renderCountdowns();
-    renderVdot(data.vdot||39);
-    renderSemaforo(allAnalyses);
+    safeRender('renderCountdowns', ()=>renderCountdowns());
+    safeRender('renderVdot',       ()=>renderVdot(data.vdot||39));
+    safeRender('renderSemaforo',   ()=>renderSemaforo(allAnalyses));
 
     const cycleAnalyses = allAnalyses.filter(a=>a.date>=CYCLE_START);
-    renderStats(cycleAnalyses);
-    renderEfficiency(allAnalyses);
+    safeRender('renderStats',      ()=>renderStats(cycleAnalyses));
+    safeRender('renderEfficiency', ()=>renderEfficiency(allAnalyses));
     // IMPORTANTE: renderCharts() chama destroyCharts() que faz `charts = {}`,
     // o que apagaria o chart.polar. Por isso renderPolarizacao vem DEPOIS.
-    renderCharts(cycleAnalyses);
-    renderPolarizacao(cycleAnalyses);
-    renderAnalyses(cycleAnalyses);
+    safeRender('renderCharts',       ()=>renderCharts(cycleAnalyses));
+    safeRender('renderPolarizacao',  ()=>renderPolarizacao(cycleAnalyses));
+    safeRender('renderAnalyses',     ()=>renderAnalyses(cycleAnalyses));
 
     if (data.last_updated) {
       const d = new Date(data.last_updated);
