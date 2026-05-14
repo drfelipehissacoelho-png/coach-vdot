@@ -571,9 +571,13 @@
     const gzPct  = gzWith.length ? Math.round(gzWith.filter(a=>a.metrics.gray_zone_alerta===true).length/gzWith.length*100) : 0;
     const gzClass = gzPct>15?'vermelho':gzPct>0?'amarelo':'verde';
 
-    const bandeira = last28.map(a=>a.metrics?.bandeira_clinica).find(v=>v!=null)??null;
+    // Whitelist of valid clinical flags — unknown strings (including internal system
+    // errors like 'arquivo_corrompido_sem_dados_analisaveis') must NEVER render as
+    // physiological alerts. Only values in this set trigger the red banner.
+    const VALID_BANDEIRAS = new Set(['red_s','overtraining','fc_media_96pct_fcmax_em_ritmo_facil','amarela','amarela_alta','vermelha']);
+    const bandeira = last28.map(a=>a.metrics?.bandeira_clinica).find(v=>v!=null && VALID_BANDEIRAS.has(v))??null;
     const bClass   = bandeira?'vermelho':'verde';
-    const bMap     = {'red_s':'RED-S — Revisar com médico','overtraining':'Overtraining — Reduza carga','fc_media_96pct_fcmax_em_ritmo_facil':'FC média em 96% da FCmáx em treino fácil'};
+    const bMap     = {'red_s':'RED-S — Revisar com médico','overtraining':'Overtraining — Reduza carga','fc_media_96pct_fcmax_em_ritmo_facil':'FC média em 96% da FCmáx em treino fácil','amarela':'Atenção clínica','amarela_alta':'Atenção alta','vermelha':'Alerta vermelho'};
     const bText    = bandeira?(bMap[bandeira]||bandeira.replace(/_/g,' ')):'✓ Nenhuma';
 
     document.getElementById('semaforo-row').innerHTML = `
