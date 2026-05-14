@@ -959,7 +959,22 @@
     document.getElementById('content').style.display = 'block';
   }
 
-  init();
+  // Guard against any uncaught exception inside init() leaving the page
+  // stuck at "Carregando...". The try/catch inside init() covers fetch and
+  // JSON.parse failures; this outer .catch() catches any renderer error that
+  // slips through (e.g. a null-deref inside renderCharts on unexpected data).
+  init().catch(() => {
+    try {
+      document.getElementById('loading').style.display  = 'none';
+      const content = document.getElementById('content');
+      if (content && !content.style.display || content.style.display === 'none') {
+        content.innerHTML   = `<div class="empty"><div class="empty-icon">📡</div>` +
+          `<p>Dados temporariamente indisponíveis.<br>` +
+          `<small>Tente recarregar a página em alguns instantes.</small></p></div>`;
+        content.style.display = 'block';
+      }
+    } catch(_) {}
+  });
 </script>
 </body>
 </html>
