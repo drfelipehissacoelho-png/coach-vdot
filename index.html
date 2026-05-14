@@ -72,6 +72,11 @@
     .pill-gray   { background: rgba(148,163,184,0.12);color: #94a3b8;        border: 1px solid rgba(148,163,184,0.25); }
     /* Classification badges — inline no card header */
     .classif-badge { padding: 2px 9px; border-radius: 12px; font-size: 0.62rem; font-weight: 800; letter-spacing: 0.5px; text-transform: uppercase; white-space: nowrap; }
+    /* Match-confidence badge (Prioridade 4) — pequeno ponto colorido com tooltip */
+    .conf-badge { display:inline-flex; align-items:center; gap:3px; padding: 2px 7px; border-radius: 10px; font-size: 0.58rem; font-weight: 700; letter-spacing: 0.3px; text-transform: uppercase; white-space: nowrap; cursor: help; }
+    .conf-high   { background: rgba(34,197,94,0.10);  color: #22c55e; border: 1px solid rgba(34,197,94,0.25); }
+    .conf-medium { background: rgba(234,179,8,0.12);  color: #ca8a04; border: 1px solid rgba(234,179,8,0.30); }
+    .conf-low    { background: rgba(239,68,68,0.12);  color: #ef4444; border: 1px solid rgba(239,68,68,0.30); }
 
     /* CONTAINER */
     .container { max-width: 1200px; margin: 0 auto; padding: 28px 20px 60px; }
@@ -504,6 +509,25 @@
     return `<span class="classif-badge" style="${meta.css}" title="${classif}">${meta.label}</span>`;
   }
 
+  /* ── Match-confidence badge (Prioridade 4) ──────────────
+     Mostra alta/media/baixa do matcher MPR. Tooltip lista os motivos. */
+  const CONF_META = {
+    'high':   { label: '● ALTA',  cls: 'conf-high'   },
+    'medium': { label: '● MÉDIA', cls: 'conf-medium' },
+    'low':    { label: '⚠ BAIXA', cls: 'conf-low'    },
+  };
+  function confidenceBadge(conf, reasons, score) {
+    if (!conf) return '';
+    const meta = CONF_META[conf];
+    if (!meta) return '';
+    const reasonLines = Array.isArray(reasons) && reasons.length
+      ? reasons.map(r => '• ' + r).join('\n')
+      : '';
+    const scoreLine = (score != null) ? `Score: ${score}\n` : '';
+    const title = `Confiança do matcher: ${conf.toUpperCase()}\n${scoreLine}${reasonLines}`;
+    return `<span class="conf-badge ${meta.cls}" title="${title.replace(/"/g,'&quot;')}">${meta.label}</span>`;
+  }
+
   /* ── Countdowns ──────────────────────────────────────── */
   function renderCountdowns() {
     const now = new Date();
@@ -834,6 +858,7 @@
             </div>
             <div class="analysis-right">
               ${classifBadge(a.classification || a.mpr_classification)}
+              ${confidenceBadge(a.match_confidence, a.match_confidence_reasons, a.match_score)}
               ${scoreBadge(a.score)}
               <div class="expand-btn">▼</div>
             </div>
