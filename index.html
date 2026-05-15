@@ -804,8 +804,8 @@
     destroyCharts();
     const data   = analyses.slice(0,15).reverse();
     const labels = data.map(a=>(a.date_display||a.date||'').slice(0,5));
-    // safeDist: ghost activities (< 0.5 km) render as 0 bar rather than 46-km-axis-stretching value
-    const dists  = data.map(a=>safeDist(a.distance_km,a.id)??0);
+    // safeDist: ghost activities (< 0.5 km) → null → no bar rendered (cleaner than a 0-height stub)
+    const dists  = data.map(a=>safeDist(a.distance_km,a.id));
     // Pace e cadência: excluir natação (ritmo /100m não é comparável ao /km de corrida)
     const isRun  = a => (a.sport||'run').toLowerCase() !== 'swim';
     // safePace: "46:25/km" → null (gap), keeps Y-axis sane for all real workouts
@@ -828,7 +828,7 @@
     });
     const line = (id,vals,color,rev,extraOpts)=> new Chart(document.getElementById(id),{
       type:'line',
-      data:{labels,datasets:[{data:vals,borderColor:color,backgroundColor:color+'15',borderWidth:2,pointRadius:3,pointBackgroundColor:color,fill:true,tension:0.35}]},
+      data:{labels,datasets:[{data:vals,borderColor:color,backgroundColor:color+'15',borderWidth:2,pointRadius:3,pointBackgroundColor:color,fill:true,tension:0.35,spanGaps:true}]},
       options:{...baseOpts,...(extraOpts||{}),scales:{...baseOpts.scales,y:{...baseOpts.scales.y,reverse:!!rev}}}
     });
 
@@ -838,8 +838,8 @@
     charts.cad  = new Chart(document.getElementById('chartCad'), {
       type:'line',
       data:{labels, datasets:[
-        {label:'Aderência (%)', data:aderencias, borderColor:'#3b82f6', backgroundColor:'#3b82f615', borderWidth:2, pointRadius:3, pointBackgroundColor:'#3b82f6', fill:true, tension:0.35, yAxisID:'yL', spanGaps:false},
-        {label:'Deriva (%)',    data:derivas,    borderColor:'#ef4444', backgroundColor:'transparent', borderWidth:2, pointRadius:3, pointBackgroundColor:'#ef4444', fill:false, tension:0.35, yAxisID:'yR', spanGaps:false}
+        {label:'Aderência (%)', data:aderencias, borderColor:'#3b82f6', backgroundColor:'#3b82f615', borderWidth:2, pointRadius:3, pointBackgroundColor:'#3b82f6', fill:true, tension:0.35, yAxisID:'yL', spanGaps:true},
+        {label:'Deriva (%)',    data:derivas,    borderColor:'#ef4444', backgroundColor:'transparent', borderWidth:2, pointRadius:3, pointBackgroundColor:'#ef4444', fill:false, tension:0.35, yAxisID:'yR', spanGaps:true}
       ]},
       options:{
         responsive:true, maintainAspectRatio:false,
