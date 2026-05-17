@@ -6,9 +6,163 @@
   "tune_up_race": "Meia Maratona de Montevideo — 09/08/2026",
   "tune_up_goal": "Sub-1h50",
   "cycle_start": "2026-04-16",
-  "last_updated": "2026-05-16T06:15:47.108182",
-  "total_analyses": 25,
+  "last_updated": "2026-05-17T11:09:42.936822",
+  "total_analyses": 26,
   "analyses": [
+    {
+      "id": "2026-05-17_morning_run_18543694726",
+      "provider": "strava",
+      "provider_activity_id": "18543694726",
+      "date": "2026-05-17",
+      "date_display": "17/05/2026",
+      "source": "strava",
+      "sport": "run",
+      "is_treadmill": true,
+      "activity_name": "Morning Run",
+      "distance_km": 6.42,
+      "duration": "45:09",
+      "avg_pace": "7:02/km",
+      "avg_heart_rate": 143.8,
+      "max_heart_rate": 151.0,
+      "avg_cadence_spm": 171,
+      "temperature_c": 23,
+      "humidity_pct": null,
+      "dew_point_c": null,
+      "heat_index_c": null,
+      "weather_source": null,
+      "total_ascent_m": 0,
+      "total_descent_m": null,
+      "training_stress_score": null,
+      "aerobic_training_effect": null,
+      "anaerobic_training_effect": null,
+      "laps": [
+        {
+          "lap_number": 1,
+          "distance_km": 1.0,
+          "duration": "07:09",
+          "avg_pace": "7:09/km",
+          "avg_heart_rate": 135,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 2,
+          "distance_km": 1.0,
+          "duration": "06:55",
+          "avg_pace": "6:54/km",
+          "avg_heart_rate": 143,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 3,
+          "distance_km": 1.0,
+          "duration": "06:59",
+          "avg_pace": "7:00/km",
+          "avg_heart_rate": 142,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 4,
+          "distance_km": 1.0,
+          "duration": "06:56",
+          "avg_pace": "6:56/km",
+          "avg_heart_rate": 144,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 5,
+          "distance_km": 1.0,
+          "duration": "07:05",
+          "avg_pace": "7:05/km",
+          "avg_heart_rate": 146,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 6,
+          "distance_km": 1.0,
+          "duration": "07:07",
+          "avg_pace": "7:07/km",
+          "avg_heart_rate": 147,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 7,
+          "distance_km": 0.42,
+          "duration": "02:58",
+          "avg_pace": "7:07/km",
+          "avg_heart_rate": 148,
+          "avg_cadence_spm": null
+        }
+      ],
+      "metrics": {
+        "vdot_referencia": 39,
+        "tipo_treino_detectado": "rodagem",
+        "zona_prescrita": "E",
+        "pace_prescrito_min_km": "6:29-7:28",
+        "pace_executado_min_km": "7:02",
+        "aderencia_pace_pct": 97,
+        "distribuicao_intensidade": {
+          "facil_pct": 100.0,
+          "moderado_pct": 0.0,
+          "forte_pct": 0.0
+        },
+        "gray_zone_alerta": false,
+        "deriva_cardiaca_pct": 2.9,
+        "eficiencia_aerobica": 1.38,
+        "cadencia_media_spm": 171,
+        "ajuste_calor_segundos_km": 11,
+        "pace_equivalente_frio_min_km": "6:51",
+        "limitador_principal": "tecnica",
+        "bandeira_clinica": null,
+        "nota_aderencia": 9,
+        "confianca_analise": "alta"
+      },
+      "metrics_validation": "valid",
+      "metrics_errors": [],
+      "score": 9,
+      "analysis_html": "<b>📊 Resumo do Treino</b>\nRodagem de 45min/6,42km na esteira (PLANNED_MATCH — sessão prescrita para 17/05). Pace médio de 7:02/km, dentro da Z1 MPR (6:29–7:28/km) e compatível com a zona E do VDOT 39 (5:58–6:40) pela margem inferior. FC média de 143,8 bpm = 75,7% FCmáx — comportamento aeróbico sólido para a fase de Base Aeróbica, semanas 1–2 do ciclo Montevideo.\n\n<b>✅ Pontos Positivos</b>\n• <b>Controle de intensidade exemplar:</b> FC média 143,8 bpm (75,7% de 190 bpm) e pico de 151 bpm (79,5%) — ambos dentro da zona aeróbica, sem nenhum extravasamento. Exatamente o que a fase de base exige.\n• <b>Ritmo consistente entre os splits:</b> Voltas 2–7 oscilam entre 6:54 e 7:09/km — variação de apenas 15 seg/km, demonstrando disciplina de pace e capacidade de manter esforço estável na esteira.\n• <b>Aderência à prescrição MPR:</b> 6,42 km em 45:09 — distância ligeiramente acima do teto prescrito (5,93–6,84 km) e duração alinhada. O treinador definiu Z1 integral; o atleta cumpriu a sessão dentro da zona por inteiro.\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>Decoupling Pace/FC anômalo (▼33,5%):</b> O dado aponta que a 1ª metade registrou pace médio de 9:56/km versus 7:06/km na 2ª metade — diferença absurda que indica <b>artefato de GPS/sensor na esteira</b> (o relógio levou tempo para calibrar a velocidade da esteira). <b>Desconsidere</b> esse decoupling para análise fisiológica; use o Decoupling Watts/FC (▲2,9%) como referência real — excelente, muito abaixo do limiar de 5%.\n• <b>Cadência de 171 spm:</b> Abaixo da referência técnica de 178–182 spm recomendada pelo Pose Method. Em esteira, é mais fácil ajustar. Vale atenção progressiva — cada passo mais curto aumenta carga articular no calcanhar.\n\n<b>🏁 Impacto na Preparação</b>\nSessão cumpre exatamente a função da Base Aeróbica: construir eficiência cardiovascular em zona segura, sem acumular fadiga. O decoupling real (Watts/FC de 2,9%) indica ótimo acoplamento aeróbico — o coração está respondendo de forma eficiente à potência gerada. Com VDOT alvo de 42 para Montevideo, semanas como esta constroem o \"motor\" para os blocos de limiar que chegam em junho.\n\n<b>📅 Próximo Treino Sugerido</b>\nConforme MPR para <b>19/05/2026</b>: séries de <b>65 min / 9,8–10,73 km</b> com estrutura mista — blocos em Z1 (6:29–7:28/km) e Z3 (5:41–6:03/km). Se for correr ao ar livre em Recife (calor), use o ajuste de +11 seg/km sobre o pace-alvo da Z3 → Z3 efetiva em ~5:52–6:14/km. Se mantiver na esteira, siga os valores originais da MPR. Qualquer ajuste de estrutura (duração dos blocos, proporção Z1/Z3) deve ser confirmado com o treinador antes da sessão.\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: 9/10 — Sessão prescrita cumprida com fidelidade de zona, duração e distância; único ponto de melhora é cadência (171 vs. 178+ spm alvo).\n",
+      "classification": "planned_match",
+      "matched_session_id": "efb02ce9-da4e-5561-977c-dd5eedb5b052",
+      "extra_session_evaluation": null,
+      "match_confidence": "high",
+      "match_confidence_reasons": [
+        "tier1 hard same-day lock — compatibilidade dura"
+      ],
+      "match_score": null,
+      "running_dynamics": {
+        "ground_contact_time_ms": null,
+        "vertical_oscillation_cm": null,
+        "vertical_ratio_pct": null,
+        "stride_length_m": null,
+        "gct_balance_pct": null
+      },
+      "drift_analysis": {
+        "pattern": "sem_drift_relevante",
+        "confidence": "low",
+        "pa_hr_decoupling_pct": -33.55,
+        "pw_hr_decoupling_pct": 2.86,
+        "delta_power_pct": -1.53,
+        "delta_pace_pct": -26.13,
+        "delta_cadence_pct": 0.57,
+        "first_half": {
+          "avg_hr": 144.97450753186558,
+          "avg_watts": 204.04287369640787,
+          "avg_pace_min_km": 9.562757493272281,
+          "avg_cadence_spm": 173.06836616454228,
+          "samples": 863
+        },
+        "second_half": {
+          "avg_hr": 146.95092693565977,
+          "avg_watts": 200.91275899672846,
+          "avg_pace_min_km": 7.064022218936757,
+          "avg_cadence_spm": 174.0545256270447,
+          "samples": 917
+        },
+        "notes": [
+          "Sinais inconsistentes para classificação firme."
+        ]
+      },
+      "generated_at": "2026-05-17T11:09:42.936800"
+    },
     {
       "id": "2026-05-16_morning_run_18526075584",
       "provider": "strava",
