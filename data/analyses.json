@@ -6,7 +6,7 @@
   "tune_up_race": "Meia Maratona de Montevideo — 09/08/2026",
   "tune_up_goal": "Sub-1h50",
   "cycle_start": "2026-04-16",
-  "last_updated": "2026-05-26T05:50:49.297976",
+  "last_updated": "2026-05-26T12:52:17.235444",
   "total_analyses": 32,
   "analyses": [
     {
@@ -29,7 +29,7 @@
       "humidity_pct": 96,
       "dew_point_c": 23.2,
       "heat_index_c": 24.0,
-      "weather_source": "open-meteo",
+      "weather_source": "cache",
       "total_ascent_m": 18.0,
       "total_descent_m": null,
       "training_stress_score": null,
@@ -129,13 +129,13 @@
         "vdot_referencia": 39,
         "tipo_treino_detectado": "fartlek",
         "zona_prescrita": "mista",
-        "pace_prescrito_min_km": "5:25-5:44 (Z4) / 6:35-7:35 (Z1 recuperação)",
-        "pace_executado_min_km": "5:38-5:54 (blocos) / 6:29-6:37 (recuperações)",
-        "aderencia_pace_pct": 85,
+        "pace_prescrito_min_km": "5:25-5:44 (Z4) / 6:29-7:28 (Z1)",
+        "pace_executado_min_km": "5:38-5:48 (blocos) / 6:29-6:36 (recuperação)",
+        "aderencia_pace_pct": 88,
         "distribuicao_intensidade": {
           "facil_pct": 40,
-          "moderado_pct": 22,
-          "forte_pct": 38
+          "moderado_pct": 0,
+          "forte_pct": 60
         },
         "gray_zone_alerta": false,
         "deriva_cardiaca_pct": 4.5,
@@ -143,17 +143,17 @@
         "cadencia_media_spm": 178,
         "ajuste_calor_segundos_km": 19,
         "pace_equivalente_frio_min_km": "5:44",
-        "limitador_principal": "deriva_cardiaca",
+        "limitador_principal": "clima",
         "bandeira_clinica": null,
         "nota_aderencia": 8,
         "confianca_analise": "alta"
       },
       "metrics_validation": "invalid",
       "metrics_errors": [
-        "pace_executado_min_km: Value error, pace inválido: '5:38-5:54 (blocos) / 6:29-6:37 (recuperações)' — esperado 'MM:SS' (opcionalmente range 'MM:SS-MM:SS' e/ou sufixo '/km') (input='5:38-5:54 (blocos) / 6:29-6:37 (recuperações)')"
+        "pace_executado_min_km: Value error, pace inválido: '5:38-5:48 (blocos) / 6:29-6:36 (recuperação)' — esperado 'MM:SS' (opcionalmente range 'MM:SS-MM:SS' e/ou sufixo '/km') (input='5:38-5:48 (blocos) / 6:29-6:36 (recuperação)')"
       ],
-      "score": 8,
-      "analysis_html": "<b>📊 Resumo do Treino</b>\nFartlek de 61 min / 10,06 km em Recife às 04h43 — condições extremas (25°C / 96% UR, ponto de orvalho 23°C). Estrutura clara nos splits: 2 km de aquecimento Z1, 6 blocos Z4 intercalados com recuperações Z1, e 2 km de desaquecimento. Pace médio 6:03/km equivale a ~5:44/km em condições frias — compatível com o topo da zona E / início da zona M do VDOT 39. Fase: Base Aeróbica — Ciclo Montevideo (Semanas 5–6).\n\n<b>✅ Pontos Positivos</b>\n• <b>Estrutura fartlek bem executada:</b> os blocos \"duros\" (voltas 3–8) oscilaram entre 5:38–5:54/km — dentro da Z4 MPR (5:20–5:44/km), com boa consistência entre repetições.\n• <b>Desacoplamento Watts/FC de 4,5% — excelente:</b> abaixo do limiar de 5%, indicando controle aeróbico sólido mesmo no calor intenso. A potência ficou estável (247→243 W) enquanto a FC subiu, padrão clássico de drift cardiovascular por calor — não por ineficiência mecânica.\n• <b>Gestão de ritmo cirúrgica:</b> a 2ª metade ficou levemente mais rápida em pace (6:00 vs 6:12) com potência quase idêntica — sinal de que o atleta administrou bem a sessão sem explodir no início.\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>Drift cardiovascular confirmado (alta confiança):</b> FC cresceu de 159→163 bpm (+2,5%) com potência estável — comportamento esperado no calor extremo de Recife, mas deve ser monitorado. FC média de 156 bpm = 82% da FCmáx (190 bpm) — levemente acima do ideal para fartlek em fase de base.\n• <b>Blocos Z4 um pouco conservadores:</b> voltas 5–8 ficaram em 5:38–5:44/km, tocando o limite inferior da Z4 MPR (5:20/km exigiria mais). Com o ajuste de calor (+19 seg/km), o equivalente em frio seria ~5:19–5:25/km — dentro da Z4 Daniels/T. Aceitável dado o ambiente.\n• <b>Volta 3 (5:48/km / 158 bpm) vs Volta 4 (5:54/km / 161 bpm):</b> a primeira repetição teve pace levemente mais rápido e FC mais baixa — leve inconsistência no arranque, mas irrelevante clinicamente.\n\n<b>🏁 Impacto na Preparação</b>\nSessão de fartlek em fase de base serve como \"sondagem de limiar\" e estimula adaptações aeróbicas sem volume excessivo. Com 10 km + ~36 min em Z4 (aprox. 6×3 min), o estímulo de limiar foi real. Correr esse fartlek em condições de 25°C/96% UR às 4h43 tem alto valor de adaptação ao calor — útil para Montevideo (agosto) e Osaka (fevereiro). Volume da semana a monitorar para não ultrapassar o teto da fase de base.\n\n<b>📅 Próximo Treino Sugerido</b>\nConforme MPR — <b>2026-05-27: RODAGEM 50 min em Z1 (6:29–7:28/km)</b>\nApós esse fartlek com drift cardiovascular, o dia seguinte em Z1 puro é não-negociável. Em Recife, com o calor, aplique o ajuste de +19 seg/km: mire 6:48–7:47/km real no relógio para manter Z1 fisiológica. FC-alvo: ≤75% FCmáx (≤142 bpm). Se a FC não ceder abaixo de 145 bpm nos primeiros 10 min, reduza o pace imediatamente. Dúvida sobre adaptação? Discuta com o treinador antes de modificar a prescrição.\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: 8/10 — Fartlek executado com estrutura correta, pace Z4 ajustado ao calor extremo e decoupling dentro do limite; leve deriva cardíaca e intensidade Z4 no teto inferior são os únicos pontos de atenção.\n",
+      "score": null,
+      "analysis_html": "Vou analisar o fartlek bloco a bloco, comparando com a prescrição MPR.\n\n**Mapeamento dos blocos:**\n- Laps 1–2: aquecimento Z1 (6:30–6:36/km, FC 132–141) ✓\n- Laps 3–8: blocos Z4 (5:38–5:48/km, FC 158–165) — os 6 intervalos de 3min\n- Laps 9–10: desaquecimento Z1 (6:29/km, FC 153–159) ✓\n- Lap 11: desaquecimento final (7:09/km) ✓\n\n---\n\n<b>📊 Resumo do Treino</b>\nFartlek de 10km / 61min em Recife às 4h43 — 25°C / 96% UR. Estrutura: aquecimento Z1 (15min) → 6 blocos de 3min em Z4 com recuperação Z1 → desaquecimento Z1 (10min), conforme prescrição MPR. VDOT 39, fase Base Aeróbica (semana 6 do ciclo Montevideo). Pace médio geral de 6:03/km reflete bem a natureza mista do fartlek com blocos curtos de esforço.\n\n---\n\n<b>✅ Pontos Positivos</b>\n\n• <b>Blocos Z4 bem executados:</b> Laps 3–8 entregaram paces entre 5:38 e 5:48/km — zona Z4 MPR prescrita é 5:25–5:44/km. Equivalente frio (ajuste -19s/km): 5:19–5:29/km, o que os coloca firmemente dentro da janela Z4 com o calor descontado. Excelente controle.\n\n• <b>Aquecimento disciplinado:</b> Laps 1–2 em 6:30–6:36/km (Z1 MPR: 6:29–7:28) — FC de 132–141 bpm (70–74% FCmáx). Chegou aos blocos fortes sem queimar desnecessariamente.\n\n• <b>FC controlada nos blocos fortes:</b> Laps 3–8 com FC entre 158–165 bpm (83–87% FCmáx) — para blocos de 3min em Z4 no calor úmido de Recife, essa resposta é fisiologicamente adequada. Nenhuma excursão preocupante.\n\n---\n\n<b>⚠️ Sinais de Alerta</b>\n\n• <b>Drift cardiovascular moderado (Watts/FC: +4,5%):</b> FC cresceu ≥3% enquanto potência caiu levemente — padrão clássico de demanda termoreguladora em calor extremo (25°C / 96% UR). Não é alarme de overtraining, mas sinal de que o calor está cobrando seu preço fisiológico. Hidratação pré-treino e intra-treino devem ser monitoradas nestas condições.\n\n• <b>Laps 3–4 levemente fora da Z4 (acima da faixa superior):</b> 5:48/km e 5:54/km — equivalente frio ~5:29–5:35/km, tocando o limite superior da Z4. Pode ser efeito de aquecimento progressivo nos primeiros intervalos, mas laps 5–8 corrigiram bem. Sem penalidade, apenas observação.\n\n• <b>FC do desaquecimento relativamente alta:</b> Laps 9–10 em Z1 mas FC ainda em 153–159 bpm (80–84% FCmáx) — para pace 6:29/km em Z1, o esperado seria abaixo de 150 bpm. Sinal do acúmulo de calor. Nenhuma bandeira clínica, mas reforce a recuperação ativa pós-treino.\n\n---\n\n<b>🏁 Impacto na Preparação</b>\nSessão de alta qualidade para a fase Base Aeróbica. Os 6 blocos Z4 de 3min introduzem estímulo de velocidade controlada sem romper a lógica 80/20 — o volume fácil domina o treino. Para Montevideo (Sub-1h50), essa familiarização precoce com paces ~5:38–5:44/km (ritmo de meia maratona alvo ~5:13/km ajustado) começa a recrutar fibras de resistência sem stress excessivo. Bloco executado com maturidade e consistência crescente nos intervalos.\n\n---\n\n<b>📅 Próximo Treino Sugerido</b>\n📌 <b>Conforme MPR — 27/05/2026:</b>\n<b>RODAGEM 50 min em Z1 (6:29–7:28/km)</b>\n→ Prioridade: recuperação ativa pós-fartlek. Mantenha FC abaixo de 145 bpm (76% FCmáx) para garantir adaptação supercompensatória dos blocos de ontem.\n→ Calor de Recife: se treino for ao ar livre, ajuste expectativa de pace para 6:40–7:00/km no calor — o sistema cardiovascular ainda estará processando o estresse térmico acumulado.\n→ Se sentir FC elevada desde o início (>148 bpm nos primeiros 10min), reduza pace sem hesitar. Qualquer adaptação discuta com seu treinador.\n\n---\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: <b>8/10</b> — Estrutura MPR respeitada, blocos Z4 bem executados com ajuste térmico adequado; laps iniciais ligeiramente acima do teto Z4, drift cardíaco esperado para o clima de Recife.\n",
       "classification": "planned_match",
       "matched_session_id": "c5627b19-faf5-5f85-871e-fad4d587193f",
       "extra_session_evaluation": null,
@@ -195,7 +195,7 @@
           "FC cresceu ≥3% enquanto pace/potência ficaram estáveis ou caíram."
         ]
       },
-      "generated_at": "2026-05-26T05:50:49.297940"
+      "generated_at": "2026-05-26T12:52:17.235424"
     },
     {
       "id": "2026-05-24_morning_run_18635339847",
