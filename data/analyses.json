@@ -6,9 +6,197 @@
   "tune_up_race": "Meia Maratona de Montevideo — 09/08/2026",
   "tune_up_goal": "Sub-1h50",
   "cycle_start": "2026-04-16",
-  "last_updated": "2026-05-24T10:51:37.082216",
-  "total_analyses": 31,
+  "last_updated": "2026-05-26T05:50:49.297976",
+  "total_analyses": 32,
   "analyses": [
+    {
+      "id": "2026-05-26_morning_run_18658146883",
+      "provider": "strava",
+      "provider_activity_id": "18658146883",
+      "date": "2026-05-26",
+      "date_display": "26/05/2026",
+      "source": "strava",
+      "sport": "run",
+      "is_treadmill": false,
+      "activity_name": "Morning Run",
+      "distance_km": 10.06,
+      "duration": "01:01:01",
+      "avg_pace": "6:03/km",
+      "avg_heart_rate": 156.0,
+      "max_heart_rate": 177.0,
+      "avg_cadence_spm": 178,
+      "temperature_c": 25,
+      "humidity_pct": 96,
+      "dew_point_c": 23.2,
+      "heat_index_c": 24.0,
+      "weather_source": "open-meteo",
+      "total_ascent_m": 18.0,
+      "total_descent_m": null,
+      "training_stress_score": null,
+      "aerobic_training_effect": null,
+      "anaerobic_training_effect": null,
+      "laps": [
+        {
+          "lap_number": 1,
+          "distance_km": 1.0,
+          "duration": "06:31",
+          "avg_pace": "6:30/km",
+          "avg_heart_rate": 132,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 2,
+          "distance_km": 1.0,
+          "duration": "06:37",
+          "avg_pace": "6:36/km",
+          "avg_heart_rate": 141,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 3,
+          "distance_km": 1.0,
+          "duration": "05:49",
+          "avg_pace": "5:48/km",
+          "avg_heart_rate": 158,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 4,
+          "distance_km": 1.0,
+          "duration": "05:55",
+          "avg_pace": "5:54/km",
+          "avg_heart_rate": 161,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 5,
+          "distance_km": 1.0,
+          "duration": "05:38",
+          "avg_pace": "5:38/km",
+          "avg_heart_rate": 164,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 6,
+          "distance_km": 1.0,
+          "duration": "05:42",
+          "avg_pace": "5:41/km",
+          "avg_heart_rate": 164,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 7,
+          "distance_km": 1.0,
+          "duration": "05:44",
+          "avg_pace": "5:44/km",
+          "avg_heart_rate": 164,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 8,
+          "distance_km": 1.0,
+          "duration": "05:40",
+          "avg_pace": "5:38/km",
+          "avg_heart_rate": 165,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 9,
+          "distance_km": 1.0,
+          "duration": "06:29",
+          "avg_pace": "6:29/km",
+          "avg_heart_rate": 159,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 10,
+          "distance_km": 1.0,
+          "duration": "06:29",
+          "avg_pace": "6:29/km",
+          "avg_heart_rate": 153,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 11,
+          "distance_km": 0.06,
+          "duration": "00:27",
+          "avg_pace": "7:09/km",
+          "avg_heart_rate": 149,
+          "avg_cadence_spm": null
+        }
+      ],
+      "metrics": {
+        "vdot_referencia": 39,
+        "tipo_treino_detectado": "fartlek",
+        "zona_prescrita": "mista",
+        "pace_prescrito_min_km": "5:25-5:44 (Z4) / 6:35-7:35 (Z1 recuperação)",
+        "pace_executado_min_km": "5:38-5:54 (blocos) / 6:29-6:37 (recuperações)",
+        "aderencia_pace_pct": 85,
+        "distribuicao_intensidade": {
+          "facil_pct": 40,
+          "moderado_pct": 22,
+          "forte_pct": 38
+        },
+        "gray_zone_alerta": false,
+        "deriva_cardiaca_pct": 4.5,
+        "eficiencia_aerobica": null,
+        "cadencia_media_spm": 178,
+        "ajuste_calor_segundos_km": 19,
+        "pace_equivalente_frio_min_km": "5:44",
+        "limitador_principal": "deriva_cardiaca",
+        "bandeira_clinica": null,
+        "nota_aderencia": 8,
+        "confianca_analise": "alta"
+      },
+      "metrics_validation": "invalid",
+      "metrics_errors": [
+        "pace_executado_min_km: Value error, pace inválido: '5:38-5:54 (blocos) / 6:29-6:37 (recuperações)' — esperado 'MM:SS' (opcionalmente range 'MM:SS-MM:SS' e/ou sufixo '/km') (input='5:38-5:54 (blocos) / 6:29-6:37 (recuperações)')"
+      ],
+      "score": 8,
+      "analysis_html": "<b>📊 Resumo do Treino</b>\nFartlek de 61 min / 10,06 km em Recife às 04h43 — condições extremas (25°C / 96% UR, ponto de orvalho 23°C). Estrutura clara nos splits: 2 km de aquecimento Z1, 6 blocos Z4 intercalados com recuperações Z1, e 2 km de desaquecimento. Pace médio 6:03/km equivale a ~5:44/km em condições frias — compatível com o topo da zona E / início da zona M do VDOT 39. Fase: Base Aeróbica — Ciclo Montevideo (Semanas 5–6).\n\n<b>✅ Pontos Positivos</b>\n• <b>Estrutura fartlek bem executada:</b> os blocos \"duros\" (voltas 3–8) oscilaram entre 5:38–5:54/km — dentro da Z4 MPR (5:20–5:44/km), com boa consistência entre repetições.\n• <b>Desacoplamento Watts/FC de 4,5% — excelente:</b> abaixo do limiar de 5%, indicando controle aeróbico sólido mesmo no calor intenso. A potência ficou estável (247→243 W) enquanto a FC subiu, padrão clássico de drift cardiovascular por calor — não por ineficiência mecânica.\n• <b>Gestão de ritmo cirúrgica:</b> a 2ª metade ficou levemente mais rápida em pace (6:00 vs 6:12) com potência quase idêntica — sinal de que o atleta administrou bem a sessão sem explodir no início.\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>Drift cardiovascular confirmado (alta confiança):</b> FC cresceu de 159→163 bpm (+2,5%) com potência estável — comportamento esperado no calor extremo de Recife, mas deve ser monitorado. FC média de 156 bpm = 82% da FCmáx (190 bpm) — levemente acima do ideal para fartlek em fase de base.\n• <b>Blocos Z4 um pouco conservadores:</b> voltas 5–8 ficaram em 5:38–5:44/km, tocando o limite inferior da Z4 MPR (5:20/km exigiria mais). Com o ajuste de calor (+19 seg/km), o equivalente em frio seria ~5:19–5:25/km — dentro da Z4 Daniels/T. Aceitável dado o ambiente.\n• <b>Volta 3 (5:48/km / 158 bpm) vs Volta 4 (5:54/km / 161 bpm):</b> a primeira repetição teve pace levemente mais rápido e FC mais baixa — leve inconsistência no arranque, mas irrelevante clinicamente.\n\n<b>🏁 Impacto na Preparação</b>\nSessão de fartlek em fase de base serve como \"sondagem de limiar\" e estimula adaptações aeróbicas sem volume excessivo. Com 10 km + ~36 min em Z4 (aprox. 6×3 min), o estímulo de limiar foi real. Correr esse fartlek em condições de 25°C/96% UR às 4h43 tem alto valor de adaptação ao calor — útil para Montevideo (agosto) e Osaka (fevereiro). Volume da semana a monitorar para não ultrapassar o teto da fase de base.\n\n<b>📅 Próximo Treino Sugerido</b>\nConforme MPR — <b>2026-05-27: RODAGEM 50 min em Z1 (6:29–7:28/km)</b>\nApós esse fartlek com drift cardiovascular, o dia seguinte em Z1 puro é não-negociável. Em Recife, com o calor, aplique o ajuste de +19 seg/km: mire 6:48–7:47/km real no relógio para manter Z1 fisiológica. FC-alvo: ≤75% FCmáx (≤142 bpm). Se a FC não ceder abaixo de 145 bpm nos primeiros 10 min, reduza o pace imediatamente. Dúvida sobre adaptação? Discuta com o treinador antes de modificar a prescrição.\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: 8/10 — Fartlek executado com estrutura correta, pace Z4 ajustado ao calor extremo e decoupling dentro do limite; leve deriva cardíaca e intensidade Z4 no teto inferior são os únicos pontos de atenção.\n",
+      "classification": "planned_match",
+      "matched_session_id": "c5627b19-faf5-5f85-871e-fad4d587193f",
+      "extra_session_evaluation": null,
+      "match_confidence": "high",
+      "match_confidence_reasons": [
+        "tier1 hard same-day lock — compatibilidade dura"
+      ],
+      "match_score": null,
+      "running_dynamics": {
+        "ground_contact_time_ms": null,
+        "vertical_oscillation_cm": null,
+        "vertical_ratio_pct": null,
+        "stride_length_m": null,
+        "gct_balance_pct": null
+      },
+      "drift_analysis": {
+        "pattern": "drift_cardiovascular",
+        "confidence": "high",
+        "pa_hr_decoupling_pct": 0.92,
+        "pw_hr_decoupling_pct": 4.52,
+        "delta_power_pct": -1.64,
+        "delta_pace_pct": -2.03,
+        "delta_cadence_pct": 0.5,
+        "first_half": {
+          "avg_hr": 158.51521739130436,
+          "avg_watts": 247.4036231884058,
+          "avg_pace_min_km": 6.121083423824848,
+          "avg_cadence_spm": 179.26376811594204,
+          "samples": 1380
+        },
+        "second_half": {
+          "avg_hr": 163.2930535455861,
+          "avg_watts": 243.33429811866858,
+          "avg_pace_min_km": 5.997100658333799,
+          "avg_cadence_spm": 180.1548480463097,
+          "samples": 1382
+        },
+        "notes": [
+          "FC cresceu ≥3% enquanto pace/potência ficaram estáveis ou caíram."
+        ]
+      },
+      "generated_at": "2026-05-26T05:50:49.297940"
+    },
     {
       "id": "2026-05-24_morning_run_18635339847",
       "provider": "strava",
