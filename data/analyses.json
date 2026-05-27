@@ -6,7 +6,7 @@
   "tune_up_race": "Meia Maratona de Montevideo — 09/08/2026",
   "tune_up_goal": "Sub-1h50",
   "cycle_start": "2026-04-16",
-  "last_updated": "2026-05-27T07:04:30.290669",
+  "last_updated": "2026-05-27T09:30:08.053529",
   "total_analyses": 32,
   "analyses": [
     {
@@ -311,13 +311,13 @@
         "vdot_referencia": 39,
         "tipo_treino_detectado": "fartlek",
         "zona_prescrita": "mista",
-        "pace_prescrito_min_km": "5:25-5:44 (Z4) / 6:35-7:35 (Z1)",
-        "pace_executado_min_km": "5:06 (blocos fortes) / 6:40 (recuperações)",
-        "aderencia_pace_pct": 72,
+        "pace_prescrito_min_km": "5:25-5:44",
+        "pace_executado_min_km": "5:06",
+        "aderencia_pace_pct": 78,
         "distribuicao_intensidade": {
-          "facil_pct": 74,
-          "moderado_pct": 8,
-          "forte_pct": 18
+          "facil_pct": 62.0,
+          "moderado_pct": 8.0,
+          "forte_pct": 30.0
         },
         "gray_zone_alerta": false,
         "deriva_cardiaca_pct": 4.5,
@@ -325,17 +325,15 @@
         "cadencia_media_spm": 178,
         "ajuste_calor_segundos_km": 19,
         "pace_equivalente_frio_min_km": "5:44",
-        "limitador_principal": "adesao",
+        "limitador_principal": "clima",
         "bandeira_clinica": null,
-        "nota_aderencia": 7,
+        "nota_aderencia": 8,
         "confianca_analise": "alta"
       },
-      "metrics_validation": "invalid",
-      "metrics_errors": [
-        "pace_executado_min_km: Value error, pace inválido: '5:06 (blocos fortes) / 6:40 (recuperações)' — esperado 'MM:SS' (opcionalmente range 'MM:SS-MM:SS' e/ou sufixo '/km') (input='5:06 (blocos fortes) / 6:40 (recuperações)')"
-      ],
-      "score": 7,
-      "analysis_html": "<b>📊 Resumo do Treino</b>\nFelipe, você executou o Fartlek estruturado prescrito para 26/05 — 6 blocos de 3 min em Z4/MPR com recuperações ativas em Z1, totalizando 10,06 km em 61 min. VDOT 39, fase de Base Aeróbica (sem 6–7 do ciclo Montevideo). Treino realizado às 04:43h em Recife com 25°C e umidade de 96% — condições hostis que pesam na análise de pace e FC.\n\n<b>✅ Pontos Positivos</b>\n\n• <b>Progressão nos blocos fortes — intencional e controlada.</b> Você saiu de 5:16/km (bloco 1) e chegou a 4:56/km (bloco 6), demonstrando capacidade de acelerar com fadiga acumulada. O pace equivalente em frio (~10°C) dos blocos fica entre 4:57–4:37/km — zona I do Daniels, excelente estímulo neuromuscular para a fase de base.\n\n• <b>Recuperações dentro da prescrição.</b> Os 5 blocos de recuperação ficaram entre 6:34–6:50/km — perfeitamente centrados na Z1 MPR (6:35–7:35/km) e alinhados com a zona E do Daniels. Isso confirma a polarização correta: você \"empurra\" nos fortes e realmente desacelera na recuperação, sem zona cinza.\n\n• <b>Cadência consistente e eficiente.</b> Média de 178 spm ao longo de todo o treino — nos blocos fortes chegando a 92 spm (cadência de passada ~184 spm), indicando boa aplicação do Pose Method. Pequena elevação de cadência na 2ª metade (+0,5%) enquanto pace se manteve: sinal de adaptação neuromuscular positiva.\n\n<b>⚠️ Sinais de Alerta</b>\n\n• <b>Blocos fortes acima da prescrição Z4/MPR nos blocos 3, 4, 5 e 6.</b> A Z4 prescrita era 5:25–5:44/km. Os blocos 3 a 6 ficaram entre 4:56–5:03/km — ~20–30 seg/km mais rápidos. Mesmo descontando o ajuste de calor (+19 seg/km), o pace equivalente em frio seria ~4:37–4:44/km, o que ultrapassa a Z4 e entra na Z5/MPR e zona I do Daniels. Na fase de base, blocos recorrentemente acima da zona prescrita podem comprometer a polarização 80/20. <b>Regra MPR prevalece aqui: Z4 define o teto da sessão.</b>\n\n• <b>Drift cardiovascular confirmado (4,5% Watts/FC).</b> FC cresceu de 159 bpm (1ª metade) para 163 bpm (2ª metade) com potência caindo de 247W para 243W. Embora 4,5% ainda esteja abaixo do limiar crítico de 5%, o calor úmido de Recife amplifica esse padrão. FC máxima de 177 bpm = 93,2% da FCmáx referência (190 bpm) — dentro do esperado para blocos de alta intensidade, sem bandeira clínica.\n\n• <b>FC média dos blocos fortes elevada para o calor.</b> Média de 169 bpm nos blocos = 89% FCmáx. Aceitável para Z4–Z5, mas monitorar nas próximas semanas se a combinação calor + intensidade acima do prescrito começa a elevar o custo de recuperação.\n\n<b>🏁 Impacto na Preparação</b>\n\nTreino de alto valor para o ciclo Montevideo. Os 6 blocos fortes totalizam 18 min de estímulo em zona I/Daniels — carga que, se periodizada com prudência, acelera a evolução do VDOT em direção ao 42 necessário para o sub-1h50. O padrão de manter ritmo nos últimos blocos (bloco 6 = 4:56/km, o mais rápido) sugere que sua capacidade anaeróbica de limiar está respondendo bem à base construída. A ressalva é que, se toda sessão de Fartlek ultrapassar a zona prescrita, você perde o controle da carga cumulativa — especialmente em semanas de volume ascendente.\n\n<b>📅 Próximo Treino Sugerido</b>\n\nConforme MPR para <b>27/05/2026</b>: <b>Rodagem de 50 min em Z1 (6:29–7:28/km)</b>.\nDado o drift cardiovascular de hoje e a intensidade acima do prescrito nos blocos 3–6, este treino regenerativo é especialmente importante — não force o ritmo. Alvo: FC estável abaixo de 155 bpm (81% FCmáx), pace entre 6:35–7:10/km em Recife com o calor matinal. Se amanhã a FC de repouso estiver >5 bpm acima da sua baseline, converse com o treinador sobre reduzir para 40 min. Foco: recuperação ativa + técnica Pose (queda frontal, apoio sob o quadril).\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: 7/10 — Estrutura executada com disciplina e progressão positiva nos blocos, mas 4 dos 6 blocos fortes ultrapassaram a Z4 prescrita em ~20–30 seg/km, comprometendo parcialmente a polarização da fase de base.\n",
+      "metrics_validation": "valid",
+      "metrics_errors": [],
+      "score": null,
+      "analysis_html": "<b>📊 Resumo do Treino</b>\nFelipe, fartlek estruturado 26/05 — 10,06 km em 61:01 com 6 blocos de 3 min forte + 3 min recuperação. Fase Base Aeróbica (sem 6–7 do ciclo Montevideo). VDOT 39 em cenário de calor extremo: 25°C / 96% UR às 04h40 em Recife — condições que penalizam pace e FC independentemente da forma.\n\n---\n\n<b>✅ Pontos Positivos</b>\n\n• <b>Execução estrutural perfeita:</b> 6/6 blocos fortes completados, aquecimento e desaquecimento respeitados. Duração total 61 min alinhada à prescrição MPR.\n\n• <b>Progressão inteligente nos blocos fortes:</b> Blocos 1–2 em 5:16–5:19/km (MPR Z4: 5:25–5:44), blocos 3–6 em 4:56–5:03/km — progressão natural e controlada, mostrando que o motor aerodinâmico engajou conforme o aquecimento. Ajustando calor (+19s/km), os blocos equivalem a <b>4:37–5:00/km em condições frias</b> — território de Zona I/limiar alto do VDOT 39 (4:45–5:15).\n\n• <b>Cadência consistente:</b> 178 spm estável nos blocos fortes (92) e recuperações (88–89) — execução técnica sólida, dentro dos princípios Pose Method prescritos.\n\n---\n\n<b>⚠️ Sinais de Alerta</b>\n\n• <b>Blocos fortes acima da Z4 MPR prescrita (5:25–5:44):</b> 4 dos 6 blocos executados em 4:56–5:03/km — entre 20–42s/km mais rápidos que o teto da prescrição. Mesmo com calor, o estímulo foi de Z5 MPR (5:05–5:18), não Z4. Não é erro grave em fartlek — mas sinaliza tendência de \"ir além\" que precisa ser monitorada no acúmulo das semanas.\n\n• <b>Drift cardiovascular confirmado (alto grau de confiança):</b> FC cresceu de 159→163 bpm (+2,5%) enquanto potência caiu 1,6% — padrão clássico de deriva em calor/umidade. Decoupling Watts/FC de 4,5% está no limite do \"excelente\" (<5%) — aceitável hoje, mas indica que o calor úmido está forçando o sistema cardiovascular mesmo sem aumento de esforço.\n\n• <b>FC nos blocos fortes em 169–172 bpm (89–91% FCmáx ref. 190):</b> Não é bandeira clínica (pico isolado, sem sustentação ≥98%), mas é intensidade real — contextualize que em dia frio esses blocos provavelmente seriam executados em FC 8–10 bpm menor com mesmo pace.\n\n---\n\n<b>🏁 Impacto na Preparação</b>\n\nTreino de alto valor neurológico e aeróbico para a Base Aeróbica. Os 18 min de blocos fortes equivalentes a Zona I/T+ em condições de frio constroem recrutamento de fibras rápidas e economia de corrida — fundação essencial para o limiar de junho e o ritmo de meia (5:14/km alvo Montevideo). A conclusão limpa do fartlek mantém a semana dentro da polarização 80/20: ~62% volume fácil (aquec+recup+desaq) vs. ~38% forte — ligeiramente mais intenso que o ideal, mas justificado pelo calor que \"encareceu\" fisiologicamente as recuperações.\n\n---\n\n<b>📅 Próximo Treino Sugerido</b>\n\nConforme MPR prescrita para <b>27/05/2026</b>:\n<b>RODAGEM 50 min — Z1 leve (6:29–7:28/km)</b>\n• Foco: recuperação ativa pós-fartlek, FC abaixo de 75% FCmáx (≤142 bpm)\n• Em Recife com calor similar, mire pace 7:00–7:20/km para manter FC na zona\n• Cadência: 176–180 spm mesmo no ritmo lento — Pose Method ativo\n• Se fadiga ou FC acima de 145 bpm nos primeiros 15 min → reduza para 40 min ou discuta ajuste com o treinador\n\n---\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: <b>8/10</b> — Estrutura e duração perfeitas; blocos fortes acima da Z4 MPR prescrita (Z5 real), mas calor extremo e progressão natural justificam parcialmente o desvio.\n",
       "classification": "planned_match",
       "matched_session_id": "c5627b19-faf5-5f85-871e-fad4d587193f",
       "extra_session_evaluation": null,
@@ -377,7 +375,19 @@
           "FC cresceu ≥3% enquanto pace/potência ficaram estáveis ou caíram."
         ]
       },
-      "generated_at": "2026-05-27T07:04:30.290641"
+      "avg_watts": 241.2,
+      "weighted_avg_watts": 244,
+      "stryd_metrics": {
+        "has_power": true,
+        "is_estimated_power": false,
+        "avg_watts": 241.2,
+        "normalized_power": 244,
+        "running_effectiveness": 0.011397,
+        "power_variability_pct": 1.16,
+        "pw_hr_classification": null,
+        "vi_classification": "very_stable"
+      },
+      "generated_at": "2026-05-27T09:30:08.053502"
     },
     {
       "id": "2026-05-24_morning_run_18635339847",

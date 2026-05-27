@@ -265,6 +265,29 @@
     .eff-arrow { font-size:0.85rem; margin-left:3px; }
     .eff-spark { flex-shrink:0; }
 
+    /* STRYD POWER SECTION */
+    #stryd-section { margin-bottom:24px; }
+    .stryd-header { font-size:0.62rem; font-weight:700; text-transform:uppercase; letter-spacing:0.7px; color:var(--text3); margin-bottom:12px; }
+    .stryd-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+    @media(max-width:600px) { .stryd-grid { grid-template-columns:1fr; } }
+    .stryd-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:20px 22px; border-top:3px solid var(--accent); }
+    .stryd-card-title { font-size:0.68rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; color:var(--text3); margin-bottom:14px; }
+    .stryd-rows { display:flex; flex-direction:column; gap:12px; }
+    .stryd-row { display:flex; align-items:center; gap:10px; }
+    .stryd-icon { font-size:0.95rem; width:22px; text-align:center; flex-shrink:0; }
+    .stryd-label { flex:1; font-size:0.74rem; color:var(--text2); }
+    .stryd-val { font-size:1.0rem; font-weight:800; }
+    .stryd-badge { font-size:0.62rem; font-weight:700; padding:2px 8px; border-radius:20px; text-transform:uppercase; letter-spacing:0.4px; }
+    .stryd-badge.excellent  { background:rgba(34,197,94,0.12);  color:var(--green2);  border:1px solid rgba(34,197,94,0.25); }
+    .stryd-badge.acceptable { background:rgba(234,179,8,0.12);  color:var(--yellow);  border:1px solid rgba(234,179,8,0.25); }
+    .stryd-badge.attention  { background:rgba(239,68,68,0.12);  color:var(--red);     border:1px solid rgba(239,68,68,0.25); }
+    .stryd-badge.very_stable{ background:rgba(34,197,94,0.12);  color:var(--green2);  border:1px solid rgba(34,197,94,0.25); }
+    .stryd-badge.stable     { background:rgba(59,130,246,0.12); color:var(--accent2); border:1px solid rgba(59,130,246,0.25); }
+    .stryd-badge.variable   { background:rgba(234,179,8,0.12);  color:var(--yellow);  border:1px solid rgba(234,179,8,0.25); }
+    .stryd-badge.high       { background:rgba(239,68,68,0.12);  color:var(--red);     border:1px solid rgba(239,68,68,0.25); }
+    .stryd-source { font-size:0.58rem; color:var(--text3); margin-top:10px; border-top:1px solid var(--border); padding-top:8px; }
+    .stryd-estimated { color:var(--yellow); }
+
     /* CHART 80/20 */
     .chart-card-wide { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:20px 22px; margin-bottom:24px; }
     .chart-wrap-tall { position:relative; height:240px; }
@@ -378,6 +401,9 @@
 
     <!-- EFFICIENCY CARD -->
     <div class="efficiency-card" id="efficiency-card"></div>
+
+    <!-- STRYD POWER CARDS (hidden when no power data) -->
+    <div id="stryd-section" style="display:none"></div>
 
     <!-- CHART 80/20 -->
     <div class="chart-card-wide" id="chart-8020-card" style="display:none">
@@ -640,6 +666,102 @@
         <div class="semaforo-status">${bandeira?'Alerta':'OK'}</div>
         <div class="semaforo-sub">Último alerta nos últimos 28d</div>
         ${bandeira?'<div class="semaforo-aviso">⚠️ Consulte um profissional. O Coach VDOT não substitui avaliação médica.</div>':''}
+      </div>`;
+  }
+
+  /* ── Stryd Power Cards ───────────────────────────────── */
+  function renderStryd(analyses) {
+    const section = document.getElementById('stryd-section');
+    if (!section) return;
+
+    // Most recent non-swim run that has real Stryd power data
+    const strydRuns = analyses.filter(a =>
+      (a.sport || 'run').toLowerCase() !== 'swim' &&
+      a.stryd_metrics != null &&
+      a.stryd_metrics.has_power === true
+    );
+
+    if (!strydRuns.length) { section.style.display = 'none'; return; }
+
+    const a  = strydRuns[0]; // analyses are sorted newest-first
+    const sm = a.stryd_metrics;
+    const da = a.drift_analysis;
+
+    // Pw:HR decoupling — source: drift_analysis (calculated by drift_analyzer.py)
+    const pwhr    = safeNum(da != null ? da.pw_hr_decoupling_pct : null, -10, 50, a.id, 'pw_hr_decoupling_pct');
+    const pwhrCls = pwhr == null ? null : pwhr < 3.0 ? 'excellent' : pwhr < 5.0 ? 'acceptable' : 'attention';
+    const pwhrLbl = { excellent:'Excelente', acceptable:'Aceitável', attention:'Atenção' };
+    const pwhrColor = pwhrCls === 'excellent' ? 'var(--green)' : pwhrCls === 'attention' ? 'var(--red)' : 'var(--yellow)';
+
+    // Running Effectiveness (m·s⁻¹·W⁻¹)
+    const re = safeNum(sm.running_effectiveness, 0.004, 0.030, a.id, 'running_effectiveness');
+
+    // Power values
+    const avgW  = safeNum(sm.avg_watts,          50, 600, a.id, 'avg_watts');
+    const npW   = safeNum(sm.normalized_power,   50, 600, a.id, 'normalized_power');
+    const vi    = safeNum(sm.power_variability_pct, 0, 40, a.id, 'power_variability_pct');
+    const viCls = sm.vi_classification || null;
+    const viLbl = { very_stable:'Muito Estável', stable:'Estável', variable:'Variável', high:'Alta Variação' };
+    const viColor = (viCls === 'very_stable' || viCls === 'stable') ? 'var(--green)' :
+                    viCls === 'high' ? 'var(--red)' : 'var(--yellow)';
+
+    const isEst    = sm.is_estimated_power === true;
+    const dateLabel = a.date_display || a.date || '';
+    const actLabel  = a.activity_name || 'atividade';
+
+    function badge(cls, lbl) {
+      if (!cls) return '';
+      return `<span class="stryd-badge ${cls}">${lbl || cls.replace(/_/g,' ')}</span>`;
+    }
+
+    section.style.display = 'block';
+    section.innerHTML = `
+      <div class="stryd-header">⚡ Análise de Potência Stryd — ${dateLabel}</div>
+      <div class="stryd-grid">
+
+        <div class="stryd-card">
+          <div class="stryd-card-title">🫁 Eficiência Aeróbica</div>
+          <div class="stryd-rows">
+            <div class="stryd-row">
+              <div class="stryd-icon">💓</div>
+              <div class="stryd-label">Desacoplamento Pw:HR</div>
+              <div class="stryd-val" style="color:${pwhrColor}">${pwhr != null ? pwhr.toFixed(1)+'%' : '—'}</div>
+              ${badge(pwhrCls, pwhrLbl[pwhrCls])}
+            </div>
+            <div class="stryd-row">
+              <div class="stryd-icon">⚙️</div>
+              <div class="stryd-label">Running Effectiveness <span style="color:var(--text3);font-size:0.64rem">m/s/W</span></div>
+              <div class="stryd-val" style="color:var(--accent2)">${re != null ? re.toFixed(4) : '—'}</div>
+            </div>
+          </div>
+          <div class="stryd-source${isEst ? ' stryd-estimated' : ''}">
+            ${isEst ? '⚠ Potência estimada pelo Strava (sem sensor)' : '● Sensor Stryd (potência real)'}
+          </div>
+        </div>
+
+        <div class="stryd-card" style="border-top-color:var(--orange)">
+          <div class="stryd-card-title">🔋 Estabilidade de Potência</div>
+          <div class="stryd-rows">
+            <div class="stryd-row">
+              <div class="stryd-icon">⚡</div>
+              <div class="stryd-label">Potência Média</div>
+              <div class="stryd-val" style="color:var(--text)">${avgW != null ? Math.round(avgW)+' W' : '—'}</div>
+            </div>
+            <div class="stryd-row">
+              <div class="stryd-icon">📊</div>
+              <div class="stryd-label">Potência Normalizada (NP)</div>
+              <div class="stryd-val" style="color:var(--text)">${npW != null ? Math.round(npW)+' W' : '—'}</div>
+            </div>
+            <div class="stryd-row">
+              <div class="stryd-icon">〰️</div>
+              <div class="stryd-label">Índice de Variabilidade (VI)</div>
+              <div class="stryd-val" style="color:${viColor}">${vi != null ? vi.toFixed(1)+'%' : '—'}</div>
+              ${badge(viCls, viLbl[viCls])}
+            </div>
+          </div>
+          <div class="stryd-source">Baseado em: ${actLabel}</div>
+        </div>
+
       </div>`;
   }
 
@@ -988,6 +1110,7 @@
     const cycleAnalyses = allAnalyses.filter(a=>a.date>=CYCLE_START);
     safeRender('renderStats',      ()=>renderStats(cycleAnalyses));
     safeRender('renderEfficiency', ()=>renderEfficiency(allAnalyses));
+    safeRender('renderStryd',      ()=>renderStryd(allAnalyses));
     // IMPORTANTE: renderCharts() chama destroyCharts() que faz `charts = {}`,
     // o que apagaria o chart.polar. Por isso renderPolarizacao vem DEPOIS.
     safeRender('renderCharts',       ()=>renderCharts(cycleAnalyses));
