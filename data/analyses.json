@@ -6,7 +6,7 @@
   "tune_up_race": "Meia Maratona de Montevideo — 09/08/2026",
   "tune_up_goal": "Sub-1h50",
   "cycle_start": "2026-04-16",
-  "last_updated": "2026-05-29T06:42:09.089580",
+  "last_updated": "2026-05-29T06:42:16.142054",
   "total_analyses": 34,
   "analyses": [
     {
@@ -29,7 +29,7 @@
       "humidity_pct": 86,
       "dew_point_c": 21.2,
       "heat_index_c": 23.6,
-      "weather_source": "open-meteo",
+      "weather_source": "cache",
       "total_ascent_m": 20.0,
       "total_descent_m": null,
       "training_stress_score": null,
@@ -283,11 +283,11 @@
         "zona_prescrita": "E",
         "pace_prescrito_min_km": "6:05-6:29",
         "pace_executado_min_km": "6:04",
-        "aderencia_pace_pct": 98,
+        "aderencia_pace_pct": 94,
         "distribuicao_intensidade": {
-          "facil_pct": 95.0,
-          "moderado_pct": 5.0,
-          "forte_pct": 0.0
+          "facil_pct": 85.0,
+          "moderado_pct": 12.0,
+          "forte_pct": 3.0
         },
         "gray_zone_alerta": false,
         "deriva_cardiaca_pct": 1.4,
@@ -295,15 +295,15 @@
         "cadencia_media_spm": 177,
         "ajuste_calor_segundos_km": 14,
         "pace_equivalente_frio_min_km": "5:50",
-        "limitador_principal": "clima",
+        "limitador_principal": "nenhum",
         "bandeira_clinica": null,
-        "nota_aderencia": 9,
+        "nota_aderencia": 8,
         "confianca_analise": "alta"
       },
       "metrics_validation": "valid",
       "metrics_errors": [],
-      "score": 9,
-      "analysis_html": "<b>📊 Resumo do Treino</b>\nFelipe, rodagem de base aeróbica de 90 minutos / 14,81 km às 04:43 em Recife — condições quentes e úmidas (24°C, 86% umidade). Pace médio de 6:04/km executado com consistência notável, dentro da Z2 MPR (6:05–6:29) e alinhado à zona E do VDOT 39 (5:58–6:40). Com ajuste de calor de 14s/km, o esforço equivale a ~5:50/km em condições neutras — excelente para a fase de base aeróbica.\n\n<b>✅ Pontos Positivos</b>\n• <b>Aderência ao plano MPR exemplar:</b> 90 minutos cumpridos com pace médio de 6:04/km — praticamente no limite superior da Z2 prescrita (6:05–6:29). A sessão foi realizada 1 dia antes do planejado e a qualidade do estímulo foi integralmente preservada.\n• <b>Controle aeróbico de alta qualidade:</b> Decoupling Pace/FC de apenas 1,4% e Potência/FC de 2,5% — ambos muito abaixo do limiar de alerta (5%). FC média de 151 bpm = 79,5% da FCmáx referência (190 bpm), perfeitamente dentro da zona aeróbica. A potência ficou estável em 242W nas duas metades, com FC subindo apenas 4 bpm — sinal claro de eficiência cardiovascular preservada mesmo no calor.\n• <b>Splits estáveis e negativos no trecho intermediário:</b> Quilômetros 1–14 variaram entre 5:50 e 6:13/km sem oscilações bruscas. A progressão natural de pace (voltou a 6:02–6:04 após voltas 10–11 mais rápidas) mostra consciência de ritmo e boa gestão de esforço para a fase de base.\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>Cadência abaixo do ideal:</b> 177 spm (média) está levemente abaixo dos 180 spm recomendados pelo Pose Method / Daniels. Atenção especial: os splits registram 86–89 spm — esses valores parecem ser leituras em <i>passos por minuto por pé</i> (ppm unilateral), o que equivale a 172–178 spm bilateral. Vale confirmar a configuração do Garmin. Se a leitura for de fato bilateral, trabalhar drills de cadência nas próximas sessões.\n• <b>Calor e umidade como variável de risco acumulativo:</b> Treinar em Recife às 04:40 já é estratégico, mas 24°C + 86% de umidade geram stress térmico residual. Não é alerta agudo, mas requer monitoramento contínuo da FC de repouso e do sono para não acumular fadiga oculta ao longo do bloco.\n\n<b>🏁 Impacto na Preparação</b>\nTreino de altíssimo valor para o ciclo de base rumo a Montevideo (09/08). A sessão consolidou adaptação aeróbica real: 90 minutos de volume contínuo com FC controlada, potência estável e zero drift — exatamente o estímulo que constrói a base oxidativa necessária para sustentar o sub-1h50 (VDOT 42). O decoupling baixíssimo indica que o coração está respondendo com eficiência crescente, sinal de que o VDOT atual de 39 tem espaço para crescer nos próximos ciclos.\n\n<b>📅 Próximo Treino Sugerido</b>\nConforme MPR prescrita: <b>2026-05-31 — Rodagem 45 min em Z1 (6:29–7:28/km)</b>.\nApós os 90 minutos de hoje, esta é a sessão de recuperação ativa ideal. Mantenha FC abaixo de ~75% FCmáx (≤142 bpm). Se a FC de repouso amanhã estiver elevada (+5 bpm acima do basal) ou o sono tiver sido comprometido pelo calor, converse com o treinador sobre reduzir para 35 min ou substituir por natação leve — o estímulo de recuperação não precisa ser forçado.\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: 9/10 — Sessão executada dentro da zona MPR prescrita, com controle aeróbico exemplar em condições climáticas adversas; apenas a cadência merece atenção pontual.\n",
+      "score": 8,
+      "analysis_html": "<b>📊 Resumo do Treino</b>\nFelipe rodou 14,81 km em 90 min (pace médio 6:04/km) em percurso plano — sessão de PERCURSO PLANO prescrita para 2026-05-30, executada em 2026-05-29 como ajuste normal de agenda. Com ajuste de calor de 14s/km (Recife, 24°C/86% umidade às 04:40h), o pace equivalente em condição fria seria ~5:50/km, posicionando o esforço real dentro da zona de Maratona (M) do VDOT 39. Sessão concluída com sucesso — estímulo aeróbico preservado.\n\n<b>✅ Pontos Positivos</b>\n• <b>Aderência à zona MPR satisfatória:</b> Pace médio 6:04/km está na fronteira superior da Z2 MPR (6:05–6:29/km), equivalendo a ~5:50/km corrigido pelo calor — confortavelmente dentro do espírito da sessão e alinhado à zona M/E do VDOT 39.\n• <b>Decoupling excepcional:</b> Pa:Hr de 1,4% e Pw:Hr de 2,5% — ambos muito abaixo do limiar crítico de 5%. Potência estável (242W → 242W) com FC controlada confirma excelente eficiência aeróbica para a fase de base. Adaptação cardiovascular em dia.\n• <b>Consistência de cadência e ritmo:</b> 177 spm estável ao longo dos 14 km com mínima variação de pace entre as voltas centrais (6:00–6:07/km). Execução disciplinada, sem oscilações que indiquem déficit de atenção técnica ou desgaste prematuro.\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>Cadência levemente abaixo do ideal:</b> 177 spm está um passo abaixo da faixa 178–182 spm recomendada pelo Pose Method para corridas de base. Não é crítico, mas incorporate drills de cadência (metrônomo a 180 spm) nas próximas saídas.\n• <b>Voltas 10–11 com leve aceleração espontânea:</b> Splits de 5:56 e 5:51/km (vs. média de 6:04) indicam que o pace deslizou para Z3 MPR momentaneamente. Em treinos Z2, mantenha o freio mesmo quando a percepção de esforço convide a acelerar — zona cinza é inimiga do 80/20.\n\n<b>🏁 Impacto na Preparação</b>\nSessão de 90 min com decoupling <3% e potência estável é exatamente o estímulo correto para consolidar a base aeróbica rumo a Montevideo (09/08). Cada longão limpo nesta fase deposita \"capital aeróbico\" que o VDOT converte em capacidade de sustentar ritmo de prova em agosto. Estás acumulando a base certa, no volume certo, com controle de intensidade que protege a consistência de treino — principal ativo desta fase.\n\n<b>📅 Próximo Treino Sugerido</b>\nConforme MPR prescrita: <b>RODAGEM 45 min — Z1 (6:29–7:28/km)</b> em 2026-05-31.\nFoco: regeneração ativa após 90 min de ontem. Mantenha o pace na faixa leve, FC abaixo de ~143 bpm (~75% FCmáx). Se o calor matinal repetir (>23°C/umidade alta), priorize percepção de esforço conversacional sobre o pace no relógio. Não há necessidade de adaptação — sessão curta e leve é exatamente o que o corpo pede agora.\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: 8/10 — Sessão concluída dentro da duração prescrita e zona-alvo correta; pequeno deslize de pace nas voltas 10–11 e cadência 1 spm abaixo do ideal impedem nota máxima.\n",
       "classification": "adjusted_within_microcycle",
       "matched_session_id": "9a5e1cdc-d4b9-5be4-b33c-a84e9be6756c",
       "extra_session_evaluation": null,
@@ -357,7 +357,7 @@
         "pw_hr_classification": null,
         "vi_classification": "very_stable"
       },
-      "generated_at": "2026-05-29T06:42:09.089486"
+      "generated_at": "2026-05-29T06:42:16.141985"
     },
     {
       "id": "2026-05-28_morning_run_18685953577",
