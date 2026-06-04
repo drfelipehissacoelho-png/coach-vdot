@@ -6,9 +6,171 @@
   "tune_up_race": "Meia Maratona de Montevideo — 09/08/2026",
   "tune_up_goal": "Sub-1h50",
   "cycle_start": "2026-04-16",
-  "last_updated": "2026-05-29T06:42:16.142054",
-  "total_analyses": 34,
+  "last_updated": "2026-06-04T14:02:35.528264",
+  "total_analyses": 35,
   "analyses": [
+    {
+      "id": "2026-06-03_2026_06_03_recife_co_34224958842026",
+      "provider": "garmin",
+      "provider_activity_id": "3422495884-20260603182748",
+      "date": "2026-06-03",
+      "date_display": "03/06/2026",
+      "source": "garmin",
+      "sport": "running",
+      "is_treadmill": false,
+      "activity_name": "2026-06-03_Recife_-_Corrida_03_06_2026_23130194507.fit",
+      "distance_km": 9.28,
+      "duration": "54:40",
+      "avg_pace": "N/D",
+      "avg_heart_rate": 157,
+      "max_heart_rate": 171,
+      "avg_cadence_spm": null,
+      "temperature_c": 27,
+      "humidity_pct": 87,
+      "dew_point_c": 23.1,
+      "heat_index_c": 25.4,
+      "weather_source": "cache",
+      "total_ascent_m": 14,
+      "total_descent_m": 11,
+      "training_stress_score": null,
+      "aerobic_training_effect": 3.1,
+      "anaerobic_training_effect": 0.0,
+      "laps": [
+        {
+          "lap_number": 1,
+          "distance_km": 1.0,
+          "duration": "06:11",
+          "avg_pace": "N/D",
+          "avg_heart_rate": 131,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 2,
+          "distance_km": 1.0,
+          "duration": "05:58",
+          "avg_pace": "N/D",
+          "avg_heart_rate": 149,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 3,
+          "distance_km": 1.0,
+          "duration": "05:54",
+          "avg_pace": "N/D",
+          "avg_heart_rate": 155,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 4,
+          "distance_km": 1.0,
+          "duration": "05:53",
+          "avg_pace": "N/D",
+          "avg_heart_rate": 156,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 5,
+          "distance_km": 1.0,
+          "duration": "05:50",
+          "avg_pace": "N/D",
+          "avg_heart_rate": 160,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 6,
+          "distance_km": 1.0,
+          "duration": "05:50",
+          "avg_pace": "N/D",
+          "avg_heart_rate": 163,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 7,
+          "distance_km": 1.0,
+          "duration": "05:50",
+          "avg_pace": "N/D",
+          "avg_heart_rate": 166,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 8,
+          "distance_km": 1.0,
+          "duration": "05:48",
+          "avg_pace": "N/D",
+          "avg_heart_rate": 166,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 9,
+          "distance_km": 0.46,
+          "duration": "02:41",
+          "avg_pace": "N/D",
+          "avg_heart_rate": 165,
+          "avg_cadence_spm": null
+        },
+        {
+          "lap_number": 10,
+          "distance_km": 0.82,
+          "duration": "04:40",
+          "avg_pace": "N/D",
+          "avg_heart_rate": 167,
+          "avg_cadence_spm": null
+        }
+      ],
+      "metrics": {
+        "vdot_referencia": 39,
+        "tipo_treino_detectado": "rodagem",
+        "zona_prescrita": "mista",
+        "pace_prescrito_min_km": null,
+        "pace_executado_min_km": "5:54",
+        "aderencia_pace_pct": null,
+        "distribuicao_intensidade": {
+          "facil_pct": 10.0,
+          "moderado_pct": 75.0,
+          "forte_pct": 15.0
+        },
+        "gray_zone_alerta": true,
+        "deriva_cardiaca_pct": 27.5,
+        "eficiencia_aerobica": null,
+        "cadencia_media_spm": null,
+        "ajuste_calor_segundos_km": 0,
+        "pace_equivalente_frio_min_km": "N/D",
+        "limitador_principal": "deriva_cardiaca",
+        "bandeira_clinica": null,
+        "nota_aderencia": 7,
+        "confianca_analise": "media"
+      },
+      "metrics_validation": "valid",
+      "metrics_errors": [],
+      "score": null,
+      "analysis_html": "<b>📊 Resumo do Treino</b>\nSessão extra (não prescrita) de 9,28 km em 54:40, realizada às 18h27 em Recife sob calor intenso (27°C / 87% umidade). Pace médio estimado ~5:54/km, que enquadra o esforço na <b>Z3 (Moderado: 5:41–6:03)</b>. FC média de 157 bpm (83% FCmáx ref.) com deriva cardíaca progressiva e clara ao longo dos splits — padrão esperado no calor úmido.\n\n---\n\n<b>✅ Pontos Positivos</b>\n• <b>Consistência de pace:</b> Voltas 3–8 mantidas entre 5:48–5:54/km — execução ritmicamente estável, sem acelerações desnecessárias.\n• <b>Training Effect Aeróbico 3.1/5.0:</b> Estímulo aeróbico real e significativo; treino cumpriu função de volume com qualidade moderada.\n• <b>Terreno plano (14m ganho):</b> Condições que permitem leitura limpa de pace e FC, sem distorções de altimetria.\n\n---\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>Deriva cardíaca acentuada:</b> FC saiu de 131 bpm (V1) para 167 bpm (V10) — elevação de ~36 bpm ao longo de ~9 km. Em Z3 no calor, isso indica <b>acúmulo de estresse cardiovascular</b> acima do esperado para rodagem; a última volta chegou a 88% FCmáx ref.\n• <b>Horário + condições térmicas:</b> Treino às 18h27 em Recife (27°C / UR 87% / ponto de orvalho 23°C) é das combinações mais adversas. O esforço percebido foi certamente maior do que o pace sugere — monitorar RPE e qualidade do sono/recuperação.\n• <b>Sessão extra sem prescrição:</b> Com deriva cardíaca desta magnitude, verificar se há sinais de fadiga no treino seguinte (FC elevada em Z1/Z2 ou RPE desproporcional).\n\n---\n\n<b>🏁 Impacto na Preparação</b>\nComo sessão extra, adicionou ~55 min de volume aeróbico em Z3 — contribui para o acúmulo semanal, mas <b>não substitui nenhuma sessão do MPR</b>. O custo de recuperação no calor úmido é real: os próximos 24–36h devem ser tratados com prioridade para recuperação. Se o próximo treino prescrito for de qualidade (limiar ou intervalado), avalie reduzir o volume ou adiar um dia se a FC estiver acima do padrão no aquecimento.\n\n---\n\n<b>📅 Próximo Treino Sugerido</b>\n<b>Regenerativo ou Z1/Z2 leve</b> — 6 a 8 km, pace <b>6:29–7:00/km</b>, FC abaixo de 75% FCmáx ref. (≤142 bpm). Foco: flush metabólico, sem nenhuma pressão de pace. Se possível, horário mais fresco (antes das 7h ou após as 20h). Confirmar que a FC está comportada antes de executar qualquer sessão de qualidade.\n\n---\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: <b>7/10</b> — Sessão extra bem executada tecnicamente, mas o custo térmico/cardíaco exige atenção à recuperação antes do próximo treino prescrito.\n",
+      "classification": "extra_session",
+      "matched_session_id": null,
+      "extra_session_evaluation": {
+        "activity_id": "2026-06-03_Recife_-_Corrida_03_06_2026_23130194507.fit",
+        "date": "2026-06-03",
+        "classification": "neutral",
+        "reason": "Sessão extra em zona moderada/indeterminada — efeito neutro.",
+        "impact_on_next_sessions": "Acompanhar deriva cardíaca e RPE no treino seguinte; ajustar se houver sinais de fadiga acumulada."
+      },
+      "match_confidence": "medium",
+      "match_confidence_reasons": [
+        "nenhuma prescrição disponível na janela próxima"
+      ],
+      "match_score": null,
+      "running_dynamics": {
+        "ground_contact_time_ms": null,
+        "vertical_oscillation_cm": null,
+        "vertical_ratio_pct": null,
+        "stride_length_m": null,
+        "gct_balance_pct": null
+      },
+      "drift_analysis": null,
+      "avg_watts": null,
+      "weighted_avg_watts": null,
+      "stryd_metrics": null,
+      "generated_at": "2026-06-04T14:02:35.528246"
+    },
     {
       "id": "2026-05-29_morning_run_18699684774",
       "provider": "strava",
