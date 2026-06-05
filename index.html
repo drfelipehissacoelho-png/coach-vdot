@@ -1033,7 +1033,7 @@
         scales:{
           x:{ticks:{color:TICK_COLOR,font:{size:9},maxRotation:45}, grid:{color:GRID_COLOR}},
           yL:{type:'linear', position:'left',  min:0, max:110, ticks:{color:TICK_COLOR,font:{size:9},callback:v=>v+'%'}, grid:{color:GRID_COLOR}},
-          yR:{type:'linear', position:'right', min:0, max:25,  ticks:{color:TICK_COLOR,font:{size:9},callback:v=>v+'%'}, grid:{drawOnChartArea:false}}
+          yR:{type:'linear', position:'right', min:0, max:Math.max(30,...derivas.filter(v=>v!=null))+5, ticks:{color:TICK_COLOR,font:{size:9},callback:v=>v+'%'}, grid:{drawOnChartArea:false}}
         }
       }
     });
