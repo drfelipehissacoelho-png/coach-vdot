@@ -412,13 +412,19 @@
     </div>
 
     <!-- CHARTS -->
-    <div class="charts-row">
-      <div class="chart-card"><div class="chart-title">📏 Distância por Treino (km)</div><div class="chart-wrap"><canvas id="chartDist"></canvas></div></div>
-      <div class="chart-card"><div class="chart-title">📈 Tendência de Pace (/km)</div><div class="chart-wrap"><canvas id="chartPace"></canvas></div></div>
+    <!-- Volume semanal (Strava-style) + Potência Stryd -->
+    <div class="charts-row" id="charts-weekly-row">
+      <div class="chart-card"><div class="chart-title">📅 Volume Semanal (km)</div><div class="chart-wrap"><canvas id="chartWeeklyVol"></canvas></div></div>
+      <div class="chart-card" id="chart-power-card" style="display:none"><div class="chart-title">⚡ Potência Stryd por Treino (W)</div><div class="chart-wrap"><canvas id="chartPower"></canvas></div></div>
+      <div class="chart-card" id="chart-pace-alt-card"><div class="chart-title">📈 Tendência de Pace (/km)</div><div class="chart-wrap"><canvas id="chartPace"></canvas></div></div>
     </div>
     <div class="charts-row">
+      <div class="chart-card"><div class="chart-title">📏 Distância por Treino (km)</div><div class="chart-wrap"><canvas id="chartDist"></canvas></div></div>
       <div class="chart-card"><div class="chart-title">❤️ FC Média por Treino (bpm)</div><div class="chart-wrap"><canvas id="chartHR"></canvas></div></div>
+    </div>
+    <div class="charts-row">
       <div class="chart-card"><div class="chart-title">🎯 Aderência × 🫀 Deriva Cardíaca</div><div class="chart-wrap"><canvas id="chartCad"></canvas></div></div>
+      <div class="chart-card" style="display:none" id="chart-placeholder"></div>
     </div>
 
     <!-- FILTER + LIST -->
@@ -920,7 +926,10 @@
     }
   };
 
-  function destroyCharts() { Object.values(charts).forEach(c=>c&&c.destroy()); charts={}; }
+  function destroyCharts() {
+    // Destrói apenas os charts de renderCharts (não o polar do 80/20)
+    ['dist','pace','hr','cad','weeklyVol','power'].forEach(k=>{ if(charts[k]){charts[k].destroy();delete charts[k];} });
+  }
 
   function renderCharts(analyses) {
     destroyCharts();
@@ -933,7 +942,9 @@
     // safePace: "46:25/km" → null (gap), keeps Y-axis sane for all real workouts
     const paces      = data.map(a=>{ if(!isRun(a)) return null; const p=safePace(a.avg_pace,a.id,'avg_pace'); return p!=null?+p.toFixed(2):null; });
     const hrs        = data.map(a=>safeNum(a.avg_heart_rate,40,220,a.id,'avg_heart_rate'));
-    const aderencias = data.map(a=>safeNum(a.metrics?.aderencia_pace_pct,0,150,a.id,'aderencia_pace_pct'));
+    // Aderência: cap interno 110 para não explodir o eixo Y; tooltip mostra valor real
+    const aderencias = data.map(a=>{ const v=safeNum(a.metrics?.aderencia_pace_pct,0,150,a.id,'aderencia_pace_pct'); return v!=null?Math.min(v,110):null; });
+    const aderenciasRaw = data.map(a=>safeNum(a.metrics?.aderencia_pace_pct,0,150,a.id,'aderencia_pace_pct'));
     const derivas    = data.map(a=>safeNum(a.metrics?.deriva_cardiaca_pct,-10,50,a.id,'deriva_cardiaca_pct'));
 
     const paceTooltip = {
@@ -954,6 +965,56 @@
       options:{...baseOpts,...(extraOpts||{}),scales:{...baseOpts.scales,y:{...baseOpts.scales.y,reverse:!!rev}}}
     });
 
+    // ── Volume Semanal (últimas 10 semanas, Strava-style) ────────
+    (function(){
+      const msWeek = 7*24*3600*1000;
+      const now = new Date();
+      const todayStr = now.toISOString().slice(0,10);
+      // Início da semana corrente (segunda-feira)
+      const dow = (now.getDay()+6)%7; // 0=seg
+      const weekStart0 = new Date(now); weekStart0.setDate(now.getDate()-dow); weekStart0.setHours(0,0,0,0);
+      const wkLabels=[], wkKm=[], wkCnt=[];
+      for(let i=9;i>=0;i--){
+        const ws=new Date(weekStart0); ws.setDate(weekStart0.getDate()-i*7);
+        const we=new Date(ws); we.setDate(ws.getDate()+6);
+        const wsS=ws.toISOString().slice(0,10), weS=we.toISOString().slice(0,10);
+        const wEntries=analyses.filter(a=>a.date&&a.date>=wsS&&a.date<=weS&&(a.sport||'run').toLowerCase()!=='swim');
+        const km=wEntries.reduce((s,a)=>s+(a.distance_km||0),0);
+        wkLabels.push(ws.toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit'}));
+        wkKm.push(km>0?Math.round(km*10)/10:null);
+        wkCnt.push(wEntries.length);
+      }
+      if(charts.weeklyVol) charts.weeklyVol.destroy();
+      charts.weeklyVol = new Chart(document.getElementById('chartWeeklyVol'),{
+        type:'bar',
+        data:{labels:wkLabels,datasets:[{data:wkKm,backgroundColor:'#6366f128',borderColor:'#6366f1',borderWidth:1.5,borderRadius:5,spanGaps:true}]},
+        options:{...baseOpts,
+          plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>`${ctx.parsed.y??0} km (${wkCnt[ctx.dataIndex]} treino${wkCnt[ctx.dataIndex]!==1?'s':''})` }}},
+          scales:{...baseOpts.scales,y:{...baseOpts.scales.y,ticks:{...baseOpts.scales.y?.ticks,callback:v=>v+'km'}}}
+        }
+      });
+    })();
+
+    // ── Potência Stryd (quando disponível) ──────────────────────
+    (function(){
+      const pwrData = data.map(a=>a.avg_watts?Math.round(a.avg_watts):null);
+      const hasPower = pwrData.some(v=>v!=null);
+      const powerCard = document.getElementById('chart-power-card');
+      const paceAltCard = document.getElementById('chart-pace-alt-card');
+      if(hasPower){
+        powerCard.style.display=''; paceAltCard.style.display='none';
+        if(charts.power) charts.power.destroy();
+        charts.power = new Chart(document.getElementById('chartPower'),{
+          type:'line',
+          data:{labels,datasets:[{data:pwrData,borderColor:'#a855f7',backgroundColor:'#a855f715',borderWidth:2,pointRadius:4,pointBackgroundColor:'#a855f7',fill:true,tension:0.35,spanGaps:true}]},
+          options:{...baseOpts,plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>`${ctx.parsed.y??0} W`}}},
+            scales:{...baseOpts.scales,y:{...baseOpts.scales.y,ticks:{...baseOpts.scales.y?.ticks,callback:v=>v+'W'}}}}
+        });
+      } else {
+        powerCard.style.display='none'; paceAltCard.style.display='';
+      }
+    })();
+
     charts.dist = bar ('chartDist', dists, '#3b82f6');
     charts.pace = line('chartPace', paces, '#f97316', true, paceTooltip);
     charts.hr   = line('chartHR',   hrs,   '#ef4444', false);
@@ -965,10 +1026,13 @@
       ]},
       options:{
         responsive:true, maintainAspectRatio:false,
-        plugins:{legend:{display:true, position:'top', labels:{color:'#94a3b8', font:{size:9}, boxWidth:12}}},
+        plugins:{
+          legend:{display:true, position:'top', labels:{color:'#94a3b8', font:{size:9}, boxWidth:12}},
+          tooltip:{callbacks:{label:ctx=>{ if(ctx.datasetIndex===0){ const real=aderenciasRaw[ctx.dataIndex]; return 'Aderência: '+(real!=null?real+'%':'N/D'); } return 'Deriva: '+(ctx.parsed.y!=null?ctx.parsed.y+'%':'N/D'); }}}
+        },
         scales:{
           x:{ticks:{color:TICK_COLOR,font:{size:9},maxRotation:45}, grid:{color:GRID_COLOR}},
-          yL:{type:'linear', position:'left',  min:0, max:100, ticks:{color:TICK_COLOR,font:{size:9},callback:v=>v+'%'}, grid:{color:GRID_COLOR}},
+          yL:{type:'linear', position:'left',  min:0, max:110, ticks:{color:TICK_COLOR,font:{size:9},callback:v=>v+'%'}, grid:{color:GRID_COLOR}},
           yR:{type:'linear', position:'right', min:0, max:25,  ticks:{color:TICK_COLOR,font:{size:9},callback:v=>v+'%'}, grid:{drawOnChartArea:false}}
         }
       }

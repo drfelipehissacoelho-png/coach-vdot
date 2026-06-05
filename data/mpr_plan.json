@@ -1,16 +1,11 @@
 {
-  "_comment": "Gerado automaticamente por parse_mpr_plan.py v2 — NÃO editar manualmente.",
-  "schema_version": 2,
-  "month": "2026-05",
-  "source_pdf": "Planilha - MPR maio.pdf",
-  "generated_at": "2026-05-13T07:30:56",
+  "_comment": "Gerado automaticamente a partir de Junho_2026_Planilha.md",
+  "schema_version": "2.0",
+  "month": "2026-06",
+  "source_pdf": "Junho_2026_Planilha.md",
+  "generated_at": "2026-06-04T17:09:30.041626",
   "athlete": "Felipe Hissa Coelho",
   "zones_mpr": {
-    "Z0": {
-      "label": "Caminhada",
-      "pace_min": "11:00",
-      "pace_max": "13:00"
-    },
     "Z1": {
       "label": "Leve",
       "pace_min": "6:29",
@@ -35,56 +30,32 @@
       "label": "Forte/2000m",
       "pace_min": "5:05",
       "pace_max": "5:18"
-    },
-    "Z6": {
-      "label": "1500m/Milha",
-      "pace_min": "5:01",
-      "pace_max": "5:14"
-    },
-    "Z7": {
-      "label": "800m/1000m",
-      "pace_min": "4:58",
-      "pace_max": "5:11"
-    },
-    "Z8": {
-      "label": "400m",
-      "pace_min": "4:31",
-      "pace_max": "4:43"
-    },
-    "Z9": {
-      "label": "200m",
-      "pace_min": "4:16",
-      "pace_max": "4:32"
-    },
-    "TIROS_2000M": {
-      "label": "Tiros 2000m",
-      "pace_min": "5:37",
-      "pace_max": "5:52"
     }
   },
   "sessions": [
     {
-      "date": "2026-05-05",
+      "date": "2026-06-02",
       "day_of_week": "Terça-Feira",
       "type": "SERIES",
-      "type_inferred": true,
+      "type_inferred": false,
       "zones": [
         "Z1",
-        "Z3"
+        "Z4"
       ],
-      "duration_min": 55,
+      "duration_min": 50,
       "duration_source": "explicit",
-      "distance_min_km": 8.17,
-      "distance_max_km": 9.0,
-      "structure": "• 15:00 Z1 - | • 30:00 Z3 - | • 10:00 Z1 -",
+      "distance_min_km": 7.66,
+      "distance_max_km": 8.41,
+      "structure": "• 15:00 Z1 | • 25:00 Z4 | • 10:00 Z1",
       "notes": null,
-      "id": "e3723e83-99d9-54bb-b39e-adb3ed771efb"
+      "status": "FALTOU",
+      "id": "a47d66ae-b067-5ef8-b7f5-11af8759c87e"
     },
     {
-      "date": "2026-05-06",
+      "date": "2026-06-03",
       "day_of_week": "Quarta-Feira",
       "type": "RODAGEM",
-      "type_inferred": true,
+      "type_inferred": false,
       "zones": [
         "Z1"
       ],
@@ -92,12 +63,13 @@
       "duration_source": "explicit",
       "distance_min_km": 6.59,
       "distance_max_km": 7.59,
-      "structure": "• 50:00 Z1 -",
+      "structure": "• 50:00 Z1 contínuo",
       "notes": null,
-      "id": "713c8fdf-d943-50a5-a55f-9240cd1b9517"
+      "status": "FALTOU",
+      "id": "19181439-95fd-52d4-a106-6e982cf8798f"
     },
     {
-      "date": "2026-05-07",
+      "date": "2026-06-04",
       "day_of_week": "Quinta-Feira",
       "type": "PERCURSO PLANO",
       "type_inferred": false,
@@ -106,14 +78,15 @@
       ],
       "duration_min": 49,
       "duration_source": "explicit",
-      "distance_min_km": null,
-      "distance_max_km": null,
-      "structure": "• 8000m Z2 -",
+      "distance_min_km": 8.0,
+      "distance_max_km": 8.0,
+      "structure": "• 8000m Z2",
       "notes": null,
-      "id": "8e14a89c-8e81-5855-bb42-41847691689b"
+      "status": "PENDENTE",
+      "id": "e6d2cbf9-1967-500a-aad5-b8651f4e3e27"
     },
     {
-      "date": "2026-05-09",
+      "date": "2026-06-06",
       "day_of_week": "Sábado",
       "type": "PERCURSO MISTO",
       "type_inferred": false,
@@ -124,15 +97,16 @@
       "duration_source": "explicit",
       "distance_min_km": 13.71,
       "distance_max_km": 14.59,
-      "structure": "• 01:30:00 Z2 -",
+      "structure": "• 1:30h Z2",
       "notes": null,
-      "id": "ec3619a9-adae-5e1e-a934-06c673d03181"
+      "status": "PENDENTE",
+      "id": "708c758f-a562-599c-9a82-977ccae2a46a"
     },
     {
-      "date": "2026-05-10",
+      "date": "2026-06-07",
       "day_of_week": "Domingo",
       "type": "RODAGEM",
-      "type_inferred": true,
+      "type_inferred": false,
       "zones": [
         "Z1"
       ],
@@ -140,113 +114,34 @@
       "duration_source": "explicit",
       "distance_min_km": 5.93,
       "distance_max_km": 6.84,
-      "structure": "• 45:00 Z1 -",
+      "structure": "• 45:00 Z1",
       "notes": null,
-      "id": "c3d619d4-bcdf-58e2-80d1-9a4a17d68764"
+      "status": "PENDENTE",
+      "id": "3e169355-6a76-5fe1-8977-bac56f14b739"
     },
     {
-      "date": "2026-05-12",
+      "date": "2026-06-09",
       "day_of_week": "Terça-Feira",
-      "type": "SERIES",
-      "type_inferred": true,
-      "zones": [
-        "Z1",
-        "Z3"
-      ],
-      "duration_min": 60,
-      "duration_source": "sum_bullets",
-      "distance_min_km": null,
-      "distance_max_km": null,
-      "structure": "• 15:00 Z1 - | • 35:00 Z3 - | • 10:00 Z1 -",
-      "notes": null,
-      "id": "b1285bf3-f8d4-5c17-92e2-4c68b2842272"
-    },
-    {
-      "date": "2026-05-13",
-      "day_of_week": "Quarta-Feira",
-      "type": "RODAGEM",
-      "type_inferred": true,
-      "zones": [
-        "Z1"
-      ],
-      "duration_min": 50,
-      "duration_source": "sum_bullets",
-      "distance_min_km": 6.59,
-      "distance_max_km": 7.59,
-      "structure": "• 50:00 Z1 -",
-      "notes": null,
-      "id": "eff825b5-99a6-58db-bbfd-113b7f878e27"
-    },
-    {
-      "date": "2026-05-14",
-      "day_of_week": "Quinta-Feira",
-      "type": "PERCURSO PLANO",
+      "type": "FARTLEK",
       "type_inferred": false,
       "zones": [
-        "Z2"
-      ],
-      "duration_min": 63,
-      "duration_source": "estimated_from_distance",
-      "distance_min_km": null,
-      "distance_max_km": null,
-      "structure": "• 10000m Z2 -",
-      "notes": null,
-      "id": "d5853f47-a17c-5e0e-9fa2-58ed43da8139"
-    },
-    {
-      "date": "2026-05-16",
-      "day_of_week": "Sábado",
-      "type": "PERCURSO MISTO",
-      "type_inferred": false,
-      "zones": [
-        "Z2"
-      ],
-      "duration_min": 95,
-      "duration_source": "sum_bullets",
-      "distance_min_km": null,
-      "distance_max_km": null,
-      "structure": "• 01:35:00 Z2 -",
-      "notes": null,
-      "id": "c88db3b3-364d-5ec5-a615-f9119ca1dcf5"
-    },
-    {
-      "date": "2026-05-17",
-      "day_of_week": "Domingo",
-      "type": "RODAGEM",
-      "type_inferred": true,
-      "zones": [
-        "Z1"
-      ],
-      "duration_min": 45,
-      "duration_source": "sum_bullets",
-      "distance_min_km": 5.93,
-      "distance_max_km": 6.84,
-      "structure": "• 45:00 Z1 -",
-      "notes": null,
-      "id": "efb02ce9-da4e-5561-977c-dd5eedb5b052"
-    },
-    {
-      "date": "2026-05-19",
-      "day_of_week": "Terça-Feira",
-      "type": "SERIES",
-      "type_inferred": true,
-      "zones": [
         "Z1",
-        "Z3"
+        "Z4"
       ],
-      "duration_min": 65,
+      "duration_min": 59,
       "duration_source": "explicit",
-      "distance_min_km": 9.8,
-      "distance_max_km": 10.73,
-      "structure": "• 15:00 Z1 - | • 40:00 Z3 - | • 10:00 Z1 -",
+      "distance_min_km": 8.75,
+      "distance_max_km": 9.73,
+      "structure": "• 15:00 Z1 | • 7x(0:45 Z4 + 0:45 Z1) | • 4x(4:00 Z4 + 2:00 Z1) | • 10:00 Z1",
       "notes": null,
-      "id": "51290523-5aa0-5375-9b1f-78d0dfb7f768"
+      "status": "PENDENTE",
+      "id": "307bd31c-9392-5d71-8132-4854e43888eb"
     },
     {
-      "date": "2026-05-20",
+      "date": "2026-06-10",
       "day_of_week": "Quarta-Feira",
       "type": "RODAGEM",
-      "type_inferred": true,
+      "type_inferred": false,
       "zones": [
         "Z1"
       ],
@@ -254,12 +149,13 @@
       "duration_source": "explicit",
       "distance_min_km": 6.59,
       "distance_max_km": 7.59,
-      "structure": "• 50:00 Z1 -",
+      "structure": "• 50:00 Z1 contínuo",
       "notes": null,
-      "id": "696a20ee-d0cf-5eeb-bb2d-88d208ec7d7c"
+      "status": "PENDENTE",
+      "id": "1f82423f-8102-520e-b015-595b90f2f342"
     },
     {
-      "date": "2026-05-21",
+      "date": "2026-06-11",
       "day_of_week": "Quinta-Feira",
       "type": "PERCURSO PLANO",
       "type_inferred": false,
@@ -268,14 +164,101 @@
       ],
       "duration_min": 61,
       "duration_source": "explicit",
-      "distance_min_km": null,
-      "distance_max_km": null,
-      "structure": "• 10000m Z2 -",
+      "distance_min_km": 10.0,
+      "distance_max_km": 10.0,
+      "structure": "• 10000m Z2",
       "notes": null,
-      "id": "589966a2-b3ee-5ad3-8845-8240c29e2f28"
+      "status": "PENDENTE",
+      "id": "6268f560-0c56-5334-9fcc-db5fc25c49a7"
     },
     {
-      "date": "2026-05-23",
+      "date": "2026-06-13",
+      "day_of_week": "Sábado",
+      "type": "PERCURSO MISTO",
+      "type_inferred": false,
+      "zones": [
+        "Z2"
+      ],
+      "duration_min": 95,
+      "duration_source": "explicit",
+      "distance_min_km": 14.47,
+      "distance_max_km": 15.41,
+      "structure": "• 1:35h Z2",
+      "notes": null,
+      "status": "PENDENTE",
+      "id": "ac4bc8e8-8ae9-55ac-819c-ed38f05d4bde"
+    },
+    {
+      "date": "2026-06-14",
+      "day_of_week": "Domingo",
+      "type": "RODAGEM",
+      "type_inferred": false,
+      "zones": [
+        "Z1"
+      ],
+      "duration_min": 45,
+      "duration_source": "explicit",
+      "distance_min_km": 5.93,
+      "distance_max_km": 6.84,
+      "structure": "• 45:00 Z1",
+      "notes": null,
+      "status": "PENDENTE",
+      "id": "af508f6e-1be1-5149-971b-f01b677576a9"
+    },
+    {
+      "date": "2026-06-16",
+      "day_of_week": "Terça-Feira",
+      "type": "SERIES",
+      "type_inferred": false,
+      "zones": [
+        "Z1",
+        "Z3"
+      ],
+      "duration_min": 60,
+      "duration_source": "explicit",
+      "distance_min_km": 8.99,
+      "distance_max_km": 9.87,
+      "structure": "• 15:00 Z1 | • 35:00 Z3 | • 10:00 Z1",
+      "notes": null,
+      "status": "PENDENTE",
+      "id": "6c50297d-39be-50c2-8b15-6cc3ecd6ac62"
+    },
+    {
+      "date": "2026-06-17",
+      "day_of_week": "Quarta-Feira",
+      "type": "RODAGEM",
+      "type_inferred": false,
+      "zones": [
+        "Z1"
+      ],
+      "duration_min": 50,
+      "duration_source": "explicit",
+      "distance_min_km": 6.59,
+      "distance_max_km": 7.59,
+      "structure": "• 50:00 Z1 contínuo",
+      "notes": null,
+      "status": "PENDENTE",
+      "id": "d715e096-9582-533b-a86e-2bcc53cd41ed"
+    },
+    {
+      "date": "2026-06-18",
+      "day_of_week": "Quinta-Feira",
+      "type": "PERCURSO PLANO",
+      "type_inferred": false,
+      "zones": [
+        "Z2"
+      ],
+      "duration_min": 61,
+      "duration_source": "explicit",
+      "distance_min_km": 10.0,
+      "distance_max_km": 10.0,
+      "structure": "• 10000m Z2",
+      "notes": null,
+      "status": "PENDENTE",
+      "id": "48a64b4b-372a-5d11-b84f-28c2f6a1d2d5"
+    },
+    {
+      "date": "2026-06-20",
       "day_of_week": "Sábado",
       "type": "PERCURSO MISTO",
       "type_inferred": false,
@@ -286,15 +269,16 @@
       "duration_source": "explicit",
       "distance_min_km": 15.99,
       "distance_max_km": 17.03,
-      "structure": "• 01:45:00 Z2 -",
+      "structure": "• 1:45h Z2",
       "notes": null,
-      "id": "dc0b703c-f1f4-52b3-b6da-cb1c459ab073"
+      "status": "PENDENTE",
+      "id": "f96167bc-3cce-5cee-8b5c-d453c297b1d9"
     },
     {
-      "date": "2026-05-24",
+      "date": "2026-06-21",
       "day_of_week": "Domingo",
       "type": "RODAGEM",
-      "type_inferred": true,
+      "type_inferred": false,
       "zones": [
         "Z1"
       ],
@@ -302,60 +286,66 @@
       "duration_source": "explicit",
       "distance_min_km": 5.93,
       "distance_max_km": 6.84,
-      "structure": "• 45:00 Z1 -",
+      "structure": "• 45:00 Z1",
       "notes": null,
-      "id": "cd6afa8b-e83f-549b-ae33-deb6326918ce"
+      "status": "PENDENTE",
+      "id": "d60c44bc-a584-5279-aad0-e641687db349"
     },
     {
-      "date": "2026-05-26",
+      "date": "2026-06-23",
       "day_of_week": "Terça-Feira",
       "type": "FARTLEK",
       "type_inferred": false,
       "zones": [
-        "Z1"
+        "Z1",
+        "Z3",
+        "Z4"
       ],
-      "duration_min": 61,
-      "duration_source": "sum_bullets",
-      "distance_min_km": null,
-      "distance_max_km": null,
-      "structure": "• 15:00 Z1 - | • 6 x (03:00 Z4 - 05:25/km a 05:44/km + 03:00 Z1 - 06:35/km a 07:35/km) | • 10:00 Z1 -",
+      "duration_min": 55,
+      "duration_source": "explicit",
+      "distance_min_km": 7.88,
+      "distance_max_km": 8.81,
+      "structure": "• 15:00 Z1 | • 6x(2:00 Z3 + 1:00 Z4 + 2:00 Z1) | • 10:00 Z1",
       "notes": null,
-      "id": "c5627b19-faf5-5f85-871e-fad4d587193f"
+      "status": "PENDENTE",
+      "id": "53f530e6-62fb-50b3-8a34-2ec2996b33f6"
     },
     {
-      "date": "2026-05-27",
+      "date": "2026-06-24",
       "day_of_week": "Quarta-Feira",
       "type": "RODAGEM",
-      "type_inferred": true,
+      "type_inferred": false,
       "zones": [
         "Z1"
       ],
       "duration_min": 50,
-      "duration_source": "sum_bullets",
-      "distance_min_km": null,
-      "distance_max_km": null,
-      "structure": "• 50:00 Z1 -",
+      "duration_source": "explicit",
+      "distance_min_km": 6.59,
+      "distance_max_km": 7.59,
+      "structure": "• 50:00 Z1 contínuo",
       "notes": null,
-      "id": "7d579c47-d480-5650-922a-ddf0ae0d7420"
+      "status": "PENDENTE",
+      "id": "7e1dd013-7c80-5692-a6e5-4f131d9c6450"
     },
     {
-      "date": "2026-05-28",
+      "date": "2026-06-25",
       "day_of_week": "Quinta-Feira",
       "type": "PERCURSO PLANO",
       "type_inferred": false,
       "zones": [
         "Z2"
       ],
-      "duration_min": 50,
-      "duration_source": "estimated_from_distance",
-      "distance_min_km": null,
-      "distance_max_km": null,
-      "structure": "• 8000m Z2 -",
+      "duration_min": 49,
+      "duration_source": "explicit",
+      "distance_min_km": 8.0,
+      "distance_max_km": 8.0,
+      "structure": "• 8000m Z2",
       "notes": null,
-      "id": "a6c653dd-d161-536b-93e5-f56daa747193"
+      "status": "PENDENTE",
+      "id": "ebfa031c-47e1-56db-a546-2a57c0abbbae"
     },
     {
-      "date": "2026-05-30",
+      "date": "2026-06-27",
       "day_of_week": "Sábado",
       "type": "PERCURSO PLANO",
       "type_inferred": false,
@@ -363,28 +353,30 @@
         "Z2"
       ],
       "duration_min": 90,
-      "duration_source": "sum_bullets",
-      "distance_min_km": null,
-      "distance_max_km": null,
-      "structure": "• 01:30:00 Z2 -",
+      "duration_source": "explicit",
+      "distance_min_km": 13.71,
+      "distance_max_km": 14.59,
+      "structure": "• 1:30h Z2",
       "notes": null,
-      "id": "9a5e1cdc-d4b9-5be4-b33c-a84e9be6756c"
+      "status": "PENDENTE",
+      "id": "79a4913e-5515-5f1b-86dc-21f05db0cbb0"
     },
     {
-      "date": "2026-05-31",
+      "date": "2026-06-28",
       "day_of_week": "Domingo",
       "type": "RODAGEM",
-      "type_inferred": true,
+      "type_inferred": false,
       "zones": [
         "Z1"
       ],
       "duration_min": 45,
-      "duration_source": "sum_bullets",
-      "distance_min_km": null,
-      "distance_max_km": null,
-      "structure": "• 45:00 Z1 -",
+      "duration_source": "explicit",
+      "distance_min_km": 5.93,
+      "distance_max_km": 6.84,
+      "structure": "• 45:00 Z1",
       "notes": null,
-      "id": "80efe008-7cab-5432-b22b-f23fda452c6b"
+      "status": "PENDENTE",
+      "id": "bf19a064-6bb5-59af-bd84-eb8b7dfb9c50"
     }
   ]
 }

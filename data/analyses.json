@@ -6,7 +6,7 @@
   "tune_up_race": "Meia Maratona de Montevideo — 09/08/2026",
   "tune_up_goal": "Sub-1h50",
   "cycle_start": "2026-04-16",
-  "last_updated": "2026-06-04T14:03:22.093535",
+  "last_updated": "2026-06-05T17:18:21.563937",
   "total_analyses": 36,
   "analyses": [
     {
@@ -136,8 +136,8 @@
       "metrics_errors": [],
       "score": 7,
       "analysis_html": "<b>📊 Resumo do Treino</b>\nSessão extra (não prescrita) de 8 km na esteira em Recife, calor úmido (Heat Index ~29,5°C). Pace progressivo de 6:27 → 5:53/km, com FC subindo de 135 até 163 bpm. Para VDOT ~39, o treino transitou de Z2 para Z4 ao longo da corrida — uma rodagem que virou progressivo natural.\n\n<b>✅ Pontos Positivos</b>\n• <b>Progressão controlada e limpa:</b> saída conservadora (6:27, 71%FCmáx) com aceleração gradual — exatamente o padrão que preserva forma aeróbica sem explodir.\n• <b>Pico de FC dentro do aceitável:</b> FC máxima de 164 bpm = 86%FCmáx — sem alarmes; contexto de calor úmido justifica FC ~5–8 bpm acima do esperado para o pace.\n• <b>Training Effect 3.4 aeróbico:</b> estímulo suficiente para manutenção/melhora da base, sem custo anaeróbico relevante (0.1) — equilíbrio adequado para uma sessão extra.\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>Deriva cardíaca expressiva:</b> +28 bpm do km 1 ao km 8 (135 → 163 bpm) num pace que acelerou apenas ~34s/km — sugere fadiga acumulada ou desidratação intraesforço. Fique atento ao RPE no treino seguinte.\n• <b>Últimos 2 km em Z4 (5:53–5:56):</b> para uma sessão extra, entrar em Z4 ao final eleva o custo de recuperação. Não é crítico, mas monitorar fadiga nas 24–36h seguintes.\n\n<b>🏁 Impacto na Preparação</b>\nSessão extra de baixo risco — complementa o volume semanal sem comprometer as prescrições do MPR, desde que a recuperação seja respeitada. O estímulo aeróbico (TE 3.4) é útil para consolidar adaptações, mas a deriva cardíaca sinaliza: não empilhe mais volume extra nesta semana. O próximo treino prescrito define se este extra foi bem encaixado ou gerou sobrecarga.\n\n<b>📅 Próximo Treino Sugerido</b>\n<b>Regenerativo leve:</b> 5–6 km contínuos em Z1 (6:29–7:28/km), FC abaixo de 140 bpm (74%FCmáx). Se a FC não estabilizar abaixo de 145 bpm no primeiro km, reduza o pace ou encurte. Prioridade: flush metabólico, não estímulo. Hidratação pré-treino redobrada dado o ambiente de Recife.\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: 7/10 — Sessão extra bem executada tecnicamente, mas a deriva cardíaca e o ingresso em Z4 no final pedem cautela na sequência.\n",
-      "classification": "extra_session",
-      "matched_session_id": null,
+      "classification": "planned_match",
+      "matched_session_id": "e6d2cbf9-1967-500a-aad5-b8651f4e3e27",
       "extra_session_evaluation": {
         "activity_id": "2026-06-04_Corrida_04_06_2026_23130202900.fit",
         "date": "2026-06-04",
@@ -145,9 +145,9 @@
         "reason": "Sessão extra em zona moderada/indeterminada — efeito neutro.",
         "impact_on_next_sessions": "Acompanhar deriva cardíaca e RPE no treino seguinte; ajustar se houver sinais de fadiga acumulada."
       },
-      "match_confidence": "medium",
+      "match_confidence": "high",
       "match_confidence_reasons": [
-        "nenhuma prescrição disponível na janela próxima"
+        "tier1 hard same-day lock — compatibilidade dura"
       ],
       "match_score": null,
       "running_dynamics": {
@@ -161,7 +161,8 @@
       "avg_watts": null,
       "weighted_avg_watts": null,
       "stryd_metrics": null,
-      "generated_at": "2026-06-04T14:03:22.093517"
+      "generated_at": "2026-06-04T14:03:22.093517",
+      "matched_session_date": "2026-06-04"
     },
     {
       "id": "2026-06-03_2026_06_03_recife_co_34224958842026",
@@ -298,8 +299,8 @@
       "metrics_errors": [],
       "score": null,
       "analysis_html": "<b>📊 Resumo do Treino</b>\nSessão extra (não prescrita) de 9,28 km em 54:40, realizada às 18h27 em Recife sob calor intenso (27°C / 87% umidade). Pace médio estimado ~5:54/km, que enquadra o esforço na <b>Z3 (Moderado: 5:41–6:03)</b>. FC média de 157 bpm (83% FCmáx ref.) com deriva cardíaca progressiva e clara ao longo dos splits — padrão esperado no calor úmido.\n\n---\n\n<b>✅ Pontos Positivos</b>\n• <b>Consistência de pace:</b> Voltas 3–8 mantidas entre 5:48–5:54/km — execução ritmicamente estável, sem acelerações desnecessárias.\n• <b>Training Effect Aeróbico 3.1/5.0:</b> Estímulo aeróbico real e significativo; treino cumpriu função de volume com qualidade moderada.\n• <b>Terreno plano (14m ganho):</b> Condições que permitem leitura limpa de pace e FC, sem distorções de altimetria.\n\n---\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>Deriva cardíaca acentuada:</b> FC saiu de 131 bpm (V1) para 167 bpm (V10) — elevação de ~36 bpm ao longo de ~9 km. Em Z3 no calor, isso indica <b>acúmulo de estresse cardiovascular</b> acima do esperado para rodagem; a última volta chegou a 88% FCmáx ref.\n• <b>Horário + condições térmicas:</b> Treino às 18h27 em Recife (27°C / UR 87% / ponto de orvalho 23°C) é das combinações mais adversas. O esforço percebido foi certamente maior do que o pace sugere — monitorar RPE e qualidade do sono/recuperação.\n• <b>Sessão extra sem prescrição:</b> Com deriva cardíaca desta magnitude, verificar se há sinais de fadiga no treino seguinte (FC elevada em Z1/Z2 ou RPE desproporcional).\n\n---\n\n<b>🏁 Impacto na Preparação</b>\nComo sessão extra, adicionou ~55 min de volume aeróbico em Z3 — contribui para o acúmulo semanal, mas <b>não substitui nenhuma sessão do MPR</b>. O custo de recuperação no calor úmido é real: os próximos 24–36h devem ser tratados com prioridade para recuperação. Se o próximo treino prescrito for de qualidade (limiar ou intervalado), avalie reduzir o volume ou adiar um dia se a FC estiver acima do padrão no aquecimento.\n\n---\n\n<b>📅 Próximo Treino Sugerido</b>\n<b>Regenerativo ou Z1/Z2 leve</b> — 6 a 8 km, pace <b>6:29–7:00/km</b>, FC abaixo de 75% FCmáx ref. (≤142 bpm). Foco: flush metabólico, sem nenhuma pressão de pace. Se possível, horário mais fresco (antes das 7h ou após as 20h). Confirmar que a FC está comportada antes de executar qualquer sessão de qualidade.\n\n---\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: <b>7/10</b> — Sessão extra bem executada tecnicamente, mas o custo térmico/cardíaco exige atenção à recuperação antes do próximo treino prescrito.\n",
-      "classification": "extra_session",
-      "matched_session_id": null,
+      "classification": "planned_match",
+      "matched_session_id": "19181439-95fd-52d4-a106-6e982cf8798f",
       "extra_session_evaluation": {
         "activity_id": "2026-06-03_Recife_-_Corrida_03_06_2026_23130194507.fit",
         "date": "2026-06-03",
@@ -307,9 +308,9 @@
         "reason": "Sessão extra em zona moderada/indeterminada — efeito neutro.",
         "impact_on_next_sessions": "Acompanhar deriva cardíaca e RPE no treino seguinte; ajustar se houver sinais de fadiga acumulada."
       },
-      "match_confidence": "medium",
+      "match_confidence": "high",
       "match_confidence_reasons": [
-        "nenhuma prescrição disponível na janela próxima"
+        "tier1 hard same-day lock — compatibilidade dura"
       ],
       "match_score": null,
       "running_dynamics": {
@@ -323,7 +324,8 @@
       "avg_watts": null,
       "weighted_avg_watts": null,
       "stryd_metrics": null,
-      "generated_at": "2026-06-04T14:02:35.528246"
+      "generated_at": "2026-06-04T14:02:35.528246",
+      "matched_session_date": "2026-06-03"
     },
     {
       "id": "2026-05-29_morning_run_18699684774",
