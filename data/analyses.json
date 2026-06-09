@@ -646,15 +646,15 @@
       "metrics_errors": [],
       "score": 3,
       "analysis_html": "<b>📊 Resumo do Treino</b>\nTreino SERIES prescrito para 02/06 (50 min, estrutura 15'+25'Z4+10') executado em 07/06 com 5 dias de atraso — fora da janela de tolerância fisiológica. A sessão foi realizada na esteira em Recife (23°C/81% UR), durou 45 min e cobriu 6,56 km a 6:52/km médio. VDOT referência: 39. O pareamento MPR tem confiança MÉDIA (score 0,82).\n\n<b>✅ Pontos Positivos</b>\n• <b>Execução contínua e consistente:</b> todos os 7 blocos km ficaram entre 6:42–7:08/km, sem picos abruptos — boa regularidade de esforço para o calor presente.\n• <b>Zona Z1 bem coberta no início:</b> o Lap 1 (7:08/km, FC 133 bpm = 70% FCmáx) está perfeitamente dentro da Z1 MPR (6:29–7:28/km) — aquecimento fisiologicamente sólido.\n• <b>Ajuste térmico favorável:</b> pace equivalente em frio (~10°C) seria ~6:37/km, o que posiciona a sessão dentro da Z1 MPR e na parte superior da zona E do VDOT 39 (5:58–6:40/km) — esforço aeróbico coerente com a capacidade do atleta.\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>Bloco Z4 ausente — prescrição não executada:</b> a estrutura MPR exigia 25 min em Z4 (5:20–5:39/km). Nenhum lap atingiu essa intensidade. O único ponto acima de Z3 foi o Lap 8 (0,01 km a 5:25/km) — irrelevante em volume. O estímulo de limiar prescrito simplesmente não aconteceu.\n• <b>Atraso crítico de 5 dias (COMPLETED_DELAYED):</b> uma sessão de séries executada fora da janela fisiológica perde o contexto de carga da semana original (02/06). Há risco de sobreposição com a sessão pendente de 07/06 (rodagem Z1), comprimindo recuperação.\n• <b>Deriva cardíaca progressiva:</b> FC subiu de 133 bpm (Lap 1) para 168 bpm (Lap 7) — incremento de ~35 bpm em ~45 min a pace constante. Isso indica resposta ao calor úmido (Ponto de Orvalho 22,5°C) e/ou acúmulo de fadiga residual pelo atraso no ciclo de treinos. FC média de 156 bpm = 82% FCmáx — elevada para um treino que funcionou como rodagem Z1/Z2.\n• <b>Distância abaixo da prescrição:</b> 6,56 km vs. 7,66–8,41 km prescritos — déficit de ~14% em volume.\n\n<b>🏁 Impacto na Preparação</b>\nEste treino entregou um estímulo aeróbico leve-moderado (Training Effect 3.7) mas <b>não cumpriu o objetivo central da sessão</b>: desenvolver tolerância ao ritmo limiar (Z4). O atraso de 5 dias descaracterizou a sessão dentro da semana de carga original. Para VDOT 39, a capacidade de sustentar 5:20–5:39/km é um bloco de construção essencial para meia/maratona — essa lacuna precisa ser endereçada com o treinador no próximo ciclo. O Training Effect Anaeróbico de 0.2 confirma: nenhum teto de intensidade foi tocado.\n\n<b>📅 Próximo Treino Sugerido</b>\nConforme prescrição MPR pendente de 07/06: <b>Rodagem 45 min / Z1 (6:29–7:28/km)</b>, distância estimada 5,9–6,8 km. Dado que este treino já aconteceu em 07/06 e a FC chegou a 168 bpm (82% FCmáx) com deriva acentuada, recomendo:\n→ Executar a rodagem Z1 com foco em FC ≤ 75% FCmáx (≤ 143 bpm), respeitando o pace pelo esforço percebido no calor.\n→ Horário mais fresco (madrugada ou indoor com ventilação).\n→ <b>Antes de reprogramar a sessão Z4 perdida, consultar o treinador</b> para não criar stacking com o microciclo seguinte.\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: 3/10 — Treino executado com 5 dias de atraso, bloco Z4 não realizado e volume abaixo da prescrição; o estímulo de limiar — objetivo central da sessão — não foi entregue.\n",
-      "classification": "completed_delayed",
-      "matched_session_id": "a47d66ae-b067-5ef8-b7f5-11af8759c87e",
+      "classification": "planned_match",
+      "matched_session_id": "3e169355-6a76-5fe1-8977-bac56f14b739",
       "extra_session_evaluation": null,
       "match_confidence": "medium",
       "match_confidence_reasons": [
         "score forte (0.82 ≥ 0.7)",
         "deslocamento de 5 dia(s) entre prescrição e execução"
       ],
-      "match_score": 0.815,
+      "match_score": null,
       "running_dynamics": {
         "ground_contact_time_ms": 298.6,
         "vertical_oscillation_cm": 5.24,
@@ -666,7 +666,9 @@
       "avg_watts": null,
       "weighted_avg_watts": null,
       "stryd_metrics": null,
-      "generated_at": "2026-06-07T11:43:01.214874"
+      "generated_at": "2026-06-07T11:43:01.214874",
+      "mpr_classification": "planned_match",
+      "mpr_matched_session_id": "3e169355-6a76-5fe1-8977-bac56f14b739"
     },
     {
       "id": "2026-06-06_2026_06_06_recife_co_34224958842026",
@@ -1163,15 +1165,15 @@
       "metrics_errors": [],
       "score": 5,
       "analysis_html": "<b>📊 Resumo do Treino</b>\nSessão de SERIES prescrita para 02/06 executada em 04/06 — deslocamento de 2 dias fora da janela de tolerância. Estrutura: aquecimento Z1 + bloco firme Z4 + desaquecimento Z1, totalizando 8,02 km em 48:51 (pace médio 6:05/km). Atleta VDOT 39, sessão realizada em esteira com Heat Index 29,5°C — condição exigente. <b>Atenção: COMPLETED_DELAYED impacta diretamente a análise de aderência.</b>\n\n<b>✅ Pontos Positivos</b>\n• <b>Volume cumprido:</b> 8,02 km está dentro da janela prescrita (7,66–8,41 km) — execução sólida em termos de distância.\n• <b>Bloco de aquecimento bem conduzido:</b> Laps 1–2 (6:27 e 6:14/km, FC 135–145 bpm = 71–76% FCmáx) respeitam bem a Z1 prescrita (6:29–7:28/km), com transição gradual de FC — excelente controle inicial.\n• <b>Progressão cardíaca coerente:</b> FC subiu de 135 → 163 bpm de forma escalonada ao longo dos blocos, sem saltos abruptos — sinal de boa resposta aeróbica ao estímulo.\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>Bloco Z4 não executado conforme prescrito:</b> Os laps 3–8 (pace 6:03–5:52/km, FC 152–162 bpm = 80–85% FCmáx) ficaram <i>abaixo</i> da Z4 prescrita (5:20–5:39/km). O pace executado equivale à Z3 MPR (5:41–6:03) ou ritmo M/T-baixo Daniels — estímulo de limiar não foi entregue. Pace equivalente ajustado ao frio: ~5:51/km, ainda aquém dos 5:20–5:39 alvo.\n• <b>COMPLETED_DELAYED — compressão de recuperação:</b> Sessão de série executada 2 dias após a data prescrita. Avaliar se houve empilhamento com outras cargas entre 02/06 e 04/06. O estímulo específico de Z4 perde parte do valor contextual no microciclo.\n• <b>Ausência de bloco Z1 final claro:</b> Lap 9 (0,02 km, 4:43/km) parece artefato de parada abrupta — não configura desaquecimento de 10' prescrito. Se o desaquecimento foi omitido, falta recuperação ativa estruturada.\n\n<b>🏁 Impacto na Preparação</b>\nO estímulo entregue foi predominantemente aeróbico de intensidade moderada (Z3/baixo-T Daniels), não o limiar firme Z4 prescrito. Para VDOT 39, o trabalho em Z4 (5:20–5:39/km) é o principal adaptador de lactato threshold — perdeu-se parte desse sinal. A sesão tem valor como rodagem de qualidade, mas não cumpre a função específica de série. O atraso de 2 dias também gera questionamento sobre o sequenciamento do microciclo — o longão da semana permanece pendente.\n\n<b>📅 Próximo Treino Sugerido</b>\n⚠️ <b>MPR prescreve para hoje (04/06): PERCURSO PLANO 49 min / 8,0 km em Z2 (6:05–6:29/km).</b>\nComo esta sessão de série já foi realizada hoje (04/06), há sobreposição de cargas na mesma data. Recomendo <b>discutir com o treinador</b> se a Z2 de hoje deve ser deslocada para 05/06 com pace 6:10–6:25/km (FC alvo ≤78% FCmáx = ≤148 bpm) como rodagem regenerativa, garantindo que o sistema neuromuscular absorva a carga de hoje antes de novo estímulo. Não acumule duas sessões no mesmo dia sem orientação explícita.\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: 5/10 — Volume correto, mas intensidade Z4 não atingida, treino com 2 dias de atraso e estrutura de blocos não respeitada conforme prescrição MPR.\n",
-      "classification": "completed_delayed",
-      "matched_session_id": "a47d66ae-b067-5ef8-b7f5-11af8759c87e",
+      "classification": "planned_match",
+      "matched_session_id": "e6d2cbf9-1967-500a-aad5-b8651f4e3e27",
       "extra_session_evaluation": null,
       "match_confidence": "medium",
       "match_confidence_reasons": [
         "score forte (0.87 ≥ 0.7)",
         "deslocamento de 2 dia(s) entre prescrição e execução"
       ],
-      "match_score": 0.872,
+      "match_score": null,
       "running_dynamics": {
         "ground_contact_time_ms": null,
         "vertical_oscillation_cm": null,
@@ -1183,7 +1185,9 @@
       "avg_watts": null,
       "weighted_avg_watts": null,
       "stryd_metrics": null,
-      "generated_at": "2026-06-06T10:28:58.393116"
+      "generated_at": "2026-06-06T10:28:58.393116",
+      "mpr_classification": "planned_match",
+      "mpr_matched_session_id": "e6d2cbf9-1967-500a-aad5-b8651f4e3e27"
     },
     {
       "id": "2026-06-03_2026_06_03_recife_co_34224958842026",
