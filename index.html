@@ -1058,9 +1058,13 @@
       const isSwim      = (a.sport||'').toLowerCase()==='swim';
       const isTreadmill = a.is_treadmill === true || (a.sub_sport||'').toLowerCase().includes('treadmill');
       const cardClass   = isSwim ? ' swim-card' : isTreadmill ? ' treadmill-card' : '';
+      // Escapa '<' solto (ex.: "em <8 min") que NAO inicia uma tag permitida.
+      // Sem isso, o innerHTML quebra e funde todos os cards num no so.
+      const ALLOW_TAGS = /<(?!\/?(?:strong|em|b|i|br|p|ul|ol|li|span|div|a|h[1-6])\b)/gi;
       const html      = (a.analysis_html||'')
         .replace(/<b>/g,'<strong>').replace(/<\/b>/g,'</strong>')
-        .replace(/<i>/g,'<em>').replace(/<\/i>/g,'</em>');
+        .replace(/<i>/g,'<em>').replace(/<\/i>/g,'</em>')
+        .replace(ALLOW_TAGS,'&lt;');
 
       // Distância: natação mostra em metros se < 2km
       const distLabel = isSwim && a.distance_km && a.distance_km < 2
