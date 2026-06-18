@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "last_updated": "2026-06-18T07:52:34.403763",
+  "last_updated": "2026-06-18T11:45:24.034327",
   "total_analyses": 43,
   "analyses": [
     {
@@ -1508,20 +1508,20 @@
           "forte_pct": 0.0
         },
         "gray_zone_alerta": false,
-        "deriva_cardiaca_pct": 21.1,
+        "deriva_cardiaca_pct": 26.3,
         "eficiencia_aerobica": null,
         "cadencia_media_spm": null,
         "ajuste_calor_segundos_km": 10,
         "pace_equivalente_frio_min_km": "6:42",
         "limitador_principal": "deriva_cardiaca",
         "bandeira_clinica": null,
-        "nota_aderencia": 9,
+        "nota_aderencia": 8,
         "confianca_analise": "alta"
       },
       "metrics_validation": "valid",
       "metrics_errors": [],
       "score": null,
-      "analysis_html": "<b>📊 Resumo do Treino</b>\nFelipe rodou 6,56 km em 45:02 na esteira (pace médio 6:52/km), encaixando perfeitamente na janela prescrita pelo MPR (45 min / Z1: 6:29–7:28/km). O volume e a duração foram atingidos com exatidão. Na escala Daniels VDOT 39, o pace ficou ligeiramente abaixo da zona Easy (5:58–6:40/km), bem dentro da faixa conversacional — exatamente o que a fase de Retomada Suave pede.\n\n---\n\n<b>✅ Pontos Positivos</b>\n\n• <b>Aderência precisa ao MPR:</b> Duração de 45:02 (meta: 45 min) e pace médio 6:52/km dentro da Z1 prescrita (6:29–7:28/km). Execução quase cirúrgica.\n\n• <b>FC média controlada:</b> 156 bpm = 82% FCmáx (ref. 190 bpm) — aceitável para uma Z1/E com aquecimento progressivo. FC máxima de 169 bpm = 89% FCmáx, pico pontual no final sem sustentação preocupante.\n\n• <b>Progressão cardíaca natural:</b> Os splits mostram aquecimento gradual (133 → 156 → 168 bpm) sem salto abrupto, indicando boa resposta autonômica e controle de esforço consciente durante a sessão.\n\n---\n\n<b>⚠️ Sinais de Alerta</b>\n\n• <b>Derive cardíaca expressiva:</b> FC subiu ~35 bpm entre a volta 1 e a volta 7 com pace relativamente estável (7:08 → 6:42/km). Parte disso é aquecimento normal, mas a FC de 168 bpm na última volta completa (~89% FCmáx) em ritmo Z1 sugere que a carga acumulada das semanas anteriores ou o ambiente indoor (ventilação/temperatura da esteira vs. ar livre) ainda elevam a resposta cardíaca. Monitorar nas próximas sessões.\n\n• <b>Pace ligeiramente abaixo da Z1 MPR nas voltas 5–7:</b> Voltas 5 a 7 variaram entre 6:56 e 6:42/km — todas dentro da janela, mas a volta 5 (6:56) roça o limite inferior da Z1. Sem problema real; apenas atenção ao não deixar o ritmo \"cair de conforto\" para baixo da zona nas sessões mais longas.\n\n---\n\n<b>🏁 Impacto na Preparação</b>\nSessão de base aeróbica sólida, cumprindo a função principal da fase de Retomada Suave: reativar o sistema cardiovascular sem estresse desnecessário. O Training Effect Aeróbico de 3,7/5,0 confirma estímulo de base real — acima do esperado para um treino \"leve\", o que é positivo nesta fase de reconstrução. Volume semanal segue no trilho correto para escalar gradualmente rumo aos 40 km/semana. Cada sessão assim é um tijolo para o VDOT 42 necessário para o sub-3h50 em Osaka.\n\n---\n\n<b>📅 Próximo Treino Sugerido</b>\nConforme prescrição MPR de <b>11/06/2026</b>:\n<b>Rodagem Z2 — percurso plano · 61 min · 10,0 km</b>\nPace-alvo: <b>6:05–6:29/km</b> (Z2 MPR / borda superior da zona Easy Daniels)\nFoco: manter FC abaixo de 85% FCmáx (~162 bpm) do início ao fim — se a FC romper esse teto nos últimos 3 km, reduza o pace para preservar a polarização. Priorize percurso plano para isolar o estímulo aeróbico sem viés de elevação. <i>Se sentir acúmulo de fadiga pelos próximos dias, discuta com o treinador possível ajuste de intensidade ou troca para Z1.</i>\n\n---\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: <b>9/10</b> — Execução fiel à prescrição MPR em duração, zona e progressão; desconto mínimo pela deriva cardíaca elevada no final que vale acompanhamento.\n",
+      "analysis_html": "<b>📊 Resumo do Treino</b>\nRodagem de 45 min / 6,56 km na esteira, prescrita como Z1 pelo MPR (6:29–7:28/km). Pace médio de 6:52/km — dentro da zona Z1 MPR e bem posicionado na zona Easy Daniels (5:58–6:40/km, com sobreposição). Sessão de caráter regenerativo/aeróbico suave, adequada à Fase de Retomada Suave (sem 1–2). VDOT 39 como referência.\n\n<b>✅ Pontos Positivos</b>\n• <b>Aderência perfeita ao MPR:</b> 45:02 de duração (prescrição: 45 min) e pace médio 6:52/km — plenamente dentro da Z1 prescrita (6:29–7:28/km). Execução fiel ao plano.\n• <b>FC controlada e fisiologicamente saudável:</b> FC média de 156 bpm (82% FCmáx ref.) e pico de 169 bpm (89% FCmáx ref.) — compatível com esforço aeróbico moderado-suave em esteira indoor. Sem sinal de excesso.\n• <b>Training Effect Aeróbico de 3,7/5,0:</b> Estímulo aeróbico concreto para a fase atual — exatamente o tipo de carga que constrói base sem agredir recuperação.\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>Deriva cardíaca progressiva:</b> FC subiu de 133 bpm (V1) para 168 bpm (V7) — delta de ~35 bpm ao longo de 6 km, com pace estável (~6:45–6:56/km). Isso representa uma deriva de ~26%, acima do esperado para intensidade Z1. Causas prováveis: início de semana com acúmulo leve de fadiga, calor relativo indoor, ou simplesmente retomada ainda em progresso. Acompanhar nas próximas rodagens — se a deriva reduzir, é sinal de adaptação cardiovascular positiva.\n• <b>Pace ligeiramente abaixo do teto Daniels Easy:</b> O ritmo 6:52/km está <i>acima</i> do limite superior da zona Easy Daniels (6:40/km), ou seja, tecnicamente mais suave que o mínimo recomendado pelo Daniels — o que na fase atual é <b>positivo</b>, não problemático. Só mencionar caso o atleta queira subir o VDOT: a zona Easy vai se deslocar para baixo naturalmente.\n\n<b>🏁 Impacto na Preparação</b>\nSessão que cumpre exatamente o papel da retomada: volume sem estresse, estímulo aeróbico real (TE 3,7) e manutenção do hábito de treino. Contribui para o acúmulo gradual de quilometragem semanal rumo aos 40 km/semana prescritos. Não eleva fadiga residual, o que preserva a capacidade de absorção dos próximos estímulos. Bloco correto para a semana 2 do ciclo de retomada.\n\n<b>📅 Próximo Treino Sugerido</b>\n📌 <b>MPR 11/06 — Percurso Plano | 61 min / 10,0 km | Z2: 6:05–6:29/km</b>\nEsse salto de 6,5 km → 10 km é significativo (+53% distância). Recomendo: execute os primeiros 2 km em Z1 (6:29–6:45/km) como aquecimento, depois estabilize em Z2 (6:05–6:29/km) nos 8 km restantes. Foco em <b>manter FC média ≤160 bpm</b> como âncora de controle de intensidade — se a deriva aparecer cedo (FC >165 bpm antes do km 6), reduza o pace para Z1 sem hesitar. Ambiente outdoor: o ajuste de calor de Recife pode exigir pace percebido mais suave; confie na FC, não só no relógio.\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: <b>8/10</b> — Execução fiel ao MPR (duração e zona), com deriva cardíaca elevada que merece monitoramento mas não compromete a sessão nesta fase.\n",
       "classification": "planned_match",
       "matched_session_id": "3e169355-6a76-5fe1-8977-bac56f14b739",
       "extra_session_evaluation": null,
@@ -1541,7 +1541,7 @@
       "avg_watts": null,
       "weighted_avg_watts": null,
       "stryd_metrics": null,
-      "generated_at": "2026-06-18T07:51:57.861722"
+      "generated_at": "2026-06-18T11:45:24.034277"
     },
     {
       "id": "2026-06-06_2026_06_06_recife_co_34224958842026",
