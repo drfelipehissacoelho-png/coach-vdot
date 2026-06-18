@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "last_updated": "2026-06-18T07:51:57.861767",
+  "last_updated": "2026-06-18T07:52:34.403763",
   "total_analyses": 43,
   "analyses": [
     {
@@ -191,7 +191,7 @@
         "zona_prescrita": "E",
         "pace_prescrito_min_km": "6:05-6:29",
         "pace_executado_min_km": "6:10",
-        "aderencia_pace_pct": 97,
+        "aderencia_pace_pct": 96,
         "distribuicao_intensidade": {
           "facil_pct": 100.0,
           "moderado_pct": 0.0,
@@ -205,13 +205,13 @@
         "pace_equivalente_frio_min_km": "5:51",
         "limitador_principal": "deriva_cardiaca",
         "bandeira_clinica": null,
-        "nota_aderencia": 9,
+        "nota_aderencia": 8,
         "confianca_analise": "alta"
       },
       "metrics_validation": "valid",
       "metrics_errors": [],
-      "score": 9,
-      "analysis_html": "<b>📊 Resumo do Treino</b>\nFelipe, sessão prescrita de 10 km em Z2 (6:05–6:29/km) executada às 04h45 em Recife com 27°C/92% de umidade. Pace médio de 6:10/km — dentro da janela MPR. Com o ajuste térmico de 19s/km, o esforço equivale a ~5:51/km em condições frias, colocando o treino na zona fácil (E) do Daniels (VDOT 39). Fase de Retomada Suave, semana 10 — volume e intensidade adequados.\n\n<b>✅ Pontos Positivos</b>\n• <b>Aderência ao plano MPR perfeita:</b> 10,01 km em 6:10/km médio — dentro da Z2 prescrita (6:05–6:29/km) do primeiro ao último km, sem desvios de ritmo significativos (variação máxima entre voltas: apenas 13s/km).\n• <b>Controle de FC sólido:</b> FC média de 158 bpm = 83% da FCmáx referência (190 bpm). FC máxima de 166 bpm = 87% — valores compatíveis com Z2/fácil considerando o calor e a hora do treino. Nenhum sinal de sobrecarga cardiovascular.\n• <b>Consistência de pace notável:</b> splits de V1 a V10 variam apenas 13s (6:03–6:16/km), demonstrando maturidade de pacing e boa autopercepção de esforço — qualidade essencial para a maratona de Osaka.\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>Deriva cardíaca moderada:</b> FC saiu de 142 bpm (V1) para ~162–163 bpm (V7–V10) — elevação de ~21 bpm ao longo do treino (~14,8%). Isso é esperado com umidade de 92% e calor moderado, mas indica que a dissipação de calor foi o fator limitante, não a capacidade aeróbica. Monitorar essa deriva nas próximas semanas — se persistir acima de 10% com as mesmas condições, revisar hidratação e estratégia de resfriamento pré-treino.\n• <b>Pace equivalente em frio (5:51/km):</b> ligeiramente acima da Z2 MPR (6:05–6:29/km), posicionando o esforço real próximo à M-pace do Daniels. Não é problema neste treino isolado, mas reforça que o ajuste térmico real está sendo \"pago\" pelo organismo — cuidado para não acumular treinos mais intensos do que parecem nos dados brutos.\n\n<b>🏁 Impacto na Preparação</b>\nTraining Effect aeróbico de 3,5/5,0 confirma estímulo de base sólido — exatamente o que a fase de Retomada Suave pede. Este treino fortalece o teto aeróbico de baixa intensidade, contribui para a adaptação ao calor de Recife (que será vantagem fisiológica em setembro/outubro na tune-up race) e mantém o volume semanal na trilha dos 40 km alvo. Nenhum custo de recuperação elevado esperado.\n\n<b>📅 Próximo Treino Sugerido</b>\n📌 <b>Prescrição MPR 20/06 — PERCURSO MISTO · ~105 min / 15,99–17,03 km em Z2 (6:05–6:29/km)</b>\nExecute o volume com a mesma disciplina de hoje: pace dentro da janela Z2 do início ao fim, sem acelerar na segunda metade. Dado o maior volume (~16–17 km) e a deriva cardíaca observada hoje, sugira ao treinador confirmar a estratégia de hidratação/resfriamento pré-corrida (gelo na nuca, água no colete). Se a FC média ultrapassar 165 bpm antes dos 12 km, reduza o pace em ~10–15s/km sem culpa — o estímulo aeróbico ainda será preservado. Qualquer adaptação de distância ou horário: discuta com o treinador.\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: 9/10 — Pace, distância e zona MPR executados com precisão; desconto mínimo pela deriva cardíaca moderada esperada no calor.\n",
+      "score": 8,
+      "analysis_html": "<b>📊 Resumo do Treino</b>\nFelipe correu 10,01 km em 1h01:51 a 6:10/km médio — dentro da Z2 MPR (6:05–6:29/km) e na zona E do Daniels (5:58–6:40/km). Treino de percurso plano em Recife às 04:45h, com calor moderado (27°C / 92% UR). VDOT 39, fase de Retomada Suave, sessão prescrita cumprida com precisão.\n\n<b>✅ Pontos Positivos</b>\n• <b>Aderência ao plano MPR excelente:</b> pace médio 6:10/km encaixa perfeitamente na Z2 prescrita (6:05–6:29/km). Distância e duração bateram com o prescrito (10 km / 61 min). Missão cumprida.\n• <b>Pacing consistente e controlado:</b> os 10 splits oscilam apenas 13s (6:03–6:16/km), sem aceleração impulsiva no início nem queda no fim — disciplina de corredor experiente.\n• <b>Pace equivalente ao frio dentro da zona E Daniels:</b> corrigido o ajuste de calor (19s/km), o esforço equivale a ~5:51/km, confirmando intensidade aeróbica genuína sem ultrapassar o teto fácil.\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>Deriva cardíaca presente:</b> FC subiu de 142 bpm (V1) para 163 bpm (V8–V10) — elevação de ~15% entre a primeira e a última volta, com pace praticamente estável. Deriva de ~14,8% sinaliza que o sistema cardiovascular trabalhou progressivamente mais para manter o mesmo ritmo. Contexto principal: calor + umidade + fase de retomada (volume ainda baixo = base cardíaca em reconstrução). Monitorar nas próximas semanas.\n• <b>FC média de 158 bpm = 83,2% FCmáx:</b> levemente acima do teto ideal para zona E pura (≤80% FCmáx = 152 bpm). Não é alarme, mas reforça que em dias quentes o pace deve ceder ainda mais para proteger a zona aeróbica. Sem bandeira clínica — pico de 166 bpm (87,4% FCmáx) é aceitável para esse contexto.\n\n<b>🏁 Impacto na Preparação</b>\nSessão de base aeróbica sólida, alinhada com a fase de Retomada Suave. Construção de volume seguro sem estresse metabólico excessivo — exatamente o que o corpo precisa após 1 mês de pausa. O Training Effect Aeróbico de 3,5/5,0 confirma estímulo eficiente para adaptação cardiovascular sem custo de recuperação alto. Cada sessão Z2 consistente como essa empilha base para a progressão de volume nas semanas seguintes, rumo ao VDOT alvo 42 para Osaka 2027.\n\n<b>📅 Próximo Treino Sugerido</b>\nConforme prescrição MPR de <b>20/06/2026</b>:\n🗓️ <b>PERCURSO MISTO — 105 min / ~16–17 km em Z2 (6:05–6:29/km)</b>\n• Foco: manter pace Z2 MPR sem forçar — se a FC escalar acima de 158 bpm antes dos 60 min, recue 10–15s/km sem hesitar.\n• Dado que a deriva cardíaca apareceu hoje aos ~50 min, em 105 min o gerenciamento de FC é ainda mais crítico. Priorize sensação percebida + FC sobre o pace.\n• Hidratação proativa: percurso misto em Recife exige reposição a cada ~20 min.\n• Se houver calor acima de 28°C ou umidade >90%, discuta com seu treinador a possibilidade de ajustar o volume ou fracionar a sessão.\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: 8/10 — Sessão executada com precisão no plano MPR e dentro das zonas Daniels; desconto marginal pela deriva cardíaca que indica margem de melhora no gerenciamento de intensidade no calor.\n",
       "classification": "planned_match",
       "matched_session_id": "48a64b4b-372a-5d11-b84f-28c2f6a1d2d5",
       "extra_session_evaluation": null,
@@ -231,7 +231,7 @@
       "avg_watts": null,
       "weighted_avg_watts": null,
       "stryd_metrics": null,
-      "generated_at": "2026-06-18T07:05:43.521891"
+      "generated_at": "2026-06-18T07:52:34.403636"
     },
     {
       "id": "2026-06-17_2026_06_17_recife_co_34224958842026",
