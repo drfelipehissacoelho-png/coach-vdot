@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "last_updated": "2026-06-18T06:02:35.429235",
+  "last_updated": "2026-06-18T07:05:43.521989",
   "total_analyses": 43,
   "analyses": [
     {
@@ -20,10 +20,10 @@
       "max_heart_rate": 166,
       "avg_cadence_spm": null,
       "temperature_c": 27,
-      "humidity_pct": 90,
-      "dew_point_c": 23.1,
-      "heat_index_c": 24.8,
-      "weather_source": "open-meteo",
+      "humidity_pct": 92,
+      "dew_point_c": 22.6,
+      "heat_index_c": 23.9,
+      "weather_source": "cache",
       "total_ascent_m": 16,
       "total_descent_m": 9,
       "training_stress_score": null,
@@ -191,7 +191,7 @@
         "zona_prescrita": "E",
         "pace_prescrito_min_km": "6:05-6:29",
         "pace_executado_min_km": "6:10",
-        "aderencia_pace_pct": 95,
+        "aderencia_pace_pct": 97,
         "distribuicao_intensidade": {
           "facil_pct": 100.0,
           "moderado_pct": 0.0,
@@ -199,19 +199,19 @@
         },
         "gray_zone_alerta": false,
         "deriva_cardiaca_pct": 14.8,
-        "eficiencia_aerobica": 0.0114,
+        "eficiencia_aerobica": null,
         "cadencia_media_spm": null,
         "ajuste_calor_segundos_km": 19,
         "pace_equivalente_frio_min_km": "5:51",
-        "limitador_principal": "clima",
+        "limitador_principal": "deriva_cardiaca",
         "bandeira_clinica": null,
-        "nota_aderencia": 8,
+        "nota_aderencia": 9,
         "confianca_analise": "alta"
       },
       "metrics_validation": "valid",
       "metrics_errors": [],
-      "score": 8,
-      "analysis_html": "<b>📊 Resumo do Treino</b>\nFelipe, você completou a sessão prescrita pelo MPR para 18/06: 10 km em Z2 Confortável, pace médio 6:10/km em condições extremas — 27°C com 90% de umidade às 7h45 em Recife. Com o ajuste de calor de 19s/km, seu pace equivalente a frio é 5:51/km, o que posiciona o esforço solidamente na zona E/Fácil do VDOT 39 (5:58–6:40). Fase de retomada suave, VDOT 39 — execução dentro do esperado.\n\n<b>✅ Pontos Positivos</b>\n• <b>Aderência ao MPR impecável:</b> 10,01 km em 61:51, pace médio 6:10/km — dentro da janela Z2 prescrita (6:05–6:29/km). Missão cumprida com precisão cirúrgica.\n• <b>Pace corrigido confirma esforço real:</b> 5:51/km equivalente (frio/10°C) coloca você dentro da zona E do Daniels — o corpo trabalhou na intensidade certa apesar do ambiente hostil.\n• <b>Splits consistentes e controlados:</b> Variação de apenas 13s entre o mais lento (6:16 V3) e o mais rápido (6:03 V9). Execução uniforme ao longo de 10 km num calor intenso — sinal de maturidade de corrida.\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>Deriva cardíaca relevante:</b> FC saltou de 142 bpm (V1) para 162–163 bpm (V6–V10) — uma elevação de ~21 bpm com pace praticamente estável. Isso equivale a uma deriva de ~14,8% ao longo da sessão. Num dia de calor extremo com 90% de umidade, é esperado, mas indica que o estresse cardiovascular real foi significativamente maior do que o pace sugere.\n• <b>FC Média em 158 bpm = 83,2% FCmáx:</b> Para uma sessão prescrita como Z2/fácil, esse percentual está elevado. O ambiente foi o principal driver — não é indicativo de overtraining, mas exige atenção à recuperação nas próximas 24–36h.\n• <b>Form Power em 31% — acima do ideal:</b> Form Power de 74W sobre 237W total está bem acima da referência de &lt;20%. Isso merece atenção técnica (ver seção Stryd abaixo).\n\n<b>⚡ Potência / Stryd</b>\n• <b>Running Effectiveness (RE): 0,0114 m/s/W</b> — dentro da faixa de referência para amadores (0,010–0,014). Eficiência mecânica aceitável para as condições de calor, que tendem a degradar o RE por maior gasto térmico.\n• <b>Form Power: 74W / 31% da potência total</b> — <b>significativamente acima do ideal (&lt;20%)</b>. Isso indica postura ineficiente, excesso de oscilação vertical ou fadiga de core. Prioridade para trabalho técnico (Pose Method: queda para frente, contato com o solo, ativação de core).\n• <b>Variability Index:</b> Com splits variando apenas 7s/km e pace consistente, VI estimado é baixo (&lt;5%) — execução uniforme confirmada pelos splits.\n• <b>Decoupling W/FC:</b> Potência média estável (237W) com FC crescendo de 142→163 bpm ao longo do treino = padrão clássico de <b>fadiga cardiovascular</b>. O músculo manteve o output mecânico, mas o coração trabalhou progressivamente mais para sustentar o mesmo esforço — efeito esperado do calor/desidratação.\n• <b>Conclusão:</b> A potência confirma o pace: sessão mecanicamente eficiente (RE ok), mas com custo cardiovascular alto pelo ambiente. O Form Power elevado é o principal ponto técnico de melhora.\n\n<b>🏁 Impacto na Preparação</b>\nTreino de base aeróbica cumprido na fase de retomada suave (sem 1–2). Sessões Z2 consistentes como esta constroem o substrato aeróbico necessário para chegar ao VDOT 42 que Osaka exige. Com 10 km em condições de estresse térmico real, você também está adaptando o sistema termoregulatório — um ativo valioso para quem treina em Recife. TE Aeróbico 3.5/5.0 confirma estímulo de manutenção/melhora aeróbica adequado para a fase.\n\n<b>📅 Próximo Treino Sugerido</b>\n📌 <b>MPR 20/06 — PERCURSO MISTO | 105 min / 15,99–17,03 km | Z2: 6:05–6:29/km</b>\n\nEsta será a maior sessão da semana. Considerando a deriva cardíaca de hoje e o calor de Recife, sugestões práticas:\n— Saia mais cedo (antes das 6h) ou gerencie por FC: teto de 155–160 bpm nas primeiras 10 km\n— Hidratação agressiva: mínimo 500ml/hora, preferencialmente com eletrólitos\n— Nas subidas do percurso misto, permita que o pace abra (6:30–6:45) mantendo a FC controlada\n— Se temperatura >26°C ou umidade >85% no horário planejado, discuta com o treinador uma adaptação de volume (reduzir para ~90 min)\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: 8/10 — Prescrição MPR cumprida com precisão em condições extremas; penalização leve pelo Form Power elevado (31%) e deriva cardíaca intensa que sinaliza necessidade de atenção à recuperação pré-sessão longa de sexta.\n",
+      "score": 9,
+      "analysis_html": "<b>📊 Resumo do Treino</b>\nFelipe, sessão prescrita de 10 km em Z2 (6:05–6:29/km) executada às 04h45 em Recife com 27°C/92% de umidade. Pace médio de 6:10/km — dentro da janela MPR. Com o ajuste térmico de 19s/km, o esforço equivale a ~5:51/km em condições frias, colocando o treino na zona fácil (E) do Daniels (VDOT 39). Fase de Retomada Suave, semana 10 — volume e intensidade adequados.\n\n<b>✅ Pontos Positivos</b>\n• <b>Aderência ao plano MPR perfeita:</b> 10,01 km em 6:10/km médio — dentro da Z2 prescrita (6:05–6:29/km) do primeiro ao último km, sem desvios de ritmo significativos (variação máxima entre voltas: apenas 13s/km).\n• <b>Controle de FC sólido:</b> FC média de 158 bpm = 83% da FCmáx referência (190 bpm). FC máxima de 166 bpm = 87% — valores compatíveis com Z2/fácil considerando o calor e a hora do treino. Nenhum sinal de sobrecarga cardiovascular.\n• <b>Consistência de pace notável:</b> splits de V1 a V10 variam apenas 13s (6:03–6:16/km), demonstrando maturidade de pacing e boa autopercepção de esforço — qualidade essencial para a maratona de Osaka.\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>Deriva cardíaca moderada:</b> FC saiu de 142 bpm (V1) para ~162–163 bpm (V7–V10) — elevação de ~21 bpm ao longo do treino (~14,8%). Isso é esperado com umidade de 92% e calor moderado, mas indica que a dissipação de calor foi o fator limitante, não a capacidade aeróbica. Monitorar essa deriva nas próximas semanas — se persistir acima de 10% com as mesmas condições, revisar hidratação e estratégia de resfriamento pré-treino.\n• <b>Pace equivalente em frio (5:51/km):</b> ligeiramente acima da Z2 MPR (6:05–6:29/km), posicionando o esforço real próximo à M-pace do Daniels. Não é problema neste treino isolado, mas reforça que o ajuste térmico real está sendo \"pago\" pelo organismo — cuidado para não acumular treinos mais intensos do que parecem nos dados brutos.\n\n<b>🏁 Impacto na Preparação</b>\nTraining Effect aeróbico de 3,5/5,0 confirma estímulo de base sólido — exatamente o que a fase de Retomada Suave pede. Este treino fortalece o teto aeróbico de baixa intensidade, contribui para a adaptação ao calor de Recife (que será vantagem fisiológica em setembro/outubro na tune-up race) e mantém o volume semanal na trilha dos 40 km alvo. Nenhum custo de recuperação elevado esperado.\n\n<b>📅 Próximo Treino Sugerido</b>\n📌 <b>Prescrição MPR 20/06 — PERCURSO MISTO · ~105 min / 15,99–17,03 km em Z2 (6:05–6:29/km)</b>\nExecute o volume com a mesma disciplina de hoje: pace dentro da janela Z2 do início ao fim, sem acelerar na segunda metade. Dado o maior volume (~16–17 km) e a deriva cardíaca observada hoje, sugira ao treinador confirmar a estratégia de hidratação/resfriamento pré-corrida (gelo na nuca, água no colete). Se a FC média ultrapassar 165 bpm antes dos 12 km, reduza o pace em ~10–15s/km sem culpa — o estímulo aeróbico ainda será preservado. Qualquer adaptação de distância ou horário: discuta com o treinador.\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: 9/10 — Pace, distância e zona MPR executados com precisão; desconto mínimo pela deriva cardíaca moderada esperada no calor.\n",
       "classification": "planned_match",
       "matched_session_id": "48a64b4b-372a-5d11-b84f-28c2f6a1d2d5",
       "extra_session_evaluation": null,
@@ -228,19 +228,10 @@
         "gct_balance_pct": 40.47
       },
       "drift_analysis": null,
-      "avg_watts": 236.6,
+      "avg_watts": null,
       "weighted_avg_watts": null,
-      "stryd_metrics": {
-        "has_power": true,
-        "is_estimated_power": false,
-        "avg_watts": 236.6,
-        "normalized_power": null,
-        "running_effectiveness": 0.011395,
-        "power_variability_pct": null,
-        "pw_hr_classification": null,
-        "vi_classification": null
-      },
-      "generated_at": "2026-06-18T06:02:35.429150"
+      "stryd_metrics": null,
+      "generated_at": "2026-06-18T07:05:43.521891"
     },
     {
       "id": "2026-06-17_2026_06_17_recife_co_34224958842026",
