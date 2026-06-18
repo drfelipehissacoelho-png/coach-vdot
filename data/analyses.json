@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "last_updated": "2026-06-18T11:46:04.153898",
+  "last_updated": "2026-06-18T12:10:57.381996",
   "total_analyses": 43,
   "analyses": [
     {
@@ -193,8 +193,8 @@
         "pace_executado_min_km": "6:10",
         "aderencia_pace_pct": 97,
         "distribuicao_intensidade": {
-          "facil_pct": 100.0,
-          "moderado_pct": 0.0,
+          "facil_pct": 95.0,
+          "moderado_pct": 5.0,
           "forte_pct": 0.0
         },
         "gray_zone_alerta": false,
@@ -210,8 +210,8 @@
       },
       "metrics_validation": "valid",
       "metrics_errors": [],
-      "score": 9,
-      "analysis_html": "<b>📊 Resumo do Treino</b>\nFelipe, rodagem de 10 km no plano prescrito pelo MPR para 18/06 — PLANNED_MATCH confirmado. Pace médio de 6:10/km dentro da Z2 MPR (6:05–6:29/km), executado às 4h45 em Recife com 27°C e 92% de umidade. Equivalente a ~5:51/km em condições frias, tangenciando a faixa fácil-alta do VDOT 39 (E: 5:58–6:40). Sessão bem-executada na fase de Retomada Suave (sem 1–2).\n\n<b>✅ Pontos Positivos</b>\n• <b>Aderência ao plano MPR precisa:</b> 10,01 km em 61:51 — bateu milímetro a milímetro a prescrição (10 km / 61 min / Z2). Pace médio 6:10/km no centro da janela 6:05–6:29/km.\n• <b>Pacing disciplinado:</b> Splits de 6:03 a 6:16/km sem variação explosiva — exatamente o controle de esforço que a fase de retomada exige. Nenhum km abaixo de 5:58 (zona E Daniels).\n• <b>FC dentro do esperado:</b> FC média 158 bpm = 83% FCmáx (190 bpm ref.) e pico de 166 bpm = 87% FCmáx — valores compatíveis com Z2/fácil-alta numa madrugada de 27°C/92% UR. Sem episódio de FC acima de 92% (175 bpm), sem bandeira clínica.\n\n<b>⚠️ Sinais de Alerta</b>\n• <b>Deriva cardíaca moderada (+21 bpm):</b> V1 → 142 bpm / V10 → 162 bpm = +14,8% de drift ao longo dos 10 km. Parte disso é o aquecimento natural (V1 para V2 sobe 12 bpm), mas a FC se estabilizou entre V6 e V10 em 162–163 bpm — sinal de carga cardiovascular persistente no calor úmido. Monitorar se a deriva estabiliza antes de 5 km nas próximas sessões.\n• <b>Umidade elevada (92%):</b> Ponto de orvalho de 22,6°C indica saturação quase total — a termorregulação por evaporação fica comprometida. Não é impeditivo nesta fase, mas reforça a necessidade de hidratação pré e durante, especialmente quando o volume semanal aumentar.\n\n<b>🏁 Impacto na Preparação</b>\nSessão de base aeróbica de alta qualidade dentro da Retomada Suave. O Training Effect aeróbico de 3,5/5 confirma estímulo relevante sem custo anaeróbico (0,0/5) — exatamente o que constrói a fundação para o aumento de volume rumo à meia maratona tune-up (set/out 2026) e à Maratona de Osaka (fev/2027). O equivalente frio de 5:51/km mostra que a base aeróbica está acima do pace M do VDOT 39 (~5:36) — sinal positivo de que a adaptação está acontecendo no ritmo certo.\n\n<b>📅 Próximo Treino Sugerido</b>\nConforme a MPR, a próxima sessão prescrita é <b>20/06/2026 — Percurso Misto 105 min / 15,99–17,03 km em Z2 (6:05–6:29/km)</b>. Trata-se de um volume significativamente maior (+70% de duração) em relação ao treino de hoje. Recomendações práticas:\n— Mantenha Z2 MPR rigorosa; se a FC atingir 165+ bpm antes de 10 km, recalibrar o pace para 6:20–6:29/km.\n— O salto de 61 min para 105 min é grande numa semana de retomada — se houver acúmulo de fadiga ou sono curto, discuta com o treinador a possibilidade de dividir em 90 min + descanso antes de avançar.\n— Hidratação: carregar pelo menos 500 ml + eletrólitos dado o calor úmido de Recife.\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: 9/10 — Sessão executada exatamente na prescrição MPR, pace e FC controlados, sem desvios de zona; desconto mínimo pela deriva cardíaca moderada esperada no calor.\n",
+      "score": null,
+      "analysis_html": "<b>📊 Resumo do Treino</b>\nFelipe rodou 10,01 km em 1h01:51 a 6:10/km médio — direto na zona Z2 da MPR (6:05–6:29/km), sessão prescrita para hoje. VDOT 39, fase de Retomada Suave (sem. 1–2). Pace equivalente em condições frias (~10°C): 5:51/km, dentro da zona E de Daniels (5:58–6:40). Execução limpa de percurso plano às 4h45, com 27°C e umidade de 92%.\n\n---\n\n<b>✅ Pontos Positivos</b>\n\n• <b>Aderência ao plano MPR perfeita:</b> pace médio de 6:10/km ficou no centro exato da Z2 prescrita (6:05–6:29). Duração de 61 min igualmente no alvo. Sem desvios.\n\n• <b>Splits notavelmente consistentes:</b> amplitude de apenas 13 segundos entre a volta mais lenta (6:16, V3) e a mais rápida (6:03, V9) — excelente controle de esforço para um treino fácil em calor úmido.\n\n• <b>FC máxima bem comportada:</b> pico de 166 bpm = 87% da FCmáx ref. (190 bpm). Em um treino Z2 com 92% de umidade, isso é fisiologicamente adequado, sem bandeira de alerta.\n\n---\n\n<b>⚠️ Sinais de Alerta</b>\n\n• <b>Deriva cardíaca moderada:</b> FC subiu de 142 bpm (V1) para ~163 bpm (V8–V10) — elevação de ~15% ao longo do treino. Deriva de ~14% é acima do ideal para uma sessão puramente fácil (tolerável até ~5–8%). O principal fator: umidade de 92% dificultando a evaporação do suor, não falha de pacing. Hidratação e aclimatação contínua são os leves ajustadores aqui.\n\n• <b>FC média de 158 bpm = 83% FCmáx:</b> para zona E/Z2, o ideal seria 75–82% FCmáx (142–156 bpm). Está levemente acima, mas o ajuste de calor de +19 seg/km explica a elevação. Não requer ação imediata — apenas monitorar tendência.\n\n---\n\n<b>🏁 Impacto na Preparação</b>\nTreino bem executado que cumpre o papel da Retomada Suave: construir base aeróbica sem estresse muscular ou metabólico excessivo. O Training Effect aeróbico de 3,5/5,0 confirma estímulo útil sem sobrecarga. Cada sessão Z2 bem controlada agora é tijolo direto na fundação do sub-3h50 em Osaka. Consistência > intensidade nesta fase.\n\n---\n\n<b>📅 Próximo Treino Sugerido</b>\n<b>📌 Prescrição MPR — 20/06/2026</b>\nPercurso Misto · ~105 min · 15,99–17,03 km · Z2 (6:05–6:29/km)\n\nExecute com o mesmo controle de pacing de hoje. Dado que a deriva cardíaca chegou a 15% nos 61 min desta sessão, no volume maior de 105 min monitore a FC de perto: se ultrapassar 165–167 bpm de forma sustentada, reduza o pace para a faixa 6:20–6:29 na segunda metade. Hidratação proativa antes de sair (400–500 ml) e, se possível, ponto de água no percurso. Qualquer dúvida sobre adaptação da sessão, alinhe com o treinador.\n\n---\n\n<b>🎯 Aderência ao Objetivo</b>\nNota: <b>9/10</b> — Pace e duração exatamente no alvo MPR; desconto mínimo pela deriva cardíaca acima do ideal esperado para Z2 pura.\n",
       "classification": "planned_match",
       "matched_session_id": "48a64b4b-372a-5d11-b84f-28c2f6a1d2d5",
       "extra_session_evaluation": null,
@@ -231,7 +231,7 @@
       "avg_watts": null,
       "weighted_avg_watts": null,
       "stryd_metrics": null,
-      "generated_at": "2026-06-18T11:46:04.153855"
+      "generated_at": "2026-06-18T12:10:57.381958"
     },
     {
       "id": "2026-06-17_2026_06_17_recife_co_34224958842026",
